@@ -154,7 +154,34 @@ Next.js hace proxy de `/api/*` y `/uploads/*` hacia `http://localhost:4000` medi
 
 ## Puesta en marcha
 
-**Pendiente.** El repositorio aún no contiene la aplicación ni los scripts de arranque. La puesta en marcha se documentará al completar **BE-0.1** (estructura del monorepo) y **BE-0.2** (entorno Docker local).
+### Entorno local (infraestructura)
+
+Requisitos: Docker Desktop (o Docker Engine con Compose v2).
+
+1. Copia las variables de cada aplicación. Los archivos `.env` no se versionan:
+   ```bash
+   cp apps/api/.env.example apps/api/.env
+   cp apps/web/.env.example apps/web/.env.local
+   ```
+2. Levanta PostgreSQL 16 y Mailpit, y espera a que estén sanos:
+   ```bash
+   docker compose up -d --wait
+   ```
+
+Servicios locales:
+
+- **PostgreSQL 16:** `localhost:5432`, usuario `cinematch`. Bases `cinematch` (desarrollo) y `cinematch_test` (pruebas).
+- **Mailpit:** SMTP en `localhost:1025` e interfaz web en http://localhost:8025.
+
+Operaciones:
+
+- **Detener** sin perder datos: `docker compose stop`.
+- **Apagar** los contenedores y conservar datos: `docker compose down`.
+- **Resetear** todo, incluidos los datos: `docker compose down -v`. Al volver a levantar, las bases se recrean desde `infra/postgres/init/`.
+
+Las bases y los scripts de `infra/postgres/init/` solo se ejecutan con un volumen vacío, por eso el reset es el único modo de recrearlas.
+
+> La puesta en marcha de API y web se documentará con BE-0.3 y FE-0.1.
 
 Requisitos previstos para el entorno local:
 

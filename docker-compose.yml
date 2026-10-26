@@ -1,0 +1,46 @@
+name: cinematch
+
+services:
+  postgres:
+    image: postgres:16.15-alpine
+    container_name: cinematch-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-cinematch}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cinematch_local}
+      POSTGRES_DB: cinematch
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d cinematch"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks:
+      - cinematch
+
+  mailpit:
+    image: axllent/mailpit:v1.32.0
+    container_name: cinematch-mailpit
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:1025:1025"
+      - "127.0.0.1:8025:8025"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8025/readyz"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks:
+      - cinematch
+
+volumes:
+  pgdata:
+    name: cinematch_pgdata
+
+networks:
+  cinematch:
+    name: cinematch_net
