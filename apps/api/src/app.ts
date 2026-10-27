@@ -39,6 +39,7 @@ import { crearServicioEstadoInterno } from "./modules/biblioteca/biblioteca.esta
 import { createResenasRouter } from "./modules/resenas/resenas.routes.js";
 import { crearServicioResenas } from "./modules/resenas/resenas.servicio.js";
 import { createResenasConsultaRouter } from "./modules/resenas/resenas.consulta.routes.js";
+import { createPerfilPublicoRouter } from "./modules/usuarios/perfil-publico.routes.js";
 import { crearServicioConsultaResenas } from "./modules/resenas/resenas.consulta.js";
 import { crearServicioBiblioteca } from "./modules/biblioteca/biblioteca.servicio.js";
 import { createBibliotecaPrivacidadRouter } from "./modules/biblioteca/biblioteca.privacidad.routes.js";
@@ -168,6 +169,16 @@ export function createApp({
   app.use(
     "/api",
     createResenasConsultaRouter(crearServicioConsultaResenas({ pool, reglas }), servicioAuth),
+  );
+  app.use(
+    "/api",
+    createPerfilPublicoRouter({
+      pool,
+      resenas: crearServicioConsultaResenas({ pool, reglas }),
+      biblioteca: crearServicioBiblioteca(pool),
+      amigos: crearServicioConsultaAmistades(pool),
+      servicioAuth,
+    }),
   );
   app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
   app.use("/api", createPerfilRouter(crearServicioPerfil(pool), servicioAuth));
