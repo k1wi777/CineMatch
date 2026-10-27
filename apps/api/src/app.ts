@@ -30,6 +30,8 @@ import {
   type HubNotificaciones,
   type IntervalosStream,
 } from "./modules/notificaciones/notificaciones.stream.js";
+import { createCatalogoRouter } from "./modules/catalogo/catalogo.routes.js";
+import { crearServicioCatalogo } from "./modules/catalogo/catalogo.consulta.js";
 import { createNotificacionesRouter } from "./modules/notificaciones/notificaciones.routes.js";
 import { crearServicioConsulta } from "./modules/notificaciones/notificaciones.consulta.js";
 import { createAvatarRouter } from "./modules/usuarios/avatar.routes.js";
@@ -109,6 +111,7 @@ export function createApp({
     }),
   );
   app.use("/api", createGenerosRouter(pool));
+  app.use("/api", createCatalogoRouter(crearServicioCatalogo(pool), servicioAuth));
   app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
   app.use("/api", createPerfilRouter(crearServicioPerfil(pool), servicioAuth));
   app.use(
