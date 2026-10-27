@@ -50,6 +50,12 @@ export class ValidationError extends AppError {
   }
 }
 
+export class PayloadTooLargeError extends AppError {
+  constructor(message = "La petición supera el tamaño máximo permitido.") {
+    super(413, "PAYLOAD_TOO_LARGE", message);
+  }
+}
+
 export class TooManyRequestsError extends AppError {
   constructor(message = "Demasiadas peticiones. Inténtalo más tarde.") {
     super(429, "TOO_MANY_REQUESTS", message);

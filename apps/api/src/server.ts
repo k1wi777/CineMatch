@@ -1,5 +1,6 @@
 import { createApp } from "./app.js";
 import { loadEnv, type Env } from "./config/env.js";
+import { opcionesDeSeguridad } from "./config/security.js";
 import { createPool } from "./lib/db.js";
 import { createLogger } from "./lib/logger.js";
 import { migrateUp } from "./lib/migrations.js";
@@ -29,7 +30,7 @@ if (env.MIGRATE_ON_START) {
   }
 }
 
-const app = createApp({ pool, logger });
+const app = createApp({ pool, logger, seguridad: opcionesDeSeguridad(env) });
 const server = app.listen(env.API_PORT, () => {
   logger.info({ port: env.API_PORT, env: env.NODE_ENV }, "API escuchando");
 });

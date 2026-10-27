@@ -2,6 +2,7 @@ import type { ErrorResponse } from "@cinematch/shared";
 import type { ErrorRequestHandler } from "express";
 import type { Logger } from "pino";
 import { AppError, mapearErrorPostgres } from "../lib/errors.js";
+import { mapearErrorHttp } from "../lib/http-errors.js";
 
 // Convierte cualquier error en la respuesta { error: { code, message, fields? } }.
 // Nunca devuelve el stack ni detalles internos: esos van solo al log.
@@ -9,7 +10,8 @@ export function createErrorHandler(logger: Logger): ErrorRequestHandler {
   return (err, _req, res, _next) => {
     if (res.headersSent) return;
 
-    const errorDeDominio = err instanceof AppError ? err : mapearErrorPostgres(err);
+    const errorDeDominio =
+      err instanceof AppError ? err : (mapearErrorPostgres(err) ?? mapearErrorHttp(err));
     if (errorDeDominio) {
       const body: ErrorResponse = {
         error: {
