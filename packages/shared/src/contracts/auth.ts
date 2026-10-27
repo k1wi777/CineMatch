@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { GenerosInteresSchema } from "./generos.js";
 
 // Política de contraseñas (sección 2): mínimo 8 caracteres, al menos una letra y un número.
 export const PasswordSchema = z
@@ -33,10 +34,7 @@ export const RegistroSchema = z.object({
   correo: z.email().max(255),
   contrasena: PasswordSchema,
   aceptaDatos: z.literal(true, { message: "Debes aceptar el tratamiento de tus datos." }),
-  generoIds: z
-    .array(z.number().int().positive())
-    .min(3, "Elige al menos 3 géneros de interés.")
-    .refine((ids) => new Set(ids).size === ids.length, "No repitas géneros."),
+  generoIds: GenerosInteresSchema,
 });
 
 export type Registro = z.infer<typeof RegistroSchema>;
