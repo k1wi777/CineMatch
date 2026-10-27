@@ -4,6 +4,10 @@ import { createApp } from "../../src/app.js";
 import type { ReglasDeNegocio } from "../../src/config/business-rules.js";
 import type { OpcionesDeSeguridad } from "../../src/config/security.js";
 import type { ServicioCorreo } from "../../src/lib/correo.js";
+import type {
+  HubNotificaciones,
+  IntervalosStream,
+} from "../../src/modules/notificaciones/notificaciones.stream.js";
 
 const silentLogger = pino({ level: "silent" });
 
@@ -50,6 +54,8 @@ type OpcionesDePrueba = {
   reglas?: ReglasDeNegocio;
   correo?: ServicioCorreo;
   directorioAvatares?: string;
+  notificaciones?: HubNotificaciones;
+  intervalosStream?: Partial<IntervalosStream>;
 };
 
 // Aplicación Express real, sin abrir puerto: Supertest la monta directamente.
@@ -69,5 +75,7 @@ export function buildTestApp(
     reloj: opciones.reloj,
     correo: opciones.correo ?? correoDePrueba(),
     directorioAvatares: opciones.directorioAvatares,
+    notificaciones: opciones.notificaciones,
+    intervalosStream: opciones.intervalosStream,
   });
 }
