@@ -49,3 +49,57 @@ export function limpiarMotivo(texto: string): string | null {
     .trim();
   return limpio === "" ? null : limpio;
 }
+
+// Persona y título resumidos en las listas y el detalle de recomendaciones.
+export const PersonaResumenSchema = z.object({
+  id: z.number().int(),
+  username: z.string(),
+  avatarUrl: z.string().nullable(),
+});
+
+export const TituloResumenSchema = z.object({
+  id: z.number().int(),
+  titulo: z.string(),
+  posterUrl: z.string().nullable(),
+});
+
+export const RecomendacionListaItemSchema = z.object({
+  id: z.number().int(),
+  estado: RecommendationStatusSchema,
+  fueraDeIntereses: z.boolean(),
+  fechaEnvio: z.string(),
+  emisor: PersonaResumenSchema,
+  receptor: PersonaResumenSchema,
+  contenido: TituloResumenSchema,
+});
+
+export type RecomendacionListaItem = z.infer<typeof RecomendacionListaItemSchema>;
+
+// Reseña adjunta o del receptor, tal como la puede ver quien consulta (regla de BE-9.4).
+export const ResenaVisibleSchema = z.object({
+  calificacion: z.number(),
+  etiquetas: z.array(z.string()),
+  esSpoiler: z.boolean(),
+  comentario: z.string().nullable(),
+});
+
+export const RecomendacionDetalleSchema = RecomendacionListaItemSchema.extend({
+  motivo: z.string().nullable(),
+  fechaApertura: z.string().nullable(),
+  fechaRespuesta: z.string().nullable(),
+  fechaCompletado: z.string().nullable(),
+  // Reseña adjunta a la recomendación, solo si es visible para quien consulta; null en otro caso.
+  resenaAdjunta: ResenaVisibleSchema.nullable(),
+  // Calificación del receptor, solo cuando la recomendación está completada y es visible para el emisor.
+  resenaReceptor: ResenaVisibleSchema.nullable(),
+});
+
+export type RecomendacionDetalle = z.infer<typeof RecomendacionDetalleSchema>;
+
+export const FiltrarRecibidasQuerySchema = z.object({
+  estado: RecommendationStatusSchema.optional(),
+  page: z.coerce.number().int().min(1).default(1),
+  pageSize: z.coerce.number().int().min(1).max(50).default(20),
+});
+
+export type FiltrarRecibidasQuery = z.infer<typeof FiltrarRecibidasQuerySchema>;
