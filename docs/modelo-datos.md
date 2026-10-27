@@ -110,7 +110,7 @@ El mínimo de 3 géneros lo valida la aplicación (RN13, ERS).
 | `fuente`              | varchar(30)      | NOT NULL                                                           | `fuente`             |
 | `id_externo`          | varchar(50)      | NOT NULL                                                           | `idExterno`          |
 | `fecha_actualizacion` | timestamptz      | NOT NULL                                                           | `fechaActualizacion` |
-| `popularidad_externa` | numeric          | NULL. Necesaria para RN15 (issues #10, #42). **No está en el ERS** | (issue #10, #42)     |
+| `popularidad_externa` | numeric(12,3)    | NULL. Necesaria para RN15 (issues #10, #42). **No está en el ERS** | (issue #10, #42)     |
 
 - `UNIQUE (fuente, tipo, id_externo)`. Un mismo `id_externo` puede existir como película y como serie (ERS).
 - RN16: una serie es una sola unidad, sin temporadas ni episodios.
@@ -259,7 +259,8 @@ Ninguna bloquea BE-1.
 ## Decisiones confirmadas
 
 - **ON DELETE:** CASCADE en contenido_genero e interes_usuario. Sin acción en las FKs a usuario, porque los usuarios se anonimizan y no se borran (#88).
-- **contenido.fuente:** mdb para datos reales y mock para pruebas y desarrollo sin clave (#42).
+- **contenido.fuente:** `tmdb` para datos reales y mock para pruebas y desarrollo sin clave (#42).
+- **Origen de notificaciones:** al borrarse la recomendación, amistad o reseña que origina una notificación, la notificación se borra en cascada (BE-1.5). **Decidido.**
 
 ## Resueltas por el ERS
 
