@@ -1,4 +1,5 @@
 import type pg from "pg";
+import { hashPassword } from "../../src/lib/password.js";
 
 // Datos mínimos para las pruebas de integridad. Cada función devuelve el id creado.
 
@@ -11,6 +12,22 @@ export async function crearUsuario(
   const { rows } = await db.query<{ id: number }>(
     "INSERT INTO usuario (nombre, username, correo, contrasena, rol_id) VALUES ($1, $2, $3, 'hash', (SELECT id FROM rol WHERE nombre = 'usuario')) RETURNING id",
     [username, username, correo],
+  );
+  return idDe(rows);
+}
+
+// Usuario con contraseña real (argon2id), para probar el inicio de sesión.
+export async function crearUsuarioConContrasena(
+  db: pg.Pool,
+  username: string,
+  correo: string,
+  contrasena: string,
+): Promise<number> {
+  const hash = await hashPassword(contrasena);
+  await db.query("INSERT INTO rol (nombre) VALUES ('usuario') ON CONFLICT (nombre) DO NOTHING");
+  const { rows } = await db.query<{ id: number }>(
+    "INSERT INTO usuario (nombre, username, correo, contrasena, rol_id, acepta_datos_en) VALUES ($1, $2, $3, $4, (SELECT id FROM rol WHERE nombre = 'usuario'), now()) RETURNING id",
+    [username, username, correo, hash],
   );
   return idDe(rows);
 }

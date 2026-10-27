@@ -123,7 +123,8 @@ describe("seguridad base de la API (BE-2.4)", () => {
       const primera = await request(app).post("/api/auth/login").set("Origin", ORIGEN_WEB);
       const segunda = await request(app).post("/api/auth/login").set("Origin", ORIGEN_WEB);
 
-      expect(primera.status).toBe(404);
+      // La primera pasa el límite (aquí responde 401 por credenciales inválidas); la segunda ya no.
+      expect(primera.status).not.toBe(429);
       expect(segunda.status).toBe(429);
       expect(segunda.body.error.code).toBe("TOO_MANY_REQUESTS");
     });

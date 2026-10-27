@@ -63,19 +63,25 @@ describe("integridad de usuarios, roles y sesiones (BE-1.2)", () => {
 
   it("rechaza una sesión de un usuario que no existe (23503)", async () => {
     await expectError(
-      pool.query("INSERT INTO sesion (id, usuario_id) VALUES ($1, 999999)", ["a".repeat(64)]),
+      pool.query(
+        "INSERT INTO sesion (id, usuario_id, expira_en) VALUES ($1, 999999, now() + interval '30 minutes')",
+        ["a".repeat(64)],
+      ),
       "23503",
     );
   });
 
   it("rechaza dos sesiones con el mismo id (23505)", async () => {
     const usuario = await crearUsuario(pool, "sesion_user");
-    await pool.query("INSERT INTO sesion (id, usuario_id) VALUES ($1, $2)", [
-      "b".repeat(64),
-      usuario,
-    ]);
+    await pool.query(
+      "INSERT INTO sesion (id, usuario_id, expira_en) VALUES ($1, $2, now() + interval '30 minutes')",
+      ["b".repeat(64), usuario],
+    );
     await expectError(
-      pool.query("INSERT INTO sesion (id, usuario_id) VALUES ($1, $2)", ["b".repeat(64), usuario]),
+      pool.query(
+        "INSERT INTO sesion (id, usuario_id, expira_en) VALUES ($1, $2, now() + interval '30 minutes')",
+        ["b".repeat(64), usuario],
+      ),
       "23505",
     );
   });
