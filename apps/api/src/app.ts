@@ -32,6 +32,8 @@ import {
 } from "./modules/notificaciones/notificaciones.stream.js";
 import { createAmistadesRouter } from "./modules/amistades/amistades.routes.js";
 import { crearServicioAmistades } from "./modules/amistades/amistades.servicio.js";
+import { createAmistadesConsultaRouter } from "./modules/amistades/amistades.consulta.routes.js";
+import { crearServicioConsultaAmistades } from "./modules/amistades/amistades.consulta.js";
 import { crearServicioCreacion } from "./modules/notificaciones/notificaciones.creacion.js";
 import { createCatalogoRouter } from "./modules/catalogo/catalogo.routes.js";
 import { crearServicioCatalogo } from "./modules/catalogo/catalogo.consulta.js";
@@ -125,6 +127,10 @@ export function createApp({
       }),
       servicioAuth,
     ),
+  );
+  app.use(
+    "/api",
+    createAmistadesConsultaRouter(crearServicioConsultaAmistades(pool), servicioAuth),
   );
   app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
   app.use("/api", createPerfilRouter(crearServicioPerfil(pool), servicioAuth));
