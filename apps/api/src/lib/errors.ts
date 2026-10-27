@@ -56,6 +56,12 @@ export class PayloadTooLargeError extends AppError {
   }
 }
 
+export class UnsupportedMediaTypeError extends AppError {
+  constructor(message = "El tipo de archivo no está permitido.") {
+    super(415, "UNSUPPORTED_MEDIA_TYPE", message);
+  }
+}
+
 export class TooManyRequestsError extends AppError {
   constructor(message = "Demasiadas peticiones. Inténtalo más tarde.") {
     super(429, "TOO_MANY_REQUESTS", message);

@@ -35,6 +35,13 @@ export const PerfilSchema = z.object({
 
 export type Perfil = z.infer<typeof PerfilSchema>;
 
+// Avatar subido (BE-4.4): ruta pública relativa, p. ej. /uploads/avatars/12-<hex>.webp.
+export const AvatarSchema = z.object({
+  avatarUrl: z.string(),
+});
+
+export type Avatar = z.infer<typeof AvatarSchema>;
+
 // Cambios parciales del perfil. Un bio vacío o null borra la biografía.
 export const ActualizarPerfilSchema = z
   .object({
