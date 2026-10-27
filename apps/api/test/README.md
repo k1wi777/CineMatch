@@ -37,27 +37,27 @@ import { createTestPool, resetDatabase } from "../helpers/database.js";
 
 Las pruebas de `test/integration/integridad-*.test.ts` verifican cada CHECK, UNIQUE, FK e índice del esquema. Cada una inserta un dato inválido y espera el código de error de PostgreSQL. Si se elimina la restricción, el test falla.
 
-| Restricción | Tabla | Código | Prueba |
-| --- | --- | --- | --- |
-| `usuario_username_formato` (longitud 3–20, `^[A-Za-z0-9_]+$`) | `usuario` | 23514 / 22001 | `integridad-usuarios` |
-| `usuario_username_lower_key` (único sin mayúsculas) | `usuario` | 23505 | `integridad-usuarios` |
-| `usuario_correo_lower_key` (único parcial sin mayúsculas) | `usuario` | 23505 | `integridad-recomendaciones` (índices) |
-| `rol.nombre` UNIQUE | `rol` | 23505 | `integridad-usuarios` |
-| PK y FK de `sesion` y `token_recuperacion` | `sesion`, `token_recuperacion` | 23505 / 23503 | `integridad-usuarios` |
-| `genero.nombre` UNIQUE | `genero` | 23505 | `integridad-catalogo-social` |
-| `contenido` UNIQUE `(fuente, tipo, id_externo)` y enum `tipo` | `contenido` | 23505 / 22P02 | `integridad-catalogo-social` |
-| FK y PK de `contenido_genero` e `interes_usuario` | relaciones | 23503 / 23505 | `integridad-catalogo-social` |
-| `amistad_no_autoamistad` y `amistad_par_key` | `amistad` | 23514 / 23505 | `integridad-catalogo-social` |
-| `resena_calificacion_rango_paso` | `resena` | 23514 | `integridad-catalogo-social` |
-| `resena_comentario_longitud` (2000) | `resena` | 23514 | `integridad-catalogo-social` |
-| `resena_usuario_contenido_key` | `resena` | 23505 | `integridad-catalogo-social` |
-| `etiqueta.texto` UNIQUE y cascada desde `resena` | `etiqueta`, `resena_etiqueta` | 23505 / efecto | `integridad-catalogo-social` |
-| `seguimiento` UNIQUE y enum `estado` | `seguimiento` | 23505 / 22P02 | `integridad-catalogo-social` |
-| `recomendacion_no_a_uno_mismo` y UNIQUE del emisor, receptor y título | `recomendacion` | 23514 / 23505 | `integridad-recomendaciones` |
-| `resena_id` con `ON DELETE SET NULL` | `recomendacion` | efecto | `integridad-recomendaciones` |
-| `notificacion_un_solo_origen` | `notificacion` | 23514 | `integridad-recomendaciones` |
-| Cascada desde la recomendación, amistad o reseña de origen | `notificacion` | efecto | `integridad-recomendaciones` |
-| Índices de búsqueda y de integridad (GIN, parcial, DESC) | varios | definición | `integridad-recomendaciones` |
+| Restricción                                                           | Tabla                          | Código         | Prueba                                 |
+| --------------------------------------------------------------------- | ------------------------------ | -------------- | -------------------------------------- |
+| `usuario_username_formato` (longitud 3–20, `^[A-Za-z0-9_]+$`)         | `usuario`                      | 23514 / 22001  | `integridad-usuarios`                  |
+| `usuario_username_lower_key` (único sin mayúsculas)                   | `usuario`                      | 23505          | `integridad-usuarios`                  |
+| `usuario_correo_lower_key` (único parcial sin mayúsculas)             | `usuario`                      | 23505          | `integridad-recomendaciones` (índices) |
+| `rol.nombre` UNIQUE                                                   | `rol`                          | 23505          | `integridad-usuarios`                  |
+| PK y FK de `sesion` y `token_recuperacion`                            | `sesion`, `token_recuperacion` | 23505 / 23503  | `integridad-usuarios`                  |
+| `genero.nombre` UNIQUE                                                | `genero`                       | 23505          | `integridad-catalogo-social`           |
+| `contenido` UNIQUE `(fuente, tipo, id_externo)` y enum `tipo`         | `contenido`                    | 23505 / 22P02  | `integridad-catalogo-social`           |
+| FK y PK de `contenido_genero` e `interes_usuario`                     | relaciones                     | 23503 / 23505  | `integridad-catalogo-social`           |
+| `amistad_no_autoamistad` y `amistad_par_key`                          | `amistad`                      | 23514 / 23505  | `integridad-catalogo-social`           |
+| `resena_calificacion_rango_paso`                                      | `resena`                       | 23514          | `integridad-catalogo-social`           |
+| `resena_comentario_longitud` (2000)                                   | `resena`                       | 23514          | `integridad-catalogo-social`           |
+| `resena_usuario_contenido_key`                                        | `resena`                       | 23505          | `integridad-catalogo-social`           |
+| `etiqueta.texto` UNIQUE y cascada desde `resena`                      | `etiqueta`, `resena_etiqueta`  | 23505 / efecto | `integridad-catalogo-social`           |
+| `seguimiento` UNIQUE y enum `estado`                                  | `seguimiento`                  | 23505 / 22P02  | `integridad-catalogo-social`           |
+| `recomendacion_no_a_uno_mismo` y UNIQUE del emisor, receptor y título | `recomendacion`                | 23514 / 23505  | `integridad-recomendaciones`           |
+| `resena_id` con `ON DELETE SET NULL`                                  | `recomendacion`                | efecto         | `integridad-recomendaciones`           |
+| `notificacion_un_solo_origen`                                         | `notificacion`                 | 23514          | `integridad-recomendaciones`           |
+| Cascada desde la recomendación, amistad o reseña de origen            | `notificacion`                 | efecto         | `integridad-recomendaciones`           |
+| Índices de búsqueda y de integridad (GIN, parcial, DESC)              | varios                         | definición     | `integridad-recomendaciones`           |
 
 ## Qué no hacer
 
