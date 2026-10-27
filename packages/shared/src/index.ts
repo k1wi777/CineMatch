@@ -1,6 +1,7 @@
 // API pública del paquete. Solo lo exportado aquí forma parte del contrato.
 export * from "./contracts/auth.js";
 export * from "./contracts/amistades.js";
+export * from "./contracts/biblioteca.js";
 export * from "./contracts/catalogo.js";
 export * from "./contracts/errors.js";
 export * from "./contracts/generos.js";
