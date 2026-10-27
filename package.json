@@ -13,6 +13,7 @@
     "lint": "eslint .",
     "typecheck": "pnpm -r --if-present run typecheck",
     "test": "pnpm -r --if-present run test",
+    "test:api": "pnpm --filter @cinematch/api run test",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
