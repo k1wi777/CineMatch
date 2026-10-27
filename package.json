@@ -17,6 +17,8 @@
     "migrate:up": "pnpm --filter @cinematch/api run migrate:up",
     "migrate:down": "pnpm --filter @cinematch/api run migrate:down",
     "migrate:create": "pnpm --filter @cinematch/api run migrate:create",
+    "seed": "pnpm --filter @cinematch/api run seed",
+    "seed:demo": "pnpm --filter @cinematch/api run seed:demo",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
