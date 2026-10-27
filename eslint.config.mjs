@@ -14,5 +14,12 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     },
   },
+  {
+    // Scripts operativos en JavaScript de Node (p. ej. la copia de seguridad): sus globales se declaran aquí.
+    files: ["apps/api/scripts/**/*.mjs"],
+    languageOptions: {
+      globals: { process: "readonly", console: "readonly" },
+    },
+  },
   prettier,
 );

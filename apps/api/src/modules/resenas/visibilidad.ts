@@ -4,7 +4,7 @@
 // Definiciones:
 // - Reseña oculta: visible = false (moderación).
 // - Espectador: usuario autenticado que consulta. Amigo: amistad aceptada entre autor y espectador.
-// - Autor eliminado: sus reseñas dejan de verse para cualquiera que no sea el propio autor.
+// - Autor eliminado: sus reseñas siguen contando en promedios y se muestran con el autor anonimizado (BE-13.1).
 
 export type VisibilidadResena = "publica" | "amigos";
 
@@ -13,7 +13,6 @@ export type ResenaVisible = {
   usuarioId: number;
   visible: boolean;
   visibilidad: VisibilidadResena;
-  autorActivo: boolean;
 };
 
 // Subconsulta: ¿son amigos (amistad aceptada) el autor de `autor` y el espectador `espectador`?
@@ -23,10 +22,6 @@ function sonAmigosSql(autor: string, espectador: string): string {
      WHERE a.estado = 'aceptada'
        AND LEAST(a.solicitante_id, a.receptor_id) = LEAST(${autor}, ${espectador})
        AND GREATEST(a.solicitante_id, a.receptor_id) = GREATEST(${autor}, ${espectador}))`;
-}
-
-function autorActivoSql(alias: string): string {
-  return `EXISTS (SELECT 1 FROM usuario au WHERE au.id = ${alias}.usuario_id AND au.eliminado_en IS NULL)`;
 }
 
 // Fragmento para listar reseñas a un espectador. Parámetros: `alias` y `espectadorParam` los escribe el código, no el usuario.
@@ -40,13 +35,13 @@ export function visibleReviewsFilter({
 }): string {
   return `(${alias}.usuario_id = ${espectadorParam}
     OR (${alias}.visible
-        AND ${autorActivoSql(alias)}
+
         AND (${alias}.visibilidad = 'publica' OR ${sonAmigosSql(`${alias}.usuario_id`, espectadorParam)})))`;
 }
 
 // Promedio y conteo públicos (RN4): cuentan todas las reseñas no ocultas, de forma anónima.
 export function filtroPromedioPublico(alias: string): string {
-  return `(${alias}.visible AND ${autorActivoSql(alias)})`;
+  return `(${alias}.visible)`;
 }
 
 // Promedio de amigos (RN5): reseñas no ocultas cuyos autores son amigos del espectador.
@@ -57,12 +52,12 @@ export function filtroPromedioAmigos({
   alias: string;
   espectadorParam: string;
 }): string {
-  return `(${alias}.visible AND ${autorActivoSql(alias)} AND ${sonAmigosSql(`${alias}.usuario_id`, espectadorParam)})`;
+  return `(${alias}.visible AND ${sonAmigosSql(`${alias}.usuario_id`, espectadorParam)})`;
 }
 
 // Etiquetas de la comunidad (RN7): solo reseñas públicas y no ocultas.
 export function filtroEtiquetasComunidad(alias: string): string {
-  return `(${alias}.visible AND ${alias}.visibilidad = 'publica' AND ${autorActivoSql(alias)})`;
+  return `(${alias}.visible AND ${alias}.visibilidad = 'publica')`;
 }
 
 // Misma regla que visibleReviewsFilter, en memoria. `sonAmigos` se calcula fuera (según la amistad vigente).
@@ -72,6 +67,6 @@ export function canViewerSee(
   sonAmigos: boolean,
 ): boolean {
   if (resena.usuarioId === espectadorId) return true;
-  if (!resena.visible || !resena.autorActivo) return false;
+  if (!resena.visible) return false;
   return resena.visibilidad === "publica" || sonAmigos;
 }

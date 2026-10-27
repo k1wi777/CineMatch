@@ -46,6 +46,8 @@ import { crearServicioAcciones } from "./modules/recomendaciones/recomendaciones
 import { crearCompletarRecomendaciones } from "./modules/recomendaciones/recomendaciones.completar.js";
 import { createComunidadRouter } from "./modules/comunidad/comunidad.routes.js";
 import { createAdministracionRouter } from "./modules/administracion/administracion.routes.js";
+import { createCuentaRouter } from "./modules/usuarios/cuenta.routes.js";
+import { crearServicioCuenta } from "./modules/usuarios/cuenta.servicio.js";
 import {
   crearServicioModeracion,
   crearSincronizacionAdmin,
@@ -217,6 +219,16 @@ export function createApp({
       servicioAuth,
     ),
   );
+  // Derechos de datos y eliminación de cuenta (BE-13.1).
+  app.use(
+    "/api",
+    createCuentaRouter(
+      crearServicioCuenta({ pool, hub: notificaciones, directorioAvatares, logger }),
+      servicioAuth,
+      { produccion },
+    ),
+  );
+
   const creacionRecomendaciones = crearServicioCreacion({ emisor: notificaciones });
   app.use(
     "/api",

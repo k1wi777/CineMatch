@@ -13,7 +13,9 @@
     "seed:demo": "tsx --env-file-if-exists=.env seeds/index.ts --demo",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "seed:catalog": "tsx --env-file-if-exists=.env seeds/catalogo.ts"
+    "seed:catalog": "tsx --env-file-if-exists=.env seeds/catalogo.ts",
+    "backup": "node scripts/backup.mjs",
+    "carga": "tsx --env-file-if-exists=.env scripts/carga.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
