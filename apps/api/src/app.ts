@@ -22,6 +22,8 @@ import { createInteresesRouter } from "./modules/usuarios/intereses.routes.js";
 import { crearServicioIntereses } from "./modules/usuarios/intereses.service.js";
 import { createPerfilRouter } from "./modules/usuarios/perfil.routes.js";
 import { crearServicioPerfil } from "./modules/usuarios/perfil.service.js";
+import { createNotificacionesRouter } from "./modules/notificaciones/notificaciones.routes.js";
+import { crearServicioConsulta } from "./modules/notificaciones/notificaciones.consulta.js";
 import { createAvatarRouter } from "./modules/usuarios/avatar.routes.js";
 import { crearServicioAvatar, RUTA_PUBLICA_AVATARES } from "./modules/usuarios/avatar.service.js";
 
@@ -102,6 +104,8 @@ export function createApp({
       servicioAuth,
     ),
   );
+
+  app.use("/api", createNotificacionesRouter(crearServicioConsulta(pool), servicioAuth));
 
   // Avatares: archivos con nombre generado por el servidor, siempre con nosniff y caché larga
   // (el nombre cambia en cada subida, así que una versión vieja nunca se confunde con la nueva).
