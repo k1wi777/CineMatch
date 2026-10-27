@@ -23,6 +23,7 @@ import { crearServicioIntereses } from "./modules/usuarios/intereses.service.js"
 import { createPerfilRouter } from "./modules/usuarios/perfil.routes.js";
 import { crearServicioPerfil } from "./modules/usuarios/perfil.service.js";
 import { hashToken } from "./lib/session-token.js";
+import { EventBus } from "./lib/events.js";
 import {
   crearHubNotificaciones,
   createStreamNotificacionesRouter,
@@ -34,6 +35,9 @@ import { createAmistadesRouter } from "./modules/amistades/amistades.routes.js";
 import { crearServicioAmistades } from "./modules/amistades/amistades.servicio.js";
 import { createAmistadesConsultaRouter } from "./modules/amistades/amistades.consulta.routes.js";
 import { createBibliotecaRouter } from "./modules/biblioteca/biblioteca.routes.js";
+import { crearServicioEstadoInterno } from "./modules/biblioteca/biblioteca.estado.js";
+import { createResenasRouter } from "./modules/resenas/resenas.routes.js";
+import { crearServicioResenas } from "./modules/resenas/resenas.servicio.js";
 import { crearServicioBiblioteca } from "./modules/biblioteca/biblioteca.servicio.js";
 import { createBibliotecaPrivacidadRouter } from "./modules/biblioteca/biblioteca.privacidad.routes.js";
 import { crearServicioConsultaAmistades } from "./modules/amistades/amistades.consulta.js";
@@ -64,6 +68,8 @@ export type AppDeps = {
   reloj?: () => Date;
   // Carpeta donde se guardan los avatares. Las pruebas usan una temporal.
   directorioAvatares?: string;
+  // Bus de eventos de dominio. server.ts lo pasa con sus listeners; las pruebas pueden usar el suyo.
+  eventos?: EventBus;
   // Hub de conexiones SSE. Las pruebas lo pasan para emitir eventos y observarlos.
   notificaciones?: HubNotificaciones;
   intervalosStream?: Partial<IntervalosStream>;
@@ -83,6 +89,7 @@ export function createApp({
   directorioAvatares = DIRECTORIO_AVATARES_POR_DEFECTO,
   notificaciones = crearHubNotificaciones(),
   intervalosStream,
+  eventos = new EventBus(logger),
 }: AppDeps) {
   const app = express();
   app.disable("x-powered-by");
@@ -144,6 +151,17 @@ export function createApp({
       amigos: crearServicioConsultaAmistades(pool),
       servicioAuth,
     }),
+  );
+  app.use(
+    "/api",
+    createResenasRouter(
+      crearServicioResenas({
+        pool,
+        eventos,
+        estado: crearServicioEstadoInterno(pool),
+      }),
+      servicioAuth,
+    ),
   );
   app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
   app.use("/api", createPerfilRouter(crearServicioPerfil(pool), servicioAuth));
