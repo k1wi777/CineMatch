@@ -49,6 +49,7 @@ type OpcionesDePrueba = {
   reloj?: () => Date;
   reglas?: ReglasDeNegocio;
   correo?: ServicioCorreo;
+  directorioAvatares?: string;
 };
 
 // Aplicación Express real, sin abrir puerto: Supertest la monta directamente.
@@ -67,5 +68,6 @@ export function buildTestApp(
     produccion: opciones.produccion ?? false,
     reloj: opciones.reloj,
     correo: opciones.correo ?? correoDePrueba(),
+    directorioAvatares: opciones.directorioAvatares,
   });
 }

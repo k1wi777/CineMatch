@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import helmet from "helmet";
+import { fileURLToPath } from "node:url";
 import type pg from "pg";
 import type { Logger } from "pino";
 import type { ReglasDeNegocio } from "./config/business-rules.js";
@@ -21,6 +22,13 @@ import { createInteresesRouter } from "./modules/usuarios/intereses.routes.js";
 import { crearServicioIntereses } from "./modules/usuarios/intereses.service.js";
 import { createPerfilRouter } from "./modules/usuarios/perfil.routes.js";
 import { crearServicioPerfil } from "./modules/usuarios/perfil.service.js";
+import { createAvatarRouter } from "./modules/usuarios/avatar.routes.js";
+import { crearServicioAvatar, RUTA_PUBLICA_AVATARES } from "./modules/usuarios/avatar.service.js";
+
+// Carpeta de avatares por defecto: apps/api/uploads/avatars (ignorada por git).
+const DIRECTORIO_AVATARES_POR_DEFECTO = fileURLToPath(
+  new URL("../uploads/avatars", import.meta.url),
+);
 
 export type AppDeps = {
   pool: pg.Pool;
@@ -34,6 +42,8 @@ export type AppDeps = {
   correo: ServicioCorreo;
   // Reloj inyectable: las pruebas lo usan para simular el paso del tiempo (bloqueos, expiración de sesiones).
   reloj?: () => Date;
+  // Carpeta donde se guardan los avatares. Las pruebas usan una temporal.
+  directorioAvatares?: string;
 };
 
 // Composición de Express sin abrir puertos: server.ts es quien arranca el proceso.
@@ -47,6 +57,7 @@ export function createApp({
   produccion,
   reloj = () => new Date(),
   correo,
+  directorioAvatares = DIRECTORIO_AVATARES_POR_DEFECTO,
 }: AppDeps) {
   const app = express();
   app.disable("x-powered-by");
@@ -84,6 +95,27 @@ export function createApp({
   app.use("/api", createGenerosRouter(pool));
   app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
   app.use("/api", createPerfilRouter(crearServicioPerfil(pool), servicioAuth));
+  app.use(
+    "/api",
+    createAvatarRouter(
+      crearServicioAvatar({ pool, directorio: directorioAvatares, logger }),
+      servicioAuth,
+    ),
+  );
+
+  // Avatares: archivos con nombre generado por el servidor, siempre con nosniff y caché larga
+  // (el nombre cambia en cada subida, así que una versión vieja nunca se confunde con la nueva).
+  app.use(
+    RUTA_PUBLICA_AVATARES,
+    express.static(directorioAvatares, {
+      index: false,
+      maxAge: "1y",
+      immutable: true,
+      setHeaders: (res) => {
+        res.setHeader("X-Content-Type-Options", "nosniff");
+      },
+    }),
+  );
   if (documentacion) {
     app.use("/api", createDocsRouter());
   }
