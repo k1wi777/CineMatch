@@ -21,10 +21,14 @@ export function createTestPool(): pg.Pool {
   return new pg.Pool({ connectionString: getTestDatabaseUrl(), connectionTimeoutMillis: 3_000 });
 }
 
+// Tabla que registra las migraciones aplicadas: nunca se vacía, o el siguiente `migrate:up` la reintentaría.
+const MIGRATIONS_TABLE = "pgmigrations";
+
 // Vacía todas las tablas de public antes de cada prueba. No altera el esquema.
 export async function resetDatabase(pool: pg.Pool): Promise<void> {
   const { rows } = await pool.query<{ tablename: string }>(
-    "SELECT tablename FROM pg_tables WHERE schemaname = 'public'",
+    "SELECT tablename FROM pg_tables WHERE schemaname = 'public' AND tablename <> $1",
+    [MIGRATIONS_TABLE],
   );
   if (rows.length === 0) return;
   const tables = rows.map((row) => `"${row.tablename}"`).join(", ");
