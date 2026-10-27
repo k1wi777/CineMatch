@@ -12,6 +12,10 @@ const envBase = z.object({
   WEB_URL: z.url().default("http://localhost:3000"),
   // Confiar en el proxy que reenvía la IP del cliente (necesario detrás de un balanceador).
   TRUST_PROXY: z.stringbool().default(false),
+  // Correo saliente: Mailpit en desarrollo (SMTP 1025).
+  SMTP_HOST: z.string().min(1).default("localhost"),
+  SMTP_PORT: z.coerce.number().int().positive().default(1025),
+  SMTP_FROM: z.string().min(1).default("CineMatch <no-reply@cinematch.local>"),
 });
 
 const envSchema = envBase.extend(REGLAS_DE_NEGOCIO_SCHEMA.shape).superRefine((env, ctx) => {

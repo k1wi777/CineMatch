@@ -2,6 +2,7 @@ import { createApp } from "./app.js";
 import { loadEnv, type Env } from "./config/env.js";
 import { opcionesDeSeguridad } from "./config/security.js";
 import { reglasDeNegocio } from "./config/business-rules.js";
+import { crearCorreoSmtp } from "./lib/correo.js";
 import { iniciarLimpieza } from "./jobs/limpieza-sesiones.js";
 import { EventBus } from "./lib/events.js";
 import { registrarListenersDeModulos } from "./modules/registro-eventos.js";
@@ -48,6 +49,7 @@ const app = createApp({
   documentacion: env.NODE_ENV !== "production",
   reglas: reglasDeNegocio(env),
   produccion: env.NODE_ENV === "production",
+  correo: crearCorreoSmtp({ host: env.SMTP_HOST, port: env.SMTP_PORT, from: env.SMTP_FROM }),
 });
 const server = app.listen(env.API_PORT, () => {
   logger.info({ port: env.API_PORT, env: env.NODE_ENV }, "API escuchando");
