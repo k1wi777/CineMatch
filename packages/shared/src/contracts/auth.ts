@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { GenerosInteresSchema } from "./generos.js";
+import { UsernameSchema } from "./perfil.js";
 
 // Política de contraseñas (sección 2): mínimo 8 caracteres, al menos una letra y un número.
 export const PasswordSchema = z
@@ -30,7 +31,7 @@ export type UsuarioSesion = z.infer<typeof UsuarioSesionSchema>;
 // Registro de cuenta (BE-3.1). Crea el usuario y sus intereses; no inicia sesión.
 export const RegistroSchema = z.object({
   nombre: z.string().trim().min(1).max(100),
-  username: z.string().regex(/^[A-Za-z0-9_]{3,20}$/, "Usa de 3 a 20 letras, números o guion bajo."),
+  username: UsernameSchema,
   correo: z.email().max(255),
   contrasena: PasswordSchema,
   aceptaDatos: z.literal(true, { message: "Debes aceptar el tratamiento de tus datos." }),
@@ -60,3 +61,11 @@ export const RestablecerContrasenaSchema = z.object({
 });
 
 export type RestablecerContrasena = z.infer<typeof RestablecerContrasenaSchema>;
+
+// Cambio de contraseña desde el perfil (BE-4.2): exige la actual y cumple la política con la nueva.
+export const CambiarContrasenaSchema = z.object({
+  contrasenaActual: z.string().min(1).max(256),
+  contrasenaNueva: PasswordSchema,
+});
+
+export type CambiarContrasena = z.infer<typeof CambiarContrasenaSchema>;

@@ -19,6 +19,8 @@ import { createGenerosRouter } from "./modules/generos/generos.routes.js";
 import { createHealthRouter } from "./modules/health/health.routes.js";
 import { createInteresesRouter } from "./modules/usuarios/intereses.routes.js";
 import { crearServicioIntereses } from "./modules/usuarios/intereses.service.js";
+import { createPerfilRouter } from "./modules/usuarios/perfil.routes.js";
+import { crearServicioPerfil } from "./modules/usuarios/perfil.service.js";
 
 export type AppDeps = {
   pool: pg.Pool;
@@ -81,6 +83,7 @@ export function createApp({
   );
   app.use("/api", createGenerosRouter(pool));
   app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
+  app.use("/api", createPerfilRouter(crearServicioPerfil(pool), servicioAuth));
   if (documentacion) {
     app.use("/api", createDocsRouter());
   }
