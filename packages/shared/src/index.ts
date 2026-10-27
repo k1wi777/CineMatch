@@ -1,2 +1,7 @@
-// Placeholder hasta BE-0.4 (contratos compartidos).
-export {};
+// API pública del paquete. Solo lo exportado aquí forma parte del contrato.
+export * from "./contracts/errors.js";
+export * from "./contracts/health.js";
+export * from "./domain/library.js";
+export * from "./domain/notification.js";
+export * from "./domain/recommendation.js";
+export * from "./domain/review-visibility.js";
