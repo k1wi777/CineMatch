@@ -330,7 +330,7 @@ describe("lecturas de reseñas: agregados, listados y reseñas de usuario (BE-9.
       });
     });
 
-    it("si el autor se elimina, nadie salvo él ve sus reseñas", async () => {
+    it("si el autor se elimina, sus reseñas siguen visibles con el autor anonimizado (BE-13.1)", async () => {
       const titulo = await crearContenido(pool, "pelicula", "usuario-borrado");
       const autor = await crearUsuarioConContrasena(
         pool,
@@ -352,7 +352,7 @@ describe("lecturas de reseñas: agregados, listados y reseñas de usuario (BE-9.
         .get(`/api/users/${autor}/reviews`)
         .set("Cookie", await sesionDe(a, "resenas.lector@cinematch.test"));
 
-      expect(lector.body.total).toBe(0);
+      expect(lector.body.total).toBe(1);
     });
   });
 });

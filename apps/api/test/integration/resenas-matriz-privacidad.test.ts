@@ -219,7 +219,7 @@ describe("matriz de privacidad de reseñas y perfil (BE-9.8 y BE-9.9)", () => {
     expect(comentarios(perfil.body.resenas.items)).toEqual(["pública"]);
   });
 
-  it("un autor eliminado: su perfil devuelve 404 y nadie más ve sus reseñas", async () => {
+  it("un autor eliminado: su perfil devuelve 404, pero sus reseñas siguen en el listado y los agregados (BE-13.1)", async () => {
     const e = await escenario();
     await pool.query("UPDATE usuario SET eliminado_en = now() WHERE id = $1", [e.autor]);
 
@@ -234,8 +234,8 @@ describe("matriz de privacidad de reseñas y perfil (BE-9.8 y BE-9.9)", () => {
       .set("Cookie", e.cookieExtrano);
 
     expect(perfil.status).toBe(404);
-    expect(listado.body.items).toHaveLength(0);
-    expect(stats.body.conteoPublico).toBe(0);
+    expect(listado.body.items).toHaveLength(1);
+    expect(stats.body.conteoPublico).toBe(1);
   });
 
   it("el perfil de un usuario inexistente devuelve 404", async () => {

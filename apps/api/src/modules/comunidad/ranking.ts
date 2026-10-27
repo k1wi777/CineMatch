@@ -84,7 +84,7 @@ export function crearRankingComunidad(minimoCalificaciones: number): EstrategiaR
                 avg(r.calificacion) AS promedio, count(r.id) AS calificaciones
            FROM contenido c
            JOIN resena r ON r.contenido_id = c.id AND r.visible
-          WHERE EXISTS (SELECT 1 FROM usuario u WHERE u.id = r.usuario_id AND u.eliminado_en IS NULL)
+          WHERE TRUE
             ${filtroGenero}
           GROUP BY c.id
          HAVING count(r.id) >= $1

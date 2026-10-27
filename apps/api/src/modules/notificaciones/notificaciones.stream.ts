@@ -49,6 +49,7 @@ export type HubNotificaciones = EmisorNotificaciones & {
   registrar(conexion: ConexionStream): boolean;
   quitar(conexion: ConexionStream): void;
   cerrarSesion(sesionId: string): void;
+  cerrarUsuario(usuarioId: number): void;
 };
 
 function escribirNotificacion(res: Response, notificacion: Notificacion): void {
@@ -99,6 +100,13 @@ export function crearHubNotificaciones(): HubNotificaciones {
         for (const conexion of [...conexiones]) {
           if (conexion.sesionId === sesionId) conexion.cerrar();
         }
+      }
+    },
+
+    // Llamado al eliminar la cuenta (BE-13.1): corta todos los streams de ese usuario.
+    cerrarUsuario(usuarioId) {
+      for (const conexion of [...(porUsuario.get(usuarioId) ?? [])]) {
+        conexion.cerrar();
       }
     },
   };

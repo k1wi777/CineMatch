@@ -21,3 +21,5 @@ coverage/
 test-results/
 playwright-report/
 *.log
+# Copias de seguridad locales (pnpm backup)
+backups/

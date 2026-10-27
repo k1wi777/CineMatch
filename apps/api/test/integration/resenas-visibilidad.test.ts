@@ -65,20 +65,13 @@ describe("regla de visibilidad de reseñas (BE-9.4)", () => {
       usuario_id: number;
       visible: boolean;
       visibilidad: "publica" | "amigos";
-      autor_activo: boolean;
-    }>(
-      `SELECT r.usuario_id, r.visible, r.visibilidad,
-              EXISTS (SELECT 1 FROM usuario au WHERE au.id = r.usuario_id AND au.eliminado_en IS NULL) AS autor_activo
-         FROM resena r WHERE r.id = $1`,
-      [resenaId],
-    );
+    }>(`SELECT r.usuario_id, r.visible, r.visibilidad FROM resena r WHERE r.id = $1`, [resenaId]);
     const fila = rows[0];
     if (!fila) throw new Error("reseña inexistente en la prueba");
     const resena: ResenaVisible = {
       usuarioId: fila.usuario_id,
       visible: fila.visible,
       visibilidad: fila.visibilidad,
-      autorActivo: fila.autor_activo,
     };
     const sonAmigos = await pool.query(
       `SELECT 1 FROM amistad a WHERE a.estado = 'aceptada'
@@ -184,14 +177,13 @@ describe("regla de visibilidad de reseñas (BE-9.4)", () => {
       expect(await veMemoria(e.publica, e.extrano)).toBe(false);
     });
 
-    it("las reseñas de un usuario eliminado no las ve nadie salvo él", async () => {
+    it("las reseñas de un usuario eliminado siguen visibles para todos (BE-13.1)", async () => {
       const e = await escenario();
       await pool.query("UPDATE usuario SET eliminado_en = now() WHERE id = $1", [e.autor]);
 
-      expect(await veSql(e.publica, e.amigo)).toBe(false);
-      expect(await veSql(e.publica, e.extrano)).toBe(false);
-      expect(await veSql(e.publica, e.autor)).toBe(true);
-      expect(await veMemoria(e.publica, e.amigo)).toBe(false);
+      expect(await veSql(e.publica, e.amigo)).toBe(true);
+      expect(await veSql(e.publica, e.extrano)).toBe(true);
+      expect(await veMemoria(e.publica, e.extrano)).toBe(true);
     });
   });
 });

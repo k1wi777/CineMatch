@@ -21,10 +21,13 @@
     "seed:demo": "pnpm --filter @cinematch/api run seed:demo",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "seed:catalog": "pnpm --filter @cinematch/api run seed:catalog"
+    "seed:catalog": "pnpm --filter @cinematch/api run seed:catalog",
+    "backup": "pnpm --filter @cinematch/api run backup",
+    "carga": "pnpm --filter @cinematch/api run carga"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "autocannon": "^8.0.0",
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.9.10",

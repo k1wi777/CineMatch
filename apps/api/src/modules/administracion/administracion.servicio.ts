@@ -81,14 +81,8 @@ export function crearSincronizacionAdmin({
         descartados: resultado.descartados,
         generosAgregados: resultado.generosAgregados,
       };
-      estado = {
-        estado: resultado.estado === "ok" ? "ok" : "error",
-        iniciadaEn: estado.iniciadaEn,
-        terminadaEn: new Date().toISOString(),
-        ultimoResumen: resumen,
-        error: resultado.error ?? null,
-      };
-      // El catálogo cambió: el pool de recomendaciones generales se recalcula ya.
+      const final = resultado.estado === "ok" ? "ok" : "error";
+      // El catálogo cambió: el pool de recomendaciones generales se recalcula antes de marcar la ejecución como terminada.
       await cache.recalcular();
       await withTransaction(pool, (tx) =>
         registrarAuditoria(tx, {
@@ -96,9 +90,17 @@ export function crearSincronizacionAdmin({
           accion: "sincronizar_catalogo",
           entidad: "catalogo",
           entidadId: null,
-          detalle: { ...resumen, estado: estado.estado },
+          detalle: { ...resumen, estado: final },
         }),
       );
+      // Solo ahora el estado deja de ser "en_curso": quien consulta ve también el trabajo posterior terminado.
+      estado = {
+        estado: final,
+        iniciadaEn: estado.iniciadaEn,
+        terminadaEn: new Date().toISOString(),
+        ultimoResumen: resumen,
+        error: resultado.error ?? null,
+      };
     } catch (err: unknown) {
       logger.error({ err }, "La sincronización manual del catálogo falló");
       estado = {
