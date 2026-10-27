@@ -2,6 +2,7 @@ import { createApp } from "./app.js";
 import { loadEnv, type Env } from "./config/env.js";
 import { opcionesDeSeguridad } from "./config/security.js";
 import { reglasDeNegocio } from "./config/business-rules.js";
+import { iniciarLimpieza } from "./jobs/limpieza-sesiones.js";
 import { EventBus } from "./lib/events.js";
 import { registrarListenersDeModulos } from "./modules/registro-eventos.js";
 import { createPool } from "./lib/db.js";
@@ -37,6 +38,9 @@ if (env.MIGRATE_ON_START) {
 const eventos = new EventBus(logger);
 registrarListenersDeModulos(eventos);
 
+// Limpieza de sesiones y tokens vencidos (BE-3.6): corre al arrancar y cada hora.
+const detenerLimpieza = iniciarLimpieza(pool, logger);
+
 const app = createApp({
   pool,
   logger,
@@ -55,6 +59,7 @@ async function shutdown(signal: NodeJS.Signals): Promise<void> {
   if (shuttingDown) return;
   shuttingDown = true;
   logger.info({ signal }, "Apagando la API");
+  detenerLimpieza();
 
   const forceExit = setTimeout(() => {
     logger.error("Apagado forzado: se superó el tiempo máximo");
