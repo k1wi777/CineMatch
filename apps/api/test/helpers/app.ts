@@ -5,6 +5,7 @@ import type { ReglasDeNegocio } from "../../src/config/business-rules.js";
 import type { OpcionesDeSeguridad } from "../../src/config/security.js";
 import type { ServicioCorreo } from "../../src/lib/correo.js";
 import type { EventBus } from "../../src/lib/events.js";
+import type { MovieProvider } from "../../src/modules/catalogo/proveedor/movie-provider.js";
 import type {
   HubNotificaciones,
   IntervalosStream,
@@ -58,6 +59,8 @@ type OpcionesDePrueba = {
   notificaciones?: HubNotificaciones;
   intervalosStream?: Partial<IntervalosStream>;
   eventos?: EventBus;
+  proveedorCatalogo?: MovieProvider;
+  cantidadSincronizacion?: number;
 };
 
 // Aplicación Express real, sin abrir puerto: Supertest la monta directamente.
@@ -80,5 +83,7 @@ export function buildTestApp(
     notificaciones: opciones.notificaciones,
     intervalosStream: opciones.intervalosStream,
     eventos: opciones.eventos,
+    proveedorCatalogo: opciones.proveedorCatalogo,
+    cantidadSincronizacion: opciones.cantidadSincronizacion,
   });
 }
