@@ -9,6 +9,8 @@
     "migrate:up": "node --env-file-if-exists=.env node_modules/node-pg-migrate/bin/node-pg-migrate.js up",
     "migrate:down": "node --env-file-if-exists=.env node_modules/node-pg-migrate/bin/node-pg-migrate.js down",
     "migrate:create": "node --env-file-if-exists=.env node_modules/node-pg-migrate/bin/node-pg-migrate.js create --migration-file-language sql",
+    "seed": "tsx --env-file-if-exists=.env seeds/index.ts",
+    "seed:demo": "tsx --env-file-if-exists=.env seeds/index.ts --demo",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
@@ -23,6 +25,7 @@
   },
   "dependencies": {
     "@cinematch/shared": "workspace:*",
+    "argon2": "^0.45.1",
     "express": "^5.3.0",
     "node-pg-migrate": "^9.0.0",
     "pg": "^8.23.1",
