@@ -30,6 +30,9 @@ import {
   type HubNotificaciones,
   type IntervalosStream,
 } from "./modules/notificaciones/notificaciones.stream.js";
+import { createAmistadesRouter } from "./modules/amistades/amistades.routes.js";
+import { crearServicioAmistades } from "./modules/amistades/amistades.servicio.js";
+import { crearServicioCreacion } from "./modules/notificaciones/notificaciones.creacion.js";
 import { createCatalogoRouter } from "./modules/catalogo/catalogo.routes.js";
 import { crearServicioCatalogo } from "./modules/catalogo/catalogo.consulta.js";
 import { createNotificacionesRouter } from "./modules/notificaciones/notificaciones.routes.js";
@@ -112,6 +115,17 @@ export function createApp({
   );
   app.use("/api", createGenerosRouter(pool));
   app.use("/api", createCatalogoRouter(crearServicioCatalogo(pool), servicioAuth));
+  // Las notificaciones de amistad usan el mismo hub SSE que el stream, así llegan en vivo.
+  app.use(
+    "/api",
+    createAmistadesRouter(
+      crearServicioAmistades({
+        pool,
+        creacion: crearServicioCreacion({ emisor: notificaciones }),
+      }),
+      servicioAuth,
+    ),
+  );
   app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
   app.use("/api", createPerfilRouter(crearServicioPerfil(pool), servicioAuth));
   app.use(
