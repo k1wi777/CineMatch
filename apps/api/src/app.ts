@@ -35,6 +35,7 @@ import { crearServicioAmistades } from "./modules/amistades/amistades.servicio.j
 import { createAmistadesConsultaRouter } from "./modules/amistades/amistades.consulta.routes.js";
 import { createBibliotecaRouter } from "./modules/biblioteca/biblioteca.routes.js";
 import { crearServicioBiblioteca } from "./modules/biblioteca/biblioteca.servicio.js";
+import { createBibliotecaPrivacidadRouter } from "./modules/biblioteca/biblioteca.privacidad.routes.js";
 import { crearServicioConsultaAmistades } from "./modules/amistades/amistades.consulta.js";
 import { crearServicioCreacion } from "./modules/notificaciones/notificaciones.creacion.js";
 import { createCatalogoRouter } from "./modules/catalogo/catalogo.routes.js";
@@ -135,6 +136,15 @@ export function createApp({
     createAmistadesConsultaRouter(crearServicioConsultaAmistades(pool), servicioAuth),
   );
   app.use("/api", createBibliotecaRouter(crearServicioBiblioteca(pool), servicioAuth));
+  app.use(
+    "/api",
+    createBibliotecaPrivacidadRouter({
+      pool,
+      servicio: crearServicioBiblioteca(pool),
+      amigos: crearServicioConsultaAmistades(pool),
+      servicioAuth,
+    }),
+  );
   app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
   app.use("/api", createPerfilRouter(crearServicioPerfil(pool), servicioAuth));
   app.use(
