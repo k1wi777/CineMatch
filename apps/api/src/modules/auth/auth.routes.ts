@@ -1,10 +1,18 @@
-import { LoginSchema, UsuarioSesionSchema, type LoginRequest } from "@cinematch/shared";
+import {
+  LoginSchema,
+  RegistroRespuestaSchema,
+  RegistroSchema,
+  UsuarioSesionSchema,
+  type LoginRequest,
+  type Registro,
+} from "@cinematch/shared";
 import { Router, type CookieOptions } from "express";
 import { leerCookie } from "../../lib/cookies.js";
 import { UnauthorizedError } from "../../lib/errors.js";
 import { registroOpenApi } from "../../lib/openapi.js";
 import { validate } from "../../middleware/validate.js";
 import type { ServicioAuth } from "./auth.service.js";
+import type { ServicioRegistro } from "./auth.registro.js";
 
 export const NOMBRE_COOKIE_SESION = "cm_session";
 
@@ -16,12 +24,23 @@ function opcionesCookie(produccion: boolean): CookieOptions {
 
 export function createAuthRouter(
   servicio: ServicioAuth,
-  opciones: { produccion: boolean },
+  opciones: { produccion: boolean; registro: ServicioRegistro },
 ): Router {
   const router = Router();
 
   registroOpenApi.registrarEsquema("UsuarioSesion", UsuarioSesionSchema);
   registroOpenApi.registrarEsquema("LoginRequest", LoginSchema);
+  registroOpenApi.registrarEsquema("RegistroRespuesta", RegistroRespuestaSchema);
+  registroOpenApi.registrar({
+    metodo: "post",
+    ruta: "/api/auth/register",
+    resumen: "Crear una cuenta (no inicia sesión)",
+    respuestas: {
+      201: { descripcion: "Cuenta creada.", esquema: "RegistroRespuesta" },
+      409: { descripcion: "El correo o el username ya están en uso.", esquema: "ErrorResponse" },
+      422: { descripcion: "Algún dato no es válido.", esquema: "ErrorResponse" },
+    },
+  });
   registroOpenApi.registrar({
     metodo: "post",
     ruta: "/api/auth/login",
@@ -59,6 +78,13 @@ export function createAuthRouter(
     });
     res.cookie(NOMBRE_COOKIE_SESION, token, opcionesCookie(opciones.produccion));
     res.json(UsuarioSesionSchema.parse(usuario));
+  });
+
+  router.post("/auth/register", validate({ body: RegistroSchema }), async (_req, res) => {
+    const datos = res.locals.input.body as Registro;
+    const creado = await opciones.registro.registrar(datos);
+    // No hay cookie: el registro no inicia sesión (BE-3.1).
+    res.status(201).json(RegistroRespuestaSchema.parse(creado));
   });
 
   router.post("/auth/logout", async (req, res) => {

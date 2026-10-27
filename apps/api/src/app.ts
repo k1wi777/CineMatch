@@ -10,6 +10,7 @@ import { createErrorHandler } from "./middleware/error-handler.js";
 import { notFound } from "./middleware/not-found.js";
 import { limitadorDeTasa } from "./middleware/rate-limit.js";
 import { createAuthRouter } from "./modules/auth/auth.routes.js";
+import { crearServicioRegistro } from "./modules/auth/auth.registro.js";
 import { crearServicioAuth } from "./modules/auth/auth.service.js";
 import { createDocsRouter } from "./modules/docs/docs.routes.js";
 import { createHealthRouter } from "./modules/health/health.routes.js";
@@ -53,7 +54,8 @@ export function createApp({
   // Las rutas se montan antes que la documentación, que las recoge del registro OpenAPI.
   app.use("/api", createHealthRouter(pool));
   const servicioAuth = crearServicioAuth({ pool, reglas, reloj });
-  app.use("/api", createAuthRouter(servicioAuth, { produccion }));
+  const servicioRegistro = crearServicioRegistro({ pool, reloj });
+  app.use("/api", createAuthRouter(servicioAuth, { produccion, registro: servicioRegistro }));
   if (documentacion) {
     app.use("/api", createDocsRouter());
   }

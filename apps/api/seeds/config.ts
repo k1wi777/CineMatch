@@ -1,3 +1,5 @@
+import { PasswordSchema } from "@cinematch/shared";
+
 export type AdminSeed = {
   correo: string;
   username: string;
@@ -21,5 +23,13 @@ export function readAdminSeed(env: NodeJS.ProcessEnv = process.env): AdminSeed |
   }
 
   const [correo, username, contrasena] = values as [string, string, string];
+
+  // El administrador sigue la misma política de contraseñas que cualquier usuario.
+  const politica = PasswordSchema.safeParse(contrasena);
+  if (!politica.success) {
+    throw new Error(
+      `ADMIN_PASSWORD no cumple la política de contraseñas: ${politica.error.issues[0]?.message ?? ""}`,
+    );
+  }
   return { correo, username, contrasena };
 }

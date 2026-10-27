@@ -20,7 +20,8 @@ export async function seedAdmin(db: pg.PoolClient, admin: AdminSeed | null): Pro
 
   const hash = await hashPassword(admin.contrasena);
   await db.query(
-    "INSERT INTO usuario (nombre, username, correo, contrasena, rol_id) VALUES ($1, $2, $3, $4, (SELECT id FROM rol WHERE nombre = 'administrador'))",
+    // El operador que crea el administrador acepta el tratamiento de datos al hacerlo.
+    "INSERT INTO usuario (nombre, username, correo, contrasena, rol_id, acepta_datos_en) VALUES ($1, $2, $3, $4, (SELECT id FROM rol WHERE nombre = 'administrador'), now())",
     [admin.username, admin.username, admin.correo, hash],
   );
   console.log(`Administrador ${admin.username} creado.`);
