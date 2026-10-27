@@ -108,7 +108,11 @@ export function crearServicioAuth({ pool, reglas, reloj }: DependenciasAuth) {
     },
 
     // Devuelve el usuario de una sesión vigente. Actualiza la actividad solo si pasó el intervalo configurado.
-    async resolverSesion(token: string): Promise<UsuarioSesion | undefined> {
+    // `tocar: false` valida la sesión sin registrar actividad (lo usa el canal SSE, BE-5.3).
+    async resolverSesion(
+      token: string,
+      { tocar = true }: { tocar?: boolean } = {},
+    ): Promise<UsuarioSesion | undefined> {
       const ahora = reloj();
       const sesion = await buscarSesion(pool, hashToken(token));
       if (!sesion || sesion.eliminadoEn || ahora.getTime() >= sesion.expiraEn.getTime()) {
@@ -116,7 +120,7 @@ export function crearServicioAuth({ pool, reglas, reloj }: DependenciasAuth) {
       }
 
       const desdeUltimaActividad = ahora.getTime() - sesion.ultimaActividad.getTime();
-      if (desdeUltimaActividad > reglas.SESSION_TOUCH_SECONDS * 1_000) {
+      if (tocar && desdeUltimaActividad > reglas.SESSION_TOUCH_SECONDS * 1_000) {
         await actualizarActividadSesion(
           pool,
           sesion.id,
