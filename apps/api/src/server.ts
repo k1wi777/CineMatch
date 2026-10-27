@@ -1,6 +1,8 @@
 import { createApp } from "./app.js";
 import { loadEnv, type Env } from "./config/env.js";
 import { opcionesDeSeguridad } from "./config/security.js";
+import { EventBus } from "./lib/events.js";
+import { registrarListenersDeModulos } from "./modules/registro-eventos.js";
 import { createPool } from "./lib/db.js";
 import { createLogger } from "./lib/logger.js";
 import { migrateUp } from "./lib/migrations.js";
@@ -29,6 +31,10 @@ if (env.MIGRATE_ON_START) {
     process.exit(1);
   }
 }
+
+// Los listeners de cada módulo se registran una sola vez, antes de aceptar peticiones.
+const eventos = new EventBus(logger);
+registrarListenersDeModulos(eventos);
 
 const app = createApp({ pool, logger, seguridad: opcionesDeSeguridad(env) });
 const server = app.listen(env.API_PORT, () => {
