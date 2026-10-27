@@ -18,6 +18,8 @@ export type ContenidoExterno = {
 };
 
 export interface MovieProvider {
+  // Nombre de la fuente (columna `fuente`): junto a tipo e id externo identifica un título sin duplicarlo.
+  readonly fuente: string;
   // Nombres de géneros de películas y series, sin repetir.
   fetchGenres(): Promise<string[]>;
   // Títulos populares de un tipo, página a página (sin director ni duración: vienen en el detalle).

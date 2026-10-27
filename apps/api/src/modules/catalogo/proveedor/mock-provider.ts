@@ -12,6 +12,7 @@ export function crearMockProvider(fixtures: ContenidoExterno[] = FIXTURES_MOCK):
   });
 
   return {
+    fuente: "mock",
     async fetchGenres() {
       return [...new Set(fixtures.flatMap((contenido) => contenido.generos))];
     },

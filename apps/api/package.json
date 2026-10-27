@@ -12,7 +12,8 @@
     "seed": "tsx --env-file-if-exists=.env seeds/index.ts",
     "seed:demo": "tsx --env-file-if-exists=.env seeds/index.ts --demo",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "seed:catalog": "tsx --env-file-if-exists=.env seeds/catalogo.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
@@ -36,6 +37,7 @@
     "express-rate-limit": "^8.7.1",
     "helmet": "^8.3.0",
     "multer": "^2.5.0",
+    "node-cron": "^4.6.0",
     "node-pg-migrate": "^9.0.0",
     "nodemailer": "^10.2.1",
     "pg": "^8.23.1",
