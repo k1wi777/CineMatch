@@ -15,7 +15,10 @@ import { crearServicioRecuperacion } from "./modules/auth/auth.recuperacion.js";
 import { crearServicioRegistro } from "./modules/auth/auth.registro.js";
 import { crearServicioAuth } from "./modules/auth/auth.service.js";
 import { createDocsRouter } from "./modules/docs/docs.routes.js";
+import { createGenerosRouter } from "./modules/generos/generos.routes.js";
 import { createHealthRouter } from "./modules/health/health.routes.js";
+import { createInteresesRouter } from "./modules/usuarios/intereses.routes.js";
+import { crearServicioIntereses } from "./modules/usuarios/intereses.service.js";
 
 export type AppDeps = {
   pool: pg.Pool;
@@ -76,6 +79,8 @@ export function createApp({
       recuperacion: servicioRecuperacion,
     }),
   );
+  app.use("/api", createGenerosRouter(pool));
+  app.use("/api", createInteresesRouter(crearServicioIntereses(pool), servicioAuth));
   if (documentacion) {
     app.use("/api", createDocsRouter());
   }
