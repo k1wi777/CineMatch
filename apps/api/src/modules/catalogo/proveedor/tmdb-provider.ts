@@ -122,6 +122,7 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
   }
 
   return {
+    fuente: "tmdb",
     async fetchGenres() {
       const mapas = await cargarGeneros();
       const nombres = new Set<string>(mapas.peliculas.values());

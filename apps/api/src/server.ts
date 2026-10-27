@@ -10,6 +10,12 @@ import { createPool } from "./lib/db.js";
 import { createLogger } from "./lib/logger.js";
 import { migrateUp } from "./lib/migrations.js";
 import { closeSseConnections } from "./lib/sse.js";
+import { crearProveedorCatalogo } from "./modules/catalogo/proveedor/crear-proveedor.js";
+import { crearServicioSincronizacion } from "./modules/catalogo/sincronizacion.js";
+import {
+  CANTIDAD_POR_TIPO_POR_DEFECTO,
+  iniciarSincronizacionCatalogo,
+} from "./modules/catalogo/sincronizacion.job.js";
 
 const SHUTDOWN_TIMEOUT_MS = 10_000;
 
@@ -42,6 +48,19 @@ registrarListenersDeModulos(eventos);
 // Limpieza de sesiones y tokens vencidos (BE-3.6): corre al arrancar y cada hora.
 const detenerLimpieza = iniciarLimpieza(pool, logger);
 
+// Sincronización periódica del catálogo (BE-6.3): solo si CATALOGO_SYNC_HABILITADA=true.
+const sincronizacion = crearServicioSincronizacion({
+  pool,
+  proveedor: crearProveedorCatalogo(env.TMDB_API_KEY),
+  logger,
+});
+const detenerSincronizacion = iniciarSincronizacionCatalogo({
+  habilitada: env.CATALOGO_SYNC_HABILITADA,
+  expresion: env.CATALOGO_SYNC_CRON,
+  ejecutar: () => sincronizacion.sincronizar(CANTIDAD_POR_TIPO_POR_DEFECTO),
+  logger,
+});
+
 const app = createApp({
   pool,
   logger,
@@ -62,6 +81,7 @@ async function shutdown(signal: NodeJS.Signals): Promise<void> {
   shuttingDown = true;
   logger.info({ signal }, "Apagando la API");
   detenerLimpieza();
+  detenerSincronizacion();
 
   const forceExit = setTimeout(() => {
     logger.error("Apagado forzado: se superó el tiempo máximo");

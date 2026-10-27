@@ -20,7 +20,8 @@
     "seed": "pnpm --filter @cinematch/api run seed",
     "seed:demo": "pnpm --filter @cinematch/api run seed:demo",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "seed:catalog": "pnpm --filter @cinematch/api run seed:catalog"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

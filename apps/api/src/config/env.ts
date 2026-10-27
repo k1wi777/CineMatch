@@ -22,6 +22,9 @@ const envBase = z.object({
     .trim()
     .optional()
     .transform((valor) => (valor ? valor : undefined)),
+  // Sincronización periódica del catálogo (BE-6.3). Desactivada por defecto.
+  CATALOGO_SYNC_HABILITADA: z.stringbool().default(false),
+  CATALOGO_SYNC_CRON: z.string().trim().min(1).default("0 3 * * 0"),
 });
 
 const envSchema = envBase.extend(REGLAS_DE_NEGOCIO_SCHEMA.shape).superRefine((env, ctx) => {

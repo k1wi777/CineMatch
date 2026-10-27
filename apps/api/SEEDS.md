@@ -43,3 +43,15 @@ Si `demo_ana` ya existe, los datos de demostración no se vuelven a cargar.
 ## Idempotencia
 
 Ejecutar los seeds varias veces no duplica datos. Los roles y géneros usan `ON CONFLICT DO NOTHING`, y el administrador y los datos de demostración se omiten si ya existen.
+
+## Catálogo inicial (`pnpm seed:catalog`)
+
+Carga entre 500 y 1000 títulos populares (mitad películas, mitad series) con sus géneros.
+
+- Con `TMDB_API_KEY` definida usa TMDB; sin ella usa el proveedor de prueba, que no necesita red.
+- Es idempotente: repetirlo actualiza los títulos sin duplicarlos.
+- `--total=N` ajusta el total (entero entre 500 y 1000). Por defecto son 600.
+
+## Sincronización periódica
+
+Desactivada por defecto. Con `CATALOGO_SYNC_HABILITADA=true` se ejecuta según `CATALOGO_SYNC_CRON` (por defecto, cada domingo a las 03:00 UTC). Si el proveedor falla, la ejecución queda registrada como error y el catálogo existente se conserva.
