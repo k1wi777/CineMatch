@@ -40,6 +40,9 @@ import { createResenasRouter } from "./modules/resenas/resenas.routes.js";
 import { crearServicioResenas } from "./modules/resenas/resenas.servicio.js";
 import { createResenasConsultaRouter } from "./modules/resenas/resenas.consulta.routes.js";
 import { createRecomendacionesRouter } from "./modules/recomendaciones/recomendaciones.routes.js";
+import { createRecomendacionesEstadoRouter } from "./modules/recomendaciones/recomendaciones.estado.routes.js";
+import { crearServicioConsultaRecomendaciones } from "./modules/recomendaciones/recomendaciones.consulta.js";
+import { crearServicioAcciones } from "./modules/recomendaciones/recomendaciones.acciones.js";
 import { crearServicioRecomendaciones } from "./modules/recomendaciones/recomendaciones.servicio.js";
 import { createPerfilPublicoRouter } from "./modules/usuarios/perfil-publico.routes.js";
 import { crearServicioConsultaResenas } from "./modules/resenas/resenas.consulta.js";
@@ -180,6 +183,19 @@ export function createApp({
         eventos,
         creacion: crearServicioCreacion({ emisor: notificaciones }),
         amigos: crearServicioConsultaAmistades(pool),
+      }),
+      servicioAuth,
+    ),
+  );
+  const creacionRecomendaciones = crearServicioCreacion({ emisor: notificaciones });
+  app.use(
+    "/api",
+    createRecomendacionesEstadoRouter(
+      crearServicioConsultaRecomendaciones({ pool }),
+      crearServicioAcciones({
+        pool,
+        creacion: creacionRecomendaciones,
+        estado: crearServicioEstadoInterno(pool),
       }),
       servicioAuth,
     ),
