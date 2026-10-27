@@ -36,7 +36,12 @@ if (env.MIGRATE_ON_START) {
 const eventos = new EventBus(logger);
 registrarListenersDeModulos(eventos);
 
-const app = createApp({ pool, logger, seguridad: opcionesDeSeguridad(env) });
+const app = createApp({
+  pool,
+  logger,
+  seguridad: opcionesDeSeguridad(env),
+  documentacion: env.NODE_ENV !== "production",
+});
 const server = app.listen(env.API_PORT, () => {
   logger.info({ port: env.API_PORT, env: env.NODE_ENV }, "API escuchando");
 });

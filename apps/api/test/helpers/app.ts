@@ -17,6 +17,10 @@ export const SEGURIDAD_DE_PRUEBA: OpcionesDeSeguridad = {
 };
 
 // Aplicación Express real, sin abrir puerto: Supertest la monta directamente.
-export function buildTestApp(pool: pg.Pool, seguridad: OpcionesDeSeguridad = SEGURIDAD_DE_PRUEBA) {
-  return createApp({ pool, logger: silentLogger, seguridad });
+export function buildTestApp(
+  pool: pg.Pool,
+  seguridad: OpcionesDeSeguridad = SEGURIDAD_DE_PRUEBA,
+  documentacion = true,
+) {
+  return createApp({ pool, logger: silentLogger, seguridad, documentacion });
 }
