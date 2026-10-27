@@ -43,6 +43,7 @@ import { createRecomendacionesRouter } from "./modules/recomendaciones/recomenda
 import { createRecomendacionesEstadoRouter } from "./modules/recomendaciones/recomendaciones.estado.routes.js";
 import { crearServicioConsultaRecomendaciones } from "./modules/recomendaciones/recomendaciones.consulta.js";
 import { crearServicioAcciones } from "./modules/recomendaciones/recomendaciones.acciones.js";
+import { crearCompletarRecomendaciones } from "./modules/recomendaciones/recomendaciones.completar.js";
 import { crearServicioRecomendaciones } from "./modules/recomendaciones/recomendaciones.servicio.js";
 import { createPerfilPublicoRouter } from "./modules/usuarios/perfil-publico.routes.js";
 import { crearServicioConsultaResenas } from "./modules/resenas/resenas.consulta.js";
@@ -102,6 +103,12 @@ export function createApp({
   const app = express();
   app.disable("x-powered-by");
   app.set("trust proxy", seguridad.trustProxy);
+
+  // Completar recomendaciones cuando el receptor califica por primera vez (BE-10.6), dentro de la misma transacción.
+  eventos.onInTransaction(
+    "review.created",
+    crearCompletarRecomendaciones({ creacion: crearServicioCreacion({ emisor: notificaciones }) }),
+  );
 
   app.use(helmet());
   app.use(cors({ origin: seguridad.webUrl, credentials: true }));
