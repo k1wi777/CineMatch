@@ -10,7 +10,7 @@ export async function crearUsuario(
 ): Promise<number> {
   await db.query("INSERT INTO rol (nombre) VALUES ('usuario') ON CONFLICT (nombre) DO NOTHING");
   const { rows } = await db.query<{ id: number }>(
-    "INSERT INTO usuario (nombre, username, correo, contrasena, rol_id) VALUES ($1, $2, $3, 'hash', (SELECT id FROM rol WHERE nombre = 'usuario')) RETURNING id",
+    "INSERT INTO usuario (nombre, username, correo, contrasena, rol_id, acepta_datos_en) VALUES ($1, $2, $3, 'hash', (SELECT id FROM rol WHERE nombre = 'usuario'), now()) RETURNING id",
     [username, username, correo],
   );
   return idDe(rows);
