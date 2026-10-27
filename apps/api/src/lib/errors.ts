@@ -62,6 +62,13 @@ export class UnsupportedMediaTypeError extends AppError {
   }
 }
 
+// La API externa (TMDB) no respondió bien. El detalle técnico no sale al cliente: no contiene la clave.
+export class ProveedorExternoError extends AppError {
+  constructor(message = "El catálogo externo no está disponible en este momento.") {
+    super(502, "PROVIDER_UNAVAILABLE", message);
+  }
+}
+
 export class TooManyRequestsError extends AppError {
   constructor(message = "Demasiadas peticiones. Inténtalo más tarde.") {
     super(429, "TOO_MANY_REQUESTS", message);

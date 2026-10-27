@@ -16,6 +16,12 @@ const envBase = z.object({
   SMTP_HOST: z.string().min(1).default("localhost"),
   SMTP_PORT: z.coerce.number().int().positive().default(1025),
   SMTP_FROM: z.string().min(1).default("CineMatch <no-reply@cinematch.local>"),
+  // Clave de TMDB (BE-6). Vacía o ausente: el catálogo usa el proveedor de prueba, sin red.
+  TMDB_API_KEY: z
+    .string()
+    .trim()
+    .optional()
+    .transform((valor) => (valor ? valor : undefined)),
 });
 
 const envSchema = envBase.extend(REGLAS_DE_NEGOCIO_SCHEMA.shape).superRefine((env, ctx) => {
