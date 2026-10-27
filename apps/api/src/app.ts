@@ -44,6 +44,11 @@ import { createRecomendacionesEstadoRouter } from "./modules/recomendaciones/rec
 import { crearServicioConsultaRecomendaciones } from "./modules/recomendaciones/recomendaciones.consulta.js";
 import { crearServicioAcciones } from "./modules/recomendaciones/recomendaciones.acciones.js";
 import { crearCompletarRecomendaciones } from "./modules/recomendaciones/recomendaciones.completar.js";
+import { createComunidadRouter } from "./modules/comunidad/comunidad.routes.js";
+import {
+  crearPoolComunidad,
+  crearServicioComunidad,
+} from "./modules/comunidad/comunidad.servicio.js";
 import { crearServicioRecomendaciones } from "./modules/recomendaciones/recomendaciones.servicio.js";
 import { createPerfilPublicoRouter } from "./modules/usuarios/perfil-publico.routes.js";
 import { crearServicioConsultaResenas } from "./modules/resenas/resenas.consulta.js";
@@ -252,6 +257,14 @@ export function createApp({
       },
     }),
   );
+  // Recomendaciones generales (BE-11): el pool se calcula al arrancar desde server.ts y luego cada TTL.
+  const poolComunidad = crearPoolComunidad({ pool, reglas, reloj });
+  app.use(
+    "/api",
+    createComunidadRouter(crearServicioComunidad({ pool, cache: poolComunidad }), servicioAuth),
+  );
+  app.locals.calentarComunidad = () => poolComunidad.asegurar();
+
   if (documentacion) {
     app.use("/api", createDocsRouter());
   }

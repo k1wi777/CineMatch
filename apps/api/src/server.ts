@@ -71,6 +71,11 @@ const app = createApp({
   produccion: env.NODE_ENV === "production",
   correo: crearCorreoSmtp({ host: env.SMTP_HOST, port: env.SMTP_PORT, from: env.SMTP_FROM }),
 });
+// Pool de recomendaciones generales (BE-11.2): se calcula al arrancar. Si falla, la API arranca igual y lo recalcula al servir.
+await app.locals.calentarComunidad().catch((err: unknown) => {
+  logger.error({ err }, "No se pudo calcular el pool de recomendaciones al arrancar");
+});
+
 const server = app.listen(env.API_PORT, () => {
   logger.info({ port: env.API_PORT, env: env.NODE_ENV }, "API escuchando");
 });
