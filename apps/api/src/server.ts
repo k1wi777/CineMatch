@@ -64,6 +64,7 @@ const detenerSincronizacion = iniciarSincronizacionCatalogo({
 const app = createApp({
   pool,
   logger,
+  eventos,
   seguridad: opcionesDeSeguridad(env),
   documentacion: env.NODE_ENV !== "production",
   reglas: reglasDeNegocio(env),

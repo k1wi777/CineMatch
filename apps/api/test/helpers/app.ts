@@ -4,6 +4,7 @@ import { createApp } from "../../src/app.js";
 import type { ReglasDeNegocio } from "../../src/config/business-rules.js";
 import type { OpcionesDeSeguridad } from "../../src/config/security.js";
 import type { ServicioCorreo } from "../../src/lib/correo.js";
+import type { EventBus } from "../../src/lib/events.js";
 import type {
   HubNotificaciones,
   IntervalosStream,
@@ -56,6 +57,7 @@ type OpcionesDePrueba = {
   directorioAvatares?: string;
   notificaciones?: HubNotificaciones;
   intervalosStream?: Partial<IntervalosStream>;
+  eventos?: EventBus;
 };
 
 // Aplicación Express real, sin abrir puerto: Supertest la monta directamente.
@@ -77,5 +79,6 @@ export function buildTestApp(
     directorioAvatares: opciones.directorioAvatares,
     notificaciones: opciones.notificaciones,
     intervalosStream: opciones.intervalosStream,
+    eventos: opciones.eventos,
   });
 }

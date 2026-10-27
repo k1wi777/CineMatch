@@ -31,7 +31,8 @@ function fallar(app: ReturnType<typeof buildTestApp>, correo: string, veces: num
   return Promise.all(Array.from({ length: veces }, () => login(app, correo, "clave-incorrecta-1")));
 }
 
-describe("seguridad de autenticación (BE-3.5)", () => {
+// Varios inicios de sesión en paralelo con argon2: con la suite completa en marcha superan los 5 s por defecto.
+describe("seguridad de autenticación (BE-3.5)", { timeout: 20_000 }, () => {
   let pool: pg.Pool;
 
   beforeAll(() => {
