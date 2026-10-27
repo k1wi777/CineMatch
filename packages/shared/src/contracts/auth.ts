@@ -48,3 +48,17 @@ export const RegistroRespuestaSchema = z.object({
 });
 
 export type RegistroRespuesta = z.infer<typeof RegistroRespuestaSchema>;
+
+// Recuperación de contraseña (BE-3.4): pedir el enlace y usarlo.
+export const SolicitarRecuperacionSchema = z.object({
+  correo: z.email().max(255),
+});
+
+export type SolicitarRecuperacion = z.infer<typeof SolicitarRecuperacionSchema>;
+
+export const RestablecerContrasenaSchema = z.object({
+  token: z.string().min(1).max(200),
+  contrasena: PasswordSchema,
+});
+
+export type RestablecerContrasena = z.infer<typeof RestablecerContrasenaSchema>;

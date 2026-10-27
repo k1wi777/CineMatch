@@ -3,6 +3,7 @@ import type pg from "pg";
 import { createApp } from "../../src/app.js";
 import type { ReglasDeNegocio } from "../../src/config/business-rules.js";
 import type { OpcionesDeSeguridad } from "../../src/config/security.js";
+import type { ServicioCorreo } from "../../src/lib/correo.js";
 
 const silentLogger = pino({ level: "silent" });
 
@@ -30,10 +31,24 @@ export const REGLAS_DE_PRUEBA: ReglasDeNegocio = {
   RESET_TOKEN_TTL_MINUTES: 60,
 };
 
+// Correo falso: guarda los envíos para que las pruebas lean el enlace de recuperación.
+export function correoDePrueba(): ServicioCorreo & {
+  enviados: { destino: string; enlace: string }[];
+} {
+  const enviados: { destino: string; enlace: string }[] = [];
+  return {
+    enviados,
+    async enviarRecuperacion(destino, enlace) {
+      enviados.push({ destino, enlace });
+    },
+  };
+}
+
 type OpcionesDePrueba = {
   produccion?: boolean;
   reloj?: () => Date;
   reglas?: ReglasDeNegocio;
+  correo?: ServicioCorreo;
 };
 
 // Aplicación Express real, sin abrir puerto: Supertest la monta directamente.
@@ -51,5 +66,6 @@ export function buildTestApp(
     reglas: opciones.reglas ?? REGLAS_DE_PRUEBA,
     produccion: opciones.produccion ?? false,
     reloj: opciones.reloj,
+    correo: opciones.correo ?? correoDePrueba(),
   });
 }

@@ -2,9 +2,13 @@ import {
   LoginSchema,
   RegistroRespuestaSchema,
   RegistroSchema,
+  RestablecerContrasenaSchema,
+  SolicitarRecuperacionSchema,
   UsuarioSesionSchema,
   type LoginRequest,
   type Registro,
+  type RestablecerContrasena,
+  type SolicitarRecuperacion,
 } from "@cinematch/shared";
 import { Router, type CookieOptions } from "express";
 import { leerCookie } from "../../lib/cookies.js";
@@ -13,6 +17,7 @@ import { registroOpenApi } from "../../lib/openapi.js";
 import { validate } from "../../middleware/validate.js";
 import type { ServicioAuth } from "./auth.service.js";
 import type { ServicioRegistro } from "./auth.registro.js";
+import type { ServicioRecuperacion } from "./auth.recuperacion.js";
 
 export const NOMBRE_COOKIE_SESION = "cm_session";
 
@@ -24,9 +29,49 @@ function opcionesCookie(produccion: boolean): CookieOptions {
 
 export function createAuthRouter(
   servicio: ServicioAuth,
-  opciones: { produccion: boolean; registro: ServicioRegistro },
+  opciones: { produccion: boolean; registro: ServicioRegistro; recuperacion: ServicioRecuperacion },
 ): Router {
   const router = Router();
+
+  // Recuperación de contraseña (BE-3.4). La respuesta de solicitar es igual exista o no el correo.
+  registroOpenApi.registrar({
+    metodo: "post",
+    ruta: "/api/auth/forgot-password",
+    resumen: "Pedir un enlace para restablecer la contraseña",
+    respuestas: { 202: { descripcion: "Si el correo existe, se envía el enlace." } },
+  });
+  registroOpenApi.registrar({
+    metodo: "post",
+    ruta: "/api/auth/reset-password",
+    resumen: "Restablecer la contraseña con el enlace recibido",
+    respuestas: {
+      204: { descripcion: "Contraseña cambiada. Se cierran todas las sesiones." },
+      400: { descripcion: "El enlace no es válido, venció o ya se usó.", esquema: "ErrorResponse" },
+      422: { descripcion: "La contraseña no cumple la política.", esquema: "ErrorResponse" },
+    },
+  });
+
+  router.post(
+    "/auth/forgot-password",
+    validate({ body: SolicitarRecuperacionSchema }),
+    async (_req, res) => {
+      const { correo } = res.locals.input.body as SolicitarRecuperacion;
+      await opciones.recuperacion.solicitar(correo);
+      res.status(202).json({
+        mensaje: "Si el correo existe, te enviamos un enlace para restablecer tu contraseña.",
+      });
+    },
+  );
+
+  router.post(
+    "/auth/reset-password",
+    validate({ body: RestablecerContrasenaSchema }),
+    async (_req, res) => {
+      const { token, contrasena } = res.locals.input.body as RestablecerContrasena;
+      await opciones.recuperacion.restablecer(token, contrasena);
+      res.status(204).end();
+    },
+  );
 
   registroOpenApi.registrarEsquema("UsuarioSesion", UsuarioSesionSchema);
   registroOpenApi.registrarEsquema("LoginRequest", LoginSchema);

@@ -10,6 +10,8 @@ import { createErrorHandler } from "./middleware/error-handler.js";
 import { notFound } from "./middleware/not-found.js";
 import { limitadorDeTasa } from "./middleware/rate-limit.js";
 import { createAuthRouter } from "./modules/auth/auth.routes.js";
+import type { ServicioCorreo } from "./lib/correo.js";
+import { crearServicioRecuperacion } from "./modules/auth/auth.recuperacion.js";
 import { crearServicioRegistro } from "./modules/auth/auth.registro.js";
 import { crearServicioAuth } from "./modules/auth/auth.service.js";
 import { createDocsRouter } from "./modules/docs/docs.routes.js";
@@ -23,6 +25,8 @@ export type AppDeps = {
   documentacion: boolean;
   reglas: ReglasDeNegocio;
   produccion: boolean;
+  // Canal de correo para la recuperación de contraseña: SMTP en producción y desarrollo, falso en pruebas.
+  correo: ServicioCorreo;
   // Reloj inyectable: las pruebas lo usan para simular el paso del tiempo (bloqueos, expiración de sesiones).
   reloj?: () => Date;
 };
@@ -37,6 +41,7 @@ export function createApp({
   reglas,
   produccion,
   reloj = () => new Date(),
+  correo,
 }: AppDeps) {
   const app = express();
   app.disable("x-powered-by");
@@ -55,7 +60,22 @@ export function createApp({
   app.use("/api", createHealthRouter(pool));
   const servicioAuth = crearServicioAuth({ pool, reglas, reloj });
   const servicioRegistro = crearServicioRegistro({ pool, reloj });
-  app.use("/api", createAuthRouter(servicioAuth, { produccion, registro: servicioRegistro }));
+  const servicioRecuperacion = crearServicioRecuperacion({
+    pool,
+    reglas,
+    reloj,
+    servicioCorreo: correo,
+    webUrl: seguridad.webUrl,
+    logger,
+  });
+  app.use(
+    "/api",
+    createAuthRouter(servicioAuth, {
+      produccion,
+      registro: servicioRegistro,
+      recuperacion: servicioRecuperacion,
+    }),
+  );
   if (documentacion) {
     app.use("/api", createDocsRouter());
   }
