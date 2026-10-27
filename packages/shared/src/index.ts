@@ -1,6 +1,7 @@
 // API pública del paquete. Solo lo exportado aquí forma parte del contrato.
 export * from "./contracts/errors.js";
 export * from "./contracts/health.js";
+export * from "./contracts/paginacion.js";
 export * from "./domain/library.js";
 export * from "./domain/notification.js";
 export * from "./domain/recommendation.js";
