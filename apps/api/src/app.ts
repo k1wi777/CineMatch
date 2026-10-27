@@ -45,6 +45,15 @@ import { crearServicioConsultaRecomendaciones } from "./modules/recomendaciones/
 import { crearServicioAcciones } from "./modules/recomendaciones/recomendaciones.acciones.js";
 import { crearCompletarRecomendaciones } from "./modules/recomendaciones/recomendaciones.completar.js";
 import { createComunidadRouter } from "./modules/comunidad/comunidad.routes.js";
+import { createAdministracionRouter } from "./modules/administracion/administracion.routes.js";
+import {
+  crearServicioModeracion,
+  crearSincronizacionAdmin,
+} from "./modules/administracion/administracion.servicio.js";
+import { crearServicioSincronizacion } from "./modules/catalogo/sincronizacion.js";
+import { crearProveedorCatalogo } from "./modules/catalogo/proveedor/crear-proveedor.js";
+import { CANTIDAD_POR_TIPO_POR_DEFECTO } from "./modules/catalogo/sincronizacion.job.js";
+import type { MovieProvider } from "./modules/catalogo/proveedor/movie-provider.js";
 import {
   crearPoolComunidad,
   crearServicioComunidad,
@@ -87,6 +96,12 @@ export type AppDeps = {
   // Hub de conexiones SSE. Las pruebas lo pasan para emitir eventos y observarlos.
   notificaciones?: HubNotificaciones;
   intervalosStream?: Partial<IntervalosStream>;
+  // Clave de TMDB para la sincronización manual. Sin ella se usa el proveedor de prueba.
+  tmdbApiKey?: string;
+  // Proveedor de catálogo explícito (las pruebas lo usan para controlar la sincronización).
+  proveedorCatalogo?: MovieProvider;
+  // Títulos por tipo en cada sincronización manual.
+  cantidadSincronizacion?: number;
 };
 
 // Composición de Express sin abrir puertos: server.ts es quien arranca el proceso.
@@ -104,6 +119,9 @@ export function createApp({
   notificaciones = crearHubNotificaciones(),
   intervalosStream,
   eventos = new EventBus(logger),
+  tmdbApiKey,
+  proveedorCatalogo,
+  cantidadSincronizacion = CANTIDAD_POR_TIPO_POR_DEFECTO,
 }: AppDeps) {
   const app = express();
   app.disable("x-powered-by");
@@ -264,6 +282,32 @@ export function createApp({
     createComunidadRouter(crearServicioComunidad({ pool, cache: poolComunidad }), servicioAuth),
   );
   app.locals.calentarComunidad = () => poolComunidad.asegurar();
+
+  // Administración (BE-12): sincronización manual, moderación y auditoría. Solo rol administrador.
+  const sincronizacionCatalogo = crearServicioSincronizacion({
+    pool,
+    proveedor: proveedorCatalogo ?? crearProveedorCatalogo(tmdbApiKey),
+    logger,
+  });
+  app.use(
+    "/api",
+    createAdministracionRouter(
+      crearSincronizacionAdmin({
+        sincronizacion: sincronizacionCatalogo,
+        cache: poolComunidad,
+        pool,
+        cantidadPorTipo: cantidadSincronizacion,
+        logger,
+      }),
+      crearServicioModeracion({
+        pool,
+        eventos,
+        creacion: crearServicioCreacion({ emisor: notificaciones }),
+        cache: poolComunidad,
+      }),
+      servicioAuth,
+    ),
+  );
 
   if (documentacion) {
     app.use("/api", createDocsRouter());

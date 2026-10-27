@@ -70,6 +70,7 @@ const app = createApp({
   reglas: reglasDeNegocio(env),
   produccion: env.NODE_ENV === "production",
   correo: crearCorreoSmtp({ host: env.SMTP_HOST, port: env.SMTP_PORT, from: env.SMTP_FROM }),
+  tmdbApiKey: env.TMDB_API_KEY,
 });
 // Pool de recomendaciones generales (BE-11.2): se calcula al arrancar. Si falla, la API arranca igual y lo recalcula al servir.
 await app.locals.calentarComunidad().catch((err: unknown) => {
