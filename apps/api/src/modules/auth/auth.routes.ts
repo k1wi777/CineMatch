@@ -29,7 +29,13 @@ function opcionesCookie(produccion: boolean): CookieOptions {
 
 export function createAuthRouter(
   servicio: ServicioAuth,
-  opciones: { produccion: boolean; registro: ServicioRegistro; recuperacion: ServicioRecuperacion },
+  opciones: {
+    produccion: boolean;
+    registro: ServicioRegistro;
+    recuperacion: ServicioRecuperacion;
+    // Avisa a otros módulos (p. ej. los streams SSE) de que una sesión acaba de cerrarse.
+    alCerrarSesion?: (token: string) => void;
+  },
 ): Router {
   const router = Router();
 
@@ -133,7 +139,11 @@ export function createAuthRouter(
   });
 
   router.post("/auth/logout", async (req, res) => {
-    await servicio.logout(leerCookie(req.headers.cookie, NOMBRE_COOKIE_SESION));
+    const token = leerCookie(req.headers.cookie, NOMBRE_COOKIE_SESION);
+    await servicio.logout(token);
+    if (token) {
+      opciones.alCerrarSesion?.(token);
+    }
     res.clearCookie(NOMBRE_COOKIE_SESION, opcionesCookie(opciones.produccion));
     res.status(204).end();
   });
