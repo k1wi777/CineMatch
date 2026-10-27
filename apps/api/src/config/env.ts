@@ -5,6 +5,8 @@ const envSchema = z.object({
   API_PORT: z.coerce.number().int().positive().default(4000),
   LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"]).default("info"),
   DATABASE_URL: z.url(),
+  // Aplica las migraciones pendientes al arrancar. Pensado para desarrollo local.
+  MIGRATE_ON_START: z.stringbool().default(false),
 });
 
 export type Env = z.infer<typeof envSchema>;
