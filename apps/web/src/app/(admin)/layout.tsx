@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { GuardSesion } from "@/shared/layouts/guard-sesion";
 
 const ENLACES_ADMIN = [
   { href: "/admin", texto: "Panel" },

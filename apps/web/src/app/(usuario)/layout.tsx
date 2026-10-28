@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { GuardSesion } from "@/shared/layouts/guard-sesion";
 import { Navbar } from "@/shared/layouts/navbar";
 
 // Layout de usuario: navbar con menú, buscador y campana; el contenido va en <main>.
