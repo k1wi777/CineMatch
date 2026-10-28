@@ -1,0 +1,15 @@
+{
+  "comun": {
+    "guardar": "Guardar",
+    "cancelar": "Cancelar",
+    "cargando": "Cargando"
+  },
+  "ejemplo": {
+    "titulo": "Iniciar sesión (ejemplo)",
+    "correo": "Correo electrónico",
+    "contrasena": "Contraseña",
+    "enviar": "Entrar",
+    "enviando": "Entrando",
+    "exito": "Formulario válido. Así se verá la respuesta del servidor."
+  }
+}

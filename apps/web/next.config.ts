@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 // La API corre en otro puerto: Next la expone en el mismo origen, así el navegador no necesita CORS.
 const API_URL = process.env.API_URL ?? "http://localhost:4000";
@@ -21,4 +24,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
