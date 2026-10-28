@@ -23,3 +23,7 @@ playwright-report/
 *.log
 # Copias de seguridad locales (pnpm backup)
 backups/
+
+# Next.js (generado)
+apps/web/next-env.d.ts
+apps/web/.next/
