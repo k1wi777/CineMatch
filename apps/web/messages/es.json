@@ -45,6 +45,50 @@
     "invalidoSinToken": "Falta el enlace de recuperación. Pide uno nuevo.",
     "pedirOtro": "Pedir otro enlace"
   },
+  "perfil": {
+    "cargando": "Cargando tu perfil",
+    "datos": {
+      "titulo": "Datos de la cuenta",
+      "nombre": "Nombre",
+      "username": "Nombre de usuario",
+      "bio": "Biografía",
+      "contador": "{actual} de {maximo} caracteres",
+      "guardar": "Guardar datos",
+      "guardando": "Guardando",
+      "exito": "Datos guardados."
+    },
+    "avatar": {
+      "titulo": "Foto de perfil",
+      "elegir": "Elegir imagen",
+      "ayuda": "JPEG, PNG o WebP de hasta 2 MB.",
+      "subir": "Subir foto",
+      "subiendo": "Subiendo",
+      "quitar": "Quitar foto",
+      "exito": "Foto actualizada.",
+      "quitada": "Foto quitada.",
+      "errorTipo": "Usa una imagen JPEG, PNG o WebP.",
+      "errorTamano": "La imagen supera 2 MB.",
+      "progreso": "Progreso de la subida"
+    },
+    "intereses": {
+      "titulo": "Intereses",
+      "ayuda": "Elige al menos {minimo} géneros.",
+      "contador": "Elegidos {elegidos} de al menos {minimo}",
+      "guardar": "Guardar intereses",
+      "guardando": "Guardando",
+      "exito": "Intereses guardados.",
+      "error": "No pudimos cargar tus intereses."
+    },
+    "contrasena": {
+      "titulo": "Cambiar contraseña",
+      "actual": "Contraseña actual",
+      "nueva": "Contraseña nueva",
+      "confirmacion": "Confirma la contraseña nueva",
+      "guardar": "Cambiar contraseña",
+      "guardando": "Cambiando",
+      "exito": "Contraseña actualizada. Cerramos tus otras sesiones."
+    }
+  },
   "registro": {
     "titulo": "Crear cuenta",
     "paso": "Paso {actual} de {total}",

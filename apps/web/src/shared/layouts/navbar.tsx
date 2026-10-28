@@ -11,6 +11,7 @@ export const ENLACES_PRINCIPALES = [
   { href: "/biblioteca", texto: "Biblioteca" },
   { href: "/amigos", texto: "Amigos" },
   { href: "/recomendaciones", texto: "Recomendaciones" },
+  { href: "/perfil", texto: "Mi perfil" },
 ] as const;
 
 // Una ruta está activa si coincide exacta o si es una sección suya (p. ej. /catalogo/12).
