@@ -26,8 +26,15 @@ export class TokenRecuperacionUsadoError extends AppError {
   }
 }
 
+// Cuenta bloqueada tras varios fallos. Indica cuántos segundos faltan para poder reintentar (cabecera Retry-After).
 export class CuentaBloqueadaError extends AppError {
-  constructor() {
-    super(423, "ACCOUNT_LOCKED", "La cuenta está bloqueada temporalmente. Inténtalo más tarde.");
+  constructor(retryAfterSeconds: number) {
+    super(
+      423,
+      "ACCOUNT_LOCKED",
+      "La cuenta está bloqueada temporalmente. Inténtalo más tarde.",
+      undefined,
+      retryAfterSeconds,
+    );
   }
 }

@@ -8,6 +8,8 @@ export class AppError extends Error {
     readonly code: string,
     message: string,
     readonly fields?: FieldErrors,
+    // Si se indica, el manejador de errores la envía como cabecera Retry-After.
+    readonly retryAfterSeconds?: number,
   ) {
     super(message);
     this.name = "AppError";

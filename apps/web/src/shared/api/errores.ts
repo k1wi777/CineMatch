@@ -9,6 +9,8 @@ export class ApiError extends Error {
     readonly code: string,
     message: string,
     readonly fields: FieldErrors = {},
+    // Segundos hasta poder reintentar (cabecera Retry-After), por ejemplo con una cuenta bloqueada.
+    readonly retryAfterSeconds?: number,
   ) {
     super(message);
     this.name = "ApiError";
@@ -43,5 +45,7 @@ export async function leerError(res: Response): Promise<ApiError> {
     return new ApiError(res.status, "ERROR_DESCONOCIDO", MENSAJE_GENERICO);
   }
   const { code, message, fields } = parseado.data.error;
-  return new ApiError(res.status, code, message, fields ?? {});
+  const retry = Number(res.headers.get("Retry-After"));
+  const retryAfterSeconds = Number.isFinite(retry) && retry > 0 ? retry : undefined;
+  return new ApiError(res.status, code, message, fields ?? {}, retryAfterSeconds);
 }

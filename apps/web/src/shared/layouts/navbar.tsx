@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useId, useState, type FormEvent } from "react";
+import { useCerrarSesion } from "@/features/auth/cerrar-sesion";
 
 export const ENLACES_PRINCIPALES = [
   { href: "/", texto: "Inicio" },
@@ -23,6 +24,7 @@ export function Navbar({ notificacionesSinLeer = 0 }: { notificacionesSinLeer?: 
   const router = useRouter();
   const [menuAbierto, setMenuAbierto] = useState(false);
   const idMenu = useId();
+  const cerrarSesion = useCerrarSesion();
 
   // El menú móvil se cierra con Escape y al cambiar de página.
   useEffect(() => {
@@ -95,6 +97,15 @@ export function Navbar({ notificacionesSinLeer = 0 }: { notificacionesSinLeer?: 
 
         <button
           type="button"
+          onClick={() => cerrarSesion.mutate()}
+          disabled={cerrarSesion.isPending}
+          className="hidden rounded-sm px-2 py-2 text-sm text-niebla hover:text-papel disabled:opacity-60 md:inline-block"
+        >
+          Cerrar sesión
+        </button>
+
+        <button
+          type="button"
           aria-expanded={menuAbierto}
           aria-controls={`${idMenu}-menu`}
           onClick={() => setMenuAbierto((abierto) => !abierto)}
@@ -135,6 +146,14 @@ export function Navbar({ notificacionesSinLeer = 0 }: { notificacionesSinLeer?: 
                 );
               })}
             </ul>
+            <button
+              type="button"
+              onClick={() => cerrarSesion.mutate()}
+              disabled={cerrarSesion.isPending}
+              className="mt-4 block py-3 text-sm text-niebla hover:text-papel disabled:opacity-60"
+            >
+              Cerrar sesión
+            </button>
           </nav>
         </div>
       ) : null}
