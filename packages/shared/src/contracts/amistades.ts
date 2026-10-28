@@ -50,8 +50,10 @@ export const RelacionUsuarioSchema = z.enum([
 
 export type RelacionUsuario = z.infer<typeof RelacionUsuarioSchema>;
 
+// amistadId identifica la solicitud o la amistad para aceptarla o cancelarla. Null si no hay relación activa.
 export const BusquedaUsuarioItemSchema = UsuarioResumenSchema.extend({
   relacion: RelacionUsuarioSchema,
+  amistadId: z.number().int().nullable(),
 });
 
 export const BusquedaUsuariosQuerySchema = z.object({

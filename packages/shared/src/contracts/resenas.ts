@@ -3,6 +3,32 @@ import { z } from "zod";
 export const VISIBILIDADES_RESENA = ["publica", "amigos"] as const;
 export const VisibilidadResenaSchema = z.enum(VISIBILIDADES_RESENA);
 
+// Reseña en listas de perfil y de título: el contenido solo aparece en las listas de usuario.
+export const ResenaListaSchema = z.object({
+  id: z.number().int(),
+  calificacion: z.number(),
+  etiquetas: z.array(z.string()),
+  comentario: z.string().nullable(),
+  esSpoiler: z.boolean(),
+  visibilidad: VisibilidadResenaSchema,
+  fechaCreacion: z.string(),
+  fechaEdicion: z.string().nullable(),
+  autor: z.object({
+    id: z.number().int(),
+    username: z.string(),
+    avatarUrl: z.string().nullable(),
+  }),
+  contenido: z
+    .object({
+      id: z.number().int(),
+      titulo: z.string(),
+      posterUrl: z.string().nullable(),
+    })
+    .optional(),
+});
+
+export type ResenaLista = z.infer<typeof ResenaListaSchema>;
+
 export type VisibilidadResena = z.infer<typeof VisibilidadResenaSchema>;
 
 export const MAX_ETIQUETAS_RESENA = 5;

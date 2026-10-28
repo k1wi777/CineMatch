@@ -6,6 +6,11 @@ export type Pagina<T> = { items: T[]; page: number; pageSize: number; total: num
 
 type FilaUsuario = { id: number; username: string; nombre: string; avatar_url: string | null };
 
+type UsuarioBusqueda = UsuarioResumen & {
+  relacion: RelacionUsuario;
+  amistadId: number | null;
+};
+
 function aUsuario(fila: FilaUsuario): UsuarioResumen {
   return { id: fila.id, username: fila.username, nombre: fila.nombre, avatarUrl: fila.avatar_url };
 }
@@ -180,27 +185,25 @@ export function crearServicioConsultaAmistades(pool: pg.Pool) {
           WHEN a.estado = 'aceptada' THEN 'amigos'
           WHEN a.solicitante_id = $1 THEN 'pendienteEnviada'
           ELSE 'pendienteRecibida' END`;
+      // El id de la amistad permite aceptar o cancelar la solicitud desde la búsqueda. Null si no hay relación activa.
+      const amistadId = `CASE WHEN a.id IS NULL OR a.estado = 'rechazada' THEN NULL ELSE a.id END`;
       const desde = `FROM usuario u
           LEFT JOIN amistad a ON LEAST(a.solicitante_id, a.receptor_id) = LEAST(u.id, $1::int)
                              AND GREATEST(a.solicitante_id, a.receptor_id) = GREATEST(u.id, $1::int)
          WHERE u.eliminado_en IS NULL AND u.id <> $1 AND lower(u.username) LIKE $2`;
-      return paginado<{
-        id: number;
-        username: string;
-        nombre: string;
-        avatarUrl: string | null;
-        relacion: RelacionUsuario;
-      }>(
+      return paginado<UsuarioBusqueda>(
         pagina,
         {
-          sql: `SELECT u.id, u.username, u.nombre, u.avatar_url, ${relacion} AS relacion ${desde}
+          sql: `SELECT u.id, u.username, u.nombre, u.avatar_url, ${relacion} AS relacion,
+                       ${amistadId} AS amistad_id ${desde}
                 ORDER BY u.username ASC, u.id ASC`,
           params: [yo, patron],
         },
         `SELECT count(*) AS total ${desde}`,
-        (fila: FilaUsuario & { relacion: RelacionUsuario }) => ({
+        (fila: FilaUsuario & { relacion: RelacionUsuario; amistad_id: number | null }) => ({
           ...aUsuario(fila),
           relacion: fila.relacion,
+          amistadId: fila.amistad_id,
         }),
       );
     },

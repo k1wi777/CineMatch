@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { mensajeDeError } from "@/shared/api";
 import { Avatar } from "@/shared/ui/avatar";
 import { EstadoError } from "@/shared/ui/estados";
@@ -39,10 +40,16 @@ export function PaginaPerfil() {
     <div className="space-y-12">
       <header className="flex items-center gap-4">
         <Avatar nombre={datos.nombre} url={datos.avatarUrl} tamano={56} />
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <h1 className="truncate font-display text-3xl">{datos.nombre}</h1>
           <p className="truncate text-niebla">@{datos.username}</p>
         </div>
+        <Link
+          href="/amigos/buscar"
+          className="shrink-0 text-sm text-niebla underline underline-offset-4 hover:text-papel"
+        >
+          {t("buscarPersonas")}
+        </Link>
       </header>
 
       <SeccionAvatar perfil={datos} />

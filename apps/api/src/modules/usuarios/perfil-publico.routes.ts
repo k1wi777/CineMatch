@@ -32,17 +32,27 @@ export type DependenciasPerfilPublico = {
 };
 
 // Estado de la relación para mostrar el botón de solicitud (mismo criterio que la búsqueda de usuarios).
-async function relacionCon(pool: pg.Pool, yo: number, otro: number): Promise<string> {
-  const { rows } = await pool.query<{ estado: string; solicitante_id: number }>(
-    `SELECT estado, solicitante_id FROM amistad
+// Devuelve también el id de la amistad (null sin relación activa) para aceptar o cancelar desde el perfil.
+async function relacionCon(
+  pool: pg.Pool,
+  yo: number,
+  otro: number,
+): Promise<{ relacion: string; amistadId: number | null }> {
+  const { rows } = await pool.query<{ id: number; estado: string; solicitante_id: number }>(
+    `SELECT id, estado, solicitante_id FROM amistad
       WHERE LEAST(solicitante_id, receptor_id) = LEAST($1::int, $2::int)
         AND GREATEST(solicitante_id, receptor_id) = GREATEST($1::int, $2::int)`,
     [yo, otro],
   );
   const fila = rows[0];
-  if (!fila || fila.estado === "rechazada") return "ninguna";
-  if (fila.estado === "aceptada") return "amigos";
-  return fila.solicitante_id === yo ? "pendienteEnviada" : "pendienteRecibida";
+  if (!fila || fila.estado === "rechazada") return { relacion: "ninguna", amistadId: null };
+  const relacion =
+    fila.estado === "aceptada"
+      ? "amigos"
+      : fila.solicitante_id === yo
+        ? "pendienteEnviada"
+        : "pendienteRecibida";
+  return { relacion, amistadId: fila.id };
 }
 
 export function createPerfilPublicoRouter(deps: DependenciasPerfilPublico): Router {
@@ -92,6 +102,9 @@ export function createPerfilPublicoRouter(deps: DependenciasPerfilPublico): Rout
             })
           : null;
 
+      const relacion = esPropio
+        ? { relacion: "ninguna", amistadId: null }
+        : await relacionCon(pool, yo, id);
       res.json({
         usuario: {
           id: usuario.id,
@@ -101,7 +114,8 @@ export function createPerfilPublicoRouter(deps: DependenciasPerfilPublico): Rout
           bio: usuario.bio,
         },
         esPropio,
-        relacion: esPropio ? "ninguna" : await relacionCon(pool, yo, id),
+        relacion: relacion.relacion,
+        amistadId: relacion.amistadId,
         resenas: resenasPagina,
         biblioteca: bibliotecaPagina,
       });

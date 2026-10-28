@@ -45,7 +45,52 @@
     "invalidoSinToken": "Falta el enlace de recuperación. Pide uno nuevo.",
     "pedirOtro": "Pedir otro enlace"
   },
+  "usuarios": {
+    "buscar": {
+      "titulo": "Buscar personas",
+      "ayuda": "Busca por nombre de usuario para agregar amigos o ver sus perfiles.",
+      "campo": "Nombre de usuario",
+      "placeholder": "Escribe un nombre de usuario",
+      "inicial": "Escribe un nombre de usuario para buscar.",
+      "vacio": "Nadie con ese nombre",
+      "vacioTexto": "Prueba con otra parte del nombre de usuario.",
+      "cargando": "Buscando",
+      "paginacion": "Paginación",
+      "anterior": "Anterior",
+      "siguiente": "Siguiente",
+      "pagina": "Página {actual} de {total}"
+    },
+    "relacion": {
+      "pendienteEnviada": "Solicitud enviada",
+      "pendienteRecibida": "Te envió una solicitud",
+      "amigos": "Amigos"
+    },
+    "accion": {
+      "agregar": "Agregar",
+      "cancelar": "Cancelar solicitud",
+      "aceptar": "Aceptar",
+      "verPerfil": "Ver perfil"
+    },
+    "perfil": {
+      "cargando": "Cargando perfil",
+      "noDisponible": "Este usuario no está disponible.",
+      "volver": "Volver a buscar personas",
+      "resenas": "Reseñas",
+      "sinResenas": "No hay reseñas que puedas ver.",
+      "calificacion": "Calificación",
+      "biblioteca": "Biblioteca",
+      "bibliotecaPrivada": "La biblioteca solo la ven los amigos.",
+      "sinBiblioteca": "Sin títulos en la biblioteca.",
+      "estado": {
+        "pendiente": "Pendiente",
+        "viendo": "Viendo",
+        "vista": "Vista",
+        "abandonada": "Abandonada"
+      }
+    }
+  },
   "perfil": {
+    "buscarPersonas": "Buscar personas",
     "cargando": "Cargando tu perfil",
     "datos": {
       "titulo": "Datos de la cuenta",
