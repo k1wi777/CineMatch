@@ -16,7 +16,9 @@ export default async function PaginaLogin({ searchParams }: Props) {
       ? t("registroOk")
       : aviso === "sesion-expirada"
         ? t("sesionExpirada")
-        : null;
+        : aviso === "contrasena-restablecida"
+          ? t("contrasenaRestablecida")
+          : null;
 
   return (
     <div className="space-y-6">

@@ -23,7 +23,27 @@
     "sinCuenta": "¿No tienes cuenta?",
     "registrate": "Regístrate",
     "registroOk": "Cuenta creada. Ya puedes iniciar sesión.",
-    "sesionExpirada": "Tu sesión expiró. Vuelve a entrar."
+    "sesionExpirada": "Tu sesión expiró. Vuelve a entrar.",
+    "contrasenaRestablecida": "Contraseña actualizada. Inicia sesión con la nueva.",
+    "olvidaste": "¿Olvidaste tu contraseña?"
+  },
+  "recuperar": {
+    "titulo": "Recuperar contraseña",
+    "texto": "Escribe tu correo. Si hay una cuenta, te enviaremos un enlace para crear una contraseña nueva.",
+    "correo": "Correo electrónico",
+    "enviar": "Enviar enlace",
+    "enviando": "Enviando",
+    "enviado": "Si el correo existe, te enviamos un enlace para restablecer tu contraseña. Revisa tu bandeja de entrada.",
+    "volver": "Volver a iniciar sesión",
+    "tituloRestablecer": "Nueva contraseña",
+    "textoRestablecer": "Elige una contraseña nueva.",
+    "contrasena": "Nueva contraseña",
+    "confirmacion": "Confirma la contraseña",
+    "guardar": "Guardar contraseña",
+    "guardando": "Guardando",
+    "invalidoTitulo": "Este enlace ya no sirve",
+    "invalidoSinToken": "Falta el enlace de recuperación. Pide uno nuevo.",
+    "pedirOtro": "Pedir otro enlace"
   },
   "registro": {
     "titulo": "Crear cuenta",

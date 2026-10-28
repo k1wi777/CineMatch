@@ -145,6 +145,15 @@ export function FormularioLogin({ siguiente }: { siguiente?: string }) {
         </button>
       </form>
 
+      <p className="text-center text-sm">
+        <Link
+          href="/recuperar"
+          className="text-niebla underline underline-offset-4 hover:text-papel"
+        >
+          {t("olvidaste")}
+        </Link>
+      </p>
+
       <p className="text-center text-sm text-niebla">
         {t("sinCuenta")}{" "}
         <Link href="/registro" className="text-papel underline underline-offset-4 hover:text-luz">
