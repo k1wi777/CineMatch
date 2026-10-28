@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import { ProveedorApi } from "@/shared/api";
+import { ToastProvider } from "@/shared/ui/toast";
 
 export const metadata: Metadata = {
   title: {
@@ -15,7 +16,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <body>
-        <ProveedorApi>{children}</ProveedorApi>
+        <ProveedorApi>
+          <ToastProvider>{children}</ToastProvider>
+        </ProveedorApi>
       </body>
     </html>
   );
