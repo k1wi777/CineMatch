@@ -1,4 +1,7 @@
 import { z } from "zod";
+import { RelacionUsuarioSchema } from "./amistades.js";
+import { PaginaBibliotecaSchema } from "./biblioteca.js";
+import { ResenaListaSchema } from "./resenas.js";
 
 // Username único sin distinguir mayúsculas (RN17). Lo usan el registro y el perfil.
 export const UsernameSchema = z
@@ -54,3 +57,26 @@ export const ActualizarPerfilSchema = z
   });
 
 export type ActualizarPerfil = z.infer<typeof ActualizarPerfilSchema>;
+
+// Perfil de otro usuario (BE-8.4): datos básicos siempre; biblioteca solo para el dueño y amigos (null si no).
+export const PerfilPublicoSchema = z.object({
+  usuario: z.object({
+    id: z.number().int(),
+    username: z.string(),
+    nombre: z.string(),
+    avatarUrl: z.string().nullable(),
+    bio: z.string().nullable(),
+  }),
+  esPropio: z.boolean(),
+  relacion: RelacionUsuarioSchema,
+  amistadId: z.number().int().nullable(),
+  resenas: z.object({
+    items: z.array(ResenaListaSchema),
+    page: z.number().int(),
+    pageSize: z.number().int(),
+    total: z.number().int(),
+  }),
+  biblioteca: PaginaBibliotecaSchema.nullable(),
+});
+
+export type PerfilPublico = z.infer<typeof PerfilPublicoSchema>;

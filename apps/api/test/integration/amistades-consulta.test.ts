@@ -238,7 +238,7 @@ describe("consultas de amistades y búsqueda de usuarios (BE-7.3 y BE-7.5)", () 
         .set("Cookie", await sesionDe(a, "yo_campos"));
 
       expect(Object.keys(res.body.items[0]).sort()).toEqual(
-        ["avatarUrl", "id", "nombre", "relacion", "username"].sort(),
+        ["amistadId", "avatarUrl", "id", "nombre", "relacion", "username"].sort(),
       );
     });
 
