@@ -11,5 +11,37 @@
     "enviar": "Entrar",
     "enviando": "Entrando",
     "exito": "Formulario válido. Así se verá la respuesta del servidor."
+  },
+  "login": {
+    "titulo": "Iniciar sesión",
+    "pendiente": "El formulario llega en FE-1.2.",
+    "registroOk": "Cuenta creada. Ya puedes iniciar sesión.",
+    "sesionExpirada": "Tu sesión expiró. Vuelve a entrar."
+  },
+  "registro": {
+    "titulo": "Crear cuenta",
+    "paso": "Paso {actual} de {total}",
+    "tituloPaso1": "Tus datos",
+    "tituloPaso2": "Tus intereses",
+    "nombre": "Nombre",
+    "username": "Nombre de usuario",
+    "usernameAyuda": "De 3 a 20 letras, números o guion bajo.",
+    "correo": "Correo electrónico",
+    "contrasena": "Contraseña",
+    "requisitos": "La contraseña debe tener:",
+    "requisitoLongitud": "Al menos 8 caracteres",
+    "requisitoLetra": "Una letra",
+    "requisitoNumero": "Un número",
+    "autorizacion": "Autorizo a CineMatch a tratar mi nombre, usuario, correo y géneros de interés para crear mi cuenta y mostrarme recomendaciones, según la Ley 1581 de 2012 de Colombia. Puedo revisar o eliminar mis datos desde mi perfil.",
+    "continuar": "Continuar",
+    "volver": "Volver",
+    "crear": "Crear cuenta",
+    "creando": "Creando cuenta",
+    "generos": "Géneros de interés",
+    "generosAyuda": "Elige al menos {minimo}. Los usamos para tus primeras recomendaciones.",
+    "contador": "Elegidos {elegidos} de al menos {minimo}",
+    "generosError": "No pudimos cargar los géneros.",
+    "reintentar": "Reintentar",
+    "yaTienesCuenta": "¿Ya tienes cuenta? Inicia sesión"
   }
 }
