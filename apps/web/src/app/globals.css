@@ -1,9 +1,72 @@
 @import "tailwindcss";
 
+/* Sala de proyección: fondo cálido y apagado, texto de papel, un solo acento (la luz de la sala). */
+@theme {
+  --color-sala: #16130f;
+  --color-butaca: #1f1b15;
+  --color-telon: #2c251c;
+  --color-papel: #ebe3d0;
+  --color-niebla: #9f9580;
+  --color-luz: #e2a54b;
+  --color-brasa: #c4553e;
+  --color-musgo: #7f9a72;
+
+  --font-display: "Bodoni Moda", "Didot", Georgia, serif;
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  --shadow-foco: inset 0 1px 0 #ebe3d01a, 0 18px 40px -22px #000;
+  --ease-proyector: cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-sala);
 }
 
 body {
-  @apply min-h-dvh bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100;
+  @apply min-h-dvh bg-sala font-sans text-papel antialiased;
+}
+
+/* Foco visible para teclado, en el color de la luz de la sala. */
+:focus-visible {
+  outline: 2px solid var(--color-luz);
+  outline-offset: 3px;
+}
+
+/* El único momento de movimiento: la sala se enciende al cargar la primera vez. */
+@keyframes encender-sala {
+  from {
+    filter: brightness(0.55);
+    opacity: 0.6;
+  }
+  to {
+    filter: brightness(1);
+    opacity: 1;
+  }
+}
+
+body {
+  animation: encender-sala 900ms var(--ease-proyector) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+  * {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
 }
