@@ -20,6 +20,9 @@ export function createErrorHandler(logger: Logger): ErrorRequestHandler {
           ...(errorDeDominio.fields ? { fields: errorDeDominio.fields } : {}),
         },
       };
+      if (errorDeDominio.retryAfterSeconds !== undefined) {
+        res.set("Retry-After", String(errorDeDominio.retryAfterSeconds));
+      }
       res.status(errorDeDominio.status).json(body);
       return;
     }

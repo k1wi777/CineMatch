@@ -14,7 +14,14 @@
   },
   "login": {
     "titulo": "Iniciar sesión",
-    "pendiente": "El formulario llega en FE-1.2.",
+    "correo": "Correo electrónico",
+    "contrasena": "Contraseña",
+    "entrar": "Entrar",
+    "entrando": "Entrando",
+    "bloqueada": "Demasiados intentos fallidos. La cuenta se bloqueó temporalmente.",
+    "contadorBloqueo": "Podrás volver a intentarlo en {tiempo}.",
+    "sinCuenta": "¿No tienes cuenta?",
+    "registrate": "Regístrate",
     "registroOk": "Cuenta creada. Ya puedes iniciar sesión.",
     "sesionExpirada": "Tu sesión expiró. Vuelve a entrar."
   },

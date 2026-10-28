@@ -135,9 +135,13 @@ describe("inicio de sesión, sesiones y cookie (BE-3.2)", () => {
         expect(res.status).toBe(401);
       }
 
-      expect((await login(app)).status).toBe(423);
+      const bloqueada = await login(app);
+      expect(bloqueada.status).toBe(423);
+      expect(bloqueada.headers["retry-after"]).toBe(String(15 * 60));
       avanzar(14 * MINUTO);
-      expect((await login(app)).status).toBe(423);
+      const quedanSegundos = await login(app);
+      expect(quedanSegundos.status).toBe(423);
+      expect(quedanSegundos.headers["retry-after"]).toBe("60");
       avanzar(2 * MINUTO);
       const despues = await login(app);
       expect(despues.status).toBe(200);

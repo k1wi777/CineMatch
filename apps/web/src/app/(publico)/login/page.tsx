@@ -1,10 +1,15 @@
 import { getTranslations } from "next-intl/server";
+import { FormularioLogin } from "@/features/auth/formulario-login";
 
-type Props = { searchParams: Promise<{ aviso?: string }> };
+type Props = { searchParams: Promise<{ aviso?: string; siguiente?: string }> };
 
-// Login: por ahora solo muestra los avisos que llegan de otras pantallas. El formulario llega en FE-1.2.
+export async function generateMetadata() {
+  return { title: "Iniciar sesión" };
+}
+
+// Login: muestra los avisos que llegan de otras pantallas y el formulario.
 export default async function PaginaLogin({ searchParams }: Props) {
-  const { aviso } = await searchParams;
+  const { aviso, siguiente } = await searchParams;
   const t = await getTranslations("login");
   const mensaje =
     aviso === "registro-ok"
@@ -14,14 +19,13 @@ export default async function PaginaLogin({ searchParams }: Props) {
         : null;
 
   return (
-    <section className="space-y-3">
-      <h1 className="font-display text-3xl">{t("titulo")}</h1>
+    <div className="space-y-6">
       {mensaje ? (
         <p role="status" className="text-sm text-musgo">
           {mensaje}
         </p>
       ) : null}
-      <p className="text-niebla">{t("pendiente")}</p>
-    </section>
+      <FormularioLogin siguiente={siguiente} />
+    </div>
   );
 }

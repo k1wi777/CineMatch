@@ -44,7 +44,11 @@ export function crearServicioAuth({ pool, reglas, reloj }: DependenciasAuth) {
       contexto: ContextoPeticion,
     ): Promise<{ token: string; usuario: UsuarioSesion }> {
       // La transacción confirma también los intentos fallidos: por eso el error se lanza fuera de ella.
-      const resultado = await withTransaction(pool, async (tx) => {
+      type ResultadoLogin =
+        | { ok: true; token: string; usuario: UsuarioSesion }
+        | { ok: false; bloqueada: true; segundos: number }
+        | { ok: false; bloqueada: false };
+      const resultado = await withTransaction(pool, async (tx): Promise<ResultadoLogin> => {
         const usuario = await buscarUsuarioParaLogin(tx, correo);
         if (!usuario || usuario.eliminadoEn) {
           await verifyPassword(await obtenerHashFantasma(), contrasena);
@@ -52,10 +56,10 @@ export function crearServicioAuth({ pool, reglas, reloj }: DependenciasAuth) {
         }
 
         const ahora = reloj();
-        const bloqueada =
-          usuario.bloqueadoHasta !== null && usuario.bloqueadoHasta.getTime() > ahora.getTime();
-        if (bloqueada) {
-          return { ok: false as const, bloqueada: true };
+        const bloqueadoHasta = usuario.bloqueadoHasta?.getTime() ?? 0;
+        if (bloqueadoHasta > ahora.getTime()) {
+          const segundos = Math.ceil((bloqueadoHasta - ahora.getTime()) / 1000);
+          return { ok: false as const, bloqueada: true as const, segundos };
         }
 
         // Un bloqueo ya vencido reinicia el contador.
@@ -96,7 +100,10 @@ export function crearServicioAuth({ pool, reglas, reloj }: DependenciasAuth) {
       });
 
       if (!resultado.ok) {
-        throw resultado.bloqueada ? new CuentaBloqueadaError() : new CredencialesInvalidasError();
+        if (resultado.bloqueada) {
+          throw new CuentaBloqueadaError(resultado.segundos);
+        }
+        throw new CredencialesInvalidasError();
       }
       return { token: resultado.token, usuario: resultado.usuario };
     },
