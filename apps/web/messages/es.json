@@ -25,6 +25,7 @@
     "registroOk": "Cuenta creada. Ya puedes iniciar sesión.",
     "sesionExpirada": "Tu sesión expiró. Vuelve a entrar.",
     "contrasenaRestablecida": "Contraseña actualizada. Inicia sesión con la nueva.",
+    "cuentaEliminada": "Tu cuenta se eliminó. Ya no puedes iniciar sesión con ella.",
     "olvidaste": "¿Olvidaste tu contraseña?"
   },
   "recuperar": {
@@ -44,6 +45,35 @@
     "invalidoTitulo": "Este enlace ya no sirve",
     "invalidoSinToken": "Falta el enlace de recuperación. Pide uno nuevo.",
     "pedirOtro": "Pedir otro enlace"
+  },
+  "datos": {
+    "titulo": "Mis datos",
+    "ayuda": "Aquí ves tus derechos sobre tus datos personales, descargas una copia y, si quieres, eliminas tu cuenta.",
+    "derechos": {
+      "titulo": "Tus derechos",
+      "texto": "Según la Ley 1581 de 2012 puedes conocer, actualizar y corregir tus datos, y pedir su eliminación. Para descargar una copia o eliminar tu cuenta no necesitas escribirnos: lo haces desde esta página."
+    },
+    "exportar": {
+      "titulo": "Descargar mis datos",
+      "texto": "Un archivo JSON con tu perfil, tu biblioteca, tus reseñas, tus amistades y tus recomendaciones.",
+      "boton": "Descargar JSON"
+    },
+    "eliminar": {
+      "titulo": "Eliminar mi cuenta",
+      "seElimina": "Se eliminan tu cuenta, tus sesiones, tu biblioteca, tus amistades, tus recomendaciones y tus notificaciones.",
+      "seConserva": "Tus reseñas se conservan, pero sin tu nombre ni tu foto.",
+      "advertencia": "Esta acción no se puede deshacer. No hay un periodo para recuperar la cuenta.",
+      "contrasena": "Contraseña actual",
+      "confirmacion": "Escribe {texto} para confirmar",
+      "boton": "Eliminar mi cuenta"
+    },
+    "modal": {
+      "titulo": "¿Eliminar tu cuenta?",
+      "texto": "Se cerrará tu sesión y no podrás volver a entrar con este correo.",
+      "confirmar": "Sí, eliminar mi cuenta",
+      "eliminando": "Eliminando cuenta",
+      "cancelar": "Cancelar"
+    }
   },
   "usuarios": {
     "buscar": {
@@ -91,6 +121,7 @@
   },
   "perfil": {
     "buscarPersonas": "Buscar personas",
+    "misDatos": "Mis datos y eliminación de la cuenta",
     "cargando": "Cargando tu perfil",
     "datos": {
       "titulo": "Datos de la cuenta",
