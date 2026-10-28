@@ -28,7 +28,7 @@ export default function LayoutAdmin({ children }: { children: ReactNode }) {
         </div>
       </header>
       <main id="contenido" className="mx-auto max-w-6xl px-4 py-8">
-        {children}
+        <GuardSesion requiereRol="administrador">{children}</GuardSesion>
       </main>
     </div>
   );

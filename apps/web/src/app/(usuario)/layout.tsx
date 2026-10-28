@@ -14,7 +14,7 @@ export default function LayoutUsuario({ children }: { children: ReactNode }) {
       </a>
       <Navbar />
       <main id="contenido" className="mx-auto w-full max-w-6xl px-4 py-8">
-        {children}
+        <GuardSesion>{children}</GuardSesion>
       </main>
     </>
   );
