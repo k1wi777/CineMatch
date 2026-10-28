@@ -56,6 +56,15 @@ export function PaginaPerfil() {
       <SeccionDatos perfil={datos} />
       <SeccionIntereses />
       <SeccionContrasena />
+
+      <p className="text-sm">
+        <Link
+          href="/mis-datos"
+          className="text-niebla underline underline-offset-4 hover:text-papel"
+        >
+          {t("misDatos")}
+        </Link>
+      </p>
     </div>
   );
 }
