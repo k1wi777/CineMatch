@@ -14,7 +14,7 @@ export function ProveedorApi({ children }: { children: ReactNode }) {
   useEffect(() => {
     registrarManejadorSesion(() => {
       cliente.clear();
-      router.replace("/login");
+      router.replace("/login?aviso=sesion-expirada");
     });
   }, [cliente, router]);
 
