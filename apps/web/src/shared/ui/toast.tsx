@@ -1,6 +1,13 @@
 "use client";
 
-import { agregarToast, quitarToast, type TipoToast, type Toast } from "./toast-estado";
+import Link from "next/link";
+import {
+  agregarToast,
+  quitarToast,
+  type AccionToast,
+  type TipoToast,
+  type Toast,
+} from "./toast-estado";
 import {
   createContext,
   useCallback,
@@ -11,8 +18,10 @@ import {
   type ReactNode,
 } from "react";
 
+type OpcionesToast = { accion?: AccionToast; duracionMs?: number };
+
 type ContextoToast = {
-  mostrar: (tipo: TipoToast, mensaje: string) => void;
+  mostrar: (tipo: TipoToast, mensaje: string, opciones?: OpcionesToast) => void;
   cerrar: (id: number) => void;
 };
 
@@ -27,11 +36,11 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   const cerrar = useCallback((id: number) => setLista((actual) => quitarToast(actual, id)), []);
 
   const mostrar = useCallback(
-    (tipo: TipoToast, mensaje: string) => {
+    (tipo: TipoToast, mensaje: string, opciones: OpcionesToast = {}) => {
       const id = siguiente.current;
       siguiente.current += 1;
-      setLista((actual) => agregarToast(actual, { tipo, mensaje }, id));
-      window.setTimeout(() => cerrar(id), DURACION_MS);
+      setLista((actual) => agregarToast(actual, { tipo, mensaje, accion: opciones.accion }, id));
+      window.setTimeout(() => cerrar(id), opciones.duracionMs ?? DURACION_MS);
     },
     [cerrar],
   );
@@ -61,6 +70,15 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             >
               {toast.mensaje}
             </span>
+            {toast.accion ? (
+              <Link
+                href={toast.accion.href}
+                onClick={() => cerrar(toast.id)}
+                className="shrink-0 font-semibold text-luz underline underline-offset-4"
+              >
+                {toast.accion.etiqueta}
+              </Link>
+            ) : null}
             <button
               type="button"
               onClick={() => cerrar(toast.id)}
