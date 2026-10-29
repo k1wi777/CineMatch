@@ -524,5 +524,64 @@
       "titulo": "Lo que recomienda la comunidad",
       "vacio": "Todavía no hay recomendaciones de la comunidad."
     }
+  },
+  "admin": {
+    "sincronizacion": {
+      "titulo": "Sincronización del catálogo",
+      "ayuda": "Trae títulos y géneros de la fuente externa. Corre en segundo plano: puedes salir de la página y volver.",
+      "estado": "Estado",
+      "estados": {
+        "inactiva": "Sin sincronizar",
+        "en_curso": "En curso",
+        "ok": "Correcta",
+        "error": "Con error"
+      },
+      "terminada": "Última vez: {fecha}",
+      "resumen": {
+        "agregados": "Agregados",
+        "actualizados": "Actualizados",
+        "descartados": "Descartados",
+        "generos": "Géneros nuevos"
+      },
+      "errorFuente": "La fuente externa no respondió: {detalle}",
+      "sincronizar": "Sincronizar catálogo",
+      "enCurso": "Sincronizando…"
+    },
+    "moderacion": {
+      "titulo": "Reseñas",
+      "ayuda": "Oculta una reseña si incumple las normas. Puedes restablecerla después. Las ocultas dejan de contar en promedios y ranking.",
+      "filtros": {
+        "estado": "Estado",
+        "todas": "Todas",
+        "visibles": "Visibles",
+        "ocultas": "Ocultas",
+        "titulo": "Título",
+        "idTitulo": "ID del título",
+        "autor": "Autor (usuario)",
+        "texto": "Texto del comentario"
+      },
+      "vacioTitulo": "Sin reseñas con esos filtros",
+      "vacioTexto": "Prueba con otros filtros.",
+      "calificacion": "Calificación",
+      "visible": "Visible",
+      "oculta": "Oculta",
+      "soloAmigos": "Solo amigos",
+      "publica": "Pública",
+      "spoiler": "Spoiler",
+      "sinComentario": "Sin comentario.",
+      "detalle": "Reseña {id} · autor {autor} · título {titulo}",
+      "verDetalle": "Ver detalle",
+      "cerrarDetalle": "Cerrar detalle",
+      "ocultar": "Ocultar",
+      "restablecer": "Restablecer",
+      "confirmar": {
+        "ocultarTitulo": "¿Ocultar esta reseña?",
+        "ocultarTexto": "Dejará de verse y de contar en promedios y ranking. Puedes restablecerla después.",
+        "restablecerTitulo": "¿Restablecer esta reseña?",
+        "restablecerTexto": "Volverá a verse y a contar en promedios y ranking.",
+        "enviando": "Guardando",
+        "cancelar": "Cancelar"
+      }
+    }
   }
 }
