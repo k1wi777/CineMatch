@@ -57,7 +57,13 @@ export function PaginaPerfil() {
       <SeccionIntereses />
       <SeccionContrasena />
 
-      <p className="text-sm">
+      <p className="flex flex-wrap gap-x-4 text-sm">
+        <Link
+          href="/perfil/resenas"
+          className="text-niebla underline underline-offset-4 hover:text-papel"
+        >
+          {t("misResenas")}
+        </Link>
         <Link
           href="/mis-datos"
           className="text-niebla underline underline-offset-4 hover:text-papel"
