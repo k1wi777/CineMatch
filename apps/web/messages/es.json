@@ -433,5 +433,54 @@
     "sinAmigosTitulo": "No tienes amigos a los que recomendar",
     "sinAmigosTexto": "Primero necesitas amigos para poder recomendar títulos.",
     "buscarPersonas": "Buscar personas"
+  },
+  "recomendaciones": {
+    "titulo": "Recomendaciones",
+    "pestanas": {
+      "recibidas": "Recibidas",
+      "enviadas": "Enviadas"
+    },
+    "filtroEstado": "Estado",
+    "todos": "Todas",
+    "estado": {
+      "enviada": "Enviada",
+      "abierta": "Abierta",
+      "aceptada": "En pendientes",
+      "descartada": "Descartada",
+      "completada": "Completada"
+    },
+    "cargando": "Cargando recomendaciones",
+    "vacioRecibidas": {
+      "titulo": "No tienes recomendaciones",
+      "texto": "Cuando un amigo te recomiende un título, aparecerá aquí."
+    },
+    "vacioEnviadas": {
+      "titulo": "Aún no has recomendado nada",
+      "texto": "Recomienda un título desde su ficha."
+    },
+    "explorar": "Explorar el catálogo",
+    "de": "De @{usuario}",
+    "para": "Para @{usuario}",
+    "fueraDeIntereses": "No coincide con tus intereses",
+    "ver": "Ver",
+    "noEncontrada": {
+      "titulo": "No encontramos esta recomendación",
+      "texto": "Puede que no exista o que no seas parte de ella."
+    },
+    "volverBandeja": "Volver a recomendaciones",
+    "deUsuario": "Recomendada por @{usuario}",
+    "paraUsuario": "Recomendada a @{usuario}",
+    "acciones": "Qué quieres hacer",
+    "agregarPendientes": "Agregar a pendientes",
+    "noMeInteresa": "No me interesa",
+    "verTitulo": "Ver título",
+    "calificar": "Calificar y reseñar",
+    "resenaAdjunta": "Reseña adjunta",
+    "sinResenaAdjunta": "No se adjuntó ninguna reseña.",
+    "resenaReceptor": "Reseña de @{usuario}",
+    "calificacion": "Calificación",
+    "etiquetas": "Etiquetas",
+    "spoilerAviso": "Esta reseña contiene spoilers.",
+    "mostrarSpoiler": "Mostrar spoiler"
   }
 }
