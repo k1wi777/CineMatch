@@ -1,6 +1,7 @@
 import type {
   CatalogoItem,
   CatalogoQuery,
+  Destacado,
   GeneroRef,
   TituloFicha,
   TipoContenido,
@@ -13,6 +14,20 @@ import type { MovieProvider } from "./proveedor/movie-provider.js";
 const DIA_MS = 24 * 60 * 60 * 1000;
 // Un enlace de tráiler se considera fresco durante 30 días antes de volver a consultarlo.
 const TTL_TRAILER_DIAS = 30;
+
+type FilaDestacado = {
+  id: number;
+  tipo: TipoContenido;
+  titulo: string;
+  anio: number | null;
+  sinopsis: string | null;
+  poster_url: string | null;
+  fondo_url: string;
+  fuente: string;
+  id_externo: string;
+  logo_url: string | null;
+  logo_consultado_en: Date | null;
+};
 
 type FilaTrailer = {
   tipo: TipoContenido;
@@ -80,6 +95,29 @@ async function generosDe(pool: pg.Pool, contenidoIds: number[]): Promise<Map<num
 
 // Consulta del catálogo (BE-6.4 y ficha de BE-6.5). Solo lectura.
 export function crearServicioCatalogo(pool: pg.Pool, proveedor: MovieProvider) {
+  // Logotipos de los destacados: los guardados y vigentes se usan tal cual; el resto se pide a la fuente
+  // (solo títulos de esa fuente) y se guarda, así cada título se consulta como mucho cada TTL_TRAILER_DIAS.
+  async function logosDe(filas: FilaDestacado[]): Promise<Map<number, string | null>> {
+    const mapa = new Map<number, string | null>();
+    const ahora = Date.now();
+    for (const fila of filas) {
+      const vigente =
+        fila.logo_consultado_en !== null &&
+        ahora - fila.logo_consultado_en.getTime() < TTL_TRAILER_DIAS * DIA_MS;
+      if (vigente || fila.fuente !== proveedor.fuente) {
+        mapa.set(fila.id, fila.logo_url);
+        continue;
+      }
+      const url = await proveedor.fetchLogo(fila.tipo, fila.id_externo);
+      await pool.query(
+        "UPDATE contenido SET logo_url = $2, logo_consultado_en = now() WHERE id = $1",
+        [fila.id, url],
+      );
+      mapa.set(fila.id, url);
+    }
+    return mapa;
+  }
+
   return {
     async listar(
       query: CatalogoQuery,
@@ -168,6 +206,35 @@ export function crearServicioCatalogo(pool: pg.Pool, proveedor: MovieProvider) {
         generos: generos.get(id) ?? [],
         fechaActualizacion: fila.fecha_actualizacion.toISOString(),
       };
+    },
+
+    // Títulos del carrusel del inicio: los más populares que tienen imagen horizontal.
+    async destacados(limite: number): Promise<Destacado[]> {
+      const { rows } = await pool.query<FilaDestacado>(
+        `SELECT id, tipo, titulo, anio, sinopsis, poster_url, fondo_url, fuente, id_externo,
+                logo_url, logo_consultado_en
+           FROM contenido
+          WHERE fondo_url IS NOT NULL
+          ORDER BY popularidad_externa DESC NULLS LAST, id
+          LIMIT $1`,
+        [limite],
+      );
+      const generos = await generosDe(
+        pool,
+        rows.map((fila) => fila.id),
+      );
+      const logos = await logosDe(rows);
+      return rows.map((fila) => ({
+        id: fila.id,
+        tipo: fila.tipo,
+        titulo: fila.titulo,
+        anio: fila.anio,
+        sinopsis: fila.sinopsis,
+        posterUrl: fila.poster_url,
+        fondoUrl: fila.fondo_url,
+        logoUrl: logos.get(fila.id) ?? null,
+        generos: generos.get(fila.id) ?? [],
+      }));
     },
 
     // Enlace al tráiler. Se pide a la fuente externa solo la primera vez y luego se reutiliza

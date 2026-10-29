@@ -50,6 +50,9 @@ function proveedorFalso(opciones: {
     async fetchTrailer() {
       return null;
     },
+    async fetchLogo() {
+      return null;
+    },
     async fetchPopular(tipo, pagina) {
       if (opciones.fallaEnPagina !== undefined && pagina >= opciones.fallaEnPagina) {
         throw new ProveedorExternoError();
