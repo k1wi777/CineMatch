@@ -482,5 +482,21 @@
     "etiquetas": "Etiquetas",
     "spoilerAviso": "Esta reseña contiene spoilers.",
     "mostrarSpoiler": "Mostrar spoiler"
+  },
+  "notificaciones": {
+    "titulo": "Notificaciones",
+    "sinLeer": "{total} sin leer",
+    "marcarTodas": "Marcar todas como leídas",
+    "todas": "Todas",
+    "sinLeerFiltro": "Sin leer",
+    "nueva": "Nueva",
+    "marcarLeida": "Marcar como leída",
+    "cargando": "Cargando notificaciones",
+    "vacio": {
+      "titulo": "No tienes notificaciones",
+      "texto": "Aquí aparecerán recomendaciones, solicitudes de amistad y avisos de moderación."
+    },
+    "sinLeerTitulo": "Estás al día",
+    "sinLeerTexto": "No tienes avisos sin leer."
   }
 }
