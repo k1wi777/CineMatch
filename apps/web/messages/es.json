@@ -408,5 +408,30 @@
         "texto": "Aquí aparecen los títulos que dejaste a medias."
       }
     }
+  },
+  "recomendar": {
+    "titulo": "Recomendar «{titulo}»",
+    "volver": "Volver al título",
+    "grupos": {
+      "coinciden": "Coinciden con tus intereses",
+      "otros": "Otros amigos"
+    },
+    "generosEnComun": "{total} géneros en común",
+    "etiquetas": {
+      "yaLaVio": "Ya la vio",
+      "yaRecomendada": "Ya recomendada",
+      "fuera": "Fuera de tus intereses"
+    },
+    "fueraAviso": "Este título no coincide con los géneros que te interesan. Puedes enviarlo igualmente.",
+    "fueraConfirmar": "Entiendo y quiero recomendarlo igualmente",
+    "motivo": "Motivo (opcional)",
+    "contador": "{actual} de {maximo} caracteres",
+    "adjuntar": "Adjuntar mi reseña",
+    "enviar": "Enviar recomendación",
+    "enviando": "Enviando",
+    "enviada": "Recomendación enviada a @{usuario}.",
+    "sinAmigosTitulo": "No tienes amigos a los que recomendar",
+    "sinAmigosTexto": "Primero necesitas amigos para poder recomendar títulos.",
+    "buscarPersonas": "Buscar personas"
   }
 }

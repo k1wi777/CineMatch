@@ -1,15 +1,13 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useId } from "react";
 import { useEstadoBiblioteca } from "@/features/biblioteca/biblioteca";
 import { SelectorEstado } from "@/features/biblioteca/selector-estado";
 
 // Barra de acciones de la ficha (FE-4.3): estado en la biblioteca y acciones de reseña y recomendación.
-// Reseñar ya lleva al formulario (FE-5.1). Recomendar llega con FE-7.1 y aparece como próximamente.
+// Reseñar lleva al formulario (FE-5.1) y recomendar a la página de envío (FE-7.1).
 export function BarraAcciones({ titulo, id }: { titulo: string; id: number }) {
   const t = useTranslations("ficha");
-  const idBase = useId();
   const estado = useEstadoBiblioteca(id);
 
   return (
@@ -33,17 +31,12 @@ export function BarraAcciones({ titulo, id }: { titulo: string; id: number }) {
           >
             {t("acciones.resenar")}
           </a>
-          <button
-            type="button"
-            disabled
-            aria-describedby={`${idBase}-proximamente`}
-            className="rounded-sm border border-papel/20 px-4 py-2 text-sm text-niebla disabled:cursor-not-allowed"
+          <a
+            href={`/catalogo/${id}/recomendar`}
+            className="rounded-sm border border-papel/30 px-4 py-2 text-sm hover:border-luz"
           >
             {t("acciones.recomendar")}
-          </button>
-          <span id={`${idBase}-proximamente`} className="text-xs text-niebla">
-            {t("acciones.proximamente")}
-          </span>
+          </a>
         </div>
       </div>
     </section>
