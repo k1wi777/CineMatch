@@ -25,7 +25,7 @@ export type ResenaLista = {
   visibilidad: "publica" | "amigos";
   fechaCreacion: string;
   fechaEdicion: string | null;
-  autor: { id: number; username: string; avatarUrl: string | null };
+  autor: { id: number; username: string; avatarUrl: string | null; eliminado: boolean };
   contenido?: { id: number; titulo: string; posterUrl: string | null };
 };
 
@@ -43,6 +43,7 @@ type FilaResenaLista = {
   autor_id: number;
   autor_username: string;
   autor_avatar: string | null;
+  autor_eliminado: boolean;
   contenido_id: number;
   contenido_titulo: string;
   contenido_poster: string | null;
@@ -53,6 +54,7 @@ const SELECT_LISTA = `
   SELECT r.id, r.calificacion, r.comentario, r.es_spoiler, r.visibilidad, r.fecha_creacion,
          r.fecha_edicion, r.visible,
          u.id AS autor_id, u.username AS autor_username, u.avatar_url AS autor_avatar,
+         (u.eliminado_en IS NOT NULL) AS autor_eliminado,
          c.id AS contenido_id, c.titulo AS contenido_titulo, c.poster_url AS contenido_poster,
          COALESCE((SELECT array_agg(e.texto ORDER BY e.texto)
                      FROM resena_etiqueta re JOIN etiqueta e ON e.id = re.etiqueta_id
@@ -71,7 +73,12 @@ function aLista(fila: FilaResenaLista, conContenido: boolean): ResenaLista {
     visibilidad: fila.visibilidad,
     fechaCreacion: fila.fecha_creacion.toISOString(),
     fechaEdicion: fila.fecha_edicion?.toISOString() ?? null,
-    autor: { id: fila.autor_id, username: fila.autor_username, avatarUrl: fila.autor_avatar },
+    autor: {
+      id: fila.autor_id,
+      username: fila.autor_username,
+      avatarUrl: fila.autor_avatar,
+      eliminado: fila.autor_eliminado,
+    },
   };
   if (conContenido) {
     base.contenido = {

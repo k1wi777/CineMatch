@@ -75,3 +75,10 @@ export const PaginaBibliotecaSchema = z.object({
 });
 
 export type PaginaBiblioteca = z.infer<typeof PaginaBibliotecaSchema>;
+
+// Estado de un título para el usuario de la sesión (GET /library/:contentId). null si no está en su biblioteca.
+export const EstadoActualBibliotecaSchema = z.object({
+  estado: EstadoBibliotecaSchema.nullable(),
+});
+
+export type EstadoActualBiblioteca = z.infer<typeof EstadoActualBibliotecaSchema>;

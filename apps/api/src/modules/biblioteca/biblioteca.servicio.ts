@@ -67,6 +67,15 @@ export function crearServicioBiblioteca(pool: pg.Pool) {
       };
     },
 
+    // Estado del título para la sesión, o null si no está en la biblioteca.
+    async estadoDe(usuarioId: number, contenidoId: number): Promise<EstadoBiblioteca | null> {
+      const { rows } = await pool.query<{ estado: EstadoBiblioteca }>(
+        "SELECT estado FROM seguimiento WHERE usuario_id = $1 AND contenido_id = $2",
+        [usuarioId, contenidoId],
+      );
+      return rows[0]?.estado ?? null;
+    },
+
     // Quita el título de la biblioteca. Es idempotente: si no estaba, no pasa nada.
     async quitar(usuarioId: number, contenidoId: number): Promise<void> {
       await pool.query("DELETE FROM seguimiento WHERE usuario_id = $1 AND contenido_id = $2", [
