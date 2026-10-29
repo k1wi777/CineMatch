@@ -65,25 +65,22 @@ export function PaginaFicha({ id }: { id: number }) {
         {t("volver")}
       </Link>
 
-      <header className="relative isolate overflow-hidden rounded-sm p-6 md:p-10">
+      {/* El fondo se extiende hacia fuera (margen negativo igual al padding) para que el contenido quede alineado con el resto de la página. */}
+      <header className="relative -mx-4 overflow-hidden rounded-sm px-4 py-6 md:-mx-10 md:px-10 md:py-10">
         {titulo.posterUrl ? (
-          <>
+          <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
             <Image
               src={titulo.posterUrl}
               alt=""
-              aria-hidden
               fill
               sizes="100vw"
-              className="-z-10 scale-110 object-cover opacity-40 blur-2xl"
+              className="scale-110 object-cover opacity-60 blur-xl"
             />
-            <div
-              aria-hidden
-              className="absolute inset-0 -z-10 bg-gradient-to-b from-sala/30 via-sala/80 to-sala"
-            />
-          </>
+            <div className="absolute inset-0 bg-gradient-to-r from-sala via-sala/75 to-sala/35" />
+          </div>
         ) : null}
 
-        <div className="flex flex-col gap-6 sm:flex-row">
+        <div className="relative flex flex-col gap-6 sm:flex-row">
           <div className="w-40 shrink-0 self-start sm:w-56">
             {titulo.posterUrl ? (
               <div className="relative aspect-[2/3] w-full overflow-hidden rounded-sm shadow-foco">
@@ -102,12 +99,17 @@ export function PaginaFicha({ id }: { id: number }) {
           </div>
 
           <div className="min-w-0 flex-1 space-y-4">
-            <p className="text-sm text-niebla">
-              {t(`tipo.${titulo.tipo}`)}
-              {titulo.anio ? ` · ${titulo.anio}` : ""}
-              {titulo.duracion ? ` · ${t("duracion", { minutos: titulo.duracion })}` : ""}
-            </p>
-            <h1 className="font-display text-3xl sm:text-4xl">{titulo.titulo}</h1>
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="min-w-0 space-y-2">
+                <p className="text-sm text-niebla">
+                  {t(`tipo.${titulo.tipo}`)}
+                  {titulo.anio ? ` · ${titulo.anio}` : ""}
+                  {titulo.duracion ? ` · ${t("duracion", { minutos: titulo.duracion })}` : ""}
+                </p>
+                <h1 className="font-display text-3xl sm:text-4xl">{titulo.titulo}</h1>
+              </div>
+              <BotonTrailer id={id} titulo={titulo.titulo} />
+            </div>
             {titulo.director ? (
               <p className="text-papel/85">
                 <span className="text-niebla">{t("director")}: </span>
@@ -127,9 +129,8 @@ export function PaginaFicha({ id }: { id: number }) {
               <h2 id="ficha-sinopsis" className="text-sm text-niebla">
                 {t("sinopsis")}
               </h2>
-              <p className="max-w-prose text-papel/85">{titulo.sinopsis ?? t("sinSinopsis")}</p>
+              <p className="text-papel/85">{titulo.sinopsis ?? t("sinSinopsis")}</p>
             </section>
-            <BotonTrailer id={id} titulo={titulo.titulo} />
           </div>
         </div>
       </header>
