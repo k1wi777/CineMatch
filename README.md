@@ -230,6 +230,7 @@ El administrador es el que definiste en `ADMIN_EMAIL`.
 | `pnpm test` | Pruebas de todos los paquetes (la API necesita la base de pruebas) |
 | `pnpm test:api` | Solo las pruebas de la API |
 | `pnpm format:check` | Comprueba el formato con Prettier |
+| `pnpm --filter @cinematch/web run test:e2e` | Pruebas E2E con Playwright (necesita la web compilada y la base de datos; ver abajo) |
 | `pnpm migrate:up` / `pnpm migrate:down` | Aplica o revierte migraciones |
 | `pnpm backup` | Copia de seguridad de la base de datos en `backups/` |
 
@@ -248,6 +249,7 @@ El administrador es el que definiste en `ADMIN_EMAIL`.
 - **Al iniciar sesión dice «demasiados intentos»:** en desarrollo hay un límite de 100 intentos de inicio de sesión cada 15 minutos. Reiniciar la API limpia el contador. El bloqueo de cuenta tras 5 contraseñas erróneas es independiente y dura 15 minutos.
 - **Pruebas de la API que fallan de forma intermitente en Windows** (cierre inesperado de un proceso de prueba): vuelve a ejecutarlas. El proyecto ya usa hilos en vez de procesos para Vitest, pero la causa exacta no está confirmada.
 - **La web compila con webpack, no con Turbopack:** es intencional. Turbopack no resuelve los imports `.js` de `@cinematch/shared`. Los scripts de la web ya lo tienen configurado.
+- **Pruebas E2E:** antes, `pnpm --filter @cinematch/web run build`. Playwright arranca la API y la web si no están en marcha. Chrome y Edge usan los navegadores instalados; para Firefox y WebKit, `pnpm --filter @cinematch/web exec playwright install firefox webkit`. La prueba de moderación necesita un administrador de pruebas en `E2E_ADMIN_EMAIL` y `E2E_ADMIN_PASSWORD`; sin ellos se omite. Compatibilidad y rendimiento: `docs/compatibilidad-rendimiento.md`.
 - **No llegan correos de recuperación:** comprueba que Mailpit está sano (`docker compose ps`) y mira en http://localhost:8025.
 
 ---
