@@ -498,5 +498,31 @@
     },
     "sinLeerTitulo": "Estás al día",
     "sinLeerTexto": "No tienes avisos sin leer."
+  },
+  "comunidad": {
+    "titulo": "Recomendado para ti",
+    "ayuda": "Títulos que la comunidad valora y populares ahora. No incluyen lo que ya viste.",
+    "tipo": "Tipo",
+    "tipoTodos": "Todos",
+    "peliculas": "Películas",
+    "series": "Series",
+    "genero": "Género",
+    "todosGeneros": "Todos los géneros",
+    "cargando": "Cargando recomendaciones",
+    "vacioTitulo": "Sin recomendaciones por ahora",
+    "vacioTexto": "Prueba con otro género o tipo, o vuelve más tarde."
+  },
+  "inicio": {
+    "cargando": "Cargando",
+    "verTodas": "Ver todas",
+    "recibidas": {
+      "titulo": "Recomendaciones recibidas",
+      "de": "De @{usuario}",
+      "ver": "Ver recomendación"
+    },
+    "comunidad": {
+      "titulo": "Lo que recomienda la comunidad",
+      "vacio": "Todavía no hay recomendaciones de la comunidad."
+    }
   }
 }

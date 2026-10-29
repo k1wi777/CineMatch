@@ -12,7 +12,7 @@ import { crearClaves, peticion } from "@/shared/api";
 
 export const claves = crearClaves("recomendaciones");
 
-const PaginaRecomendacionesSchema = z.object({
+export const PaginaRecomendacionesSchema = z.object({
   items: z.array(RecomendacionListaItemSchema),
   page: z.number().int(),
   pageSize: z.number().int(),
@@ -71,5 +71,16 @@ export function useAccionRecomendacion(id: number) {
       void cliente.invalidateQueries({ queryKey: ["recomendacion"] });
       void cliente.invalidateQueries({ queryKey: ["biblioteca"] });
     },
+  });
+}
+
+// Las recibidas más recientes, para la página de inicio: las primeras seis.
+export function useRecibidasRecientes(cantidad: number) {
+  return useQuery<PaginaRecomendaciones>({
+    queryKey: claves.lista({ tipo: "recientes", cantidad }),
+    queryFn: () =>
+      peticion<PaginaRecomendaciones>(`/api/recommendations/received?page=1&pageSize=${cantidad}`, {
+        esquema: PaginaRecomendacionesSchema,
+      }),
   });
 }
