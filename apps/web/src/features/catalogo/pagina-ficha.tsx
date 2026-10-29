@@ -182,12 +182,8 @@ export function PaginaFicha({ id }: { id: number }) {
               <p className="text-niebla">{t("miResena.vacio")}</p>
             )}
             <div className="rounded-sm border border-papel/10 p-4 md:p-6">
-              {/* La clave reinicia el formulario cuando cambia la reseña propia (p. ej. tras guardarla). */}
-              <FormularioResena
-                key={resenas.data.miResena?.id ?? "nueva"}
-                contenidoId={id}
-                existente={resenas.data.miResena ?? null}
-              />
+              {/* Sin clave: al guardar no se vuelve a montar, así el aviso de «guardada» sigue visible. */}
+              <FormularioResena contenidoId={id} existente={resenas.data.miResena ?? null} />
             </div>
           </>
         )}

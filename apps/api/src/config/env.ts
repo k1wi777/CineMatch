@@ -12,6 +12,9 @@ const envBase = z.object({
   WEB_URL: z.url().default("http://localhost:3000"),
   // Confiar en el proxy que reenvía la IP del cliente (necesario detrás de un balanceador).
   TRUST_PROXY: z.stringbool().default(false),
+  // Límite de intentos de autenticación por ventana de 15 minutos en desarrollo (producción usa 10 fijo).
+  // Las pruebas E2E lo suben para no agotarlo con muchos inicios de sesión seguidos.
+  LIMITE_AUTH_DESARROLLO: z.coerce.number().int().min(1).default(100),
   // Correo saliente: Mailpit en desarrollo (SMTP 1025).
   SMTP_HOST: z.string().min(1).default("localhost"),
   SMTP_PORT: z.coerce.number().int().positive().default(1025),
