@@ -251,5 +251,58 @@
     "generosError": "No pudimos cargar los géneros.",
     "reintentar": "Reintentar",
     "yaTienesCuenta": "¿Ya tienes cuenta? Inicia sesión"
+  },
+  "ficha": {
+    "cargando": "Cargando título",
+    "noEncontrado": "No encontramos este título",
+    "noEncontradoTexto": "Puede que el enlace esté mal o que el título ya no esté disponible.",
+    "volver": "Volver al catálogo",
+    "poster": "Póster de {titulo}",
+    "tipo": {
+      "pelicula": "Película",
+      "serie": "Serie"
+    },
+    "duracion": "{minutos} min",
+    "director": "Director o creador",
+    "generos": "Géneros",
+    "sinopsis": "Sinopsis",
+    "sinSinopsis": "Sin sinopsis disponible.",
+    "comunidad": {
+      "titulo": "Comunidad",
+      "promedio": "Promedio de la comunidad",
+      "calificaciones": "{total} calificaciones",
+      "sinCalificaciones": "Aún nadie ha calificado este título.",
+      "amigos": "Tus amigos",
+      "amigosTotal": "{total} de tus amigos",
+      "etiquetas": "Lo que más dice la comunidad"
+    },
+    "miResena": {
+      "titulo": "Mi reseña",
+      "vacio": "Todavía no has reseñado este título.",
+      "ocultada": "Tu reseña está oculta por moderación."
+    },
+    "resenas": {
+      "titulo": "Reseñas",
+      "vacio": "Todavía no hay reseñas con comentario.",
+      "usuarioEliminado": "Usuario eliminado",
+      "calificacion": "Calificación",
+      "etiquetas": "Etiquetas",
+      "spoilerAviso": "Esta reseña contiene spoilers.",
+      "mostrarSpoiler": "Mostrar spoiler"
+    },
+    "acciones": {
+      "titulo": "Acciones para {titulo}",
+      "biblioteca": "Estado en mi biblioteca",
+      "sinEstado": "No está en mi biblioteca",
+      "resenar": "Calificar o reseñar",
+      "recomendar": "Recomendar",
+      "proximamente": "Disponible próximamente"
+    },
+    "estado": {
+      "pendiente": "Pendiente",
+      "viendo": "Viendo",
+      "vista": "Vista",
+      "abandonada": "Abandonada"
+    }
   }
 }

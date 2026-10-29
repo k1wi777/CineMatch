@@ -1,6 +1,7 @@
 import {
   BibliotecaQuerySchema,
   EstablecerEstadoSchema,
+  EstadoActualBibliotecaSchema,
   PaginaBibliotecaSchema,
   type BibliotecaQuery,
   type EstablecerEstado,
@@ -79,6 +80,18 @@ export function createBibliotecaRouter(
     async (req, res) => {
       const query = res.locals.input.query as BibliotecaQuery;
       res.json(PaginaBibliotecaSchema.parse(await servicio.listar(idDeSesion(req), query)));
+    },
+  );
+
+  // Estado del título para la barra de acciones de la ficha. null si no está en la biblioteca.
+  router.get(
+    "/library/:contentId",
+    autenticado,
+    validate({ params: ParamsContenidoSchema }),
+    async (req, res) => {
+      const { contentId } = res.locals.input.params as z.infer<typeof ParamsContenidoSchema>;
+      const estado = await servicio.estadoDe(idDeSesion(req), contentId);
+      res.json(EstadoActualBibliotecaSchema.parse({ estado }));
     },
   );
 

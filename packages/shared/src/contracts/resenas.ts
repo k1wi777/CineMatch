@@ -13,10 +13,12 @@ export const ResenaListaSchema = z.object({
   visibilidad: VisibilidadResenaSchema,
   fechaCreacion: z.string(),
   fechaEdicion: z.string().nullable(),
+  // eliminado: la cuenta del autor se borró; se muestra como "Usuario eliminado" y sin enlace.
   autor: z.object({
     id: z.number().int(),
     username: z.string(),
     avatarUrl: z.string().nullable(),
+    eliminado: z.boolean(),
   }),
   contenido: z
     .object({
@@ -28,6 +30,28 @@ export const ResenaListaSchema = z.object({
 });
 
 export type ResenaLista = z.infer<typeof ResenaListaSchema>;
+
+// Agregados de un título para la ficha (GET /titles/:id/stats). Los promedios son anónimos.
+export const EstadisticasTituloSchema = z.object({
+  promedioPublico: z.number().nullable(),
+  conteoPublico: z.number().int(),
+  promedioAmigos: z.number().nullable(),
+  conteoAmigos: z.number().int(),
+  etiquetasComunidad: z.array(z.object({ texto: z.string(), veces: z.number().int() })),
+});
+
+export type EstadisticasTitulo = z.infer<typeof EstadisticasTituloSchema>;
+
+// Reseñas de un título (GET /titles/:id/reviews). miResena incluye si la moderación la ocultó.
+export const ResenasTituloSchema = z.object({
+  items: z.array(ResenaListaSchema),
+  page: z.number().int(),
+  pageSize: z.number().int(),
+  total: z.number().int(),
+  miResena: ResenaListaSchema.extend({ ocultaPorModeracion: z.boolean() }).nullable(),
+});
+
+export type ResenasTitulo = z.infer<typeof ResenasTituloSchema>;
 
 export type VisibilidadResena = z.infer<typeof VisibilidadResenaSchema>;
 
