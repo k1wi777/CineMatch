@@ -24,7 +24,7 @@ export function opcionesDeSeguridad(env: Env): OpcionesDeSeguridad {
     jsonLimite: "100kb",
     limites: {
       general: { ventanaMs: MINUTO_MS, max: produccion ? 120 : 1_000 },
-      auth: { ventanaMs: 15 * MINUTO_MS, max: produccion ? 10 : 100 },
+      auth: { ventanaMs: 15 * MINUTO_MS, max: produccion ? 10 : env.LIMITE_AUTH_DESARROLLO },
     },
   };
 }
