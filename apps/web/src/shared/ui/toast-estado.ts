@@ -1,6 +1,10 @@
 // Estado de los avisos (toasts) como funciones puras: sin React ni JSX, así se prueban directamente.
 export type TipoToast = "exito" | "error" | "info";
-export type Toast = { id: number; tipo: TipoToast; mensaje: string };
+
+// Acción opcional del aviso: un enlace al elemento relacionado (FE-8.3).
+export type AccionToast = { etiqueta: string; href: string };
+
+export type Toast = { id: number; tipo: TipoToast; mensaje: string; accion?: AccionToast };
 
 export const MAX_TOASTS_VISIBLES = 4;
 

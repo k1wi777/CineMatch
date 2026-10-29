@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
+import { ProveedorNotificaciones } from "@/features/notificaciones/conexion";
 import { GuardSesion } from "@/shared/layouts/guard-sesion";
 import { Navbar } from "@/shared/layouts/navbar";
 
 // Layout de usuario: navbar con menú, buscador y campana; el contenido va en <main>.
+// La conexión en vivo solo existe dentro del guard: con sesión válida y se cierra al salir.
 export default function LayoutUsuario({ children }: { children: ReactNode }) {
   return (
     <>
@@ -14,7 +16,9 @@ export default function LayoutUsuario({ children }: { children: ReactNode }) {
       </a>
       <Navbar />
       <main id="contenido" className="mx-auto w-full max-w-6xl px-4 py-8">
-        <GuardSesion>{children}</GuardSesion>
+        <GuardSesion>
+          <ProveedorNotificaciones>{children}</ProveedorNotificaciones>
+        </GuardSesion>
       </main>
     </>
   );
