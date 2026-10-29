@@ -2,6 +2,10 @@ packages:
   - "apps/*"
   - "packages/*"
 allowBuilds:
+  "@parcel/watcher": true
+  "@swc/core": true
   "@scarf/scarf": false
   argon2: true
   esbuild: true
+minimumReleaseAgeExclude:
+  - "@hookform/resolvers@6.0.1"
