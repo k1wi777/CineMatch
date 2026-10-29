@@ -52,6 +52,27 @@
     "invalidoSinToken": "Falta el enlace de recuperación. Pide uno nuevo.",
     "pedirOtro": "Pedir otro enlace"
   },
+  "catalogo": {
+    "titulo": "Catálogo",
+    "resultados": "{total} títulos",
+    "buscar": "Buscar títulos",
+    "buscarPlaceholder": "Título, por ejemplo: Dune",
+    "tipo": {
+      "etiqueta": "Tipo",
+      "todos": "Todos",
+      "peliculas": "Películas",
+      "series": "Series"
+    },
+    "generos": {
+      "etiqueta": "Géneros",
+      "elegidos": "{total} elegidos",
+      "error": "No pudimos cargar los géneros."
+    },
+    "limpiar": "Quitar filtros",
+    "cargando": "Cargando títulos",
+    "vacioTitulo": "Sin resultados",
+    "vacioTexto": "Prueba con otro título o quita algún filtro."
+  },
   "amigos": {
     "lista": {
       "titulo": "Mis amigos",
