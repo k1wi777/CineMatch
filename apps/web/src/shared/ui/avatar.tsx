@@ -1,3 +1,4 @@
+import Image from "next/image";
 // Avatar con texto alternativo. Sin imagen muestra las iniciales del nombre.
 export function Avatar({
   nombre,
@@ -11,10 +12,14 @@ export function Avatar({
   const estilo = { width: tamano, height: tamano };
   if (url) {
     return (
-      <img
+      <Image
         src={url}
         alt={`Foto de ${nombre}`}
-        style={estilo}
+        width={tamano}
+        height={tamano}
+        sizes={`${tamano}px`}
+        // Los avatares locales ya son WebP de 256×256 (los genera la API): no pasan por el optimizador.
+        unoptimized={url.startsWith("/")}
         className="rounded-full object-cover"
       />
     );

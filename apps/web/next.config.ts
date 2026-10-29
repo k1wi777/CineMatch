@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   // @cinematch/shared se consume como TypeScript fuente desde el workspace.
   transpilePackages: ["@cinematch/shared"],
+  // Pósteres externos (TMDB). Los avatares y pósteres locales vienen de /uploads y no necesitan configuración.
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "image.tmdb.org" }],
+  },
   poweredByHeader: false,
   // Los paquetes del workspace usan imports NodeNext ("./x.js" que apunta a "./x.ts"); webpack necesita este alias.
   webpack(config) {

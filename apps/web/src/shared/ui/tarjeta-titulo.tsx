@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Cartel } from "./cartel";
 
@@ -19,12 +20,15 @@ export function TarjetaTitulo({
   return (
     <Link href={`/catalogo/${id}`} className="group block space-y-2">
       {posterUrl ? (
-        <img
-          src={posterUrl}
-          alt={`Póster de ${titulo}${anio ? `, ${anio}` : ""}`}
-          loading="lazy"
-          className="aspect-[2/3] w-full rounded-sm bg-butaca object-cover shadow-foco"
-        />
+        <div className="relative aspect-[2/3] w-full overflow-hidden rounded-sm bg-butaca shadow-foco">
+          <Image
+            src={posterUrl}
+            alt={`Póster de ${titulo}${anio ? `, ${anio}` : ""}`}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+            className="object-cover"
+          />
+        </div>
       ) : (
         <Cartel titulo={titulo} anio={anio} />
       )}
