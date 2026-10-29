@@ -88,9 +88,9 @@ async function guardarTitulo(
   return withTransaction(pool, async (tx) => {
     const { rows } = await tx.query<{ id: number; agregado: boolean }>(
       `INSERT INTO contenido
-         (tipo, titulo, sinopsis, anio, director, duracion, poster_url,
+         (tipo, titulo, sinopsis, anio, director, duracion, poster_url, fondo_url,
           fuente, id_externo, fecha_actualizacion, popularidad_externa)
-       VALUES ($1::tipo_contenido, $2, $3, $4, $5, $6, $7, $8, $9, now(), $10)
+       VALUES ($1::tipo_contenido, $2, $3, $4, $5, $6, $7, $8, $9, $10, now(), $11)
        ON CONFLICT (fuente, tipo, id_externo) DO UPDATE SET
          titulo = EXCLUDED.titulo,
          sinopsis = EXCLUDED.sinopsis,
@@ -98,6 +98,7 @@ async function guardarTitulo(
          director = EXCLUDED.director,
          duracion = EXCLUDED.duracion,
          poster_url = EXCLUDED.poster_url,
+         fondo_url = EXCLUDED.fondo_url,
          popularidad_externa = EXCLUDED.popularidad_externa,
          fecha_actualizacion = now()
        RETURNING id, (xmax = 0) AS agregado`,
@@ -109,6 +110,7 @@ async function guardarTitulo(
         recortar(contenido.director, MAX_DIRECTOR),
         contenido.duracion,
         recortar(contenido.posterUrl, MAX_POSTER),
+        recortar(contenido.fondoUrl ?? null, MAX_POSTER),
         fuente,
         contenido.idExterno.trim(),
         contenido.popularidadExterna,

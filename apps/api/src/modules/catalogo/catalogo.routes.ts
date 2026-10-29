@@ -1,6 +1,7 @@
 import {
   CatalogoPaginaSchema,
   CatalogoQuerySchema,
+  DestacadosSchema,
   TituloFichaSchema,
   TrailerSchema,
   type CatalogoQuery,
@@ -18,9 +19,22 @@ const ParamsTituloSchema = z.object({
   id: z.coerce.number().int().positive(),
 });
 
+// Títulos que devuelve el carrusel del inicio.
+const LIMITE_DESTACADOS = 6;
+
 registroOpenApi.registrarEsquema("PaginaCatalogo", CatalogoPaginaSchema);
 registroOpenApi.registrarEsquema("TituloFicha", TituloFichaSchema);
 registroOpenApi.registrarEsquema("Trailer", TrailerSchema);
+registroOpenApi.registrarEsquema("Destacados", DestacadosSchema);
+registroOpenApi.registrar({
+  metodo: "get",
+  ruta: "/api/catalog/destacados",
+  resumen: "Títulos destacados del inicio, con imagen horizontal (los más populares)",
+  respuestas: {
+    200: { descripcion: "Lista de destacados.", esquema: "Destacados" },
+    401: { descripcion: "No hay sesión vigente.", esquema: "ErrorResponse" },
+  },
+});
 registroOpenApi.registrar({
   metodo: "get",
   ruta: "/api/catalog",
@@ -69,6 +83,11 @@ export function createCatalogoRouter(
       res.json(CatalogoPaginaSchema.parse(await servicio.listar(query)));
     },
   );
+
+  // Antes de /catalog/:id, para que «destacados» no se tome por un id.
+  router.get("/catalog/destacados", autenticado, async (_req, res) => {
+    res.json(DestacadosSchema.parse(await servicio.destacados(LIMITE_DESTACADOS)));
+  });
 
   router.get(
     "/catalog/:id",

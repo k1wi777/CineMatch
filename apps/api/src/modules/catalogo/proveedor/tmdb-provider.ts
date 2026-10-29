@@ -160,6 +160,21 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
       return aContenidoExterno(tipo, titulo, generos);
     },
 
+    async fetchLogo(tipo, idExterno) {
+      if (!/^\d+$/.test(idExterno)) return null;
+      const ruta = tipo === "pelicula" ? `/movie/${idExterno}/images` : `/tv/${idExterno}/images`;
+      const datos = await pedir<{ logos?: { file_path?: string; iso_639_1?: string | null }[] }>(
+        ruta,
+        { include_image_language: "es,en,null" },
+      );
+      const logos = (datos?.logos ?? []).filter((logo) => typeof logo.file_path === "string");
+      const elegido =
+        logos.find((logo) => logo.iso_639_1 === "es") ??
+        logos.find((logo) => logo.iso_639_1 === "en") ??
+        logos[0];
+      return elegido?.file_path ? `https://image.tmdb.org/t/p/w500${elegido.file_path}` : null;
+    },
+
     async fetchTrailer(tipo, idExterno) {
       if (!/^\d+$/.test(idExterno)) return null;
       const ruta = tipo === "pelicula" ? `/movie/${idExterno}/videos` : `/tv/${idExterno}/videos`;

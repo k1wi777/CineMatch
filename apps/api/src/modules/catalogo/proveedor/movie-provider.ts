@@ -13,6 +13,8 @@ export type ContenidoExterno = {
   director: string | null;
   duracion: number | null;
   posterUrl: string | null;
+  // Imagen horizontal del título (para el carrusel del inicio). Opcional: el mock no la tiene.
+  fondoUrl?: string | null;
   popularidadExterna: number | null;
   generos: string[];
 };
@@ -28,4 +30,6 @@ export interface MovieProvider {
   fetchDetails(tipo: TipoContenido, idExterno: string): Promise<ContenidoExterno | null>;
   // Enlace de YouTube al tráiler, o null si no hay. Solo se guarda el enlace; el video no se descarga.
   fetchTrailer(tipo: TipoContenido, idExterno: string): Promise<string | null>;
+  // URL de la imagen del logotipo del título (el nombre como imagen), o null si no hay. Prefiere español e inglés.
+  fetchLogo(tipo: TipoContenido, idExterno: string): Promise<string | null>;
 }
