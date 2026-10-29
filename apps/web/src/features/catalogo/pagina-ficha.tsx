@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ApiError, mensajeDeError } from "@/shared/api";
@@ -66,11 +67,16 @@ export function PaginaFicha({ id }: { id: number }) {
       <header className="flex flex-col gap-6 sm:flex-row">
         <div className="w-40 shrink-0 self-start sm:w-56">
           {titulo.posterUrl ? (
-            <img
-              src={titulo.posterUrl}
-              alt={t("poster", { titulo: titulo.titulo })}
-              className="aspect-[2/3] w-full rounded-sm object-cover shadow-foco"
-            />
+            <div className="relative aspect-[2/3] w-full overflow-hidden rounded-sm shadow-foco">
+              <Image
+                src={titulo.posterUrl}
+                alt={t("poster", { titulo: titulo.titulo })}
+                fill
+                priority
+                sizes="(max-width: 640px) 160px, 224px"
+                className="object-cover"
+              />
+            </div>
           ) : (
             <Cartel titulo={titulo.titulo} anio={titulo.anio} />
           )}
