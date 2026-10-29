@@ -88,7 +88,7 @@ export function SeccionIntereses() {
                     type="checkbox"
                     checked={marcado}
                     onChange={(evento) => alternar(genero.id, evento.target.checked)}
-                    className="h-4 w-4 accent-luz"
+                    className="h-6 w-6 accent-luz"
                   />
                   {genero.nombre}
                 </label>

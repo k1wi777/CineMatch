@@ -45,6 +45,28 @@ body {
   outline-offset: 3px;
 }
 
+/* Objetivos táctiles de al menos 24 px (WCAG 2.5.8). Va en la capa base: las utilidades de Tailwind la sobrescriben. */
+@layer base {
+  button:not(.sr-only) {
+    min-height: 1.5rem;
+  }
+
+  /* Enlaces dentro de texto: el relleno vertical amplía el área de toque sin mover el diseño. */
+  a[href]:not(.block):not(.flex) {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+}
+
 /* El único momento de movimiento: la sala se enciende al cargar la primera vez. */
 @keyframes encender-sala {
   from {
