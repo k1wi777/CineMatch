@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { useCerrarSesion } from "@/features/auth/cerrar-sesion";
 import { useContadorSolicitudes } from "@/features/amigos/amigos";
+import { useContadorNoLeidas } from "@/features/notificaciones/notificaciones";
 
 // Aviso con el número de solicitudes recibidas pendientes, junto a «Amigos».
 function Contador({ total }: { total: number }) {
@@ -31,13 +32,14 @@ export function estaActiva(ruta: string, href: string): boolean {
   return ruta === href || ruta.startsWith(`${href}/`);
 }
 
-export function Navbar({ notificacionesSinLeer = 0 }: { notificacionesSinLeer?: number }) {
+export function Navbar() {
   const ruta = usePathname();
   const router = useRouter();
   const [menuAbierto, setMenuAbierto] = useState(false);
   const idMenu = useId();
   const cerrarSesion = useCerrarSesion();
   const solicitudesPendientes = useContadorSolicitudes().data ?? 0;
+  const notificacionesSinLeer = useContadorNoLeidas().data ?? 0;
 
   // El menú móvil se cierra con Escape y al cambiar de página.
   useEffect(() => {
