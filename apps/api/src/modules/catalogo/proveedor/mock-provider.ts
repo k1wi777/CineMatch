@@ -31,5 +31,10 @@ export function crearMockProvider(fixtures: ContenidoExterno[] = FIXTURES_MOCK):
       );
       return encontrado ? copia(encontrado) : null;
     },
+
+    // Sin red no hay tráileres.
+    async fetchTrailer() {
+      return null;
+    },
   };
 }

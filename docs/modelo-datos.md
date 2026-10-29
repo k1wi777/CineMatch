@@ -97,20 +97,22 @@ El mínimo de 3 géneros lo valida la aplicación (RN13, ERS).
 
 ### `contenido`
 
-| Columna               | Tipo             | Restricciones                                                      | Fuente               |
-| --------------------- | ---------------- | ------------------------------------------------------------------ | -------------------- |
-| `id`                  | integer          | PK                                                                 | `idContenido`        |
-| `tipo`                | `tipo_contenido` | NOT NULL                                                           | `tipo`               |
-| `titulo`              | varchar(255)     | NOT NULL. Índice GIN con `pg_trgm` (issue #10)                     | `titulo`             |
-| `sinopsis`            | text             | NULL                                                               | `sinopsis`           |
-| `anio`                | smallint         | NULL                                                               | `anio`               |
-| `director`            | varchar(150)     | NULL. Director de película o creador de serie                      | `director`           |
-| `duracion`            | smallint         | NULL. Minutos (película) o promedio por episodio (serie)           | `duracion`           |
-| `poster_url`          | varchar(255)     | NULL                                                               | `posterUrl`          |
-| `fuente`              | varchar(30)      | NOT NULL                                                           | `fuente`             |
-| `id_externo`          | varchar(50)      | NOT NULL                                                           | `idExterno`          |
-| `fecha_actualizacion` | timestamptz      | NOT NULL                                                           | `fechaActualizacion` |
-| `popularidad_externa` | numeric(12,3)    | NULL. Necesaria para RN15 (issues #10, #42). **No está en el ERS** | (issue #10, #42)     |
+| Columna                 | Tipo             | Restricciones                                                                                      | Fuente               |
+| ----------------------- | ---------------- | -------------------------------------------------------------------------------------------------- | -------------------- |
+| `id`                    | integer          | PK                                                                                                 | `idContenido`        |
+| `tipo`                  | `tipo_contenido` | NOT NULL                                                                                           | `tipo`               |
+| `titulo`                | varchar(255)     | NOT NULL. Índice GIN con `pg_trgm` (issue #10)                                                     | `titulo`             |
+| `sinopsis`              | text             | NULL                                                                                               | `sinopsis`           |
+| `anio`                  | smallint         | NULL                                                                                               | `anio`               |
+| `director`              | varchar(150)     | NULL. Director de película o creador de serie                                                      | `director`           |
+| `duracion`              | smallint         | NULL. Minutos (película) o promedio por episodio (serie)                                           | `duracion`           |
+| `poster_url`            | varchar(255)     | NULL                                                                                               | `posterUrl`          |
+| `fuente`                | varchar(30)      | NOT NULL                                                                                           | `fuente`             |
+| `id_externo`            | varchar(50)      | NOT NULL                                                                                           | `idExterno`          |
+| `fecha_actualizacion`   | timestamptz      | NOT NULL                                                                                           | `fechaActualizacion` |
+| `popularidad_externa`   | numeric(12,3)    | NULL. Necesaria para RN15 (issues #10, #42). **No está en el ERS**                                 | (issue #10, #42)     |
+| `trailer_url`           | varchar(255)     | NULL. Enlace de YouTube al tráiler. Solo el enlace: el video no se almacena. **No está en el ERS** | `trailer` (ficha)    |
+| `trailer_consultado_en` | timestamptz      | NULL. Última consulta a la fuente externa; el enlace se reutiliza 30 días. **No está en el ERS**   | —                    |
 
 - `UNIQUE (fuente, tipo, id_externo)`. Un mismo `id_externo` puede existir como película y como serie (ERS).
 - RN16: una serie es una sola unidad, sin temporadas ni episodios.

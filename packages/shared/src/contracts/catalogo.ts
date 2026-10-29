@@ -76,3 +76,10 @@ export const TituloFichaSchema = z.object({
 });
 
 export type TituloFicha = z.infer<typeof TituloFichaSchema>;
+
+// Enlace al tráiler de YouTube, o null si el título no tiene uno.
+export const TrailerSchema = z.object({
+  url: z.string().url().nullable(),
+});
+
+export type Trailer = z.infer<typeof TrailerSchema>;

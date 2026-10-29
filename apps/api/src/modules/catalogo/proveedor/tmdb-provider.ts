@@ -2,9 +2,11 @@ import { crearLimitador } from "../../../lib/concurrencia.js";
 import { ProveedorExternoError } from "../../../lib/errors.js";
 import {
   aContenidoExterno,
+  elegirTrailerYoutube,
   nombresDeGeneros,
   type GeneroTmdb,
   type TituloTmdb,
+  type VideoTmdb,
 } from "./mapeo-tmdb.js";
 import type { MovieProvider, TipoContenido } from "./movie-provider.js";
 
@@ -156,6 +158,17 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
       if (!titulo) return null;
       const generos = nombresDeGeneros(tipo, titulo.genres ?? []);
       return aContenidoExterno(tipo, titulo, generos);
+    },
+
+    async fetchTrailer(tipo, idExterno) {
+      if (!/^\d+$/.test(idExterno)) return null;
+      const ruta = tipo === "pelicula" ? `/movie/${idExterno}/videos` : `/tv/${idExterno}/videos`;
+      // Primero en español; si no hay tráiler en ese idioma, en inglés (el más habitual).
+      const enEspanol = await pedir<{ results?: VideoTmdb[] }>(ruta);
+      const trailer = elegirTrailerYoutube(enEspanol?.results ?? []);
+      if (trailer) return trailer;
+      const enIngles = await pedir<{ results?: VideoTmdb[] }>(ruta, { language: "en-US" });
+      return elegirTrailerYoutube(enIngles?.results ?? []);
     },
   };
 }

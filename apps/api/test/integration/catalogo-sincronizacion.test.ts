@@ -47,6 +47,9 @@ function proveedorFalso(opciones: {
     async fetchGenres() {
       return opciones.generos ?? ["Drama", "Comedia"];
     },
+    async fetchTrailer() {
+      return null;
+    },
     async fetchPopular(tipo, pagina) {
       if (opciones.fallaEnPagina !== undefined && pagina >= opciones.fallaEnPagina) {
         throw new ProveedorExternoError();

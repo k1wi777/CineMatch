@@ -22,6 +22,29 @@ export type TituloTmdb = {
 
 export const URL_POSTER_TMDB = "https://image.tmdb.org/t/p/w500";
 
+// Forma mínima de un video de TMDB (/videos). Solo se usa para encontrar el enlace del tráiler.
+export type VideoTmdb = {
+  site?: string;
+  type?: string;
+  key?: string;
+  official?: boolean;
+};
+
+const CLAVE_YOUTUBE = /^[\w-]{6,20}$/;
+
+// Enlace al tráiler de YouTube: el oficial si hay, si no el primero. Null si no hay ninguno utilizable.
+export function elegirTrailerYoutube(videos: VideoTmdb[]): string | null {
+  const trailers = videos.filter(
+    (video) =>
+      video.site === "YouTube" &&
+      video.type === "Trailer" &&
+      typeof video.key === "string" &&
+      CLAVE_YOUTUBE.test(video.key),
+  );
+  const elegido = trailers.find((video) => video.official) ?? trailers[0];
+  return elegido?.key ? `https://www.youtube.com/watch?v=${elegido.key}` : null;
+}
+
 // En series, TMDB agrupa algunos géneros en uno combinado. Se separan en dos géneros (decisión de BE-6.1).
 // Clave: id del género combinado de TV en TMDB.
 export const GENEROS_TV_COMBINADOS: Record<number, string[]> = {
