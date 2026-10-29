@@ -4,6 +4,7 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { ProveedorApi } from "@/shared/api";
+import { Pie } from "@/shared/layouts/pie";
 import { ToastProvider } from "@/shared/ui/toast";
 
 export const metadata: Metadata = {
@@ -22,7 +23,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ProveedorApi>
-            <ToastProvider>{children}</ToastProvider>
+            <ToastProvider>
+              {children}
+              <Pie />
+            </ToastProvider>
           </ProveedorApi>
         </NextIntlClientProvider>
       </body>
