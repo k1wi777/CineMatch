@@ -200,7 +200,7 @@ export function FormularioResena({
           type="checkbox"
           checked={esSpoiler}
           onChange={(evento) => setEsSpoiler(evento.target.checked)}
-          className="h-4 w-4 accent-luz"
+          className="h-6 w-6 accent-luz"
         />
         {t("formulario.spoiler")}
       </label>

@@ -184,7 +184,7 @@ export function PaginaRecomendar({ id }: { id: number }) {
                   type="checkbox"
                   checked={confirmado}
                   onChange={(evento) => setConfirmado(evento.target.checked)}
-                  className="h-4 w-4 accent-luz"
+                  className="h-6 w-6 accent-luz"
                 />
                 {t("fueraConfirmar")}
               </label>
@@ -217,7 +217,7 @@ export function PaginaRecomendar({ id }: { id: number }) {
                 type="checkbox"
                 checked={adjuntar}
                 onChange={(evento) => setAdjuntar(evento.target.checked)}
-                className="h-4 w-4 accent-luz"
+                className="h-6 w-6 accent-luz"
               />
               {t("adjuntar")}
             </label>

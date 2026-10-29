@@ -221,7 +221,7 @@ export function FormularioRegistro() {
                   type="checkbox"
                   aria-invalid={errors.aceptaDatos ? "true" : undefined}
                   aria-describedby={`${id}-autorizacion`}
-                  className="mt-1 h-4 w-4 accent-luz"
+                  className="mt-1 h-6 w-6 accent-luz"
                   {...register("aceptaDatos")}
                 />
                 <span id={`${id}-autorizacion`} className="text-papel/85">
@@ -272,7 +272,7 @@ export function FormularioRegistro() {
                         type="checkbox"
                         checked={marcado}
                         onChange={(evento) => alternarGenero(genero.id, evento.target.checked)}
-                        className="h-4 w-4 accent-luz"
+                        className="h-6 w-6 accent-luz"
                       />
                       {genero.nombre}
                     </label>
