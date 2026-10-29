@@ -494,10 +494,10 @@
     "cargando": "Cargando notificaciones",
     "vacio": {
       "titulo": "No tienes notificaciones",
-      "texto": "Aquí aparecerán recomendaciones, solicitudes de amistad y avisos de moderación."
-    },
-    "sinLeerTitulo": "Estás al día",
-    "sinLeerTexto": "No tienes avisos sin leer."
+      "texto": "Aquí aparecerán recomendaciones, solicitudes de amistad y avisos de moderación.",
+      "sinLeerTitulo": "Estás al día",
+      "sinLeerTexto": "No tienes avisos sin leer."
+    }
   },
   "comunidad": {
     "titulo": "Recomendado para ti",
