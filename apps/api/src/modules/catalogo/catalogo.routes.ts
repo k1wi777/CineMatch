@@ -2,6 +2,7 @@ import {
   CatalogoPaginaSchema,
   CatalogoQuerySchema,
   TituloFichaSchema,
+  TrailerSchema,
   type CatalogoQuery,
 } from "@cinematch/shared";
 import { Router } from "express";
@@ -19,6 +20,7 @@ const ParamsTituloSchema = z.object({
 
 registroOpenApi.registrarEsquema("PaginaCatalogo", CatalogoPaginaSchema);
 registroOpenApi.registrarEsquema("TituloFicha", TituloFichaSchema);
+registroOpenApi.registrarEsquema("Trailer", TrailerSchema);
 registroOpenApi.registrar({
   metodo: "get",
   ruta: "/api/catalog",
@@ -37,6 +39,17 @@ registroOpenApi.registrar({
     200: { descripcion: "Ficha del título.", esquema: "TituloFicha" },
     401: { descripcion: "No hay sesión vigente.", esquema: "ErrorResponse" },
     404: { descripcion: "No existe ese título.", esquema: "ErrorResponse" },
+  },
+});
+registroOpenApi.registrar({
+  metodo: "get",
+  ruta: "/api/catalog/{id}/trailer",
+  resumen: "Enlace al tráiler de YouTube (se consulta a la fuente externa como mucho cada 30 días)",
+  respuestas: {
+    200: { descripcion: "Enlace al tráiler, o null si no hay.", esquema: "Trailer" },
+    401: { descripcion: "No hay sesión vigente.", esquema: "ErrorResponse" },
+    404: { descripcion: "No existe ese título.", esquema: "ErrorResponse" },
+    502: { descripcion: "La fuente externa no responde.", esquema: "ErrorResponse" },
   },
 });
 
@@ -68,6 +81,20 @@ export function createCatalogoRouter(
         throw new NotFoundError("El título no existe.");
       }
       res.json(TituloFichaSchema.parse(ficha));
+    },
+  );
+
+  router.get(
+    "/catalog/:id/trailer",
+    autenticado,
+    validate({ params: ParamsTituloSchema }),
+    async (_req, res) => {
+      const { id } = res.locals.input.params as z.infer<typeof ParamsTituloSchema>;
+      const trailer = await servicio.obtenerTrailer(id);
+      if (!trailer) {
+        throw new NotFoundError("El título no existe.");
+      }
+      res.json(TrailerSchema.parse(trailer));
     },
   );
 

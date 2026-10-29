@@ -257,6 +257,14 @@
     "cargando": "Cargando título",
     "noEncontrado": "No encontramos este título",
     "noEncontradoTexto": "Puede que el enlace esté mal o que el título ya no esté disponible.",
+    "trailer": {
+      "ver": "Ver tráiler",
+      "titulo": "Tráiler de {titulo}",
+      "cerrar": "Cerrar",
+      "cargando": "Cargando tráiler…",
+      "sinTrailer": "Este título no tiene tráiler disponible.",
+      "verEnYoutube": "Ver en YouTube"
+    },
     "volver": "Volver al catálogo",
     "poster": "Póster de {titulo}",
     "tipo": {

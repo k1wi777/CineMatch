@@ -166,7 +166,12 @@ export function createApp({
     }),
   );
   app.use("/api", createGenerosRouter(pool));
-  app.use("/api", createCatalogoRouter(crearServicioCatalogo(pool), servicioAuth));
+  // Un único proveedor de catálogo para la ficha (tráileres) y la sincronización.
+  const proveedorCatalogoEfectivo = proveedorCatalogo ?? crearProveedorCatalogo(tmdbApiKey);
+  app.use(
+    "/api",
+    createCatalogoRouter(crearServicioCatalogo(pool, proveedorCatalogoEfectivo), servicioAuth),
+  );
   // Las notificaciones de amistad usan el mismo hub SSE que el stream, así llegan en vivo.
   app.use(
     "/api",
@@ -298,7 +303,7 @@ export function createApp({
   // Administración (BE-12): sincronización manual, moderación y auditoría. Solo rol administrador.
   const sincronizacionCatalogo = crearServicioSincronizacion({
     pool,
-    proveedor: proveedorCatalogo ?? crearProveedorCatalogo(tmdbApiKey),
+    proveedor: proveedorCatalogoEfectivo,
     logger,
   });
   app.use(

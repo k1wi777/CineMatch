@@ -26,4 +26,6 @@ export interface MovieProvider {
   fetchPopular(tipo: TipoContenido, page: number): Promise<ContenidoExterno[]>;
   // Ficha completa, o null si el proveedor no conoce ese id.
   fetchDetails(tipo: TipoContenido, idExterno: string): Promise<ContenidoExterno | null>;
+  // Enlace de YouTube al tráiler, o null si no hay. Solo se guarda el enlace; el video no se descarga.
+  fetchTrailer(tipo: TipoContenido, idExterno: string): Promise<string | null>;
 }

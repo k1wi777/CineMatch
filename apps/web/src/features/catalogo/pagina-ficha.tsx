@@ -13,6 +13,7 @@ import { EstadoError, EstadoVacio } from "@/shared/ui/estados";
 import { PaginacionBotones } from "@/shared/ui/paginacion-botones";
 import { Skeleton } from "@/shared/ui/skeleton";
 import { BarraAcciones } from "./barra-acciones";
+import { BotonTrailer } from "./boton-trailer";
 import { debeMostrarPromedioAmigos } from "./ficha-logica";
 import { useEstadisticas, useFicha, useResenasTitulo } from "./ficha";
 import { FormularioResena } from "@/features/resenas/formulario-resena";
@@ -64,52 +65,72 @@ export function PaginaFicha({ id }: { id: number }) {
         {t("volver")}
       </Link>
 
-      <header className="flex flex-col gap-6 sm:flex-row">
-        <div className="w-40 shrink-0 self-start sm:w-56">
-          {titulo.posterUrl ? (
-            <div className="relative aspect-[2/3] w-full overflow-hidden rounded-sm shadow-foco">
-              <Image
-                src={titulo.posterUrl}
-                alt={t("poster", { titulo: titulo.titulo })}
-                fill
-                priority
-                sizes="(max-width: 640px) 160px, 224px"
-                className="object-cover"
-              />
-            </div>
-          ) : (
-            <Cartel titulo={titulo.titulo} anio={titulo.anio} />
-          )}
-        </div>
+      <header className="relative isolate overflow-hidden rounded-sm p-6 md:p-10">
+        {titulo.posterUrl ? (
+          <>
+            <Image
+              src={titulo.posterUrl}
+              alt=""
+              aria-hidden
+              fill
+              sizes="100vw"
+              className="-z-10 scale-110 object-cover opacity-40 blur-2xl"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-10 bg-gradient-to-b from-sala/30 via-sala/80 to-sala"
+            />
+          </>
+        ) : null}
 
-        <div className="min-w-0 flex-1 space-y-4">
-          <p className="text-sm text-niebla">
-            {t(`tipo.${titulo.tipo}`)}
-            {titulo.anio ? ` · ${titulo.anio}` : ""}
-            {titulo.duracion ? ` · ${t("duracion", { minutos: titulo.duracion })}` : ""}
-          </p>
-          <h1 className="font-display text-3xl sm:text-4xl">{titulo.titulo}</h1>
-          {titulo.director ? (
-            <p className="text-papel/85">
-              <span className="text-niebla">{t("director")}: </span>
-              {titulo.director}
+        <div className="flex flex-col gap-6 sm:flex-row">
+          <div className="w-40 shrink-0 self-start sm:w-56">
+            {titulo.posterUrl ? (
+              <div className="relative aspect-[2/3] w-full overflow-hidden rounded-sm shadow-foco">
+                <Image
+                  src={titulo.posterUrl}
+                  alt={t("poster", { titulo: titulo.titulo })}
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 160px, 224px"
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <Cartel titulo={titulo.titulo} anio={titulo.anio} />
+            )}
+          </div>
+
+          <div className="min-w-0 flex-1 space-y-4">
+            <p className="text-sm text-niebla">
+              {t(`tipo.${titulo.tipo}`)}
+              {titulo.anio ? ` · ${titulo.anio}` : ""}
+              {titulo.duracion ? ` · ${t("duracion", { minutos: titulo.duracion })}` : ""}
             </p>
-          ) : null}
-          {titulo.generos.length > 0 ? (
-            <ul className="flex flex-wrap gap-2" aria-label={t("generos")}>
-              {titulo.generos.map((genero) => (
-                <li key={genero.id}>
-                  <Chip texto={genero.nombre} />
-                </li>
-              ))}
-            </ul>
-          ) : null}
-          <section aria-labelledby="ficha-sinopsis" className="space-y-2">
-            <h2 id="ficha-sinopsis" className="text-sm text-niebla">
-              {t("sinopsis")}
-            </h2>
-            <p className="max-w-prose text-papel/85">{titulo.sinopsis ?? t("sinSinopsis")}</p>
-          </section>
+            <h1 className="font-display text-3xl sm:text-4xl">{titulo.titulo}</h1>
+            {titulo.director ? (
+              <p className="text-papel/85">
+                <span className="text-niebla">{t("director")}: </span>
+                {titulo.director}
+              </p>
+            ) : null}
+            {titulo.generos.length > 0 ? (
+              <ul className="flex flex-wrap gap-2" aria-label={t("generos")}>
+                {titulo.generos.map((genero) => (
+                  <li key={genero.id}>
+                    <Chip texto={genero.nombre} />
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            <section aria-labelledby="ficha-sinopsis" className="space-y-2">
+              <h2 id="ficha-sinopsis" className="text-sm text-niebla">
+                {t("sinopsis")}
+              </h2>
+              <p className="max-w-prose text-papel/85">{titulo.sinopsis ?? t("sinSinopsis")}</p>
+            </section>
+            <BotonTrailer id={id} titulo={titulo.titulo} />
+          </div>
         </div>
       </header>
 

@@ -4,9 +4,23 @@ import type {
   GeneroRef,
   TituloFicha,
   TipoContenido,
+  Trailer,
 } from "@cinematch/shared";
 import type pg from "pg";
 import { paginar } from "../../lib/pagination.js";
+import type { MovieProvider } from "./proveedor/movie-provider.js";
+
+const DIA_MS = 24 * 60 * 60 * 1000;
+// Un enlace de tráiler se considera fresco durante 30 días antes de volver a consultarlo.
+const TTL_TRAILER_DIAS = 30;
+
+type FilaTrailer = {
+  tipo: TipoContenido;
+  id_externo: string;
+  fuente: string;
+  trailer_url: string | null;
+  trailer_consultado_en: Date | null;
+};
 
 // Mismo criterio que la columna titulo_normalizado (migración de BE-6.4): minúsculas y sin tildes.
 const SIN_TILDES: Record<string, string> = {
@@ -65,7 +79,7 @@ async function generosDe(pool: pg.Pool, contenidoIds: number[]): Promise<Map<num
 }
 
 // Consulta del catálogo (BE-6.4 y ficha de BE-6.5). Solo lectura.
-export function crearServicioCatalogo(pool: pg.Pool) {
+export function crearServicioCatalogo(pool: pg.Pool, proveedor: MovieProvider) {
   return {
     async listar(
       query: CatalogoQuery,
@@ -154,6 +168,34 @@ export function crearServicioCatalogo(pool: pg.Pool) {
         generos: generos.get(id) ?? [],
         fechaActualizacion: fila.fecha_actualizacion.toISOString(),
       };
+    },
+
+    // Enlace al tráiler. Se pide a la fuente externa solo la primera vez y luego se reutiliza
+    // durante TTL_TRAILER_DIAS, para no gastar peticiones en cada visita a la ficha.
+    async obtenerTrailer(id: number): Promise<Trailer | undefined> {
+      const { rows } = await pool.query<FilaTrailer>(
+        `SELECT tipo, id_externo, fuente, trailer_url, trailer_consultado_en
+           FROM contenido
+          WHERE id = $1`,
+        [id],
+      );
+      const fila = rows[0];
+      if (!fila) return undefined;
+
+      const vigente =
+        fila.trailer_consultado_en !== null &&
+        Date.now() - fila.trailer_consultado_en.getTime() < TTL_TRAILER_DIAS * DIA_MS;
+      // Los títulos de otra fuente (p. ej. los de demostración) no se consultan.
+      if (vigente || fila.fuente !== proveedor.fuente) {
+        return { url: fila.trailer_url };
+      }
+
+      const url = await proveedor.fetchTrailer(fila.tipo, fila.id_externo);
+      await pool.query(
+        "UPDATE contenido SET trailer_url = $2, trailer_consultado_en = now() WHERE id = $1",
+        [id, url],
+      );
+      return { url };
     },
   };
 }
