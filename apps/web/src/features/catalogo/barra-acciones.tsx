@@ -53,14 +53,12 @@ export function BarraAcciones({ titulo, id }: { titulo: string; id: number }) {
         </div>
 
         <div className="flex flex-wrap gap-2">
-          <button
-            type="button"
-            disabled
-            aria-describedby={`${idBase}-proximamente`}
-            className="rounded-sm border border-papel/20 px-4 py-2 text-sm text-niebla disabled:cursor-not-allowed"
+          <a
+            href="#ficha-mi-resena"
+            className="rounded-sm bg-luz px-4 py-2 text-sm font-semibold text-sala"
           >
             {t("acciones.resenar")}
-          </button>
+          </a>
           <button
             type="button"
             disabled

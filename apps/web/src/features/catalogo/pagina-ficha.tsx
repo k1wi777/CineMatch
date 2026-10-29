@@ -14,7 +14,8 @@ import { Skeleton } from "@/shared/ui/skeleton";
 import { BarraAcciones } from "./barra-acciones";
 import { debeMostrarPromedioAmigos } from "./ficha-logica";
 import { useEstadisticas, useFicha, useResenasTitulo } from "./ficha";
-import { ResenaItem } from "./resena-item";
+import { FormularioResena } from "@/features/resenas/formulario-resena";
+import { ResenaItem } from "@/features/resenas/resena-item";
 
 const TAMANO_RESENAS = 20;
 
@@ -163,21 +164,26 @@ export function PaginaFicha({ id }: { id: number }) {
         <h2 id="ficha-mi-resena" className="font-display text-2xl">
           {t("miResena.titulo")}
         </h2>
-        {resenas.data?.miResena ? (
-          resenas.data.miResena.ocultaPorModeracion ? (
-            <p
-              role="status"
-              className="rounded-sm border border-brasa px-3 py-2 text-sm text-brasa"
-            >
-              {t("miResena.ocultada")}
-            </p>
-          ) : (
-            <ul className="space-y-4">
-              <ResenaItem resena={resenas.data.miResena} />
-            </ul>
-          )
+        {resenas.isPending || resenas.isError ? (
+          <Skeleton className="h-32 w-full" />
         ) : (
-          <p className="text-niebla">{t("miResena.vacio")}</p>
+          <>
+            {resenas.data.miResena ? (
+              <ul className="space-y-4">
+                <ResenaItem resena={resenas.data.miResena} />
+              </ul>
+            ) : (
+              <p className="text-niebla">{t("miResena.vacio")}</p>
+            )}
+            <div className="rounded-sm border border-papel/10 p-4 md:p-6">
+              {/* La clave reinicia el formulario cuando cambia la reseña propia (p. ej. tras guardarla). */}
+              <FormularioResena
+                key={resenas.data.miResena?.id ?? "nueva"}
+                contenidoId={id}
+                existente={resenas.data.miResena ?? null}
+              />
+            </div>
+          </>
         )}
       </section>
 
