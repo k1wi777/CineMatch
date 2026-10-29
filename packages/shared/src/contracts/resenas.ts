@@ -27,6 +27,8 @@ export const ResenaListaSchema = z.object({
       posterUrl: z.string().nullable(),
     })
     .optional(),
+  // Solo en las reseñas propias: la moderación la ocultó (el autor sigue viéndola).
+  ocultaPorModeracion: z.boolean().optional(),
 });
 
 export type ResenaLista = z.infer<typeof ResenaListaSchema>;

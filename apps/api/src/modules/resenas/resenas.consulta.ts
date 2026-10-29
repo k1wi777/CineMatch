@@ -195,7 +195,10 @@ export function crearServicioConsultaResenas({ pool, reglas }: DependenciasConsu
         ]),
       ]);
       return {
-        items: filas.rows.map((fila) => aLista(fila, true)),
+        items: filas.rows.map((fila) => ({
+          ...aLista(fila, true),
+          ocultaPorModeracion: !fila.visible,
+        })),
         page: pagina.page,
         pageSize: pagina.pageSize,
         total: Number(total.rows[0]?.total ?? 0),

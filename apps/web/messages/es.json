@@ -224,7 +224,8 @@
       "guardar": "Cambiar contraseña",
       "guardando": "Cambiando",
       "exito": "Contraseña actualizada. Cerramos tus otras sesiones."
-    }
+    },
+    "misResenas": "Mis reseñas"
   },
   "registro": {
     "titulo": "Crear cuenta",
@@ -303,6 +304,60 @@
       "viendo": "Viendo",
       "vista": "Vista",
       "abandonada": "Abandonada"
+    }
+  },
+  "resenas": {
+    "usuarioEliminado": "Usuario eliminado",
+    "soloAmigos": "Solo amigos",
+    "calificacion": "Calificación",
+    "etiquetas": "Etiquetas",
+    "ocultaModeracion": "Esta reseña está oculta por moderación. Solo tú la ves.",
+    "spoilerAviso": "Esta reseña contiene spoilers.",
+    "mostrarSpoiler": "Mostrar spoiler",
+    "editar": "Editar",
+    "eliminar": "Eliminar",
+    "eliminando": "Eliminando",
+    "eliminarTitulo": "¿Eliminar esta reseña?",
+    "eliminarTexto": "Se borrará la calificación y el comentario. No se puede deshacer.",
+    "eliminarConfirmar": "Sí, eliminar",
+    "cancelar": "Cancelar",
+    "formulario": {
+      "nuevaTitulo": "Escribe tu reseña",
+      "editarTitulo": "Edita tu reseña",
+      "calificacion": "Tu calificación",
+      "calificacionRequerida": "Elige una calificación de 0,5 a 5.",
+      "comentario": "Comentario (opcional)",
+      "contador": "{actual} de {maximo} caracteres",
+      "visibilidad": "¿Quién puede verla?",
+      "visibilidadPublica": "Pública",
+      "visibilidadPublicaAyuda": "Cualquiera puede verla.",
+      "visibilidadAmigos": "Solo amigos",
+      "visibilidadAmigosAyuda": "Solo la ven tus amigos aceptados. Tu calificación sigue contando en el promedio público.",
+      "spoiler": "Contiene spoilers",
+      "etiquetas": "Etiquetas",
+      "etiquetasAyuda": "Escribe y pulsa Enter",
+      "etiquetasSinComentario": "Escribe un comentario para añadir etiquetas",
+      "etiquetasLimite": "Hasta {maximo} etiquetas de {largo} caracteres como máximo.",
+      "etiquetasElegidas": "Etiquetas elegidas",
+      "sugerencias": "Sugerencias:",
+      "guardando": "Guardando",
+      "guardarCambios": "Guardar cambios",
+      "publicar": "Publicar reseña",
+      "guardada": "Reseña guardada.",
+      "errorEtiqueta": {
+        "vacia": "La etiqueta está vacía.",
+        "larga": "Cada etiqueta puede tener hasta 30 caracteres.",
+        "maximo": "Puedes poner hasta 5 etiquetas.",
+        "repetida": "Esa etiqueta ya está."
+      }
+    },
+    "mis": {
+      "titulo": "Mis reseñas",
+      "total": "{total} reseñas",
+      "cargando": "Cargando tus reseñas",
+      "vacioTitulo": "Todavía no has reseñado nada",
+      "vacioTexto": "Cuando califiques un título, aparecerá aquí.",
+      "irCatalogo": "Ir al catálogo"
     }
   }
 }
