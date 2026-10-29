@@ -2,7 +2,13 @@
   "comun": {
     "guardar": "Guardar",
     "cancelar": "Cancelar",
-    "cargando": "Cargando"
+    "cargando": "Cargando",
+    "paginacion": {
+      "etiqueta": "Paginación",
+      "anterior": "Anterior",
+      "siguiente": "Siguiente",
+      "pagina": "Página {actual} de {total}"
+    }
   },
   "ejemplo": {
     "titulo": "Iniciar sesión (ejemplo)",
@@ -45,6 +51,40 @@
     "invalidoTitulo": "Este enlace ya no sirve",
     "invalidoSinToken": "Falta el enlace de recuperación. Pide uno nuevo.",
     "pedirOtro": "Pedir otro enlace"
+  },
+  "amigos": {
+    "lista": {
+      "titulo": "Mis amigos",
+      "navegacion": "Amigos",
+      "solicitudes": "Solicitudes",
+      "buscar": "Buscar personas",
+      "cargando": "Cargando amigos",
+      "error": "No pudimos cargar tus amigos.",
+      "vacioTitulo": "Todavía no tienes amigos",
+      "vacioTexto": "Busca personas por nombre de usuario y envíales una solicitud.",
+      "eliminar": "Eliminar amistad",
+      "eliminando": "Eliminando",
+      "eliminarTitulo": "¿Eliminar a {nombre} de tus amigos?",
+      "eliminarTexto": "Si quieres volver a ser amigos, tendrás que enviar una solicitud nueva.",
+      "eliminarConfirmar": "Sí, eliminar",
+      "eliminarCancelar": "Cancelar"
+    },
+    "solicitudes": {
+      "titulo": "Solicitudes",
+      "recibidas": "Recibidas",
+      "enviadas": "Enviadas",
+      "volver": "Volver a mis amigos",
+      "cargando": "Cargando solicitudes",
+      "error": "No pudimos cargar las solicitudes.",
+      "vacioRecibidas": "No tienes solicitudes por responder.",
+      "vacioEnviadas": "No tienes solicitudes enviadas pendientes.",
+      "vacioTexto": "Cuando haya solicitudes, aparecerán aquí.",
+      "recibidaEl": "Recibida el {fecha}",
+      "enviadaEl": "Enviada el {fecha}",
+      "aceptar": "Aceptar",
+      "rechazar": "Rechazar",
+      "cancelar": "Cancelar solicitud"
+    }
   },
   "datos": {
     "titulo": "Mis datos",

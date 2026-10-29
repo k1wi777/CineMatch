@@ -63,7 +63,11 @@ export function useAccionRelacion() {
       }
       return peticion<void>(`/api/friends/requests/${entrada.amistadId}`, { metodo: "DELETE" });
     },
-    onSettled: () => cliente.invalidateQueries({ queryKey: claves.todas }),
+    onSettled: () => {
+      void cliente.invalidateQueries({ queryKey: claves.todas });
+      // Las listas y el contador de amistades (features/amigos) también cambian.
+      void cliente.invalidateQueries({ queryKey: ["amigos"] });
+    },
   });
 }
 

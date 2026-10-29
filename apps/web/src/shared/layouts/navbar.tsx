@@ -4,6 +4,17 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { useCerrarSesion } from "@/features/auth/cerrar-sesion";
+import { useContadorSolicitudes } from "@/features/amigos/amigos";
+
+// Aviso con el número de solicitudes recibidas pendientes, junto a «Amigos».
+function Contador({ total }: { total: number }) {
+  if (total <= 0) return null;
+  return (
+    <span className="ml-1.5 inline-block min-w-5 rounded-full bg-luz px-1 text-center text-xs font-semibold text-sala">
+      {total}
+    </span>
+  );
+}
 
 export const ENLACES_PRINCIPALES = [
   { href: "/", texto: "Inicio" },
@@ -26,6 +37,7 @@ export function Navbar({ notificacionesSinLeer = 0 }: { notificacionesSinLeer?: 
   const [menuAbierto, setMenuAbierto] = useState(false);
   const idMenu = useId();
   const cerrarSesion = useCerrarSesion();
+  const solicitudesPendientes = useContadorSolicitudes().data ?? 0;
 
   // El menú móvil se cierra con Escape y al cambiar de página.
   useEffect(() => {
@@ -63,6 +75,7 @@ export function Navbar({ notificacionesSinLeer = 0 }: { notificacionesSinLeer?: 
                     className={`border-b pb-0.5 transition-colors ${activa ? "border-luz text-papel" : "border-transparent text-niebla hover:text-papel"}`}
                   >
                     {enlace.texto}
+                    {enlace.href === "/amigos" ? <Contador total={solicitudesPendientes} /> : null}
                   </Link>
                 </li>
               );
@@ -142,6 +155,9 @@ export function Navbar({ notificacionesSinLeer = 0 }: { notificacionesSinLeer?: 
                       className={`block py-3 font-display text-xl ${activa ? "text-luz" : "text-papel"}`}
                     >
                       {enlace.texto}
+                      {enlace.href === "/amigos" ? (
+                        <Contador total={solicitudesPendientes} />
+                      ) : null}
                     </Link>
                   </li>
                 );
