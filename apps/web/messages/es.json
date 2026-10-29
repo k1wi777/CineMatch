@@ -359,5 +359,54 @@
       "vacioTexto": "Cuando califiques un título, aparecerá aquí.",
       "irCatalogo": "Ir al catálogo"
     }
+  },
+  "biblioteca": {
+    "titulo": "Mi biblioteca",
+    "total": "{total} títulos",
+    "pestanas": "Estados de la biblioteca",
+    "cargando": "Cargando tu biblioteca",
+    "estado": {
+      "pendiente": "Pendiente",
+      "viendo": "Viendo",
+      "vista": "Vista",
+      "abandonada": "Abandonada"
+    },
+    "filtros": {
+      "tipo": "Tipo",
+      "tipoTodos": "Todos",
+      "peliculas": "Películas",
+      "series": "Series",
+      "orden": "Ordenar por",
+      "ordenFecha": "Fecha de cambio",
+      "ordenTitulo": "Título",
+      "ascendente": "Ascendente",
+      "descendente": "Descendente",
+      "generos": "Géneros"
+    },
+    "selector": {
+      "etiqueta": "Estado",
+      "cambiar": "Estado de {titulo}",
+      "quitar": "Quitar de mi biblioteca",
+      "ofrecerResena": "¿Ya la viste? Cuéntanos qué te pareció.",
+      "calificarResenar": "Calificar y reseñar"
+    },
+    "vacio": {
+      "pendiente": {
+        "titulo": "Nada pendiente",
+        "texto": "Los títulos que quieras ver más adelante aparecerán aquí."
+      },
+      "viendo": {
+        "titulo": "No estás viendo nada",
+        "texto": "Cuando empieces una película o serie, la verás aquí."
+      },
+      "vista": {
+        "titulo": "Todavía no marcas ninguna como vista",
+        "texto": "Cuando termines algo, márcalo para calificarlo."
+      },
+      "abandonada": {
+        "titulo": "Ninguna abandonada",
+        "texto": "Aquí aparecen los títulos que dejaste a medias."
+      }
+    }
   }
 }

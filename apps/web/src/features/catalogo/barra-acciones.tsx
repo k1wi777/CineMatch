@@ -1,25 +1,16 @@
 "use client";
 
-import { ESTADOS_BIBLIOTECA, type EstadoBiblioteca } from "@cinematch/shared";
 import { useTranslations } from "next-intl";
-import { useId, useState } from "react";
-import { mensajeDeError } from "@/shared/api";
-import { useCambiarEstadoBiblioteca, useEstadoBiblioteca } from "./ficha";
+import { useId } from "react";
+import { useEstadoBiblioteca } from "@/features/biblioteca/biblioteca";
+import { SelectorEstado } from "@/features/biblioteca/selector-estado";
 
 // Barra de acciones de la ficha (FE-4.3): estado en la biblioteca y acciones de reseña y recomendación.
-// Reseñar y recomendar llegan con FE-5.1 y FE-7.1; mientras, aparecen como próximamente.
+// Reseñar ya lleva al formulario (FE-5.1). Recomendar llega con FE-7.1 y aparece como próximamente.
 export function BarraAcciones({ titulo, id }: { titulo: string; id: number }) {
   const t = useTranslations("ficha");
   const idBase = useId();
   const estado = useEstadoBiblioteca(id);
-  const cambiar = useCambiarEstadoBiblioteca(id);
-  const [error, setError] = useState<string | null>(null);
-
-  function alCambiar(valor: string) {
-    setError(null);
-    const nuevo = valor === "" ? null : (valor as EstadoBiblioteca);
-    cambiar.mutate(nuevo, { onError: (err) => setError(mensajeDeError(err)) });
-  }
 
   return (
     <section
@@ -27,32 +18,15 @@ export function BarraAcciones({ titulo, id }: { titulo: string; id: number }) {
       className="sticky bottom-0 z-30 border-t border-papel/10 bg-sala/95 py-4 backdrop-blur md:static md:rounded-sm md:border md:bg-butaca md:px-4"
     >
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div className="space-y-1.5">
-          <label htmlFor={`${idBase}-estado`} className="block text-sm text-niebla">
-            {t("acciones.biblioteca")}
-          </label>
-          <select
-            id={`${idBase}-estado`}
-            value={estado.data ?? ""}
-            disabled={estado.isPending || cambiar.isPending}
-            onChange={(evento) => alCambiar(evento.target.value)}
-            className="w-full rounded-sm border border-papel/15 bg-butaca px-3 py-2 focus:border-luz focus:outline-none md:w-56"
-          >
-            <option value="">{t("acciones.sinEstado")}</option>
-            {ESTADOS_BIBLIOTECA.map((valor) => (
-              <option key={valor} value={valor}>
-                {t(`estado.${valor}`)}
-              </option>
-            ))}
-          </select>
-          {error ? (
-            <p role="alert" className="text-sm text-brasa">
-              {error}
-            </p>
-          ) : null}
+        <div className="md:w-72">
+          <SelectorEstado
+            contenidoId={id}
+            estado={estado.data}
+            etiqueta={t("acciones.biblioteca")}
+          />
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <a
             href="#ficha-mi-resena"
             className="rounded-sm bg-luz px-4 py-2 text-sm font-semibold text-sala"
@@ -67,7 +41,7 @@ export function BarraAcciones({ titulo, id }: { titulo: string; id: number }) {
           >
             {t("acciones.recomendar")}
           </button>
-          <span id={`${idBase}-proximamente`} className="self-center text-xs text-niebla">
+          <span id={`${idBase}-proximamente`} className="text-xs text-niebla">
             {t("acciones.proximamente")}
           </span>
         </div>
