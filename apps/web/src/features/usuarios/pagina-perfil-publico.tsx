@@ -6,6 +6,7 @@ import { Avatar } from "@/shared/ui/avatar";
 import { Estrellas } from "@/shared/ui/estrellas";
 import { EstadoError } from "@/shared/ui/estados";
 import { Insignia } from "@/shared/ui/insignia";
+import { PosterMiniatura } from "@/shared/ui/poster-miniatura";
 import { Skeleton } from "@/shared/ui/skeleton";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -87,21 +88,29 @@ export function PaginaPerfilPublico({ id }: { id: number }) {
             {resenas.items.map((resena) => (
               <li
                 key={resena.id}
-                className="space-y-2 rounded-sm border border-papel/10 bg-butaca p-4"
+                className="flex gap-4 rounded-sm border border-papel/10 bg-butaca p-4"
               >
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  {resena.contenido ? (
-                    <Link
-                      href={`/catalogo/${resena.contenido.id}`}
-                      className="font-medium hover:text-luz"
-                    >
-                      {resena.contenido.titulo}
-                    </Link>
-                  ) : null}
-                  <Estrellas valor={resena.calificacion} etiqueta={t("perfil.calificacion")} />
+                {resena.contenido ? (
+                  <PosterMiniatura
+                    titulo={resena.contenido.titulo}
+                    posterUrl={resena.contenido.posterUrl}
+                  />
+                ) : null}
+                <div className="min-w-0 flex-1 space-y-2">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    {resena.contenido ? (
+                      <Link
+                        href={`/catalogo/${resena.contenido.id}`}
+                        className="font-medium hover:text-luz"
+                      >
+                        {resena.contenido.titulo}
+                      </Link>
+                    ) : null}
+                    <Estrellas valor={resena.calificacion} etiqueta={t("perfil.calificacion")} />
+                  </div>
+                  {resena.comentario ? <p className="text-papel/85">{resena.comentario}</p> : null}
+                  <p className="text-xs text-niebla">{formatoFecha(resena.fechaCreacion)}</p>
                 </div>
-                {resena.comentario ? <p className="text-papel/85">{resena.comentario}</p> : null}
-                <p className="text-xs text-niebla">{formatoFecha(resena.fechaCreacion)}</p>
               </li>
             ))}
           </ul>
@@ -121,9 +130,17 @@ export function PaginaPerfilPublico({ id }: { id: number }) {
             {biblioteca.items.map((elemento) => (
               <li
                 key={elemento.id}
-                className="flex items-center justify-between gap-3 rounded-sm border border-papel/10 p-3"
+                className="flex items-center gap-3 rounded-sm border border-papel/10 p-3"
               >
-                <Link href={`/catalogo/${elemento.id}`} className="min-w-0 truncate hover:text-luz">
+                <PosterMiniatura
+                  titulo={elemento.titulo}
+                  posterUrl={elemento.posterUrl}
+                  anio={elemento.anio}
+                />
+                <Link
+                  href={`/catalogo/${elemento.id}`}
+                  className="min-w-0 flex-1 truncate hover:text-luz"
+                >
                   {elemento.titulo}
                 </Link>
                 <Insignia texto={t(`perfil.estado.${elemento.estado}`)} />

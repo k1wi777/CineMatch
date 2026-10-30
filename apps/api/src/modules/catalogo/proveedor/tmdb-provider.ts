@@ -160,6 +160,58 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
       return aContenidoExterno(tipo, titulo, generos);
     },
 
+    async search(texto) {
+      const consulta = texto.trim();
+      if (!consulta) return [];
+      const [peliculas, series] = await Promise.all([
+        pedir<{ results?: (TituloTmdb & { genre_ids?: number[] })[] }>("/search/movie", {
+          query: consulta,
+        }),
+        pedir<{ results?: (TituloTmdb & { genre_ids?: number[] })[] }>("/search/tv", {
+          query: consulta,
+        }),
+      ]);
+      const pel = (peliculas?.results ?? []).slice(0, 8);
+      const ser = (series?.results ?? []).slice(0, 8);
+      return Promise.all([
+        ...pel.map(async (titulo) =>
+          aContenidoExterno("pelicula", titulo, await nombresPorIds("pelicula", titulo.genre_ids)),
+        ),
+        ...ser.map(async (titulo) =>
+          aContenidoExterno("serie", titulo, await nombresPorIds("serie", titulo.genre_ids)),
+        ),
+      ]);
+    },
+
+    async fetchGallery(tipo, idExterno) {
+      if (!/^\d+$/.test(idExterno)) return [];
+      const ruta = tipo === "pelicula" ? `/movie/${idExterno}/images` : `/tv/${idExterno}/images`;
+      const datos = await pedir<{
+        backdrops?: { file_path?: string; aspect_ratio?: number; iso_639_1?: string | null }[];
+      }>(ruta, { include_image_language: "null" });
+      // Solo imágenes horizontales y sin idioma: las que llevan texto (arte de póster con el título) se dejan fuera.
+      return (datos?.backdrops ?? [])
+        .filter(
+          (imagen) =>
+            typeof imagen.file_path === "string" &&
+            (imagen.aspect_ratio ?? 0) >= 1.2 &&
+            imagen.iso_639_1 == null,
+        )
+        .slice(0, 8)
+        .map((imagen) => `https://image.tmdb.org/t/p/w780${imagen.file_path}`);
+    },
+
+    async fetchCast(tipo, idExterno) {
+      if (!/^\d+$/.test(idExterno)) return [];
+      const ruta = tipo === "pelicula" ? `/movie/${idExterno}/credits` : `/tv/${idExterno}/credits`;
+      const datos = await pedir<{ cast?: { name?: string; order?: number }[] }>(ruta);
+      return (datos?.cast ?? [])
+        .filter((persona) => typeof persona.name === "string" && persona.name.length > 0)
+        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+        .slice(0, 10)
+        .map((persona) => persona.name as string);
+    },
+
     async fetchLogo(tipo, idExterno) {
       if (!/^\d+$/.test(idExterno)) return null;
       const ruta = tipo === "pelicula" ? `/movie/${idExterno}/images` : `/tv/${idExterno}/images`;

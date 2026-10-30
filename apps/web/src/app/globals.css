@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
-/* Sala de proyección: fondo cálido y apagado, texto de papel, un solo acento (la luz de la sala). */
+/* Sala de proyección: fondo casi negro cálido, texto de papel con más contraste, acento rojo de cine.
+   Contraste WCAG AA verificado: papel/sala 17:1, niebla/sala 7.9:1, texto oscuro sobre acento 5.3:1.
+   `luz` es el acento principal (botones, enlaces, foco); `estrella` queda dorada para las calificaciones. */
 @theme {
-  --color-sala: #16130f;
-  --color-butaca: #1f1b15;
-  --color-telon: #2c251c;
-  --color-papel: #ebe3d0;
-  --color-niebla: #9f9580;
-  --color-luz: #e2a54b;
-  --color-brasa: #dc755e;
+  --color-sala: #0b0a08;
+  --color-butaca: #15130f;
+  --color-telon: #211d17;
+  --color-papel: #f5efe2;
+  --color-niebla: #aca393;
+  --color-luz: #f0424d;
+  --color-estrella: #e2a54b;
+  --color-brasa: #e8806a;
   --color-musgo: #7f9a72;
 
-  --font-display: "Bodoni Moda", "Didot", Georgia, serif;
-  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
 
   --text-base: 1rem;
   --text-lg: 1.25rem;
@@ -37,6 +40,17 @@ html {
 
 body {
   @apply min-h-dvh bg-sala font-sans text-papel antialiased;
+  overflow-x: hidden;
+}
+
+/* Títulos con peso fuerte y letra algo apretada, como en las plataformas de streaming. */
+h1,
+h2,
+h3,
+.font-display {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 /* Foco visible para teclado, en el color de la luz de la sala. */

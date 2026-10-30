@@ -4,6 +4,7 @@ import {
   EstadisticasTituloSchema,
   ResenasTituloSchema,
   TituloFichaSchema,
+  LogoSchema,
   TrailerSchema,
   type EstadisticasTitulo,
   type ResenasTitulo,
@@ -50,5 +51,22 @@ export function useResenasTitulo(id: number, page: number) {
         esquema: ResenasTituloSchema,
       }),
     placeholderData: keepPreviousData,
+  });
+}
+
+// Avisa a la API de que el tráiler de un título no se puede reproducir, para que deje de elegirse en el carrusel.
+export function reportarTrailerNoDisponible(id: number): void {
+  void peticion(`/api/catalog/${id}/trailer/no-disponible`, { metodo: "POST" }).catch(
+    () => undefined,
+  );
+}
+
+// Logotipo del título, para la página de recomendación (se consulta una vez y queda guardado).
+export function useLogo(id: number) {
+  return useQuery<{ url: string | null }>({
+    queryKey: [...claves.detalle(id), "logo"],
+    queryFn: () => peticion(`/api/catalog/${id}/logo`, { esquema: LogoSchema }),
+    enabled: id > 0,
+    staleTime: 10 * 60 * 1000,
   });
 }

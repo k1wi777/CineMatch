@@ -48,6 +48,7 @@ export const CatalogoItemSchema = z.object({
   titulo: z.string(),
   anio: z.number().int().nullable(),
   posterUrl: z.string().nullable(),
+  fondoUrl: z.string().nullable().optional(),
   generos: z.array(GeneroRefSchema),
 });
 
@@ -73,6 +74,8 @@ export const TituloFichaSchema = z.object({
   popularidadExterna: z.number().nullable(),
   generos: z.array(GeneroRefSchema),
   fechaActualizacion: z.string(),
+  reparto: z.array(z.string()).default([]),
+  galeria: z.array(z.string()).default([]),
 });
 
 export type TituloFicha = z.infer<typeof TituloFichaSchema>;
@@ -87,6 +90,7 @@ export const DestacadoSchema = z.object({
   posterUrl: z.string().nullable(),
   fondoUrl: z.string(),
   logoUrl: z.string().nullable(),
+  trailerUrl: z.string().nullable(),
   generos: z.array(GeneroRefSchema),
 });
 
@@ -100,3 +104,10 @@ export const TrailerSchema = z.object({
 });
 
 export type Trailer = z.infer<typeof TrailerSchema>;
+
+// URL del logotipo del título (el nombre como imagen), o null si no tiene.
+export const LogoSchema = z.object({
+  url: z.string().nullable(),
+});
+
+export type Logo = z.infer<typeof LogoSchema>;

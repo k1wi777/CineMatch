@@ -4,6 +4,7 @@ import { RegistroRespuestaSchema, type Registro } from "@cinematch/shared";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { useForm, type UseFormRegister } from "react-hook-form";
@@ -307,7 +308,12 @@ export function FormularioRegistro() {
         )}
       </form>
 
-      <p className="text-center text-sm text-niebla">{t("yaTienesCuenta")}</p>
+      <p className="text-center text-sm text-niebla">
+        {t("yaTienesCuenta")}{" "}
+        <Link href="/login" className="text-papel underline underline-offset-4 hover:text-luz">
+          {t("iniciarSesion")}
+        </Link>
+      </p>
     </section>
   );
 }

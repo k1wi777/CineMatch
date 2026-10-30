@@ -31,14 +31,14 @@ Solo para desarrollo. Los usuarios comparten la contraseña `Demo1234!`.
 
 | Usuario       | Correo                             | Notas                                        |
 | ------------- | ---------------------------------- | -------------------------------------------- |
-| `demo_ana`    | `demo_ana@demo.cinematch.local`    | Amiga de Luis y Marta. Escribe reseñas.      |
-| `demo_luis`   | `demo_luis@demo.cinematch.local`   | Amigo de Ana. Envió una recomendación a Ana. |
-| `demo_marta`  | `demo_marta@demo.cinematch.local`  | Amiga de Ana.                                |
-| `demo_carlos` | `demo_carlos@demo.cinematch.local` | Tiene una solicitud pendiente hacia Ana.     |
+| `Ana`    | `ana@gmail.com`    | Amiga de Luis y Marta. Escribe reseñas.      |
+| `Luis`   | `luis@gmail.com`   | Amigo de Ana. Envió una recomendación a Ana. |
+| `Marta`  | `marta@gmail.com`  | Amiga de Ana.                                |
+| `Carlos` | `carlos@gmail.com` | Tiene una solicitud pendiente hacia Ana.     |
 
 También cargan tres títulos con `fuente = 'demo'`, reseñas, etiquetas, una recomendación, una notificación y estados de biblioteca.
 
-Si `demo_ana` ya existe, los datos de demostración no se vuelven a cargar.
+Si `Ana` ya existe, los datos de demostración no se vuelven a cargar.
 
 ## Idempotencia
 

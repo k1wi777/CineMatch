@@ -16,7 +16,7 @@ import type { ServicioCorreo } from "../src/lib/correo.js";
 const CONEXIONES = 100;
 const DURACION_POR_RUTA_S = 10;
 const PROMEDIO_MAXIMO_MS = 2000;
-const CORREO = process.env.CARGA_CORREO ?? "demo_ana@demo.cinematch.local";
+const CORREO = process.env.CARGA_CORREO ?? "ana@gmail.com";
 const CONTRASENA = process.env.CARGA_CONTRASENA ?? "Demo1234!";
 
 async function main(): Promise<void> {

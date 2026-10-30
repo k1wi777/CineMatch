@@ -61,6 +61,14 @@ export const TituloResumenSchema = z.object({
   id: z.number().int(),
   titulo: z.string(),
   posterUrl: z.string().nullable(),
+  // Imagen horizontal y logotipo del título, si ya se han obtenido (opcionales en las listas).
+  fondoUrl: z.string().nullable().optional(),
+  logoUrl: z.string().nullable().optional(),
+  sinopsis: z.string().nullable().optional(),
+  director: z.string().nullable().optional(),
+  duracion: z.number().int().nullable().optional(),
+  anio: z.number().int().nullable().optional(),
+  tipo: z.enum(["pelicula", "serie"]).optional(),
 });
 
 export const RecomendacionListaItemSchema = z.object({

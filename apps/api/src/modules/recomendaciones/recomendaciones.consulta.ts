@@ -30,6 +30,13 @@ type FilaRecomendacion = {
   contenido_id: number;
   contenido_titulo: string;
   contenido_poster: string | null;
+  contenido_fondo: string | null;
+  contenido_logo: string | null;
+  contenido_sinopsis: string | null;
+  contenido_director: string | null;
+  contenido_duracion: number | null;
+  contenido_anio: number | null;
+  contenido_tipo: "pelicula" | "serie";
 };
 
 const SELECT_RECOMENDACION = `
@@ -37,7 +44,9 @@ const SELECT_RECOMENDACION = `
          r.fecha_completado, r.motivo, r.resena_id,
          e.id AS emisor_id, e.username AS emisor_username, e.avatar_url AS emisor_avatar,
          rc.id AS receptor_id, rc.username AS receptor_username, rc.avatar_url AS receptor_avatar,
-         c.id AS contenido_id, c.titulo AS contenido_titulo, c.poster_url AS contenido_poster
+         c.id AS contenido_id, c.titulo AS contenido_titulo, c.poster_url AS contenido_poster,
+         c.fondo_url AS contenido_fondo, c.logo_url AS contenido_logo,
+         c.sinopsis AS contenido_sinopsis, c.director AS contenido_director, c.duracion AS contenido_duracion, c.anio AS contenido_anio, c.tipo AS contenido_tipo
     FROM recomendacion r
     JOIN usuario e ON e.id = r.emisor_id
     JOIN usuario rc ON rc.id = r.receptor_id
@@ -59,6 +68,13 @@ function aLista(fila: FilaRecomendacion): RecomendacionListaItem {
       id: fila.contenido_id,
       titulo: fila.contenido_titulo,
       posterUrl: fila.contenido_poster,
+      fondoUrl: fila.contenido_fondo,
+      logoUrl: fila.contenido_logo,
+      sinopsis: fila.contenido_sinopsis,
+      director: fila.contenido_director,
+      duracion: fila.contenido_duracion,
+      anio: fila.contenido_anio,
+      tipo: fila.contenido_tipo,
     },
   };
 }

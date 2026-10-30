@@ -5,33 +5,61 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useDestacados } from "@/features/catalogo/catalogo";
+import { reportarTrailerNoDisponible } from "@/features/catalogo/ficha";
 import { mensajeDeError } from "@/shared/api";
 import { Chip } from "@/shared/ui/chip";
 import { EstadoError } from "@/shared/ui/estados";
 import { Skeleton } from "@/shared/ui/skeleton";
+import { VideoFondo } from "@/shared/ui/video-fondo";
 
-const INTERVALO_MS = 8000;
 const MAX_GENEROS = 3;
+// Secuencia por título: póster, tráiler de fondo (hasta que termina), póster y siguiente título.
+const ESPERA_POSTER_MS = 3000;
+const ESPERA_SIN_MOVIMIENTO_MS = 8000;
+const LIMITE_TRAILER_MS = 180_000;
 
-// Carrusel de destacados del inicio, a ancho completo: imagen horizontal de fondo, póster como arte del título,
-// texto, flechas y puntos. Avanza solo cada pocos segundos, salvo que el usuario pida reducir el movimiento
-// o pase el foco por encima.
+type Fase = "inicial" | "trailer" | "final";
+
+// Carrusel de destacados a ancho completo: imagen horizontal, logotipo, texto y tráiler de fondo.
+// Avanza solo. Se pausa al pasar el ratón o el foco por encima, salvo mientras suena el tráiler.
 export function HeroInicio() {
   const t = useTranslations("inicio.hero");
   const destacados = useDestacados();
   const [indice, setIndice] = useState(0);
+  const [fase, setFase] = useState<Fase>("inicial");
   const [pausado, setPausado] = useState(false);
   const total = destacados.data?.length ?? 0;
+  const actual = total > 0 ? indice % total : 0;
 
   useEffect(() => {
+    if (total < 2) return;
     const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (total < 2 || pausado || reducirMovimiento) return;
-    const reloj = window.setInterval(
-      () => setIndice((actual) => (actual + 1) % total),
-      INTERVALO_MS,
-    );
-    return () => window.clearInterval(reloj);
-  }, [total, pausado]);
+
+    if (fase === "trailer") {
+      // Mientras el tráiler suena, el hero no avanza solo; este límite evita quedarse atascado.
+      const limite = window.setTimeout(() => setFase("final"), LIMITE_TRAILER_MS);
+      return () => window.clearTimeout(limite);
+    }
+    if (pausado) return;
+
+    if (fase === "inicial") {
+      if (reducirMovimiento) {
+        const espera = window.setTimeout(() => {
+          setIndice((i) => (i + 1) % total);
+          setFase("inicial");
+        }, ESPERA_SIN_MOVIMIENTO_MS);
+        return () => window.clearTimeout(espera);
+      }
+      const espera = window.setTimeout(() => setFase("trailer"), ESPERA_POSTER_MS);
+      return () => window.clearTimeout(espera);
+    }
+
+    const espera = window.setTimeout(() => {
+      setIndice((i) => (i + 1) % total);
+      setFase("inicial");
+    }, ESPERA_POSTER_MS);
+    return () => window.clearTimeout(espera);
+  }, [total, fase, actual, pausado]);
 
   if (destacados.isPending) {
     return <Skeleton className="h-[28rem] w-full md:h-[32rem]" />;
@@ -46,14 +74,19 @@ export function HeroInicio() {
   }
   if (total === 0) return null;
 
-  const actual = indice % total;
   const lista = destacados.data;
 
+  function irA(posicion: number) {
+    setIndice(posicion);
+    setFase("inicial");
+  }
   function anterior() {
     setIndice((i) => (i - 1 + total) % total);
+    setFase("inicial");
   }
   function siguiente() {
     setIndice((i) => (i + 1) % total);
+    setFase("inicial");
   }
 
   return (
@@ -68,6 +101,7 @@ export function HeroInicio() {
       <div className="relative h-[28rem] md:h-[32rem]">
         {lista.map((item, posicion) => {
           const visible = posicion === actual;
+          const enTrailer = visible && fase === "trailer";
           return (
             <div
               key={item.id}
@@ -85,6 +119,18 @@ export function HeroInicio() {
                 sizes="100vw"
                 className="object-cover"
               />
+
+              {enTrailer ? (
+                <VideoFondo
+                  url={item.trailerUrl}
+                  alTerminar={() => setFase("final")}
+                  alNoHayTrailer={() => {
+                    reportarTrailerNoDisponible(item.id);
+                    setFase("final");
+                  }}
+                />
+              ) : null}
+
               <div className="absolute inset-0 bg-gradient-to-r from-sala via-sala/75 to-sala/10" />
               <div className="absolute inset-0 bg-gradient-to-t from-sala via-transparent to-transparent" />
 
@@ -168,7 +214,7 @@ export function HeroInicio() {
                 <button
                   key={item.id}
                   type="button"
-                  onClick={() => setIndice(posicion)}
+                  onClick={() => irA(posicion)}
                   aria-label={t("irA", { n: posicion + 1 })}
                   aria-current={posicion === actual ? "true" : undefined}
                   className="-mx-1 flex h-6 w-6 items-center justify-center"

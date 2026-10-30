@@ -251,7 +251,8 @@
     "contador": "Elegidos {elegidos} de al menos {minimo}",
     "generosError": "No pudimos cargar los géneros.",
     "reintentar": "Reintentar",
-    "yaTienesCuenta": "¿Ya tienes cuenta? Inicia sesión"
+    "yaTienesCuenta": "¿Ya tienes cuenta?",
+    "iniciarSesion": "Inicia sesión"
   },
   "ficha": {
     "cargando": "Cargando título",

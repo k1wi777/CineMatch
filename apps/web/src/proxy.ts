@@ -16,7 +16,7 @@ export function proxy(request: NextRequest) {
   return NextResponse.next();
 }
 
-// No aplica a la API, a los archivos subidos ni a los recursos estáticos de Next.
+// No aplica a la API, a los archivos subidos, a los recursos de Next ni a los archivos de public/ (rutas con extensión, como el logo).
 export const config = {
-  matcher: ["/((?!api|uploads|_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/((?!api|uploads|_next/static|_next/image|favicon.ico|.*\\..*).*)"],
 };

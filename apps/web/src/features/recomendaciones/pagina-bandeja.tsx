@@ -8,6 +8,7 @@ import { formatoFecha } from "@/shared/formato";
 import { mensajeDeError } from "@/shared/api";
 import { Avatar } from "@/shared/ui/avatar";
 import { Insignia, type TonoInsignia } from "@/shared/ui/insignia";
+import { PosterMiniatura } from "@/shared/ui/poster-miniatura";
 import { EstadoError, EstadoVacio } from "@/shared/ui/estados";
 import { PaginacionBotones } from "@/shared/ui/paginacion-botones";
 import { Skeleton } from "@/shared/ui/skeleton";
@@ -127,6 +128,10 @@ export function PaginaBandeja() {
                     className="flex flex-col gap-3 rounded-sm border border-papel/10 bg-butaca p-4 sm:flex-row sm:items-center"
                   >
                     <div className="flex min-w-0 flex-1 items-center gap-3">
+                      <PosterMiniatura
+                        titulo={item.contenido.titulo}
+                        posterUrl={item.contenido.posterUrl}
+                      />
                       <Avatar nombre={persona.username} url={persona.avatarUrl} tamano={44} />
                       <div className="min-w-0 space-y-1">
                         <Link

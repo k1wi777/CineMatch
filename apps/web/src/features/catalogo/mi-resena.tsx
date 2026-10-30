@@ -42,7 +42,7 @@ export function MiResena({
           <button
             type="button"
             onClick={() => setAbierto(true)}
-            className="rounded-sm bg-luz px-4 py-2 text-sm font-semibold text-sala"
+            className="rounded-sm bg-estrella px-4 py-2 text-sm font-semibold text-sala"
           >
             {t("anadir")}
           </button>
