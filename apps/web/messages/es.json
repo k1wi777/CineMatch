@@ -197,7 +197,7 @@
     "avatar": {
       "titulo": "Foto de perfil",
       "elegir": "Elegir imagen",
-      "ayuda": "JPEG, PNG o WebP de hasta 2 MB.",
+      "ayuda": "Archivos JPEG, PNG o WebP de hasta 2 MB.",
       "subir": "Subir foto",
       "subiendo": "Subiendo",
       "quitar": "Quitar foto",
@@ -529,10 +529,14 @@
     "hero": {
       "titulo": "Destacados",
       "verFicha": "Ver ficha",
-      "masInfo": "Más información",
       "anterior": "Título anterior",
       "siguiente": "Título siguiente",
       "irA": "Ir al título {n}",
+      "puesto": "N.º {n} · Destacado",
+      "sugerencia": "Sugerencia de CineMatch",
+      "calificacionMedia": "Calificación en TMDB",
+      "verPais": "Ver destacados del país",
+      "verSugerencias": "Ver sugerencias de CineMatch",
       "tipo": {
         "pelicula": "Película",
         "serie": "Serie"

@@ -23,18 +23,25 @@ type ApiYT = {
 };
 
 // La API de YouTube se carga una sola vez, cuando hace falta el primer video.
-let apiYoutube: Promise<void> | undefined;
-function cargarApiYoutube(): Promise<void> {
-  if ((window as unknown as { YT?: ApiYT }).YT?.Player) return Promise.resolve();
-  apiYoutube ??= new Promise<void>((resolver) => {
+let apiYoutube: Promise<boolean> | undefined;
+// Resuelve a true cuando la API está lista y a false si el script no carga (p. ej. un bloqueador lo corta).
+// Un fallo no se guarda: la siguiente vez se vuelve a intentar.
+function cargarApiYoutube(): Promise<boolean> {
+  if ((window as unknown as { YT?: ApiYT }).YT?.Player) return Promise.resolve(true);
+  apiYoutube ??= new Promise<boolean>((resolver) => {
     const ventana = window as unknown as { onYouTubeIframeAPIReady?: () => void };
     const previa = ventana.onYouTubeIframeAPIReady;
     ventana.onYouTubeIframeAPIReady = () => {
       previa?.();
-      resolver();
+      resolver(true);
     };
     const script = document.createElement("script");
     script.src = "https://www.youtube.com/iframe_api";
+    script.onerror = () => {
+      script.remove();
+      apiYoutube = undefined;
+      resolver(false);
+    };
     document.head.appendChild(script);
   });
   return apiYoutube;
@@ -69,7 +76,8 @@ export function VideoFondo({
     // Caja del tamaño que cubre el contenedor (proporción 16:9, recortada en el centro).
     const caja = document.createElement("div");
     caja.style.cssText =
-      "position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(100cqw,177.78cqh);height:max(100cqh,56.25cqw);pointer-events:none";
+      // 133 % del tamaño que cubre el contenedor: así los videos 4:3 también llenan el fondo sin barras negras.
+      "position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(133.33cqw,237.04cqh);height:max(133.33cqh,75cqw);pointer-events:none";
     const nodo = document.createElement("div");
     nodo.style.cssText = "width:100%;height:100%";
     caja.appendChild(nodo);
@@ -77,9 +85,14 @@ export function VideoFondo({
 
     let jugador: JugadorYT | undefined;
     let cancelado = false;
-    cargarApiYoutube().then(() => {
+    cargarApiYoutube().then((lista) => {
       const yt = (window as unknown as { YT?: ApiYT }).YT;
-      if (cancelado || !yt) return;
+      if (cancelado) return;
+      // Sin la API no hay reproductor: se da el video por terminado (no se marca como no disponible).
+      if (!lista || !yt) {
+        avisos.current.alTerminar();
+        return;
+      }
       jugador = new yt.Player(nodo, {
         videoId: clave,
         width: "100%",

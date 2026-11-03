@@ -38,4 +38,8 @@ export interface MovieProvider {
   search(texto: string): Promise<ContenidoExterno[]>;
   // URLs de fondos del título para la galería (vacío si no hay).
   fetchGallery(tipo: TipoContenido, idExterno: string): Promise<string[]>;
+  // Puntuación media de la fuente (0 a 10), o null si no la tiene. Opcional.
+  fetchPuntuacion?(tipo: TipoContenido, idExterno: string): Promise<number | null>;
+  // Títulos más populares de una región (con streaming allí), de más a menos popular. Opcional.
+  fetchPopularEnRegion?(region: string): Promise<ContenidoExterno[]>;
 }

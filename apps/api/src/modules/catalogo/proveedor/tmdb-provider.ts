@@ -8,7 +8,7 @@ import {
   type TituloTmdb,
   type VideoTmdb,
 } from "./mapeo-tmdb.js";
-import type { MovieProvider, TipoContenido } from "./movie-provider.js";
+import type { ContenidoExterno, MovieProvider, TipoContenido } from "./movie-provider.js";
 
 const BASE_POR_DEFECTO = "https://api.themoviedb.org/3";
 const IDIOMA = "es-ES";
@@ -123,6 +123,19 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
     );
   }
 
+  // Ids de las plataformas de streaming más importantes de una región (las que TMDB muestra primero).
+  async function plataformasPrincipales(region: string): Promise<number[]> {
+    const datos = await pedir<{ results?: { provider_id: number; display_priority?: number }[] }>(
+      "/watch/providers/movie",
+      { watch_region: region },
+    );
+    return (datos?.results ?? [])
+      .slice()
+      .sort((a, b) => (a.display_priority ?? 999) - (b.display_priority ?? 999))
+      .slice(0, 5)
+      .map((plataforma) => plataforma.provider_id);
+  }
+
   return {
     fuente: "tmdb",
     async fetchGenres() {
@@ -158,6 +171,59 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
       if (!titulo) return null;
       const generos = nombresDeGeneros(tipo, titulo.genres ?? []);
       return aContenidoExterno(tipo, titulo, generos);
+    },
+
+    async fetchPopularEnRegion(region) {
+      // Estrenos y series del último año disponibles en las plataformas principales de esa región, por popularidad.
+      const plataformas = await plataformasPrincipales(region);
+      const parametros: Record<string, string> = {
+        region,
+        watch_region: region,
+        with_watch_monetization_types: "flatrate",
+        sort_by: "popularity.desc",
+        "vote_count.gte": "50",
+        page: "1",
+      };
+      if (plataformas.length > 0) parametros.with_watch_providers = plataformas.join("|");
+      const desde = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+      const [peliculas, series] = await Promise.all([
+        pedir<{ results?: (TituloTmdb & { genre_ids?: number[] })[] }>("/discover/movie", {
+          ...parametros,
+          "primary_release_date.gte": desde,
+        }),
+        pedir<{ results?: (TituloTmdb & { genre_ids?: number[] })[] }>("/discover/tv", {
+          ...parametros,
+          "first_air_date.gte": desde,
+        }),
+      ]);
+      const pel = (peliculas?.results ?? []).slice(0, 12);
+      const ser = (series?.results ?? []).slice(0, 12);
+      const [peliculasMapeadas, seriesMapeadas] = await Promise.all([
+        Promise.all(
+          pel.map(async (titulo) =>
+            aContenidoExterno(
+              "pelicula",
+              titulo,
+              await nombresPorIds("pelicula", titulo.genre_ids),
+            ),
+          ),
+        ),
+        Promise.all(
+          ser.map(async (titulo) =>
+            aContenidoExterno("serie", titulo, await nombresPorIds("serie", titulo.genre_ids)),
+          ),
+        ),
+      ]);
+      // Alterna películas y series (cada lista va de más a menos popular): las series no tapan a las películas.
+      const mezcla: ContenidoExterno[] = [];
+      const maximo = Math.max(peliculasMapeadas.length, seriesMapeadas.length);
+      for (let i = 0; i < maximo; i++) {
+        const pelicula = peliculasMapeadas[i];
+        const serie = seriesMapeadas[i];
+        if (pelicula) mezcla.push(pelicula);
+        if (serie) mezcla.push(serie);
+      }
+      return mezcla;
     },
 
     async search(texto) {
@@ -225,6 +291,15 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
         logos.find((logo) => logo.iso_639_1 === "en") ??
         logos[0];
       return elegido?.file_path ? `https://image.tmdb.org/t/p/w500${elegido.file_path}` : null;
+    },
+
+    async fetchPuntuacion(tipo, idExterno) {
+      if (!/^\d+$/.test(idExterno)) return null;
+      const ruta = tipo === "pelicula" ? `/movie/${idExterno}` : `/tv/${idExterno}`;
+      const datos = await pedir<{ vote_average?: number }>(ruta);
+      return typeof datos?.vote_average === "number" && datos.vote_average > 0
+        ? datos.vote_average
+        : null;
     },
 
     async fetchTrailer(tipo, idExterno) {

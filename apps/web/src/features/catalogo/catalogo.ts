@@ -5,6 +5,7 @@ import {
   DestacadosSchema,
   type CatalogoItem,
   type Destacado,
+  type Region,
 } from "@cinematch/shared";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { crearClaves, peticion } from "@/shared/api";
@@ -21,11 +22,14 @@ export type PaginaCatalogo = {
   total: number;
 };
 
-// Títulos del carrusel del inicio. Cambian poco: se reutilizan 5 minutos.
-export function useDestacados() {
+// Títulos del carrusel del inicio, del país elegido. Cambian poco: se reutilizan 5 minutos por país.
+export function useDestacados(region: Region) {
   return useQuery<Destacado[]>({
-    queryKey: ["catalogo", "destacados"],
-    queryFn: () => peticion<Destacado[]>("/api/catalog/destacados", { esquema: DestacadosSchema }),
+    queryKey: ["catalogo", "destacados", region],
+    queryFn: () =>
+      peticion<Destacado[]>(`/api/catalog/destacados?region=${region}`, {
+        esquema: DestacadosSchema,
+      }),
     staleTime: 5 * 60 * 1000,
   });
 }

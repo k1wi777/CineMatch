@@ -8,6 +8,7 @@ import { useSesion } from "@/features/auth/sesion";
 import { usePerfil } from "@/features/perfil/perfil";
 import { useContadorSolicitudes } from "@/features/amigos/amigos";
 import { useContadorNoLeidas } from "@/features/notificaciones/notificaciones";
+import { SelectorRegion } from "@/features/catalogo/selector-region";
 import { Avatar } from "@/shared/ui/avatar";
 
 // Aviso con el número de solicitudes recibidas pendientes, junto a «Amigos».
@@ -121,32 +122,35 @@ export function Navbar() {
           </ul>
         </nav>
 
-        <form role="search" onSubmit={buscar} className="ml-auto hidden w-64 md:block">
-          <label htmlFor={`${idMenu}-buscar`} className="sr-only">
-            Buscar títulos
-          </label>
-          <div className="relative">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-niebla"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-            >
-              <circle cx="11" cy="11" r="7" />
-              <path d="m20 20-3.5-3.5" />
-            </svg>
-            <input
-              id={`${idMenu}-buscar`}
-              name="q"
-              type="search"
-              placeholder="Buscar títulos"
-              className="w-full rounded-sm border border-papel/15 bg-butaca py-2 pl-9 pr-3 text-sm placeholder:text-niebla focus:border-luz focus:outline-none"
-            />
-          </div>
-        </form>
+        <div className="ml-auto hidden items-center gap-2 md:flex">
+          <SelectorRegion />
+          <form role="search" onSubmit={buscar} className="w-64">
+            <label htmlFor={`${idMenu}-buscar`} className="sr-only">
+              Buscar títulos
+            </label>
+            <div className="relative">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-niebla"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              <input
+                id={`${idMenu}-buscar`}
+                name="q"
+                type="search"
+                placeholder="Buscar títulos"
+                className="w-full rounded-sm border border-papel/15 bg-butaca py-2 pl-9 pr-3 text-sm placeholder:text-niebla focus:border-luz focus:outline-none"
+              />
+            </div>
+          </form>
+        </div>
 
         <Link
           href="/notificaciones"
@@ -250,18 +254,21 @@ export function Navbar() {
 
       {menuAbierto ? (
         <div id={`${idMenu}-menu`} className="border-t border-papel/10 bg-butaca md:hidden">
-          <form role="search" onSubmit={buscar} className="px-4 pt-4">
-            <label htmlFor={`${idMenu}-buscar-movil`} className="sr-only">
-              Buscar títulos
-            </label>
-            <input
-              id={`${idMenu}-buscar-movil`}
-              name="q"
-              type="search"
-              placeholder="Buscar títulos"
-              className="w-full rounded-sm border border-papel/15 bg-sala px-3 py-2 text-base placeholder:text-niebla focus:border-luz focus:outline-none"
-            />
-          </form>
+          <div className="flex flex-col gap-3 px-4 pt-4">
+            <SelectorRegion className="self-start" />
+            <form role="search" onSubmit={buscar}>
+              <label htmlFor={`${idMenu}-buscar-movil`} className="sr-only">
+                Buscar títulos
+              </label>
+              <input
+                id={`${idMenu}-buscar-movil`}
+                name="q"
+                type="search"
+                placeholder="Buscar títulos"
+                className="w-full rounded-sm border border-papel/15 bg-sala px-3 py-2 text-base placeholder:text-niebla focus:border-luz focus:outline-none"
+              />
+            </form>
+          </div>
           <nav aria-label="Principal móvil" className="px-4 py-4">
             <ul className="flex flex-col gap-1">
               {ENLACES_MOVIL.map((enlace) => {

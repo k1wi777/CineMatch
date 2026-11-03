@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { useGeneros } from "@/features/generos/generos";
 import { useValorDiferido } from "@/features/usuarios/usuarios";
 import { mensajeDeError } from "@/shared/api";
@@ -24,11 +24,22 @@ export function PaginaCatalogo({ filtros }: { filtros: FiltrosCatalogo }) {
   // El texto se queda en local y solo cambia la URL tras una pausa, para no pedir una búsqueda por tecla.
   const [texto, setTexto] = useState(filtros.q);
   const diferido = useValorDiferido(texto.trim(), 300);
+  // Último texto que la página ya tiene en la URL (escrito aquí o llegado de fuera, p. ej. el buscador del navbar).
+  const enviado = useRef(filtros.q);
+  const filtrosActuales = useRef(filtros);
+  filtrosActuales.current = filtros;
   useEffect(() => {
-    if (diferido !== filtros.q) {
-      router.replace(queryDeFiltros({ ...filtros, q: diferido, page: 1 }), { scroll: false });
-    }
-  }, [diferido, filtros, router]);
+    if (diferido === enviado.current) return;
+    enviado.current = diferido;
+    router.replace(queryDeFiltros({ ...filtrosActuales.current, q: diferido, page: 1 }), {
+      scroll: false,
+    });
+  }, [diferido, router]);
+  useEffect(() => {
+    if (filtros.q === enviado.current) return;
+    enviado.current = filtros.q;
+    setTexto(filtros.q);
+  }, [filtros.q]);
 
   function cambiar(nuevo: FiltrosCatalogo) {
     router.replace(queryDeFiltros(nuevo), { scroll: false });

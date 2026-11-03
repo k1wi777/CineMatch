@@ -6,6 +6,7 @@ import type {
   TituloFicha,
   TipoContenido,
   Logo,
+  Region,
   Trailer,
 } from "@cinematch/shared";
 import type pg from "pg";
@@ -190,9 +191,112 @@ export function crearServicioCatalogo(pool: pg.Pool, proveedor: MovieProvider) {
     return url;
   }
 
+  // Puntuación de TMDB (0 a 10) de los destacados, en estrellas (0 a 5). Solo se usa en el carrusel:
+  // se pide a TMDB en directo y se guarda en memoria seis horas, sin tocar la base de datos.
+  const TTL_PUNTUACION_MS = 6 * 60 * 60 * 1000;
+  const puntuacionCache = new Map<string, { en: number; estrellas: number | null }>();
+
+  async function puntuacionesDe(filas: FilaDestacado[]): Promise<Map<number, number | null>> {
+    const mapa = new Map<number, number | null>();
+    for (const fila of filas) {
+      const clave = `${fila.tipo}:${fila.id_externo}`;
+      const guardada = puntuacionCache.get(clave);
+      if (guardada && Date.now() - guardada.en < TTL_PUNTUACION_MS) {
+        mapa.set(fila.id, guardada.estrellas);
+        continue;
+      }
+      let estrellas: number | null = null;
+      if (proveedor.fetchPuntuacion) {
+        try {
+          const puntuacion = await proveedor.fetchPuntuacion(fila.tipo, fila.id_externo);
+          if (puntuacion !== null) {
+            // Medio punto más cercano: 7.3 de 10 pasa a 3.5 de 5.
+            estrellas = Math.round((puntuacion / 2) * 2) / 2;
+          }
+        } catch {
+          // Sin puntuación, la estrella se muestra vacía.
+        }
+      }
+      puntuacionCache.set(clave, { en: Date.now(), estrellas });
+      mapa.set(fila.id, estrellas);
+    }
+    return mapa;
+  }
+
   // Textos ya buscados en la fuente externa (clave: texto normalizado, valor: momento de la búsqueda).
   const busquedasRecientes = new Map<string, number>();
   const TTL_BUSQUEDA_MS = DIA_MS;
+
+  // Títulos que CineMatch sugiere: van primero en el carrusel, en este orden (ids externos de TMDB).
+  const SUGERENCIAS_EXTERNAS = ["687163", "969681", "1368337", "1084242", "83533", "967941"];
+  let sugerenciasCache: number[] | undefined;
+
+  // Ids locales de las sugerencias. Si no están en el catálogo, se piden a la fuente y se guardan.
+  async function sugerenciasIds(): Promise<number[]> {
+    if (sugerenciasCache) return sugerenciasCache;
+    const buscar = () =>
+      pool.query<{ id: number; id_externo: string }>(
+        `SELECT id, id_externo FROM contenido
+          WHERE fuente = $1 AND tipo = 'pelicula' AND id_externo = ANY($2::text[])`,
+        [proveedor.fuente, SUGERENCIAS_EXTERNAS],
+      );
+    let { rows } = await buscar();
+    const faltan = SUGERENCIAS_EXTERNAS.filter(
+      (externo) => !rows.some((f) => f.id_externo === externo),
+    );
+    if (faltan.length > 0) {
+      for (const externo of faltan) {
+        try {
+          const ficha = await proveedor.fetchDetails("pelicula", externo);
+          if (ficha) await guardarTitulo(pool, proveedor.fuente, ficha);
+        } catch {
+          // Una sugerencia que falla no detiene las demás.
+        }
+      }
+      ({ rows } = await buscar());
+    }
+    const ids = SUGERENCIAS_EXTERNAS.map(
+      (externo) => rows.find((f) => f.id_externo === externo)?.id,
+    ).filter((id): id is number => id !== undefined);
+    if (ids.length === SUGERENCIAS_EXTERNAS.length) sugerenciasCache = ids;
+    return ids;
+  }
+
+  // Ids locales de los más populares de cada región, en orden. Se piden a la fuente como mucho cada hora por región.
+  const latamCache = new Map<Region, { en: number; ids: number[] }>();
+  const TTL_LATAM_MS = 60 * 60 * 1000;
+
+  // Guarda los títulos populares de la región y devuelve sus ids locales en el mismo orden.
+  // Si la fuente no lo ofrece o falla, devuelve undefined y el carrusel usa los populares del catálogo.
+  async function latamIds(region: Region): Promise<number[] | undefined> {
+    if (!proveedor.fetchPopularEnRegion) return undefined;
+    const guardado = latamCache.get(region);
+    if (guardado && Date.now() - guardado.en < TTL_LATAM_MS) return guardado.ids;
+    let lista: ContenidoExterno[];
+    try {
+      lista = await proveedor.fetchPopularEnRegion(region);
+    } catch {
+      return undefined;
+    }
+    for (const contenido of lista) {
+      try {
+        await guardarTitulo(pool, proveedor.fuente, contenido);
+      } catch {
+        // Un título que falla no detiene el resto.
+      }
+    }
+    const { rows } = await pool.query<{ id: number; tipo: TipoContenido; id_externo: string }>(
+      "SELECT id, tipo, id_externo FROM contenido WHERE fuente = $1 AND id_externo = ANY($2::text[])",
+      [proveedor.fuente, lista.map((contenido) => contenido.idExterno)],
+    );
+    const porClave = new Map(rows.map((fila) => [`${fila.tipo}:${fila.id_externo}`, fila.id]));
+    const ids = lista
+      .map((contenido) => porClave.get(`${contenido.tipo}:${contenido.idExterno}`))
+      .filter((id): id is number => id !== undefined);
+    if (ids.length === 0) return undefined;
+    latamCache.set(region, { en: Date.now(), ids });
+    return ids;
+  }
 
   return {
     // Búsqueda externa: trae los títulos que coinciden con el texto y los guarda en el catálogo.
@@ -346,36 +450,74 @@ export function crearServicioCatalogo(pool: pg.Pool, proveedor: MovieProvider) {
     },
 
     // Títulos del carrusel del inicio: los más populares que tienen imagen horizontal.
-    async destacados(limite: number): Promise<Destacado[]> {
-      // Se revisan candidatos populares y se quedan los que tienen tráiler, para que el carrusel
-      // siempre tenga algo que reproducir. Si ninguno tiene, se muestran los populares con póster.
-      const { rows } = await pool.query<FilaDestacado>(
+    async destacados(limite: number, region: Region): Promise<Destacado[]> {
+      // Primero las sugerencias de CineMatch (siempre, aunque no tengan tráiler).
+      // Después los destacados del país: los que tienen tráiler, o los candidatos con póster si ninguno tiene.
+      const sugeridos = await sugerenciasIds();
+      const ids = await latamIds(region);
+      const { rows: candidatas } = ids
+        ? await pool.query<FilaDestacado>(
+            `SELECT id, tipo, titulo, anio, sinopsis, poster_url, fondo_url, fuente, id_externo,
+                    logo_url, logo_consultado_en, trailer_url, trailer_consultado_en
+               FROM contenido
+              WHERE id = ANY($1::int[]) AND fondo_url IS NOT NULL`,
+            [ids],
+          )
+        : await pool.query<FilaDestacado>(
+            `SELECT id, tipo, titulo, anio, sinopsis, poster_url, fondo_url, fuente, id_externo,
+                    logo_url, logo_consultado_en, trailer_url, trailer_consultado_en
+               FROM contenido
+              WHERE fondo_url IS NOT NULL
+              ORDER BY popularidad_externa DESC NULLS LAST, id
+              LIMIT $1`,
+            [CANDIDATOS_DESTACADOS],
+          );
+      if (ids) {
+        // La consulta no garantiza el orden de popularidad: se restaura.
+        candidatas.sort((a, b) => ids.indexOf(a.id) - ids.indexOf(b.id));
+      }
+
+      const { rows: filasSugeridas } = await pool.query<FilaDestacado>(
         `SELECT id, tipo, titulo, anio, sinopsis, poster_url, fondo_url, fuente, id_externo,
                 logo_url, logo_consultado_en, trailer_url, trailer_consultado_en
-           FROM contenido
-          WHERE fondo_url IS NOT NULL
-          ORDER BY popularidad_externa DESC NULLS LAST, id
-          LIMIT $1`,
-        [CANDIDATOS_DESTACADOS],
+           FROM contenido WHERE id = ANY($1::int[])`,
+        [sugeridos],
       );
-      const conTrailer: { fila: FilaDestacado; trailerUrl: string | null }[] = [];
-      for (const fila of rows) {
-        if (conTrailer.length >= limite) break;
-        const trailerUrl = await trailerDe(fila);
-        if (trailerUrl) conTrailer.push({ fila, trailerUrl });
+      filasSugeridas.sort((a, b) => sugeridos.indexOf(a.id) - sugeridos.indexOf(b.id));
+      const cupoPais = Math.max(0, limite - filasSugeridas.length);
+      const resto = candidatas.filter((fila) => !sugeridos.includes(fila.id));
+
+      const elegidosSugeridos: {
+        fila: FilaDestacado;
+        trailerUrl: string | null;
+        sugerencia: boolean;
+      }[] = [];
+      for (const fila of filasSugeridas) {
+        elegidosSugeridos.push({ fila, trailerUrl: await trailerDe(fila), sugerencia: true });
       }
-      const elegidos =
+
+      const conTrailer: { fila: FilaDestacado; trailerUrl: string | null; sugerencia: boolean }[] =
+        [];
+      for (const fila of resto) {
+        if (conTrailer.length >= cupoPais) break;
+        const trailerUrl = await trailerDe(fila);
+        if (trailerUrl) conTrailer.push({ fila, trailerUrl, sugerencia: false });
+      }
+      const delPais =
         conTrailer.length > 0
           ? conTrailer
-          : rows.slice(0, limite).map((fila) => ({ fila, trailerUrl: null }));
+          : resto.slice(0, cupoPais).map((fila) => ({ fila, trailerUrl: null, sugerencia: false }));
 
+      const elegidos = [...elegidosSugeridos, ...delPais];
       const filas = elegidos.map((elegido) => elegido.fila);
       const generos = await generosDe(
         pool,
         filas.map((fila) => fila.id),
       );
       const logos = await logosDe(filas);
-      return elegidos.map(({ fila, trailerUrl }) => ({
+      const puntuaciones = await puntuacionesDe(filas);
+      return elegidos.map(({ fila, trailerUrl, sugerencia }) => ({
+        promedio: puntuaciones.get(fila.id) ?? null,
         id: fila.id,
         tipo: fila.tipo,
         titulo: fila.titulo,
@@ -386,6 +528,7 @@ export function crearServicioCatalogo(pool: pg.Pool, proveedor: MovieProvider) {
         logoUrl: logos.get(fila.id) ?? null,
         trailerUrl,
         generos: generos.get(fila.id) ?? [],
+        sugerencia,
       }));
     },
 

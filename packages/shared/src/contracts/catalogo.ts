@@ -92,6 +92,10 @@ export const DestacadoSchema = z.object({
   logoUrl: z.string().nullable(),
   trailerUrl: z.string().nullable(),
   generos: z.array(GeneroRefSchema),
+  // Sugerencia de CineMatch (van primero en el carrusel).
+  sugerencia: z.boolean().default(false),
+  // Calificación media de las reseñas públicas (null si nadie la ha calificado).
+  promedio: z.number().nullable().default(null),
 });
 
 export const DestacadosSchema = z.array(DestacadoSchema);
@@ -111,3 +115,28 @@ export const LogoSchema = z.object({
 });
 
 export type Logo = z.infer<typeof LogoSchema>;
+
+// Países (regiones) para los destacados para los destacados: cambian los títulos con streaming disponible en ese país.
+export const REGIONES_DESTACADOS = [
+  { codigo: "MX", nombre: "México" },
+  { codigo: "CO", nombre: "Colombia" },
+  { codigo: "AR", nombre: "Argentina" },
+  { codigo: "CL", nombre: "Chile" },
+  { codigo: "PE", nombre: "Perú" },
+  { codigo: "EC", nombre: "Ecuador" },
+  { codigo: "ES", nombre: "España" },
+  { codigo: "US", nombre: "USA" },
+  { codigo: "GB", nombre: "UK" },
+  { codigo: "JP", nombre: "Japón" },
+] as const;
+
+export const RegionSchema = z.enum(["MX", "CO", "AR", "CL", "PE", "EC", "ES", "US", "GB", "JP"]);
+
+export type Region = z.infer<typeof RegionSchema>;
+
+// Parámetros de GET /api/catalog/destacados. Sin región se usa México.
+export const DestacadosQuerySchema = z.object({
+  region: RegionSchema.default("MX"),
+});
+
+export type DestacadosQuery = z.infer<typeof DestacadosQuerySchema>;

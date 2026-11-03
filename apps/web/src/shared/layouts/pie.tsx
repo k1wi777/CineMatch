@@ -7,27 +7,27 @@ export function Pie() {
     <footer className="mt-16 border-t border-papel/10 bg-sala">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 md:grid-cols-3">
         <div className="space-y-2">
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-nowrap items-center gap-4">
             <Image
               src="/logo-cinematch.png"
               alt="CineMatch"
               width={1680}
               height={261}
-              className="h-16 w-auto"
+              className="h-6 w-auto"
             />
             <Image
               src="/logo-tmdb.png"
               alt="The Movie Database (TMDB)"
               width={700}
               height={438}
-              className="h-12 w-auto rounded-sm"
+              className="h-10 w-auto rounded-sm"
             />
             <Image
               src="/logo-dwii.png"
               alt="DW II"
               width={1536}
               height={1024}
-              className="h-12 w-auto"
+              className="h-10 w-auto"
             />
           </div>
           <p className="text-sm text-niebla">

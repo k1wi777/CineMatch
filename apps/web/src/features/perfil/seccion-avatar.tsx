@@ -90,13 +90,25 @@ export function SeccionAvatar({ perfil }: { perfil: Perfil }) {
 
       <div className="flex items-center gap-5">
         <Avatar nombre={perfil.nombre} url={vista ?? perfil.avatarUrl} tamano={96} />
-        <div className="space-y-2">
-          <label
-            htmlFor={`${id}-archivo`}
-            className="inline-block cursor-pointer rounded-sm border border-papel/30 px-4 py-2 text-sm hover:border-luz"
-          >
-            {t("avatar.elegir")}
-          </label>
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-wrap items-center gap-3">
+            <label
+              htmlFor={`${id}-archivo`}
+              className="inline-block cursor-pointer rounded-sm border border-papel/30 px-4 py-2 text-sm hover:border-luz"
+            >
+              {t("avatar.elegir")}
+            </label>
+            {perfil.avatarUrl && !archivo ? (
+              <button
+                type="button"
+                onClick={quitarFoto}
+                disabled={ocupado}
+                className="rounded-sm border border-papel/30 px-4 py-2 text-sm disabled:opacity-50"
+              >
+                {t("avatar.quitar")}
+              </button>
+            ) : null}
+          </div>
           <input
             id={`${id}-archivo`}
             type="file"
@@ -143,16 +155,6 @@ export function SeccionAvatar({ perfil }: { perfil: Perfil }) {
             className="rounded-sm bg-luz px-4 py-2 text-sm font-semibold text-sala disabled:opacity-50"
           >
             {subir.isPending ? t("avatar.subiendo") : t("avatar.subir")}
-          </button>
-        ) : null}
-        {perfil.avatarUrl && !archivo ? (
-          <button
-            type="button"
-            onClick={quitarFoto}
-            disabled={ocupado}
-            className="rounded-sm border border-papel/30 px-4 py-2 text-sm disabled:opacity-50"
-          >
-            {t("avatar.quitar")}
           </button>
         ) : null}
       </div>
