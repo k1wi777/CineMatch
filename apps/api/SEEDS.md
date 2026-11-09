@@ -29,8 +29,8 @@ Define estas variables en `apps/api/.env`:
 
 Solo para desarrollo. Los usuarios comparten la contraseña `Demo1234!`.
 
-| Usuario       | Correo                             | Notas                                        |
-| ------------- | ---------------------------------- | -------------------------------------------- |
+| Usuario  | Correo             | Notas                                        |
+| -------- | ------------------ | -------------------------------------------- |
 | `Ana`    | `ana@gmail.com`    | Amiga de Luis y Marta. Escribe reseñas.      |
 | `Luis`   | `luis@gmail.com`   | Amigo de Ana. Envió una recomendación a Ana. |
 | `Marta`  | `marta@gmail.com`  | Amiga de Ana.                                |

@@ -6,3 +6,7 @@ pnpm-lock.yaml
 # Documentación existente del proyecto; no se reformatea desde el tooling.
 AGENTS.md
 README.md
+
+# Herramientas locales del asistente (no versionadas)
+.claude/
+.impeccable/
