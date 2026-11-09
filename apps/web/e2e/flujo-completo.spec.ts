@@ -54,7 +54,10 @@ test("registro, reseña, recomendación, completado y notificación", async ({ b
     .getByLabel("Comentario (opcional)")
     .fill("Muy recomendable para el fin de semana");
   await paginaAna.getByRole("button", { name: "Publicar reseña" }).click();
-  await expect(paginaAna.getByText("Reseña guardada.")).toBeVisible();
+  // El aviso «Reseña guardada.» es transitorio: se comprueba la reseña ya guardada en la ficha.
+  await expect(
+    paginaAna.getByRole("region", { name: "Mi reseña" }).getByRole("button", { name: "Editar" }),
+  ).toBeVisible();
 
   // Amistad: Ana busca a Beto y envía la solicitud; Beto la acepta.
   await paginaAna.goto(`${BASE}/amigos/buscar`);
@@ -85,7 +88,9 @@ test("registro, reseña, recomendación, completado y notificación", async ({ b
   await paginaBeto.goto(`${BASE}/catalogo/${tituloId}`);
   await calificarCuatro(paginaBeto);
   await paginaBeto.getByRole("button", { name: "Publicar reseña" }).click();
-  await expect(paginaBeto.getByText("Reseña guardada.")).toBeVisible();
+  await expect(
+    paginaBeto.getByRole("region", { name: "Mi reseña" }).getByRole("button", { name: "Editar" }),
+  ).toBeVisible();
 
   // Ana recibe la notificación de que su recomendación se completó.
   await paginaAna.goto(`${BASE}/notificaciones`);
