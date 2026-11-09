@@ -99,8 +99,8 @@ export const EscribirResenaSchema = z.object({
   comentario: ComentarioSchema.nullable().optional(),
   visibilidad: VisibilidadResenaSchema.default("publica"),
   esSpoiler: z.boolean().default(false),
-  // Lista de texto libre. Se normaliza, se descartan vacías y repetidas, y se limita en el servicio.
-  etiquetas: z.array(z.string().max(100)).max(20).default([]),
+  // Lista de texto libre. Se normaliza, se descartan vacías y repetidas, y respeta los límites de RN6.
+  etiquetas: z.array(z.string().max(MAX_LONGITUD_ETIQUETA)).max(MAX_ETIQUETAS_RESENA).default([]),
 });
 
 export type EscribirResena = z.infer<typeof EscribirResenaSchema>;
