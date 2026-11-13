@@ -41,6 +41,9 @@ async function main(): Promise<void> {
     produccion: false,
     correo,
   });
+  // Igual que server.ts: el pool de recomendaciones generales se calcula antes de medir. Si no, las 100
+  // conexiones esperarían a la vez el primer cálculo y la medición mediría el arranque, no la caché.
+  await app.locals.calentarComunidad();
   const servidor = app.listen(0, "127.0.0.1");
   await once(servidor, "listening");
   const base = `http://127.0.0.1:${(servidor.address() as AddressInfo).port}`;

@@ -299,6 +299,7 @@ export function createApp({
     createComunidadRouter(crearServicioComunidad({ pool, cache: poolComunidad }), servicioAuth),
   );
   app.locals.calentarComunidad = () => poolComunidad.asegurar();
+  app.locals.recalcularComunidad = () => poolComunidad.recalcular();
 
   // Administración (BE-12): sincronización manual, moderación y auditoría. Solo rol administrador.
   const sincronizacionCatalogo = crearServicioSincronizacion({

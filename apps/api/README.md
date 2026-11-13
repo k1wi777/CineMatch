@@ -29,6 +29,8 @@ Las define `apps/api/.env.example` y las valida `src/config/env.ts`. Las más im
 | `WEB_URL` | Origen de la web: CORS, CSRF y enlaces de correo. Obligatoria en producción. |
 | `TMDB_API_KEY` | Clave de TMDB. Vacía: el catálogo usa el proveedor de prueba. |
 | `CATALOGO_SYNC_HABILITADA`, `CATALOGO_SYNC_CRON` | Sincronización periódica del catálogo (desactivada por defecto). |
+| `COMUNIDAD_RECALCULO_CRON` | Recálculo del pool de recomendaciones generales (activo, por defecto cada hora en punto). |
+| `COPIA_DIARIA_HABILITADA`, `COPIA_DIARIA_CRON` | Copia de seguridad diaria con `scripts/backup.mjs` (desactivada por defecto; requiere el contenedor de PostgreSQL). |
 | `SMTP_*` | Correo saliente (Mailpit en desarrollo). |
 | `COMMUNITY_CACHE_TTL_MINUTES`, `SESSION_*`, `LOGIN_*`, `RESET_TOKEN_TTL_MINUTES` | Reglas de negocio ajustables (`src/config/business-rules.ts`). |
 

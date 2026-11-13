@@ -4,6 +4,8 @@ import { opcionesDeSeguridad } from "./config/security.js";
 import { reglasDeNegocio } from "./config/business-rules.js";
 import { crearCorreoSmtp } from "./lib/correo.js";
 import { iniciarLimpieza } from "./jobs/limpieza-sesiones.js";
+import { iniciarCopiaDiaria } from "./jobs/copia-diaria.js";
+import { iniciarRecalculoComunidad } from "./jobs/recalculo-comunidad.js";
 import { EventBus } from "./lib/events.js";
 import { registrarListenersDeModulos } from "./modules/registro-eventos.js";
 import { createPool } from "./lib/db.js";
@@ -61,6 +63,13 @@ const detenerSincronizacion = iniciarSincronizacionCatalogo({
   logger,
 });
 
+// Copia de seguridad diaria (NF de disponibilidad): solo si COPIA_DIARIA_HABILITADA=true.
+const detenerCopia = iniciarCopiaDiaria({
+  habilitada: env.COPIA_DIARIA_HABILITADA,
+  expresion: env.COPIA_DIARIA_CRON,
+  logger,
+});
+
 const app = createApp({
   pool,
   logger,
@@ -77,6 +86,13 @@ await app.locals.calentarComunidad().catch((err: unknown) => {
   logger.error({ err }, "No se pudo calcular el pool de recomendaciones al arrancar");
 });
 
+// Recalculo horario del pool de recomendaciones generales (RN15).
+const detenerRecalculoComunidad = iniciarRecalculoComunidad({
+  expresion: env.COMUNIDAD_RECALCULO_CRON,
+  recalcular: () => app.locals.recalcularComunidad(),
+  logger,
+});
+
 const server = app.listen(env.API_PORT, () => {
   logger.info({ port: env.API_PORT, env: env.NODE_ENV }, "API escuchando");
 });
@@ -89,6 +105,8 @@ async function shutdown(signal: NodeJS.Signals): Promise<void> {
   logger.info({ signal }, "Apagando la API");
   detenerLimpieza();
   detenerSincronizacion();
+  detenerCopia();
+  detenerRecalculoComunidad();
 
   const forceExit = setTimeout(() => {
     logger.error("Apagado forzado: se superó el tiempo máximo");
