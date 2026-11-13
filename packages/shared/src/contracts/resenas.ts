@@ -61,10 +61,10 @@ export const MAX_ETIQUETAS_RESENA = 5;
 export const MAX_LONGITUD_ETIQUETA = 30;
 export const MAX_COMENTARIO = 2000;
 
-// Calificación de 1 a 5 en pasos de 0,5 (RN1 y ERS).
+// Calificación de 0,5 a 5 en pasos de 0,5 (RN1 y ERS).
 export const CalificacionSchema = z
   .number()
-  .min(1, "La calificación mínima es 1.")
+  .min(0.5, "La calificación mínima es 0,5.")
   .max(5, "La calificación máxima es 5.")
   .refine((valor) => Number.isInteger(valor * 2), "La calificación avanza de medio en medio.");
 
