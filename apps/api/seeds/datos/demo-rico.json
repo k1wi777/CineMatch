@@ -155,176 +155,1162 @@
  ],
  "titulos": [
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Hope"
+   "titulo": "Hope",
+   "id_externo": "1058424"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Los vigilantes de la playa"
+   "titulo": "Los vigilantes de la playa",
+   "id_externo": "4386"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Wakfu"
+   "titulo": "Wakfu",
+   "id_externo": "64414"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "El mentalista"
+   "titulo": "El mentalista",
+   "id_externo": "5920"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Encantadoramente Terrible"
+   "titulo": "Encantadoramente Terrible",
+   "id_externo": "81332"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Anatomía de Grey"
+   "titulo": "Anatomía de Grey",
+   "id_externo": "1416"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Breaking Bad"
+   "titulo": "Breaking Bad",
+   "id_externo": "1396"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Magnum"
+   "titulo": "Magnum",
+   "id_externo": "79593"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Clayface"
+   "titulo": "Clayface",
+   "id_externo": "1400940"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "X-Men: Días del futuro pasado"
+   "titulo": "X-Men: Días del futuro pasado",
+   "id_externo": "127585"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "El despertar"
+   "titulo": "El despertar",
+   "id_externo": "1657630"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Resident Evil"
+   "titulo": "Resident Evil",
+   "id_externo": "1423191"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Toy Story 5"
+   "titulo": "Toy Story 5",
+   "id_externo": "1084244"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Street Fighter"
+   "titulo": "Street Fighter",
+   "id_externo": "1153576"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Coco"
+   "titulo": "Coco",
+   "id_externo": "354912"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "La guerra de los mundos"
+   "titulo": "La guerra de los mundos",
+   "id_externo": "755898"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Vengadores: Doomsday"
+   "titulo": "Vengadores: Doomsday",
+   "id_externo": "1003596"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Dune: Parte dos"
+   "titulo": "Dune: Parte dos",
+   "id_externo": "693134"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Ley y orden: Unidad de Víctimas Especiales"
+   "titulo": "Ley y orden: Unidad de Víctimas Especiales",
+   "id_externo": "2734"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Sobrenatural"
+   "titulo": "Sobrenatural",
+   "id_externo": "1622"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Medium"
+   "titulo": "Medium",
+   "id_externo": "36"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Lo que hacemos en las sombras"
+   "titulo": "Lo que hacemos en las sombras",
+   "id_externo": "83631"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "The Bill"
+   "titulo": "The Bill",
+   "id_externo": "2072"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Amor entre lineas"
+   "titulo": "Amor entre lineas",
+   "id_externo": "279136"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "The Crown"
+   "titulo": "The Crown",
+   "id_externo": "65494"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Padre de familia"
+   "titulo": "Padre de familia",
+   "id_externo": "1434"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Malcolm"
+   "titulo": "Malcolm",
+   "id_externo": "2004"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "MINDHUNTER"
+   "titulo": "MINDHUNTER",
+   "id_externo": "67744"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Ally McBeal"
+   "titulo": "Ally McBeal",
+   "id_externo": "1480"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Running Man"
+   "titulo": "Running Man",
+   "id_externo": "33238"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Moesha"
+   "titulo": "Moesha",
+   "id_externo": "3497"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Proyecto Salvación"
+   "titulo": "Proyecto Salvación",
+   "id_externo": "687163"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "La Odisea"
+   "titulo": "La Odisea",
+   "id_externo": "1368337"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Lupin"
+   "titulo": "Lupin",
+   "id_externo": "96677"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Verity. La sombra de un engaño"
+   "titulo": "Verity. La sombra de un engaño",
+   "id_externo": "1283515"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "La constelación del perro"
+   "titulo": "La constelación del perro",
+   "id_externo": "1384216"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Pesadilla antes de Navidad"
+   "titulo": "Pesadilla antes de Navidad",
+   "id_externo": "9479"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Friends"
+   "titulo": "Friends",
+   "id_externo": "1668"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Animales"
+   "titulo": "Animales",
+   "id_externo": "1236045"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Wildwood: El Bosque Salvaje"
+   "titulo": "Wildwood: El Bosque Salvaje",
+   "id_externo": "791523"
   },
   {
+   "fuente": "tmdb",
    "tipo": "serie",
-   "titulo": "Los Simpson"
+   "titulo": "Los Simpson",
+   "id_externo": "456"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Contra el huracán"
+   "titulo": "Contra el huracán",
+   "id_externo": "1780005"
   },
   {
+   "fuente": "tmdb",
    "tipo": "pelicula",
-   "titulo": "Spider-Man: Brand New Day"
+   "titulo": "Spider-Man: Brand New Day",
+   "id_externo": "969681"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Plus belle la vie",
+   "id_externo": "8590"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Bong Soon, una chica superfuerte",
+   "id_externo": "68814"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Garth Marenghi's Darkplace",
+   "id_externo": "205"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Matrimonio Con Hijos",
+   "id_externo": "4239"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Rockefeller Plaza",
+   "id_externo": "4608"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Show de Música Misteriosa: King of Mask Singer",
+   "id_externo": "66046"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Doctor Who",
+   "id_externo": "57243"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Apocalipsis Z: Nuevo mundo",
+   "id_externo": "1507696"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "El motín",
+   "id_externo": "1288445"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "New Scotland Yard",
+   "id_externo": "32160"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Holby City",
+   "id_externo": "1028"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "The Boys",
+   "id_externo": "76479"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "サザエさん",
+   "id_externo": "153485"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "The Office",
+   "id_externo": "2316"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Passions",
+   "id_externo": "9912"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Fall 2: Deadpoint",
+   "id_externo": "1101412"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Chicago P.D.",
+   "id_externo": "58841"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Quotidien",
+   "id_externo": "67824"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Cyberpunk: Edgerunners",
+   "id_externo": "105248"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Vigilados, Person of Interest",
+   "id_externo": "1411"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "DAS!",
+   "id_externo": "62992"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Ninja Boy Rantaro",
+   "id_externo": "34860"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Smallville",
+   "id_externo": "4604"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "VisionQuest",
+   "id_externo": "213375"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "One Tree Hill",
+   "id_externo": "269"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Volle Kanne",
+   "id_externo": "64190"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Nocturno",
+   "id_externo": "292741"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Silo",
+   "id_externo": "125988"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Crónicas vampíricas",
+   "id_externo": "18165"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Resident Evil. Bienvenidos a Raccoon City",
+   "id_externo": "460458"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Watch What Happens Live with Andy Cohen",
+   "id_externo": "22980"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Expediente X",
+   "id_externo": "4087"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Perry Mason",
+   "id_externo": "4177"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Star Trek: La nueva generación",
+   "id_externo": "655"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "LEGO Ninjago: Maestros del Spinjitzu",
+   "id_externo": "38693"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Hollywood Squares",
+   "id_externo": "221468"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "CentoVetrine",
+   "id_externo": "80318"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "妖神记",
+   "id_externo": "76806"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Deadpool y Lobezno",
+   "id_externo": "533535"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Saturday Night Live",
+   "id_externo": "1667"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "S.W.A.T.: Los hombres de Harrelson",
+   "id_externo": "71790"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Frieren: Tras finalizar el viaje",
+   "id_externo": "209867"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Shameless",
+   "id_externo": "34307"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Castle",
+   "id_externo": "1419"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "2 Días y 1 Noche",
+   "id_externo": "30801"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Match of the Day",
+   "id_externo": "224"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Vikingos",
+   "id_externo": "44217"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Better Call Saul",
+   "id_externo": "60059"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Seinfeld",
+   "id_externo": "1400"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Real Time with Bill Maher",
+   "id_externo": "4419"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Markus Lanz",
+   "id_externo": "23915"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Scrubs",
+   "id_externo": "4556"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "LIVE with Kelly and Mark",
+   "id_externo": "1900"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Riverdale",
+   "id_externo": "69050"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Juego de tronos",
+   "id_externo": "1399"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "La asistenta",
+   "id_externo": "1368166"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Ted Lasso",
+   "id_externo": "97546"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "El día de la revelación",
+   "id_externo": "1275779"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "你好，星期六",
+   "id_externo": "154770"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Barrio Sesamo",
+   "id_externo": "502"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Chicago Med",
+   "id_externo": "62650"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Raw",
+   "id_externo": "4656"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Sturm der Liebe",
+   "id_externo": "45789"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Homeland",
+   "id_externo": "1407"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Doraemon, el gato cósmico",
+   "id_externo": "65733"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "TV 동물농장",
+   "id_externo": "64369"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "La otra madre",
+   "id_externo": "1400837"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Vivy: Fluorite Eye’s Song",
+   "id_externo": "116725"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Leute heute",
+   "id_externo": "111979"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Jimmy Kimmel Live!",
+   "id_externo": "1489"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Good Mythical Morning",
+   "id_externo": "65701"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "The Florist",
+   "id_externo": "1476746"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Al este del Edén",
+   "id_externo": "258165"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "American Horror Story",
+   "id_externo": "1413"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Doraemon",
+   "id_externo": "57911"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Sensación de vivir",
+   "id_externo": "2025"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Tenzing",
+   "id_externo": "1288069"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Survivor",
+   "id_externo": "14658"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Horizon",
+   "id_externo": "1966"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Barátok közt",
+   "id_externo": "50821"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Klara y el Sol",
+   "id_externo": "858035"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "El caballero oscuro",
+   "id_externo": "155"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "El cor de la ciutat",
+   "id_externo": "14743"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Crystal Lake",
+   "id_externo": "213562"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "La Patrulla Canina",
+   "id_externo": "57532"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Top Gun: Maverick",
+   "id_externo": "361743"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Hunter × Hunter",
+   "id_externo": "46298"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Campus Drivers",
+   "id_externo": "303044"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Hora de aventuras",
+   "id_externo": "15260"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Naruto Shippuden",
+   "id_externo": "31910"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Jason y los Argonautas",
+   "id_externo": "25406"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Jeopardy!",
+   "id_externo": "2912"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Futurama",
+   "id_externo": "615"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Detective Conan",
+   "id_externo": "30983"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "La mangosta",
+   "id_externo": "1294189"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "相棒",
+   "id_externo": "40663"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "El hormiguero",
+   "id_externo": "6809"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Halv åtta hos mig",
+   "id_externo": "18180"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "真情",
+   "id_externo": "15844"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Padre made in USA",
+   "id_externo": "1433"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "No dejes a los niños solos",
+   "id_externo": "1339274"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "El viaje de Chihiro",
+   "id_externo": "129"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "El final de Oak Street",
+   "id_externo": "1101383"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Phineas y Ferb",
+   "id_externo": "1877"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "The Graham Norton Show",
+   "id_externo": "1220"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "FBI",
+   "id_externo": "80748"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Mickey's Slayhouse",
+   "id_externo": "1393056"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Noche fatídica",
+   "id_externo": "1453407"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Aniquilación",
+   "id_externo": "1284046"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Jujutsu Kaisen",
+   "id_externo": "95479"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "The Good Doctor",
+   "id_externo": "71712"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Conan",
+   "id_externo": "32415"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Insidious: Fuera del más allá",
+   "id_externo": "1291595"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "El primer matrimonio de Georgie y Mandy",
+   "id_externo": "243875"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Casualty",
+   "id_externo": "1021"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Entrega al límite",
+   "id_externo": "1377237"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Shin Chan",
+   "id_externo": "30623"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Die Harald Schmidt Show",
+   "id_externo": "40605"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Dune: Parte tres",
+   "id_externo": "1170608"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Bleach",
+   "id_externo": "30984"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Lucifer",
+   "id_externo": "63174"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Miraculous: Las aventuras de Ladybug",
+   "id_externo": "65334"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "No nos rendimos",
+   "id_externo": "1616687"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Cococinel",
+   "id_externo": "21144"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Don't Move",
+   "id_externo": "1375161"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Dexter",
+   "id_externo": "1405"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Gute Zeiten, schlechte Zeiten",
+   "id_externo": "13945"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Mujeres desesperadas",
+   "id_externo": "693"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Dragon Ball Z",
+   "id_externo": "12971"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Las Tortugas Ninja",
+   "id_externo": "51817"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Los mundos de Coraline",
+   "id_externo": "14836"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Rompiendo el hielo",
+   "id_externo": "283428"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Yellowstone",
+   "id_externo": "73586"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Dos hombres y medio",
+   "id_externo": "2691"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "The Warrior Princess and the Barbaric King",
+   "id_externo": "273467"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Dark Shadows",
+   "id_externo": "2883"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Amazing Saturday: Music Bites",
+   "id_externo": "78648"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Solo en casa",
+   "id_externo": "65282"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Naruto",
+   "id_externo": "46260"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Demain nous appartient",
+   "id_externo": "72879"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Historias corrientes",
+   "id_externo": "31132"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Aquí todo empieza",
+   "id_externo": "112470"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Minions & Monsters",
+   "id_externo": "1315772"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "NCIS: Los Ángeles",
+   "id_externo": "17610"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "24",
+   "id_externo": "1973"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Tracker",
+   "id_externo": "211288"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Cómo conocí a vuestra madre",
+   "id_externo": "1100"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "논스톱",
+   "id_externo": "18495"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "serie",
+   "titulo": "Suits: la clave del éxito",
+   "id_externo": "37680"
+  },
+  {
+   "fuente": "tmdb",
+   "tipo": "pelicula",
+   "titulo": "Bronca Navidad",
+   "id_externo": "1611767"
   }
  ],
  "amistades": [
@@ -427,6 +1413,206 @@
    "solicitante": "nicolas_duarte",
    "receptor": "Camilo_Pacheco",
    "estado": "pendiente"
+  },
+  {
+   "solicitante": "nicolas_duarte",
+   "receptor": "valeria_soto",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Marta",
+   "receptor": "andres_molina",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Sofia",
+   "receptor": "Marta",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "paula_rios",
+   "receptor": "Ana",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "paula_rios",
+   "receptor": "nicolas_duarte",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "paula_rios",
+   "receptor": "lucia_herrera",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Carlos",
+   "receptor": "Diego",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Sofia",
+   "receptor": "Mateo",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "nicolas_duarte",
+   "receptor": "Sofia",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "andres_molina",
+   "receptor": "paula_rios",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Mateo",
+   "receptor": "andres_molina",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Valentina",
+   "receptor": "tomas_vargas",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "valeria_soto",
+   "receptor": "tomas_vargas",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Luis",
+   "receptor": "Diego",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "tomas_vargas",
+   "receptor": "andres_molina",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Luis",
+   "receptor": "Sofia",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Mateo",
+   "receptor": "Ana",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "andres_molina",
+   "receptor": "Carlos",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Luis",
+   "receptor": "andres_molina",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "andres_molina",
+   "receptor": "Valentina",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "paula_rios",
+   "receptor": "Marta",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Diego",
+   "receptor": "paula_rios",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "Sofia",
+   "receptor": "paula_rios",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Luis",
+   "receptor": "paula_rios",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "lucia_herrera",
+   "receptor": "nicolas_duarte",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Sofia",
+   "receptor": "andres_molina",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Diego",
+   "receptor": "Mateo",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "andres_molina",
+   "receptor": "nicolas_duarte",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "lucia_herrera",
+   "receptor": "Valentina",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "valeria_soto",
+   "receptor": "Marta",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "paula_rios",
+   "receptor": "Carlos",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Sofia",
+   "receptor": "Valentina",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "nicolas_duarte",
+   "receptor": "Carlos",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Valentina",
+   "receptor": "Ana",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Sofia",
+   "receptor": "Carlos",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Diego",
+   "receptor": "Ana",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Mateo",
+   "receptor": "Valentina",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "tomas_vargas",
+   "receptor": "Diego",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "nicolas_duarte",
+   "receptor": "Ana",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "andres_molina",
+   "receptor": "lucia_herrera",
+   "estado": "aceptada"
   }
  ],
  "resenas": [
@@ -717,10 +1903,10 @@
    "tipo": "serie",
    "id_externo": "2734",
    "calificacion": 4.0,
-   "comentario": "Casos muy bien construidos.",
+   "comentario": "Reseña ocultada por contener insultos.",
    "visibilidad": "publica",
    "es_spoiler": false,
-   "visible": true,
+   "visible": false,
    "etiquetas": null
   },
   {
@@ -1143,768 +2329,6573 @@
    "es_spoiler": false,
    "visible": true,
    "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Klara y el Sol",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Actuaciones muy sólidas y una banda sonora que se queda contigo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Rompiendo el hielo",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "drama",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Naruto",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Bleach",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Los personajes secundarios son lo mejor.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "familiar",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Las Tortugas Ninja",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "CentoVetrine",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Me esperaba algo más original.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "The Warrior Princess and the Barbaric King",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Saturday Night Live",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Tracker",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "drama",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Smallville",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Perfecta para ver en familia.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "El caballero oscuro",
+   "tipo": "pelicula",
+   "calificacion": 2.5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Show de Música Misteriosa: King of Mask Singer",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "El villano es fascinante.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Survivor",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Diálogos brillantes y una dirección muy cuidada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Wildwood: El Bosque Salvaje",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "The Florist",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Gran reparto y un montaje muy dinámico.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Solo en casa",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Buena historia, aunque el ritmo decae en la mitad.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "personajes",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "你好，星期六",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Demasiado larga para lo que cuenta.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "tension",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Al este del Edén",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Perfecta para ver en familia.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Smallville",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Garth Marenghi's Darkplace",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Detective Conan",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Visualmente impresionante, aunque el guion es irregular.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "American Horror Story",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "La segunda temporada mejora mucho a la primera.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Sobrenatural",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "El guion tiene huecos, pero el conjunto funciona.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Plus belle la vie",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Clayface",
+   "tipo": "pelicula",
+   "calificacion": 2,
+   "comentario": "Muy disfrutable aunque no revolucionaria.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "La guerra de los mundos",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": "Divertida de principio a fin, sin pretensiones.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "accion",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Dune: Parte tres",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Diálogos brillantes y una dirección muy cuidada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Expediente X",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "drama",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Leute heute",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Un poco predecible, pero bien ejecutada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "drama",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Show de Música Misteriosa: King of Mask Singer",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Coco",
+   "tipo": "pelicula",
+   "calificacion": 2.5,
+   "comentario": "Tensión constante, no pude despegarme de la pantalla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "fotografia",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Lucifer",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Las escenas de acción son de lo mejor del género.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "clasica",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Sobrenatural",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Cococinel",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Me esperaba algo más original.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "drama",
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Frieren: Tras finalizar el viaje",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Es de esas series que se ven en un fin de semana entero.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "clasica",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Running Man",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Humor inteligente y muy bien escrito.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Silo",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Muy emotiva, me dejó pensando.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Dexter",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "LIVE with Kelly and Mark",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Algo confusa en la trama central.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Halv åtta hos mig",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Gran reparto y un montaje muy dinámico.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Solo en casa",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "fotografia",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "El cor de la ciutat",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "No me convenció el final, esperaba más.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "No nos rendimos",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Miraculous: Las aventuras de Ladybug",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Me sorprendió gratamente, esperaba menos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Wildwood: El Bosque Salvaje",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": "El villano es fascinante.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Better Call Saul",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "fotografia",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Yellowstone",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "Me sorprendió gratamente, esperaba menos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Dune: Parte tres",
+   "tipo": "pelicula",
+   "calificacion": 2.5,
+   "comentario": "Un poco predecible, pero bien ejecutada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "clasica",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Vikingos",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Buena historia, aunque el ritmo decae en la mitad.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "fotografia",
+    "personajes",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Sturm der Liebe",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Me esperaba algo más original.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Animales",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Me la recomendó un amigo y no me arrepiento.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "drama",
+    "ritmo",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "妖神记",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Divertida de principio a fin, sin pretensiones.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "El cor de la ciutat",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Demasiado larga para lo que cuenta.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Die Harald Schmidt Show",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "Me encantó, una de las mejores que he visto este año.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Insidious: Fuera del más allá",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Diálogos brillantes y una dirección muy cuidada.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Pesadilla antes de Navidad",
+   "tipo": "pelicula",
+   "calificacion": 2.5,
+   "comentario": "Humor inteligente y muy bien escrito.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "TV 동물농장",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Me sorprendió gratamente, esperaba menos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Matrimonio Con Hijos",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "サザエさん",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Running Man",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "No me convenció el final, esperaba más.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Toy Story 5",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Lenta al principio, pero vale la pena llegar al final.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "No llegó a convencerme del todo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Better Call Saul",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "No llegó a convencerme del todo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "clasica",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Doraemon, el gato cósmico",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "No me convenció el final, esperaba más.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Cococinel",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Perry Mason",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "Actuaciones muy sólidas y una banda sonora que se queda contigo.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "tension",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Gute Zeiten, schlechte Zeiten",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Divertida de principio a fin, sin pretensiones.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "The Crown",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "El guion tiene huecos, pero el conjunto funciona.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Sobrenatural",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Muy emotiva, me dejó pensando.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Animales",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": "Terminé la temporada en dos días.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Markus Lanz",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "The Boys",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Humor inteligente y muy bien escrito.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "El motín",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": "Las escenas de acción son de lo mejor del género.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Conan",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Gran reparto y un montaje muy dinámico.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "La mangosta",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "Perfecta para ver en familia.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Resident Evil",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Hunter × Hunter",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Ideal para una tarde de domingo.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Breaking Bad",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "The Bill",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Humor inteligente y muy bien escrito.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Hope",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Es de esas series que se ven en un fin de semana entero.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "humor",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Naruto Shippuden",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Muy emotiva, me dejó pensando.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Fall 2: Deadpoint",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": "Muy disfrutable aunque no revolucionaria.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "El caballero oscuro",
+   "tipo": "pelicula",
+   "calificacion": 2,
+   "comentario": "Un poco predecible, pero bien ejecutada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Better Call Saul",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Muy emotiva, me dejó pensando.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "El villano es fascinante.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Expediente X",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Quotidien",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Actuaciones muy sólidas y una banda sonora que se queda contigo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Moesha",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama",
+    "humor",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Dune: Parte dos",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Tensión constante, no pude despegarme de la pantalla.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "humor",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Show de Música Misteriosa: King of Mask Singer",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Me la recomendó un amigo y no me arrepiento.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "真情",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "El hormiguero",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Lenta al principio, pero vale la pena llegar al final.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Amor entre lineas",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Demasiado larga para lo que cuenta.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "accion",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Juego de tronos",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Divertida de principio a fin, sin pretensiones.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Real Time with Bill Maher",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Rockefeller Plaza",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Better Call Saul",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Tensión constante, no pude despegarme de la pantalla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Entrega al límite",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": "Ideal para una tarde de domingo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Crystal Lake",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "No llegó a convencerme del todo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Cococinel",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Tensión constante, no pude despegarme de la pantalla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Rompiendo el hielo",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Seinfeld",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Muy recomendable si te gusta el género.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "tension",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Fall 2: Deadpoint",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Insidious: Fuera del más allá",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Visualmente impresionante, aunque el guion es irregular.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Jeopardy!",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Me esperaba algo más original.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "La constelación del perro",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": "Gran reparto y un montaje muy dinámico.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Vengadores: Doomsday",
+   "tipo": "pelicula",
+   "calificacion": 2,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Spider-Man: Brand New Day",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": "La segunda temporada mejora mucho a la primera.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Crystal Lake",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Verity. La sombra de un engaño",
+   "tipo": "pelicula",
+   "calificacion": 2,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Perfecta para ver en familia.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "El villano es fascinante.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Cyberpunk: Edgerunners",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Lupin",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Clásica, la veré otra vez seguro.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "accion",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Doraemon",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Las escenas de acción son de lo mejor del género.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Sobrenatural",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "La guerra de los mundos",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": "Demasiado larga para lo que cuenta.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Conan",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Contra el huracán",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "El guion tiene huecos, pero el conjunto funciona.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Entrega al límite",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "논스톱",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Watch What Happens Live with Andy Cohen",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "Me encantó, una de las mejores que he visto este año.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Raw",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Actuaciones muy sólidas y una banda sonora que se queda contigo.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Volle Kanne",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Los personajes secundarios son lo mejor.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Anatomía de Grey",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Ley y orden: Unidad de Víctimas Especiales",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Aquí todo empieza",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "accion",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Historias corrientes",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Me esperaba algo más original.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Casualty",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Gran reparto y un montaje muy dinámico.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Cómo conocí a vuestra madre",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Muy recomendable si te gusta el género.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "fotografia",
+    "familiar",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "The Graham Norton Show",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Los personajes secundarios son lo mejor.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Bronca Navidad",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Visualmente impresionante, aunque el guion es irregular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Deadpool y Lobezno",
+   "tipo": "pelicula",
+   "calificacion": 2.5,
+   "comentario": "Ideal para una tarde de domingo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Amor entre lineas",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Buena historia, aunque el ritmo decae en la mitad.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Doctor Who",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "DAS!",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Terminé la temporada en dos días.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Naruto",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "El guion tiene huecos, pero el conjunto funciona.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Pesadilla antes de Navidad",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Resident Evil",
+   "tipo": "pelicula",
+   "calificacion": 5,
+   "comentario": "Clásica, la veré otra vez seguro.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Dragon Ball Z",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Ideal para una tarde de domingo.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "La Odisea",
+   "tipo": "pelicula",
+   "calificacion": 2.5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "El día de la revelación",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "Me la recomendó un amigo y no me arrepiento.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Die Harald Schmidt Show",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Muy recomendable si te gusta el género.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Verity. La sombra de un engaño",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "Demasiado larga para lo que cuenta.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "humor",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "NCIS: Los Ángeles",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Humor inteligente y muy bien escrito.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Better Call Saul",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "No llegó a convencerme del todo.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Hope",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Algo confusa en la trama central.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Passions",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Tensión constante, no pude despegarme de la pantalla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "emotiva",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "El día de la revelación",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "humor",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "The Warrior Princess and the Barbaric King",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Lenta al principio, pero vale la pena llegar al final.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "El final de Oak Street",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": "Actuaciones muy sólidas y una banda sonora que se queda contigo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "fotografia",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "FBI",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Clásica, la veré otra vez seguro.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "24",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Los personajes secundarios son lo mejor.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Gute Zeiten, schlechte Zeiten",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "La segunda temporada mejora mucho a la primera.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "tension",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Jimmy Kimmel Live!",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "No llegó a convencerme del todo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "clasica",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "One Tree Hill",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Muy bonita, aunque se alarga más de lo necesario.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "clasica",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Rompiendo el hielo",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Cómo conocí a vuestra madre",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Muy disfrutable aunque no revolucionaria.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "fotografia",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Mujeres desesperadas",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Un poco predecible, pero bien ejecutada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Solo en casa",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "La segunda temporada mejora mucho a la primera.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "The Good Doctor",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Yellowstone",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Don't Move",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "No llegó a convencerme del todo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "No dejes a los niños solos",
+   "tipo": "pelicula",
+   "calificacion": 3,
+   "comentario": "Me encantó, una de las mejores que he visto este año.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "personajes",
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Insidious: Fuera del más allá",
+   "tipo": "pelicula",
+   "calificacion": 3,
+   "comentario": "Actuaciones muy sólidas y una banda sonora que se queda contigo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Nocturno",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Crystal Lake",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Es de esas series que se ven en un fin de semana entero.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "La constelación del perro",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Naruto",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Demasiado larga para lo que cuenta.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Proyecto Salvación",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Jujutsu Kaisen",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Me sorprendió gratamente, esperaba menos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Bong Soon, una chica superfuerte",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Cómo conocí a vuestra madre",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "Muy recomendable si te gusta el género.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "fotografia",
+    "accion",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Matrimonio Con Hijos",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Visualmente impresionante, aunque el guion es irregular.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Seinfeld",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Padre made in USA",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Divertida de principio a fin, sin pretensiones.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Frieren: Tras finalizar el viaje",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Tiene momentos brillantes y otros flojos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "drama",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Clayface",
+   "tipo": "pelicula",
+   "calificacion": 3,
+   "comentario": "Un poco predecible, pero bien ejecutada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Padre made in USA",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Lenta al principio, pero vale la pena llegar al final.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "tension",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Street Fighter",
+   "tipo": "pelicula",
+   "calificacion": 2,
+   "comentario": "Perfecta para ver en familia.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Lucifer",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "El villano es fascinante.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Dragon Ball Z",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Me encantó, una de las mejores que he visto este año.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "fotografia",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Toy Story 5",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Yellowstone",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Muy disfrutable aunque no revolucionaria.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Moesha",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Los personajes secundarios son lo mejor.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "familiar",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Die Harald Schmidt Show",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Me sorprendió gratamente, esperaba menos.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Gute Zeiten, schlechte Zeiten",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Tiene momentos brillantes y otros flojos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "emotiva",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Scrubs",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Me encantó, una de las mejores que he visto este año.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Survivor",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Me la recomendó un amigo y no me arrepiento.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "ritmo",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "FBI",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Es de esas series que se ven en un fin de semana entero.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Bronca Navidad",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Muy emotiva, me dejó pensando.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Conan",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Muy recomendable si te gusta el género.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "The Warrior Princess and the Barbaric King",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Ideal para una tarde de domingo.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Jimmy Kimmel Live!",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Muy disfrutable aunque no revolucionaria.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Padre de familia",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Cómo conocí a vuestra madre",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Entrega al límite",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": "Perfecta para ver en familia.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "LEGO Ninjago: Maestros del Spinjitzu",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Bronca Navidad",
+   "tipo": "pelicula",
+   "calificacion": 2.5,
+   "comentario": "Lenta al principio, pero vale la pena llegar al final.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Lo que hacemos en las sombras",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Bong Soon, una chica superfuerte",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Los personajes secundarios son lo mejor.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Noche fatídica",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Riverdale",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "No me convenció el final, esperaba más.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "drama",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Tenzing",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "Me encantó, una de las mejores que he visto este año.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama",
+    "personajes",
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Demain nous appartient",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Algo confusa en la trama central.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "humor",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Resident Evil. Bienvenidos a Raccoon City",
+   "tipo": "pelicula",
+   "calificacion": 2,
+   "comentario": "Tensión constante, no pude despegarme de la pantalla.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Nocturno",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Star Trek: La nueva generación",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Un thriller muy bien construido.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Silo",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Un thriller muy bien construido.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Lupin",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Me la recomendó un amigo y no me arrepiento.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "humor",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "One Tree Hill",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Homeland",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Buena historia, aunque el ritmo decae en la mitad.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "Los personajes secundarios son lo mejor.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Juego de tronos",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Gran ambientación y personajes muy humanos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "No dejes a los niños solos",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "Humor inteligente y muy bien escrito.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Casualty",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Perfecta para ver en familia.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "tension",
+    "humor",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Ally McBeal",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Tensión constante, no pude despegarme de la pantalla.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "ritmo",
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Bong Soon, una chica superfuerte",
+   "tipo": "serie",
+   "calificacion": 2.5,
+   "comentario": "Es de esas series que se ven en un fin de semana entero.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "tension",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Mujeres desesperadas",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "La fotografía es espectacular.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Ley y orden: Unidad de Víctimas Especiales",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Un thriller muy bien construido.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Nocturno",
+   "tipo": "serie",
+   "calificacion": 5,
+   "comentario": "Algo confusa en la trama central.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "El caballero oscuro",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Raw",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Terminé la temporada en dos días.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "fotografia"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Las Tortugas Ninja",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Muy recomendable si te gusta el género.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Quotidien",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Tensión constante, no pude despegarme de la pantalla.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo",
+    "emotiva",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Moesha",
+   "tipo": "serie",
+   "calificacion": 3,
+   "comentario": "Muy recomendable si te gusta el género.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "fotografia",
+    "ritmo",
+    "tension"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "サザエさん",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Lenta al principio, pero vale la pena llegar al final.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Entrega al límite",
+   "tipo": "pelicula",
+   "calificacion": 4.5,
+   "comentario": "Muy disfrutable aunque no revolucionaria.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Garth Marenghi's Darkplace",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Hollywood Squares",
+   "tipo": "serie",
+   "calificacion": 2,
+   "comentario": "Me esperaba algo más original.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "clasica"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "La constelación del perro",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "Muy emotiva, me dejó pensando.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Aquí todo empieza",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "El guion tiene huecos, pero el conjunto funciona.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Good Mythical Morning",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Entretenida, ideal para un fin de semana.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar"
+   ]
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Wakfu",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Detective Conan",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": null,
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "The Office",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Visualmente impresionante, aunque el guion es irregular.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "ritmo",
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Ninja Boy Rantaro",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "ritmo",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Raw",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Divertida de principio a fin, sin pretensiones.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "2 Días y 1 Noche",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "No es para todos, pero a mí me atrapó.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "S.W.A.T.: Los hombres de Harrelson",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Diálogos brillantes y una dirección muy cuidada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "accion",
+    "personajes",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "La mangosta",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": null,
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Clayface",
+   "tipo": "pelicula",
+   "calificacion": 3.5,
+   "comentario": "Muy emotiva, me dejó pensando.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "clasica",
+    "emotiva",
+    "drama"
+   ]
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "NCIS: Los Ángeles",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Muy bonita, aunque se alarga más de lo necesario.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "fotografia",
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "The Crown",
+   "tipo": "serie",
+   "calificacion": 3.5,
+   "comentario": "Muy disfrutable aunque no revolucionaria.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva",
+    "humor"
+   ]
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Campus Drivers",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "El villano es fascinante.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "familiar",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Ninja Boy Rantaro",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Me sorprendió gratamente, esperaba menos.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Dune: Parte dos",
+   "tipo": "pelicula",
+   "calificacion": 4,
+   "comentario": "Perfecta para ver en familia.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Ley y orden: Unidad de Víctimas Especiales",
+   "tipo": "serie",
+   "calificacion": 4.5,
+   "comentario": "Divertida de principio a fin, sin pretensiones.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Naruto",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Buena historia, aunque el ritmo decae en la mitad.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Match of the Day",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "El guion tiene huecos, pero el conjunto funciona.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": []
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "S.W.A.T.: Los hombres de Harrelson",
+   "tipo": "serie",
+   "calificacion": 4,
+   "comentario": "Clásica, la veré otra vez seguro.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "personajes"
+   ]
   }
  ],
  "seguimientos": [
   {
    "usuario": "Camilo_Pacheco",
-   "titulo": "Hope",
-   "tipo": "pelicula",
-   "id_externo": "1058424",
+   "titulo": "Shameless",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Historias corrientes",
+   "tipo": "serie",
    "estado": "pendiente"
   },
   {
-   "usuario": "Luis",
-   "titulo": "Los vigilantes de la playa",
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Leute heute",
    "tipo": "serie",
-   "id_externo": "4386",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "El viaje de Chihiro",
+   "tipo": "pelicula",
    "estado": "viendo"
   },
   {
    "usuario": "Camilo_Pacheco",
-   "titulo": "Los vigilantes de la playa",
+   "titulo": "Saturday Night Live",
    "tipo": "serie",
-   "id_externo": "4386",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Barrio Sesamo",
+   "tipo": "serie",
    "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "No dejes a los niños solos",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Street Fighter",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "S.W.A.T.: Los hombres de Harrelson",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Naruto Shippuden",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Rompiendo el hielo",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Better Call Saul",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "DAS!",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "TV 동물농장",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Gute Zeiten, schlechte Zeiten",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Dune: Parte tres",
+   "tipo": "pelicula",
+   "estado": "abandonada"
   },
   {
    "usuario": "Camilo_Pacheco",
    "titulo": "Wakfu",
    "tipo": "serie",
-   "id_externo": "64414",
    "estado": "pendiente"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "El mentalista",
-   "tipo": "serie",
-   "id_externo": "5920",
-   "estado": "abandonada"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Encantadoramente Terrible",
-   "tipo": "serie",
-   "id_externo": "81332",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Anatomía de Grey",
-   "tipo": "serie",
-   "id_externo": "1416",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Valentina",
-   "titulo": "Anatomía de Grey",
-   "tipo": "serie",
-   "id_externo": "1416",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Breaking Bad",
-   "tipo": "serie",
-   "id_externo": "1396",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Magnum",
-   "tipo": "serie",
-   "id_externo": "79593",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Sofia",
-   "titulo": "Magnum",
-   "tipo": "serie",
-   "id_externo": "79593",
-   "estado": "viendo"
-  },
-  {
-   "usuario": "Luis",
-   "titulo": "Magnum",
-   "tipo": "serie",
-   "id_externo": "79593",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "X-Men: Días del futuro pasado",
+   "usuario": "Ana",
+   "titulo": "Clayface",
    "tipo": "pelicula",
-   "id_externo": "127585",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "El despertar",
-   "tipo": "pelicula",
-   "id_externo": "1657630",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Valentina",
-   "titulo": "El despertar",
-   "tipo": "pelicula",
-   "id_externo": "1657630",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Resident Evil",
-   "tipo": "pelicula",
-   "id_externo": "1423191",
-   "estado": "abandonada"
-  },
-  {
-   "usuario": "Mateo",
-   "titulo": "Resident Evil",
-   "tipo": "pelicula",
-   "id_externo": "1423191",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Toy Story 5",
-   "tipo": "pelicula",
-   "id_externo": "1084244",
-   "estado": "viendo"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Street Fighter",
-   "tipo": "pelicula",
-   "id_externo": "1153576",
-   "estado": "abandonada"
-  },
-  {
-   "usuario": "Mateo",
-   "titulo": "Street Fighter",
-   "tipo": "pelicula",
-   "id_externo": "1153576",
-   "estado": "abandonada"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Coco",
-   "tipo": "pelicula",
-   "id_externo": "354912",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Sofia",
-   "titulo": "Coco",
-   "tipo": "pelicula",
-   "id_externo": "354912",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "La guerra de los mundos",
-   "tipo": "pelicula",
-   "id_externo": "755898",
-   "estado": "viendo"
-  },
-  {
-   "usuario": "Mateo",
-   "titulo": "La guerra de los mundos",
-   "tipo": "pelicula",
-   "id_externo": "755898",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Sofia",
-   "titulo": "Vengadores: Doomsday",
-   "tipo": "pelicula",
-   "id_externo": "1003596",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Vengadores: Doomsday",
-   "tipo": "pelicula",
-   "id_externo": "1003596",
-   "estado": "pendiente"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Dune: Parte dos",
-   "tipo": "pelicula",
-   "id_externo": "693134",
-   "estado": "viendo"
-  },
-  {
-   "usuario": "Diego",
-   "titulo": "Ley y orden: Unidad de Víctimas Especiales",
-   "tipo": "serie",
-   "id_externo": "2734",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Sobrenatural",
-   "tipo": "serie",
-   "id_externo": "1622",
-   "estado": "viendo"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Medium",
-   "tipo": "serie",
-   "id_externo": "36",
-   "estado": "abandonada"
-  },
-  {
-   "usuario": "Valentina",
-   "titulo": "Lo que hacemos en las sombras",
-   "tipo": "serie",
-   "id_externo": "83631",
    "estado": "vista"
   },
   {
    "usuario": "Ana",
-   "titulo": "Lo que hacemos en las sombras",
+   "titulo": "Miraculous: Las aventuras de Ladybug",
    "tipo": "serie",
-   "id_externo": "83631",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Entrega al límite",
+   "tipo": "pelicula",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Volle Kanne",
+   "tipo": "serie",
    "estado": "vista"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Lo que hacemos en las sombras",
+   "usuario": "Ana",
+   "titulo": "Los mundos de Coraline",
+   "tipo": "pelicula",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Shin Chan",
    "tipo": "serie",
-   "id_externo": "83631",
    "estado": "vista"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "The Bill",
+   "usuario": "Ana",
+   "titulo": "Nocturno",
    "tipo": "serie",
-   "id_externo": "2072",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Die Harald Schmidt Show",
+   "tipo": "serie",
    "estado": "abandonada"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "The Crown",
+   "usuario": "Ana",
+   "titulo": "相棒",
    "tipo": "serie",
-   "id_externo": "65494",
    "estado": "viendo"
   },
   {
-   "usuario": "paula_rios",
-   "titulo": "The Crown",
-   "tipo": "serie",
-   "id_externo": "65494",
+   "usuario": "Ana",
+   "titulo": "X-Men: Días del futuro pasado",
+   "tipo": "pelicula",
    "estado": "pendiente"
   },
   {
-   "usuario": "Mateo",
-   "titulo": "The Crown",
+   "usuario": "Ana",
+   "titulo": "Padre de familia",
    "tipo": "serie",
-   "id_externo": "65494",
    "estado": "pendiente"
   },
   {
-   "usuario": "andres_molina",
-   "titulo": "Padre de familia",
+   "usuario": "Ana",
+   "titulo": "Ninja Boy Rantaro",
    "tipo": "serie",
-   "id_externo": "1434",
-   "estado": "viendo"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Padre de familia",
-   "tipo": "serie",
-   "id_externo": "1434",
    "estado": "vista"
   },
   {
-   "usuario": "nicolas_duarte",
-   "titulo": "Malcolm",
+   "usuario": "Ana",
+   "titulo": "Proyecto Salvación",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Jason y los Argonautas",
    "tipo": "serie",
-   "id_externo": "2004",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "El mentalista",
+   "tipo": "serie",
    "estado": "pendiente"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Malcolm",
-   "tipo": "serie",
-   "id_externo": "2004",
+   "usuario": "Luis",
+   "titulo": "Aniquilación",
+   "tipo": "pelicula",
    "estado": "viendo"
   },
   {
-   "usuario": "Mateo",
-   "titulo": "MINDHUNTER",
+   "usuario": "Luis",
+   "titulo": "Detective Conan",
    "tipo": "serie",
-   "id_externo": "67744",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Jimmy Kimmel Live!",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Proyecto Salvación",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Campus Drivers",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Lupin",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Perry Mason",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Raw",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "The Graham Norton Show",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Watch What Happens Live with Andy Cohen",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Silo",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Vigilados, Person of Interest",
+   "tipo": "serie",
    "estado": "viendo"
   },
   {
-   "usuario": "Sofia",
-   "titulo": "MINDHUNTER",
+   "usuario": "Luis",
+   "titulo": "The Bill",
    "tipo": "serie",
-   "id_externo": "67744",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "El hormiguero",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Demain nous appartient",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "American Horror Story",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "El primer matrimonio de Georgie y Mandy",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "El final de Oak Street",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "The Office",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Cococinel",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "La asistenta",
+   "tipo": "pelicula",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Contra el huracán",
+   "tipo": "pelicula",
    "estado": "vista"
   },
   {
    "usuario": "Marta",
-   "titulo": "MINDHUNTER",
+   "titulo": "Cyberpunk: Edgerunners",
    "tipo": "serie",
-   "id_externo": "67744",
    "estado": "vista"
   },
   {
-   "usuario": "Ana",
-   "titulo": "MINDHUNTER",
+   "usuario": "Marta",
+   "titulo": "Saturday Night Live",
    "tipo": "serie",
-   "id_externo": "67744",
    "estado": "vista"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "MINDHUNTER",
+   "usuario": "Marta",
+   "titulo": "Padre made in USA",
    "tipo": "serie",
-   "id_externo": "67744",
    "estado": "vista"
   },
   {
-   "usuario": "Diego",
-   "titulo": "Ally McBeal",
+   "usuario": "Marta",
+   "titulo": "S.W.A.T.: Los hombres de Harrelson",
    "tipo": "serie",
-   "id_externo": "1480",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "El cor de la ciutat",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Nocturno",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Resident Evil. Bienvenidos a Raccoon City",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "サザエさん",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Perry Mason",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Coco",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Anatomía de Grey",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "真情",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Dune: Parte dos",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Insidious: Fuera del más allá",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Vikingos",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Jimmy Kimmel Live!",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Dexter",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "La guerra de los mundos",
+   "tipo": "pelicula",
    "estado": "vista"
   },
   {
    "usuario": "Carlos",
-   "titulo": "Ally McBeal",
+   "titulo": "Naruto Shippuden",
    "tipo": "serie",
-   "id_externo": "1480",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "The Crown",
+   "tipo": "serie",
    "estado": "vista"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Ally McBeal",
+   "usuario": "Carlos",
+   "titulo": "Cómo conocí a vuestra madre",
    "tipo": "serie",
-   "id_externo": "1480",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "논스톱",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Horizon",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Volle Kanne",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Dune: Parte tres",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Naruto",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Solo en casa",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "La Odisea",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Sturm der Liebe",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Malcolm",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Halv åtta hos mig",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Mickey's Slayhouse",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Moesha",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "La Patrulla Canina",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "你好，星期六",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Phineas y Ferb",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "No nos rendimos",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Saturday Night Live",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "논스톱",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "La Patrulla Canina",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Juego de tronos",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Good Mythical Morning",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Star Trek: La nueva generación",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Rockefeller Plaza",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "La mangosta",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "LEGO Ninjago: Maestros del Spinjitzu",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Leute heute",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "The Graham Norton Show",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Riverdale",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "FBI",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Chicago P.D.",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "The Bill",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Frieren: Tras finalizar el viaje",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Insidious: Fuera del más allá",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Vigilados, Person of Interest",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Seinfeld",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "El despertar",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Jujutsu Kaisen",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Los mundos de Coraline",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Vikingos",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Al este del Edén",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Wakfu",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Cómo conocí a vuestra madre",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Dune: Parte dos",
+   "tipo": "pelicula",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Jeopardy!",
+   "tipo": "serie",
    "estado": "pendiente"
   },
   {
    "usuario": "Mateo",
-   "titulo": "Running Man",
-   "tipo": "serie",
-   "id_externo": "33238",
-   "estado": "pendiente"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "La Odisea",
+   "titulo": "Fall 2: Deadpoint",
    "tipo": "pelicula",
-   "id_externo": "1368337",
-   "estado": "pendiente"
-  },
-  {
-   "usuario": "lucia_herrera",
-   "titulo": "Lupin",
-   "tipo": "serie",
-   "id_externo": "96677",
    "estado": "viendo"
   },
   {
-   "usuario": "lucia_herrera",
-   "titulo": "Verity. La sombra de un engaño",
-   "tipo": "pelicula",
-   "id_externo": "1283515",
+   "usuario": "Mateo",
+   "titulo": "Padre de familia",
+   "tipo": "serie",
    "estado": "vista"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Verity. La sombra de un engaño",
+   "usuario": "Mateo",
+   "titulo": "Raw",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "LIVE with Kelly and Mark",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Top Gun: Maverick",
    "tipo": "pelicula",
-   "id_externo": "1283515",
    "estado": "pendiente"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Pesadilla antes de Navidad",
-   "tipo": "pelicula",
-   "id_externo": "9479",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Sofia",
-   "titulo": "Pesadilla antes de Navidad",
-   "tipo": "pelicula",
-   "id_externo": "9479",
-   "estado": "vista"
-  },
-  {
-   "usuario": "valeria_soto",
-   "titulo": "Friends",
+   "usuario": "Mateo",
+   "titulo": "Barrio Sesamo",
    "tipo": "serie",
-   "id_externo": "1668",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Cococinel",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "No dejes a los niños solos",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Phineas y Ferb",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Wildwood: El Bosque Salvaje",
+   "tipo": "pelicula",
    "estado": "abandonada"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Friends",
+   "usuario": "Mateo",
+   "titulo": "Show de Música Misteriosa: King of Mask Singer",
    "tipo": "serie",
-   "id_externo": "1668",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Doraemon, el gato cósmico",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Campus Drivers",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Doraemon, el gato cósmico",
+   "tipo": "serie",
    "estado": "vista"
   },
   {
    "usuario": "Valentina",
-   "titulo": "Friends",
-   "tipo": "serie",
-   "id_externo": "1668",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Sofia",
-   "titulo": "Friends",
-   "tipo": "serie",
-   "id_externo": "1668",
-   "estado": "vista"
-  },
-  {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Animales",
+   "titulo": "Dune: Parte tres",
    "tipo": "pelicula",
-   "id_externo": "1236045",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Jeopardy!",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Expediente X",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Holby City",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Hunter × Hunter",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Show de Música Misteriosa: King of Mask Singer",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Sturm der Liebe",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Matrimonio Con Hijos",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "La guerra de los mundos",
+   "tipo": "pelicula",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "El viaje de Chihiro",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Conan",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Better Call Saul",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "El final de Oak Street",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Bleach",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Minions & Monsters",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "El despertar",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Volle Kanne",
+   "tipo": "serie",
    "estado": "pendiente"
   },
   {
    "usuario": "Diego",
-   "titulo": "Animales",
+   "titulo": "No nos rendimos",
    "tipo": "pelicula",
-   "id_externo": "1236045",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Detective Conan",
+   "tipo": "serie",
    "estado": "pendiente"
   },
   {
-   "usuario": "tomas_vargas",
-   "titulo": "Wildwood: El Bosque Salvaje",
+   "usuario": "Diego",
+   "titulo": "Hora de aventuras",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Pesadilla antes de Navidad",
    "tipo": "pelicula",
-   "id_externo": "791523",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "The Graham Norton Show",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Apocalipsis Z: Nuevo mundo",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Sturm der Liebe",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Conan",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Proyecto Salvación",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Naruto Shippuden",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Campus Drivers",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Padre de familia",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Sobrenatural",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Plus belle la vie",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Jason y los Argonautas",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "El cor de la ciutat",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Tenzing",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "El primer matrimonio de Georgie y Mandy",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Vivy: Fluorite Eye’s Song",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "The Office",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "你好，星期六",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Mickey's Slayhouse",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Resident Evil",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Jimmy Kimmel Live!",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Street Fighter",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Entrega al límite",
+   "tipo": "pelicula",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Cyberpunk: Edgerunners",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "DAS!",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Passions",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Noche fatídica",
+   "tipo": "pelicula",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Bong Soon, una chica superfuerte",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "妖神记",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
    "estado": "vista"
   },
   {
    "usuario": "andres_molina",
-   "titulo": "Los Simpson",
+   "titulo": "Barrio Sesamo",
    "tipo": "serie",
-   "id_externo": "456",
    "estado": "vista"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Los Simpson",
+   "usuario": "andres_molina",
+   "titulo": "Demain nous appartient",
    "tipo": "serie",
-   "id_externo": "456",
    "estado": "vista"
   },
   {
-   "usuario": "Valentina",
-   "titulo": "Los Simpson",
+   "usuario": "andres_molina",
+   "titulo": "El caballero oscuro",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Anatomía de Grey",
    "tipo": "serie",
-   "id_externo": "456",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Vigilados, Person of Interest",
+   "tipo": "serie",
    "estado": "pendiente"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Contra el huracán",
-   "tipo": "pelicula",
-   "id_externo": "1780005",
+   "usuario": "andres_molina",
+   "titulo": "The Bill",
+   "tipo": "serie",
    "estado": "pendiente"
   },
   {
-   "usuario": "Valentina",
-   "titulo": "Contra el huracán",
-   "tipo": "pelicula",
-   "id_externo": "1780005",
+   "usuario": "andres_molina",
+   "titulo": "Bong Soon, una chica superfuerte",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Plus belle la vie",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Seinfeld",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Juego de tronos",
+   "tipo": "serie",
    "estado": "viendo"
   },
   {
-   "usuario": "Camilo_Pacheco",
-   "titulo": "Spider-Man: Brand New Day",
-   "tipo": "pelicula",
-   "id_externo": "969681",
+   "usuario": "andres_molina",
+   "titulo": "Rockefeller Plaza",
+   "tipo": "serie",
    "estado": "vista"
   },
   {
-   "usuario": "Sofia",
-   "titulo": "Spider-Man: Brand New Day",
-   "tipo": "pelicula",
-   "id_externo": "969681",
+   "usuario": "andres_molina",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Expediente X",
+   "tipo": "serie",
    "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "你好，星期六",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "No dejes a los niños solos",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Real Time with Bill Maher",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Running Man",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Shameless",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Detective Conan",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "2 Días y 1 Noche",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Wildwood: El Bosque Salvaje",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Cyberpunk: Edgerunners",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Solo en casa",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Lupin",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Amor entre lineas",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Apocalipsis Z: Nuevo mundo",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Nocturno",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "El hormiguero",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "La Odisea",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Padre made in USA",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Good Mythical Morning",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Tenzing",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Scrubs",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Solo en casa",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "VisionQuest",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Jujutsu Kaisen",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Jimmy Kimmel Live!",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Noche fatídica",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Scrubs",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Detective Conan",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "DAS!",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Chicago Med",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Insidious: Fuera del más allá",
+   "tipo": "pelicula",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Campus Drivers",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "The Boys",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "La Odisea",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Bronca Navidad",
+   "tipo": "pelicula",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Proyecto Salvación",
+   "tipo": "pelicula",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Los mundos de Coraline",
+   "tipo": "pelicula",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Hora de aventuras",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Saturday Night Live",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Show de Música Misteriosa: King of Mask Singer",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Gute Zeiten, schlechte Zeiten",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Dune: Parte dos",
+   "tipo": "pelicula",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "No dejes a los niños solos",
+   "tipo": "pelicula",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Real Time with Bill Maher",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Top Gun: Maverick",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Star Trek: La nueva generación",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Doctor Who",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Vengadores: Doomsday",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Historias corrientes",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "CentoVetrine",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "The Bill",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Passions",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Watch What Happens Live with Andy Cohen",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "La Odisea",
+   "tipo": "pelicula",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Barrio Sesamo",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "DAS!",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Barrio Sesamo",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Better Call Saul",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Die Harald Schmidt Show",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Padre de familia",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Matrimonio Con Hijos",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Expediente X",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Running Man",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Nocturno",
+   "tipo": "serie",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Insidious: Fuera del más allá",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "The Office",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Los mundos de Coraline",
+   "tipo": "pelicula",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "El despertar",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Chicago Med",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Solo en casa",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Historias corrientes",
+   "tipo": "serie",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Contra el huracán",
+   "tipo": "pelicula",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Vivy: Fluorite Eye’s Song",
+   "tipo": "serie",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Apocalipsis Z: Nuevo mundo",
+   "tipo": "pelicula",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "LEGO Ninjago: Maestros del Spinjitzu",
+   "tipo": "serie",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Wildwood: El Bosque Salvaje",
+   "tipo": "pelicula",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Juego de tronos",
+   "tipo": "serie",
+   "estado": "abandonada"
   }
  ],
  "recomendaciones": [
   {
-   "emisor": "Camilo_Pacheco",
-   "receptor": "Luis",
-   "titulo": "Wakfu",
-   "tipo": "serie",
-   "id_externo": "64414",
-   "estado": "aceptada",
-   "motivo": "Animación de aventuras, te puede gustar.",
-   "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Te la recomiendo: vale la pena verla."
-   }
-  },
-  {
-   "emisor": "Mateo",
-   "receptor": "Camilo_Pacheco",
-   "titulo": "Spider-Man: Brand New Day",
+   "emisor": "tomas_vargas",
+   "receptor": "Diego",
+   "titulo": "La constelación del perro",
    "tipo": "pelicula",
-   "id_externo": "969681",
+   "fuente": "tmdb",
+   "id_externo": "1384216",
    "estado": "completada",
-   "motivo": "Acción de la buena, para el fin de semana.",
+   "motivo": "La vi hace poco y pensé en ti.",
    "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Te la recomiendo: vale la pena verla."
-   }
+   "resena_del_emisor": null
   },
   {
-   "emisor": "Sofia",
-   "receptor": "Camilo_Pacheco",
-   "titulo": "Los Simpson",
+   "emisor": "Valentina",
+   "receptor": "Marta",
+   "titulo": "Aquí todo empieza",
    "tipo": "serie",
-   "id_externo": "456",
+   "fuente": "tmdb",
+   "id_externo": "112470",
    "estado": "completada",
-   "motivo": "Un clásico de la animación para la tarde.",
+   "motivo": "Por tu gusto por el género.",
    "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 5.0,
-    "comentario": "Mis capítulos favoritos son de la era dorada."
-   }
-  },
-  {
-   "emisor": "Diego",
-   "receptor": "Camilo_Pacheco",
-   "titulo": "Animales",
-   "tipo": "pelicula",
-   "id_externo": "1236045",
-   "estado": "abierta",
-   "motivo": "Sé que no es tu género, pero el ritmo es perfecto.",
-   "fuera_de_intereses": true,
-   "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Te la recomiendo: vale la pena verla."
-   }
-  },
-  {
-   "emisor": "Luis",
-   "receptor": "Camilo_Pacheco",
-   "titulo": "Moesha",
-   "tipo": "serie",
-   "id_externo": "3497",
-   "estado": "aceptada",
-   "motivo": "Comedia de los noventa, la vas a disfrutar.",
-   "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Te la recomiendo: vale la pena verla."
-   }
+   "resena_del_emisor": null
   },
   {
    "emisor": "Ana",
-   "receptor": "Camilo_Pacheco",
-   "titulo": "Magnum",
+   "receptor": "Mateo",
+   "titulo": "Ninja Boy Rantaro",
    "tipo": "serie",
-   "id_externo": "79593",
-   "estado": "completada",
-   "motivo": "Es ligera y tiene un tono parecido a lo que te gusta.",
+   "fuente": "tmdb",
+   "id_externo": "34860",
+   "estado": "abierta",
+   "motivo": "La vi hace poco y pensé en ti.",
    "fuera_de_intereses": false,
    "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Te la recomiendo: vale la pena verla."
+    "calificacion": 3.5,
+    "comentario": "Muy disfrutable aunque no revolucionaria."
    }
   },
   {
    "emisor": "Valentina",
-   "receptor": "Camilo_Pacheco",
-   "titulo": "Encantadoramente Terrible",
+   "receptor": "andres_molina",
+   "titulo": "サザエさん",
    "tipo": "serie",
-   "id_externo": "81332",
-   "estado": "descartada",
-   "motivo": "Una comedia romántica muy divertida.",
-   "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Te la recomiendo: vale la pena verla."
-   }
-  },
-  {
-   "emisor": "Sofia",
-   "receptor": "Camilo_Pacheco",
-   "titulo": "Hope",
-   "tipo": "pelicula",
-   "id_externo": "1058424",
-   "estado": "abierta",
-   "motivo": "Te va a encantar el giro final.",
-   "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Te la recomiendo: vale la pena verla."
-   }
-  },
-  {
-   "emisor": "Camilo_Pacheco",
-   "receptor": "Marta",
-   "titulo": "Amor entre lineas",
-   "tipo": "serie",
-   "id_externo": "279136",
-   "estado": "completada",
-   "motivo": "Una historia romántica muy bien llevada.",
-   "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Muy tierna, me gustó mucho."
-   }
-  },
-  {
-   "emisor": "Camilo_Pacheco",
-   "receptor": "Sofia",
-   "titulo": "Proyecto Salvación",
-   "tipo": "pelicula",
-   "id_externo": "687163",
-   "estado": "enviada",
-   "motivo": "Muy buena pelicula, me gusto mucho.",
+   "fuente": "tmdb",
+   "id_externo": "153485",
+   "estado": "aceptada",
+   "motivo": "La vi hace poco y pensé en ti.",
    "fuera_de_intereses": true,
    "resena_del_emisor": null
   },
   {
-   "emisor": "Camilo_Pacheco",
-   "receptor": "Sofia",
-   "titulo": "Coco",
-   "tipo": "pelicula",
-   "id_externo": "354912",
-   "estado": "completada",
-   "motivo": "Creo que te va a emocionar.",
-   "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 5.0,
-    "comentario": "Un guion precioso."
-   }
-  },
-  {
-   "emisor": "Camilo_Pacheco",
-   "receptor": "Sofia",
-   "titulo": "Resident Evil",
-   "tipo": "pelicula",
-   "id_externo": "1423191",
-   "estado": "descartada",
-   "motivo": "Pensé que te gustaría por el género.",
-   "fuera_de_intereses": false,
-   "resena_del_emisor": {
-    "calificacion": 4.0,
-    "comentario": "Te la recomiendo: vale la pena verla."
-   }
-  },
-  {
-   "emisor": "Camilo_Pacheco",
-   "receptor": "Mateo",
-   "titulo": "Breaking Bad",
+   "emisor": "Marta",
+   "receptor": "Valentina",
+   "titulo": "Conan",
    "tipo": "serie",
-   "id_externo": "1396",
-   "estado": "enviada",
-   "motivo": "Es una serie espectacular su desarrollo y ritmo son verdaderamente atrapantes. Muy recomendada.",
+   "fuente": "tmdb",
+   "id_externo": "32415",
+   "estado": "descartada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "paula_rios",
+   "receptor": "lucia_herrera",
+   "titulo": "Good Mythical Morning",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "65701",
+   "estado": "completada",
+   "motivo": "Tenemos que verla juntos.",
    "fuera_de_intereses": false,
    "resena_del_emisor": {
-    "calificacion": 5.0,
-    "comentario": "Una serie espectacular."
+    "calificacion": 4.5,
+    "comentario": "Gran ambientación y personajes muy humanos."
    }
+  },
+  {
+   "emisor": "Mateo",
+   "receptor": "Luis",
+   "titulo": "Gute Zeiten, schlechte Zeiten",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "13945",
+   "estado": "enviada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "tomas_vargas",
+   "receptor": "andres_molina",
+   "titulo": "Wakfu",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "64414",
+   "estado": "completada",
+   "motivo": "La vi hace poco y pensé en ti.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4,
+    "comentario": "Muy disfrutable aunque no revolucionaria."
+   }
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "Luis",
+   "titulo": "Survivor",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "14658",
+   "estado": "enviada",
+   "motivo": "Por tu gusto por el género.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "lucia_herrera",
+   "receptor": "nicolas_duarte",
+   "titulo": "Detective Conan",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "30983",
+   "estado": "completada",
+   "motivo": null,
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "andres_molina",
+   "receptor": "lucia_herrera",
+   "titulo": "Dexter",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "1405",
+   "estado": "aceptada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Mateo",
+   "receptor": "Ana",
+   "titulo": "No nos rendimos",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1616687",
+   "estado": "abierta",
+   "motivo": "La vi hace poco y pensé en ti.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": {
+    "calificacion": 4,
+    "comentario": "Me esperaba algo más original."
+   }
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Marta",
+   "titulo": "The Office",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "2316",
+   "estado": "completada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "andres_molina",
+   "receptor": "paula_rios",
+   "titulo": "Matrimonio Con Hijos",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "4239",
+   "estado": "abierta",
+   "motivo": null,
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "lucia_herrera",
+   "receptor": "paula_rios",
+   "titulo": "Ninja Boy Rantaro",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "34860",
+   "estado": "completada",
+   "motivo": "Por tu gusto por el género.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "nicolas_duarte",
+   "receptor": "Carlos",
+   "titulo": "Raw",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "4656",
+   "estado": "completada",
+   "motivo": "La vi hace poco y pensé en ti.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "andres_molina",
+   "receptor": "nicolas_duarte",
+   "titulo": "Yellowstone",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "73586",
+   "estado": "aceptada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "nicolas_duarte",
+   "receptor": "Carlos",
+   "titulo": "Amor entre lineas",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "279136",
+   "estado": "abierta",
+   "motivo": "Por tu gusto por el género.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Toy Story 5",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1084244",
+   "estado": "aceptada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.5,
+    "comentario": "Un poco predecible, pero bien ejecutada."
+   }
+  },
+  {
+   "emisor": "valeria_soto",
+   "receptor": "tomas_vargas",
+   "titulo": "Verity. La sombra de un engaño",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1283515",
+   "estado": "aceptada",
+   "motivo": null,
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Diego",
+   "titulo": "El motín",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1288445",
+   "estado": "descartada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": {
+    "calificacion": 4.5,
+    "comentario": "Ideal para una tarde de domingo."
+   }
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Mateo",
+   "titulo": "2 Días y 1 Noche",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "30801",
+   "estado": "completada",
+   "motivo": "Me recordó a algo que te encantaría.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Mateo",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "S.W.A.T.: Los hombres de Harrelson",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "71790",
+   "estado": "completada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
   },
   {
    "emisor": "Camilo_Pacheco",
    "receptor": "Valentina",
-   "titulo": "El despertar",
-   "tipo": "pelicula",
-   "id_externo": "1657630",
-   "estado": "aceptada",
-   "motivo": "Tiene la atmósfera que te gusta.",
+   "titulo": "VisionQuest",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "213375",
+   "estado": "abierta",
+   "motivo": "Creo que te va a gustar mucho.",
    "fuera_de_intereses": false,
    "resena_del_emisor": {
-    "calificacion": 2.5,
-    "comentario": "Buena premisa, pero el final llega demasiado rápido."
+    "calificacion": 4,
+    "comentario": "Algo confusa en la trama central."
    }
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Valentina",
+   "titulo": "La mangosta",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1294189",
+   "estado": "completada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Mateo",
+   "receptor": "Diego",
+   "titulo": "Clayface",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1400940",
+   "estado": "completada",
+   "motivo": "Por tu gusto por el género.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "Marta",
+   "titulo": "Lupin",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "96677",
+   "estado": "descartada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Marta",
+   "receptor": "Valentina",
+   "titulo": "NCIS: Los Ángeles",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "17610",
+   "estado": "aceptada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Carlos",
+   "receptor": "andres_molina",
+   "titulo": "妖神记",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "76806",
+   "estado": "enviada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "tomas_vargas",
+   "receptor": "andres_molina",
+   "titulo": "DAS!",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "62992",
+   "estado": "aceptada",
+   "motivo": "Por tu gusto por el género.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Luis",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "NCIS: Los Ángeles",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "17610",
+   "estado": "completada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Luis",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "The Crown",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "65494",
+   "estado": "completada",
+   "motivo": "Me recordó a algo que te encantaría.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "andres_molina",
+   "receptor": "tomas_vargas",
+   "titulo": "Campus Drivers",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "303044",
+   "estado": "completada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Diego",
+   "receptor": "Carlos",
+   "titulo": "Animales",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1236045",
+   "estado": "abierta",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.5,
+    "comentario": "Las escenas de acción son de lo mejor del género."
+   }
+  },
+  {
+   "emisor": "Luis",
+   "receptor": "paula_rios",
+   "titulo": "LEGO Ninjago: Maestros del Spinjitzu",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "38693",
+   "estado": "abierta",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "tomas_vargas",
+   "receptor": "valeria_soto",
+   "titulo": "Ninja Boy Rantaro",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "34860",
+   "estado": "completada",
+   "motivo": "Me recordó a algo que te encantaría.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Valentina",
+   "receptor": "Ana",
+   "titulo": "Tenzing",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1288069",
+   "estado": "aceptada",
+   "motivo": "La vi hace poco y pensé en ti.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "paula_rios",
+   "receptor": "Sofia",
+   "titulo": "Dune: Parte dos",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "693134",
+   "estado": "completada",
+   "motivo": "La vi hace poco y pensé en ti.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Mateo",
+   "receptor": "andres_molina",
+   "titulo": "Anatomía de Grey",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "1416",
+   "estado": "abierta",
+   "motivo": "Por tu gusto por el género.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": {
+    "calificacion": 4,
+    "comentario": "Tensión constante, no pude despegarme de la pantalla."
+   }
+  },
+  {
+   "emisor": "tomas_vargas",
+   "receptor": "Valentina",
+   "titulo": "No nos rendimos",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1616687",
+   "estado": "enviada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": {
+    "calificacion": 4.5,
+    "comentario": "No me convenció el final, esperaba más."
+   }
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "Carlos",
+   "titulo": "Ley y orden: Unidad de Víctimas Especiales",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "2734",
+   "estado": "completada",
+   "motivo": null,
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "Marta",
+   "titulo": "Suits: la clave del éxito",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "37680",
+   "estado": "enviada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Diego",
+   "titulo": "Castle",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "1419",
+   "estado": "abierta",
+   "motivo": null,
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4,
+    "comentario": "Entretenida, ideal para un fin de semana."
+   }
+  },
+  {
+   "emisor": "Valentina",
+   "receptor": "Mateo",
+   "titulo": "Crystal Lake",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "213562",
+   "estado": "descartada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Luis",
+   "receptor": "Ana",
+   "titulo": "Deadpool y Lobezno",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "533535",
+   "estado": "descartada",
+   "motivo": "Me recordó a algo que te encantaría.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Naruto",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "46260",
+   "estado": "completada",
+   "motivo": "Me recordó a algo que te encantaría.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "paula_rios",
+   "titulo": "Rompiendo el hielo",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "283428",
+   "estado": "descartada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "nicolas_duarte",
+   "titulo": "The Graham Norton Show",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "1220",
+   "estado": "aceptada",
+   "motivo": "La vi hace poco y pensé en ti.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": {
+    "calificacion": 4.5,
+    "comentario": "No es para todos, pero a mí me atrapó."
+   }
+  },
+  {
+   "emisor": "andres_molina",
+   "receptor": "Sofia",
+   "titulo": "No nos rendimos",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1616687",
+   "estado": "aceptada",
+   "motivo": "Por tu gusto por el género.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "nicolas_duarte",
+   "receptor": "lucia_herrera",
+   "titulo": "Real Time with Bill Maher",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "4419",
+   "estado": "descartada",
+   "motivo": "Me recordó a algo que te encantaría.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "Ana",
+   "titulo": "Padre made in USA",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "1433",
+   "estado": "aceptada",
+   "motivo": "La vi hace poco y pensé en ti.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4,
+    "comentario": "Me la recomendó un amigo y no me arrepiento."
+   }
+  },
+  {
+   "emisor": "paula_rios",
+   "receptor": "lucia_herrera",
+   "titulo": "Amor entre lineas",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "279136",
+   "estado": "enviada",
+   "motivo": null,
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Camilo_Pacheco",
+   "receptor": "Ana",
+   "titulo": "New Scotland Yard",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "32160",
+   "estado": "descartada",
+   "motivo": "Me recordó a algo que te encantaría.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "Carlos",
+   "titulo": "Animales",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "1236045",
+   "estado": "abierta",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "valeria_soto",
+   "receptor": "Marta",
+   "titulo": "Naruto",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "46260",
+   "estado": "abierta",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Marta",
+   "receptor": "Sofia",
+   "titulo": "Match of the Day",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "224",
+   "estado": "completada",
+   "motivo": "La vi hace poco y pensé en ti.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": {
+    "calificacion": 4.5,
+    "comentario": "Muy emotiva, me dejó pensando."
+   }
+  },
+  {
+   "emisor": "Luis",
+   "receptor": "Sofia",
+   "titulo": "El viaje de Chihiro",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "129",
+   "estado": "aceptada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "nicolas_duarte",
+   "titulo": "Passions",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "9912",
+   "estado": "enviada",
+   "motivo": "Creo que te va a gustar mucho.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": {
+    "calificacion": 4,
+    "comentario": "Demasiado larga para lo que cuenta."
+   }
+  },
+  {
+   "emisor": "paula_rios",
+   "receptor": "lucia_herrera",
+   "titulo": "S.W.A.T.: Los hombres de Harrelson",
+   "tipo": "serie",
+   "fuente": "tmdb",
+   "id_externo": "71790",
+   "estado": "completada",
+   "motivo": "Me recordó a algo que te encantaría.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Sofia",
+   "titulo": "Resident Evil. Bienvenidos a Raccoon City",
+   "tipo": "pelicula",
+   "fuente": "tmdb",
+   "id_externo": "460458",
+   "estado": "enviada",
+   "motivo": "Tenemos que verla juntos.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
   }
  ],
  "notificaciones": [
   {
-   "destinatario": "Camilo_Pacheco",
-   "origen": "Ana",
-   "tipo": "amistad_aceptada",
+   "destinatario": "Diego",
+   "origen": "tomas_vargas",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "tomas_vargas|La constelación del perro"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "Diego",
+   "tipo": "recomendacion_aceptada",
    "leida": true,
-   "recomendacion_de": null
+   "recomendacion_de": "tomas_vargas|La constelación del perro"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "Diego",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "tomas_vargas|La constelación del perro"
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "Valentina",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Valentina|Aquí todo empieza"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Marta",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Valentina|Aquí todo empieza"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Marta",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "Valentina|Aquí todo empieza"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Ana|Ninja Boy Rantaro"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "Valentina",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Valentina|サザエさん"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Valentina|サザエさん"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Marta",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Marta|Conan"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "paula_rios",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "paula_rios|Good Mythical Morning"
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "lucia_herrera",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "paula_rios|Good Mythical Morning"
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "lucia_herrera",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "paula_rios|Good Mythical Morning"
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Mateo",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Mateo|Gute Zeiten, schlechte Zeiten"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "tomas_vargas",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "tomas_vargas|Wakfu"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "tomas_vargas|Wakfu"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "tomas_vargas|Wakfu"
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Sofia",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Sofia|Survivor"
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "lucia_herrera",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "lucia_herrera|Detective Conan"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "nicolas_duarte",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "lucia_herrera|Detective Conan"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "nicolas_duarte",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "lucia_herrera|Detective Conan"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "andres_molina|Dexter"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "lucia_herrera",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "andres_molina|Dexter"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Mateo",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Mateo|No nos rendimos"
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Ana|The Office"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Marta",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Ana|The Office"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Marta",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "Ana|The Office"
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "andres_molina|Matrimonio Con Hijos"
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "lucia_herrera",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "lucia_herrera|Ninja Boy Rantaro"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "paula_rios",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "lucia_herrera|Ninja Boy Rantaro"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "paula_rios",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "lucia_herrera|Ninja Boy Rantaro"
+  },
+  {
+   "destinatario": "Carlos",
+   "origen": "nicolas_duarte",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "nicolas_duarte|Raw"
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "Carlos",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "nicolas_duarte|Raw"
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "Carlos",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "nicolas_duarte|Raw"
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "andres_molina|Yellowstone"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "nicolas_duarte",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "andres_molina|Yellowstone"
+  },
+  {
+   "destinatario": "Carlos",
+   "origen": "nicolas_duarte",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "nicolas_duarte|Amor entre lineas"
   },
   {
    "destinatario": "Camilo_Pacheco",
    "origen": "Ana",
    "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Ana|Toy Story 5"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Ana|Toy Story 5"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "valeria_soto",
+   "tipo": "recomendacion_recibida",
    "leida": false,
-   "recomendacion_de": "Ana|Magnum"
+   "recomendacion_de": "valeria_soto|Verity. La sombra de un engaño"
+  },
+  {
+   "destinatario": "valeria_soto",
+   "origen": "tomas_vargas",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "valeria_soto|Verity. La sombra de un engaño"
+  },
+  {
+   "destinatario": "Diego",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Ana|El motín"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Ana|2 Días y 1 Noche"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Mateo",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Ana|2 Días y 1 Noche"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Mateo",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "Ana|2 Días y 1 Noche"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Mateo",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Mateo|S.W.A.T.: Los hombres de Harrelson"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Mateo|S.W.A.T.: Los hombres de Harrelson"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "Mateo|S.W.A.T.: Los hombres de Harrelson"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Camilo_Pacheco|VisionQuest"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Ana|La mangosta"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Valentina",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Ana|La mangosta"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Valentina",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "Ana|La mangosta"
+  },
+  {
+   "destinatario": "Diego",
+   "origen": "Mateo",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Mateo|Clayface"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Diego",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Mateo|Clayface"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Diego",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "Mateo|Clayface"
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "Sofia",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Sofia|Lupin"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Marta",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Marta|NCIS: Los Ángeles"
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "Valentina",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Marta|NCIS: Los Ángeles"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "Carlos",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Carlos|妖神记"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "tomas_vargas",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "tomas_vargas|DAS!"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "tomas_vargas|DAS!"
   },
   {
    "destinatario": "Camilo_Pacheco",
    "origen": "Luis",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Luis|NCIS: Los Ángeles"
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Camilo_Pacheco",
    "tipo": "recomendacion_aceptada",
    "leida": true,
-   "recomendacion_de": "Camilo_Pacheco|Wakfu"
+   "recomendacion_de": "Luis|NCIS: Los Ángeles"
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "Luis|NCIS: Los Ángeles"
   },
   {
    "destinatario": "Camilo_Pacheco",
+   "origen": "Luis",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Luis|The Crown"
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Luis|The Crown"
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "Luis|The Crown"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "andres_molina|Campus Drivers"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "tomas_vargas",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "andres_molina|Campus Drivers"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "tomas_vargas",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "andres_molina|Campus Drivers"
+  },
+  {
+   "destinatario": "Carlos",
    "origen": "Diego",
    "tipo": "recomendacion_recibida",
    "leida": false,
    "recomendacion_de": "Diego|Animales"
   },
   {
+   "destinatario": "paula_rios",
+   "origen": "Luis",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Luis|LEGO Ninjago: Maestros del Spinjitzu"
+  },
+  {
+   "destinatario": "valeria_soto",
+   "origen": "tomas_vargas",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "tomas_vargas|Ninja Boy Rantaro"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "valeria_soto",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "tomas_vargas|Ninja Boy Rantaro"
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "valeria_soto",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "tomas_vargas|Ninja Boy Rantaro"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Valentina",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Valentina|Tenzing"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Ana",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Valentina|Tenzing"
+  },
+  {
    "destinatario": "Sofia",
-   "origen": "Camilo_Pacheco",
+   "origen": "paula_rios",
    "tipo": "recomendacion_recibida",
-   "leida": false,
-   "recomendacion_de": "Camilo_Pacheco|Proyecto Salvación"
+   "leida": true,
+   "recomendacion_de": "paula_rios|Dune: Parte dos"
   },
   {
-   "destinatario": "Mateo",
-   "origen": "Camilo_Pacheco",
-   "tipo": "recomendacion_recibida",
-   "leida": false,
-   "recomendacion_de": "Camilo_Pacheco|Breaking Bad"
+   "destinatario": "paula_rios",
+   "origen": "Sofia",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "paula_rios|Dune: Parte dos"
   },
   {
-   "destinatario": "Mateo",
-   "origen": "Camilo_Pacheco",
+   "destinatario": "paula_rios",
+   "origen": "Sofia",
    "tipo": "recomendacion_completada",
    "leida": false,
-   "recomendacion_de": "Mateo|Spider-Man: Brand New Day"
+   "recomendacion_de": "paula_rios|Dune: Parte dos"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "Mateo",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Mateo|Anatomía de Grey"
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "tomas_vargas",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "tomas_vargas|No nos rendimos"
+  },
+  {
+   "destinatario": "Carlos",
+   "origen": "Sofia",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Sofia|Ley y orden: Unidad de Víctimas Especiales"
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Carlos",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Sofia|Ley y orden: Unidad de Víctimas Especiales"
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Carlos",
+   "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "Sofia|Ley y orden: Unidad de Víctimas Especiales"
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "Sofia",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Sofia|Suits: la clave del éxito"
+  },
+  {
+   "destinatario": "Diego",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Ana|Castle"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Valentina",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Valentina|Crystal Lake"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Luis",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Luis|Deadpool y Lobezno"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Ana|Naruto"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Ana|Naruto"
   },
   {
    "destinatario": "Ana",
    "origen": "Camilo_Pacheco",
    "tipo": "recomendacion_completada",
+   "leida": true,
+   "recomendacion_de": "Ana|Naruto"
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "Sofia",
+   "tipo": "recomendacion_recibida",
    "leida": false,
-   "recomendacion_de": "Ana|Magnum"
+   "recomendacion_de": "Sofia|Rompiendo el hielo"
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Ana|The Graham Norton Show"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "nicolas_duarte",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Ana|The Graham Norton Show"
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "andres_molina",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "andres_molina|No nos rendimos"
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "Sofia",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "andres_molina|No nos rendimos"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "nicolas_duarte",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "nicolas_duarte|Real Time with Bill Maher"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Sofia",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Sofia|Padre made in USA"
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Ana",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Sofia|Padre made in USA"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "paula_rios",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "paula_rios|Amor entre lineas"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Camilo_Pacheco|New Scotland Yard"
+  },
+  {
+   "destinatario": "Carlos",
+   "origen": "Sofia",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Sofia|Animales"
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "valeria_soto",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "valeria_soto|Naruto"
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Marta",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Marta|Match of the Day"
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "Sofia",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Marta|Match of the Day"
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "Sofia",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "Marta|Match of the Day"
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Luis",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Luis|El viaje de Chihiro"
   },
   {
    "destinatario": "Luis",
-   "origen": "Camilo_Pacheco",
-   "tipo": "solicitud_amistad",
+   "origen": "Sofia",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Luis|El viaje de Chihiro"
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
    "leida": false,
+   "recomendacion_de": "Ana|Passions"
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "paula_rios",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "paula_rios|S.W.A.T.: Los hombres de Harrelson"
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "lucia_herrera",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "paula_rios|S.W.A.T.: Los hombres de Harrelson"
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "lucia_herrera",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "paula_rios|S.W.A.T.: Los hombres de Harrelson"
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Ana|Resident Evil. Bienvenidos a Raccoon City"
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Ana",
+   "tipo": "amistad_aceptada",
+   "leida": true,
    "recomendacion_de": null
   },
   {
-   "destinatario": "Camilo_Pacheco",
-   "origen": "Marta",
-   "tipo": "recomendacion_completada",
-   "leida": false,
-   "recomendacion_de": "Camilo_Pacheco|Amor entre lineas"
+   "destinatario": "Marta",
+   "origen": "Ana",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
   },
   {
-   "destinatario": "Camilo_Pacheco",
+   "destinatario": "Ana",
    "origen": "Carlos",
    "tipo": "solicitud_amistad",
    "leida": false,
@@ -1912,38 +8903,45 @@
   },
   {
    "destinatario": "Camilo_Pacheco",
-   "origen": "Sofia",
+   "origen": "Luis",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Camilo_Pacheco",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "Camilo_Pacheco",
    "tipo": "amistad_aceptada",
    "leida": true,
    "recomendacion_de": null
   },
   {
    "destinatario": "Camilo_Pacheco",
-   "origen": "Sofia",
-   "tipo": "recomendacion_completada",
-   "leida": false,
-   "recomendacion_de": "Camilo_Pacheco|Coco"
+   "origen": "Carlos",
+   "tipo": "solicitud_amistad",
+   "leida": true,
+   "recomendacion_de": null
   },
   {
-   "destinatario": "Camilo_Pacheco",
-   "origen": "Sofia",
-   "tipo": "recomendacion_recibida",
-   "leida": false,
-   "recomendacion_de": "Sofia|Hope"
-  },
-  {
-   "destinatario": "Camilo_Pacheco",
-   "origen": "Mateo",
+   "destinatario": "Sofia",
+   "origen": "Camilo_Pacheco",
    "tipo": "amistad_aceptada",
    "leida": false,
    "recomendacion_de": null
   },
   {
-   "destinatario": "Camilo_Pacheco",
-   "origen": "Mateo",
-   "tipo": "recomendacion_recibida",
+   "destinatario": "Mateo",
+   "origen": "Camilo_Pacheco",
+   "tipo": "amistad_aceptada",
    "leida": true,
-   "recomendacion_de": "Mateo|Spider-Man: Brand New Day"
+   "recomendacion_de": null
   },
   {
    "destinatario": "Camilo_Pacheco",
@@ -1953,14 +8951,357 @@
    "recomendacion_de": null
   },
   {
-   "destinatario": "Camilo_Pacheco",
-   "origen": "Valentina",
-   "tipo": "recomendacion_aceptada",
+   "destinatario": "Sofia",
+   "origen": "Ana",
+   "tipo": "amistad_aceptada",
    "leida": false,
-   "recomendacion_de": "Camilo_Pacheco|El despertar"
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Luis",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Marta",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Diego",
+   "origen": "Camilo_Pacheco",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
   },
   {
    "destinatario": "Camilo_Pacheco",
+   "origen": "lucia_herrera",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "andres_molina",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "paula_rios",
+   "tipo": "solicitud_amistad",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "tomas_vargas",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "valeria_soto",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "nicolas_duarte",
+   "tipo": "solicitud_amistad",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "valeria_soto",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Marta",
+   "origen": "andres_molina",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Marta",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "paula_rios",
+   "tipo": "solicitud_amistad",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "paula_rios",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "lucia_herrera",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Carlos",
+   "origen": "Diego",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Sofia",
+   "tipo": "solicitud_amistad",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "nicolas_duarte",
+   "tipo": "solicitud_amistad",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "paula_rios",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "andres_molina",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "tomas_vargas",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "valeria_soto",
+   "origen": "tomas_vargas",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Diego",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "andres_molina",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Sofia",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Ana",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "Carlos",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "Luis",
+   "tipo": "solicitud_amistad",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "Valentina",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "Marta",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "Diego",
+   "tipo": "solicitud_amistad",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "paula_rios",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "paula_rios",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "lucia_herrera",
+   "origen": "nicolas_duarte",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "andres_molina",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Diego",
+   "origen": "Mateo",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "nicolas_duarte",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "lucia_herrera",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "valeria_soto",
+   "origen": "Marta",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "paula_rios",
+   "origen": "Carlos",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Valentina",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "Carlos",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Valentina",
+   "origen": "Ana",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Carlos",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Diego",
+   "origen": "Ana",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Valentina",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "tomas_vargas",
+   "origen": "Diego",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "nicolas_duarte",
+   "origen": "Ana",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "andres_molina",
+   "origen": "lucia_herrera",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Diego",
    "origen": null,
    "tipo": "resena_oculta",
    "leida": false,

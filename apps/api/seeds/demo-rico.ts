@@ -3,13 +3,14 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type pg from "pg";
 import { hashPassword } from "../src/lib/password.js";
-import { DEMO_PASSWORD } from "./demo.js";
+// Contraseña común de los usuarios de esta semilla. Solo para desarrollo local.
+export const PASSWORD_RICO = "Demo12345678!";
 
 // Datos de demostración más completos: usuarios, reseñas, biblioteca, recomendaciones, amistades y notificaciones.
 // Los nombres y correos son inventados (dominio @cinematch.test). Todos usan DEMO_PASSWORD. Solo para desarrollo.
 type Datos = {
   usuarios: { username: string; nombre: string; bio: string | null; intereses: string[] | null }[];
-  titulos: { tipo: "pelicula" | "serie"; titulo: string }[];
+  titulos: { fuente: string; tipo: "pelicula" | "serie"; titulo: string; id_externo: string }[];
   amistades: { solicitante: string; receptor: string; estado: "pendiente" | "aceptada" | "rechazada" }[];
   resenas: {
     usuario: string;
@@ -58,7 +59,7 @@ export async function seedDemoRico(db: pg.PoolClient): Promise<void> {
     return;
   }
   const datos = JSON.parse(readFileSync(join(RAIZ, "demo-rico.json"), "utf-8")) as Datos;
-  const hash = await hashPassword(DEMO_PASSWORD);
+  const hash = await hashPassword(PASSWORD_RICO);
 
   await db.query("BEGIN");
   try {
@@ -104,19 +105,17 @@ async function cargar(db: pg.PoolClient, d: Datos, hash: string) {
     }
   }
 
+  // Los títulos son del catálogo real (TMDB, con póster). Deben existir: se cargan con `pnpm seed:catalog`.
   const idTitulo = new Map<string, number>();
-  let n = 0;
   for (const t of d.titulos) {
-    n += 1;
-    const idExterno = `rico-${n}`;
     const { rows } = await db.query<{ id: number }>(
-      "INSERT INTO contenido (tipo, titulo, fuente, id_externo, fecha_actualizacion) VALUES ($1, $2, 'demo', $3, now()) ON CONFLICT (fuente, tipo, id_externo) DO NOTHING RETURNING id",
-      [t.tipo, t.titulo, idExterno],
+      "SELECT id FROM contenido WHERE fuente = $1 AND tipo = $2 AND id_externo = $3",
+      [t.fuente, t.tipo, t.id_externo],
     );
-    const id =
-      rows[0]?.id ??
-      (await db.query<{ id: number }>("SELECT id FROM contenido WHERE fuente = 'demo' AND tipo = $1 AND id_externo = $2", [t.tipo, idExterno])).rows[0]!.id;
-    idTitulo.set(`${t.tipo}|${t.titulo}`, id);
+    if (!rows[0]) {
+      throw new Error(`Falta en el catálogo: ${t.titulo}. Ejecuta antes \`pnpm seed:catalog\`.`);
+    }
+    idTitulo.set(`${t.tipo}|${t.titulo}`, rows[0].id);
   }
   const contenido = (tipo: string, titulo: string) => {
     const id = idTitulo.get(`${tipo}|${titulo}`);

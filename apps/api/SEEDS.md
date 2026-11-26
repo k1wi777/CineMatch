@@ -58,8 +58,9 @@ Desactivada por defecto. Con `CATALOGO_SYNC_HABILITADA=true` se ejecuta según `
 
 ## Datos de demostración ampliados (`pnpm seed:demo-rico`)
 
-Carga un conjunto más completo para presentaciones: 15 usuarios con intereses, 56 reseñas (con calificación, comentario, spoilers y etiquetas), 70 títulos en biblioteca, 14 recomendaciones entre amigos en distintos estados, 20 amistades y 19 notificaciones. Los títulos son reales y los datos son ficticios.
+Carga perfiles con uso real para presentaciones: 15 usuarios con intereses, 308 reseñas (calificación, comentario, spoilers y etiquetas), 287 títulos en biblioteca, 60 recomendaciones entre amigos en distintos estados, 60 amistades y 175 notificaciones coherentes entre sí. Los títulos son reales del catálogo de TMDB, con póster.
 
-- Ejecutar después de `pnpm seed` (o `pnpm seed:demo`). Reutiliza los usuarios que ya existan (por ejemplo, Ana, Luis, Marta y Carlos) y no los reemplaza.
+- Orden: `pnpm migrate:up`, luego `pnpm seed` y `pnpm seed:catalog` (necesario: los títulos deben existir en el catálogo), y por último `pnpm seed:demo-rico`. No ejecutar `seed:demo` antes: crea a Ana, Luis, Marta y Carlos con otra contraseña.
+- Reutiliza usuarios existentes y no reemplaza datos.
 - Es idempotente: si ya se cargó (existe el usuario `Camilo_Pacheco`), no hace nada.
-- Contraseña de los usuarios: `Demo1234!`. Solo para desarrollo; `NODE_ENV=production` lo rechaza.
+- Contraseña de los usuarios creados: `Demo12345678!`. Solo para desarrollo; `NODE_ENV=production` lo rechaza.
