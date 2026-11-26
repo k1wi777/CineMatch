@@ -1,0 +1,1970 @@
+{
+ "usuarios": [
+  {
+   "username": "Ana",
+   "nombre": "Ana",
+   "bio": null,
+   "intereses": [
+    "Drama",
+    "Comedia",
+    "Ciencia ficción"
+   ]
+  },
+  {
+   "username": "Luis",
+   "nombre": "Luis",
+   "bio": null,
+   "intereses": [
+    "Drama",
+    "Comedia",
+    "Acción"
+   ]
+  },
+  {
+   "username": "Diego",
+   "nombre": "Diego Torres",
+   "bio": "Documentales y lo que me recomienden.",
+   "intereses": [
+    "Ciencia ficción",
+    "Misterio",
+    "Crimen"
+   ]
+  },
+  {
+   "username": "Camilo_Pacheco",
+   "nombre": "Camilo Pacheco",
+   "bio": "Cinéfilo de sábado: series de crimen, comedia y ciencia ficción y terror.",
+   "intereses": [
+    "Acción",
+    "Aventura",
+    "Bélica",
+    "Ciencia ficción",
+    "Animación"
+   ]
+  },
+  {
+   "username": "Marta",
+   "nombre": "Marta",
+   "bio": null,
+   "intereses": [
+    "Drama",
+    "Comedia",
+    "Ciencia ficción"
+   ]
+  },
+  {
+   "username": "Carlos",
+   "nombre": "Carlos",
+   "bio": null,
+   "intereses": [
+    "Drama",
+    "Acción",
+    "Ciencia ficción"
+   ]
+  },
+  {
+   "username": "Sofia",
+   "nombre": "Sofía Ruiz",
+   "bio": "Vivo para el cine de autor y las películas de animación.",
+   "intereses": [
+    "Drama",
+    "Animación",
+    "Familia"
+   ]
+  },
+  {
+   "username": "Mateo",
+   "nombre": "Mateo López",
+   "bio": "Acción, suspense y series de crimen.",
+   "intereses": [
+    "Acción",
+    "Suspense",
+    "Crimen"
+   ]
+  },
+  {
+   "username": "Valentina",
+   "nombre": "Valentina Gil",
+   "bio": "Comedias románticas y series de los 90.",
+   "intereses": [
+    "Drama",
+    "Comedia",
+    "Romance"
+   ]
+  },
+  {
+   "username": "lucia_herrera",
+   "nombre": "LucÃ­a Herrera",
+   "bio": "CinÃ©fila de madrugada. Si hay un drama coreano, lo veo.",
+   "intereses": [
+    "Comedia",
+    "Drama",
+    "Romance"
+   ]
+  },
+  {
+   "username": "andres_molina",
+   "nombre": "AndrÃ©s Molina",
+   "bio": "Series largas, finales abiertos y debates en el sofÃ¡.",
+   "intereses": [
+    "Ciencia ficción",
+    "Crimen",
+    "Suspense"
+   ]
+  },
+  {
+   "username": "paula_rios",
+   "nombre": "Paula RÃ­os",
+   "bio": "Terror, misterio y cualquier pelÃ­cula que me deje sin dormir.",
+   "intereses": [
+    "Suspense",
+    "Misterio",
+    "Terror"
+   ]
+  },
+  {
+   "username": "tomas_vargas",
+   "nombre": "TomÃ¡s Vargas",
+   "bio": "AnimaciÃ³n y ciencia ficciÃ³n. Mi clÃ¡sico favorito es Blade Runner.",
+   "intereses": [
+    "Fantasía",
+    "Ciencia ficción",
+    "Animación"
+   ]
+  },
+  {
+   "username": "valeria_soto",
+   "nombre": "Valeria Soto",
+   "bio": "Comedia, romance y maratones de fin de semana.",
+   "intereses": [
+    "Familia",
+    "Romance",
+    "Comedia"
+   ]
+  },
+  {
+   "username": "nicolas_duarte",
+   "nombre": "NicolÃ¡s Duarte",
+   "bio": "Documentales, historia y cine de autor. Siempre con una libreta.",
+   "intereses": [
+    "Drama",
+    "Historia",
+    "Documental"
+   ]
+  }
+ ],
+ "titulos": [
+  {
+   "tipo": "pelicula",
+   "titulo": "Hope"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Los vigilantes de la playa"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Wakfu"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "El mentalista"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Encantadoramente Terrible"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Anatomía de Grey"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Breaking Bad"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Magnum"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Clayface"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "X-Men: Días del futuro pasado"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "El despertar"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Resident Evil"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Toy Story 5"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Street Fighter"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Coco"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "La guerra de los mundos"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Vengadores: Doomsday"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Dune: Parte dos"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Ley y orden: Unidad de Víctimas Especiales"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Sobrenatural"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Medium"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Lo que hacemos en las sombras"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "The Bill"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Amor entre lineas"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "The Crown"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Padre de familia"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Malcolm"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "MINDHUNTER"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Ally McBeal"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Running Man"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Moesha"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Proyecto Salvación"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "La Odisea"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Lupin"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Verity. La sombra de un engaño"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "La constelación del perro"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Pesadilla antes de Navidad"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Friends"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Animales"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Wildwood: El Bosque Salvaje"
+  },
+  {
+   "tipo": "serie",
+   "titulo": "Los Simpson"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Contra el huracán"
+  },
+  {
+   "tipo": "pelicula",
+   "titulo": "Spider-Man: Brand New Day"
+  }
+ ],
+ "amistades": [
+  {
+   "solicitante": "Luis",
+   "receptor": "Ana",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Marta",
+   "receptor": "Ana",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Carlos",
+   "receptor": "Ana",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "Camilo_Pacheco",
+   "receptor": "Luis",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Ana",
+   "receptor": "Camilo_Pacheco",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Marta",
+   "receptor": "Camilo_Pacheco",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Carlos",
+   "receptor": "Camilo_Pacheco",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "Sofia",
+   "receptor": "Camilo_Pacheco",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Mateo",
+   "receptor": "Camilo_Pacheco",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Camilo_Pacheco",
+   "receptor": "Valentina",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Sofia",
+   "receptor": "Ana",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Mateo",
+   "receptor": "Luis",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Valentina",
+   "receptor": "Marta",
+   "estado": "aceptada"
+  },
+  {
+   "solicitante": "Camilo_Pacheco",
+   "receptor": "Diego",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "lucia_herrera",
+   "receptor": "Camilo_Pacheco",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "andres_molina",
+   "receptor": "Camilo_Pacheco",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "paula_rios",
+   "receptor": "Camilo_Pacheco",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "tomas_vargas",
+   "receptor": "Camilo_Pacheco",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "valeria_soto",
+   "receptor": "Camilo_Pacheco",
+   "estado": "pendiente"
+  },
+  {
+   "solicitante": "nicolas_duarte",
+   "receptor": "Camilo_Pacheco",
+   "estado": "pendiente"
+  }
+ ],
+ "resenas": [
+  {
+   "usuario": "Sofia",
+   "titulo": "Hope",
+   "tipo": "pelicula",
+   "id_externo": "1058424",
+   "calificacion": 4.0,
+   "comentario": "Te la recomiendo: vale la pena verla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
+   "id_externo": "4386",
+   "calificacion": 3.5,
+   "comentario": "Entretenida, con algunos personajes muy graciosos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
+   "id_externo": "4386",
+   "calificacion": 3.0,
+   "comentario": "Divertida para descansar, sin más pretensiones.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ligera"
+   ]
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Wakfu",
+   "tipo": "serie",
+   "id_externo": "64414",
+   "calificacion": 4.0,
+   "comentario": "Te la recomiendo: vale la pena verla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Encantadoramente Terrible",
+   "tipo": "serie",
+   "id_externo": "81332",
+   "calificacion": 3.0,
+   "comentario": "Muy regular la serie.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "drama",
+    "koreano"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Encantadoramente Terrible",
+   "tipo": "serie",
+   "id_externo": "81332",
+   "calificacion": 4.0,
+   "comentario": "Te la recomiendo: vale la pena verla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Anatomía de Grey",
+   "tipo": "serie",
+   "id_externo": "1416",
+   "calificacion": 3.0,
+   "comentario": "Dramática pero predecible.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Anatomía de Grey",
+   "tipo": "serie",
+   "id_externo": "1416",
+   "calificacion": 2.0,
+   "comentario": "Comentario que la moderación ocultó.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": false,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Breaking Bad",
+   "tipo": "serie",
+   "id_externo": "1396",
+   "calificacion": 5.0,
+   "comentario": "Una serie espectacular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emocionante",
+    "mejor serie"
+   ]
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "id_externo": "79593",
+   "calificacion": 4.0,
+   "comentario": "Te la recomiendo: vale la pena verla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "id_externo": "79593",
+   "calificacion": 4.0,
+   "comentario": "Muy buena",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "buena",
+    "accion"
+   ]
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "id_externo": "79593",
+   "calificacion": 4.0,
+   "comentario": "Un clásico que se disfruta, muy ligera.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Clayface",
+   "tipo": "pelicula",
+   "id_externo": "1400940",
+   "calificacion": 4.5,
+   "comentario": "Visualmente preciosa, la vi dos veces.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "X-Men: Días del futuro pasado",
+   "tipo": "pelicula",
+   "id_externo": "127585",
+   "calificacion": 5.0,
+   "comentario": "Super.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "El despertar",
+   "tipo": "pelicula",
+   "id_externo": "1657630",
+   "calificacion": 4.0,
+   "comentario": "Buena atmósfera, muy recomendable.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "El despertar",
+   "tipo": "pelicula",
+   "id_externo": "1657630",
+   "calificacion": 2.5,
+   "comentario": "Buena premisa, pero el final llega demasiado rápido.",
+   "visibilidad": "amigos",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Resident Evil",
+   "tipo": "pelicula",
+   "id_externo": "1423191",
+   "calificacion": 4.0,
+   "comentario": "Te la recomiendo: vale la pena verla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Resident Evil",
+   "tipo": "pelicula",
+   "id_externo": "1423191",
+   "calificacion": 2.0,
+   "comentario": "Mucha acción y poca historia.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Coco",
+   "tipo": "pelicula",
+   "id_externo": "354912",
+   "calificacion": 5.0,
+   "comentario": "Un guion precioso.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Coco",
+   "tipo": "pelicula",
+   "id_externo": "354912",
+   "calificacion": 5.0,
+   "comentario": "Emotiva de principio a fin.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "emotiva"
+   ]
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "La guerra de los mundos",
+   "tipo": "pelicula",
+   "id_externo": "755898",
+   "calificacion": 3.5,
+   "comentario": "Tensa al principio y floja al final.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Vengadores: Doomsday",
+   "tipo": "pelicula",
+   "id_externo": "1003596",
+   "calificacion": 5.0,
+   "comentario": "Espero con mucha emoción está pelicula.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "espero",
+    "emocion",
+    "doomsday"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Ley y orden: Unidad de Víctimas Especiales",
+   "tipo": "serie",
+   "id_externo": "2734",
+   "calificacion": 4.0,
+   "comentario": "Casos muy bien construidos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Sobrenatural",
+   "tipo": "serie",
+   "id_externo": "1622",
+   "calificacion": 3.0,
+   "comentario": "Me parecio más natural que sobrenatural.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "natural",
+    "sobrenatural"
+   ]
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Lo que hacemos en las sombras",
+   "tipo": "serie",
+   "id_externo": "83631",
+   "calificacion": 4.5,
+   "comentario": "Muy buena temporada, sin relleno.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Lo que hacemos en las sombras",
+   "tipo": "serie",
+   "id_externo": "83631",
+   "calificacion": 4.0,
+   "comentario": "Muy buena, aunque el segundo arco baja un poco.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Lo que hacemos en las sombras",
+   "tipo": "serie",
+   "id_externo": "83631",
+   "calificacion": 5.0,
+   "comentario": "Humor seco y personajes muy bien escritos. Una de mis favoritas.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "humor",
+    "personajes"
+   ]
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "The Bill",
+   "tipo": "serie",
+   "id_externo": "2072",
+   "calificacion": 2.5,
+   "comentario": "Me costó seguirla. El cierre de la temporada lo arruina todo.",
+   "visibilidad": "publica",
+   "es_spoiler": true,
+   "visible": true,
+   "etiquetas": [
+    "spoiler"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "Amor entre lineas",
+   "tipo": "serie",
+   "id_externo": "279136",
+   "calificacion": 4.0,
+   "comentario": "Muy tierna, me gustó mucho.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "The Crown",
+   "tipo": "serie",
+   "id_externo": "65494",
+   "calificacion": 4.0,
+   "comentario": "TensiÃ³n constante, el primer capÃ­tulo engancha.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Padre de familia",
+   "tipo": "serie",
+   "id_externo": "1434",
+   "calificacion": 5.0,
+   "comentario": "Cada temporada mejora la anterior. Imprescindible.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Padre de familia",
+   "tipo": "serie",
+   "id_externo": "1434",
+   "calificacion": 4.5,
+   "comentario": "Muy chévere.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "chevere",
+    "familia"
+   ]
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Malcolm",
+   "tipo": "serie",
+   "id_externo": "2004",
+   "calificacion": 4.0,
+   "comentario": "Un retrato honesto de una Ã©poca.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "calificacion": 4.5,
+   "comentario": "Sin duda, de las mejores series de crimen.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "suspense"
+   ]
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "calificacion": 4.0,
+   "comentario": "Ritmo lento al inicio, pero vale la pena.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "calificacion": 5.0,
+   "comentario": "La mejor serie de crimen que he visto.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "ritmo"
+   ]
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "calificacion": 4.5,
+   "comentario": "Atrapante desde el primer episodio; la tensión se mantiene muy bien.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "atrapante",
+    "tensión"
+   ]
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Ally McBeal",
+   "tipo": "serie",
+   "id_externo": "1480",
+   "calificacion": 3.0,
+   "comentario": "Irregular, pero con momentos divertidos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Ally McBeal",
+   "tipo": "serie",
+   "id_externo": "1480",
+   "calificacion": 3.0,
+   "comentario": "Un clásico de comedia dramática, algo irregular.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Moesha",
+   "tipo": "serie",
+   "id_externo": "3497",
+   "calificacion": 4.0,
+   "comentario": "Te la recomiendo: vale la pena verla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "La Odisea",
+   "tipo": "pelicula",
+   "id_externo": "1368337",
+   "calificacion": 3.5,
+   "comentario": "Impresionante fotografía, aunque el ritmo se hace largo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "Verity. La sombra de un engaño",
+   "tipo": "pelicula",
+   "id_externo": "1283515",
+   "calificacion": 3.5,
+   "comentario": "Buen suspense, aunque el final se alarga un poco.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "La constelación del perro",
+   "tipo": "pelicula",
+   "id_externo": "1384216",
+   "calificacion": 4.0,
+   "comentario": "Me dejÃ³ pensando varios dÃ­as.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Pesadilla antes de Navidad",
+   "tipo": "pelicula",
+   "id_externo": "9479",
+   "calificacion": 4.5,
+   "comentario": "Me encanta la animación stop-motion.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "animación"
+   ]
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Pesadilla antes de Navidad",
+   "tipo": "pelicula",
+   "id_externo": "9479",
+   "calificacion": 4.0,
+   "comentario": "Clásico de Navidad; la música es lo mejor.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "id_externo": "1668",
+   "calificacion": 4.0,
+   "comentario": "Divertida y con mucho ritmo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "id_externo": "1668",
+   "calificacion": 3.5,
+   "comentario": "Nostalgia pura.",
+   "visibilidad": "amigos",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "nostalgia"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "id_externo": "1668",
+   "calificacion": 4.0,
+   "comentario": "Clásica para ver con amigos.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "id_externo": "1668",
+   "calificacion": 4.5,
+   "comentario": "Siempre vuelve a funcionar. Los personajes son entrañables.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Animales",
+   "tipo": "pelicula",
+   "id_externo": "1236045",
+   "calificacion": 4.0,
+   "comentario": "Te la recomiendo: vale la pena verla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Wildwood: El Bosque Salvaje",
+   "tipo": "pelicula",
+   "id_externo": "791523",
+   "calificacion": 4.5,
+   "comentario": "AnimaciÃ³n con mucho corazÃ³n.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "id_externo": "456",
+   "calificacion": 4.5,
+   "comentario": "Nostalgia pura, los guiones siguen funcionando.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "id_externo": "456",
+   "calificacion": 5.0,
+   "comentario": "Mis capítulos favoritos son de la era dorada.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Spider-Man: Brand New Day",
+   "tipo": "pelicula",
+   "id_externo": "969681",
+   "calificacion": 4.0,
+   "comentario": "Te la recomiendo: vale la pena verla.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Spider-Man: Brand New Day",
+   "tipo": "pelicula",
+   "id_externo": "969681",
+   "calificacion": 5.0,
+   "comentario": "Spider-Man: Brand New Day ofrece una propuesta emocionante y refrescante para uno de los personajes más emblemáticos de Marvel. Su historia representa una nueva etapa para Peter Parker, explorando su evolución personal, los desafíos que implica asumir sus responsabilidades y el equilibrio entre su vida cotidiana y su identidad como Spider-Man.\n\nLa película destaca por su potencial narrativo, la profundidad de su protagonista y la oportunidad de recuperar la esencia más humana del personaje, combinando acción, emoción, humor y momentos de reflexión. Es una propuesta que promete conectar tanto con los seguidores de siempre como con nuevas audiencias, manteniendo vivo el espíritu de Spider-Man: un héroe cercano, imperfecto y dispuesto a seguir adelante a pesar de las dificultades.\n\nEn definitiva, una entrega prometedora que celebra la esencia del personaje y abre las puertas a una nueva etapa llena de posibilidades.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": [
+    "spiderman",
+    "brand new day"
+   ]
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Spider-Man: Brand New Day",
+   "tipo": "pelicula",
+   "id_externo": "969681",
+   "calificacion": 4.0,
+   "comentario": "Divertida y con buen ritmo.",
+   "visibilidad": "publica",
+   "es_spoiler": false,
+   "visible": true,
+   "etiquetas": null
+  }
+ ],
+ "seguimientos": [
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Hope",
+   "tipo": "pelicula",
+   "id_externo": "1058424",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
+   "id_externo": "4386",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Los vigilantes de la playa",
+   "tipo": "serie",
+   "id_externo": "4386",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Wakfu",
+   "tipo": "serie",
+   "id_externo": "64414",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "El mentalista",
+   "tipo": "serie",
+   "id_externo": "5920",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Encantadoramente Terrible",
+   "tipo": "serie",
+   "id_externo": "81332",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Anatomía de Grey",
+   "tipo": "serie",
+   "id_externo": "1416",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Anatomía de Grey",
+   "tipo": "serie",
+   "id_externo": "1416",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Breaking Bad",
+   "tipo": "serie",
+   "id_externo": "1396",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "id_externo": "79593",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "id_externo": "79593",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Luis",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "id_externo": "79593",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "X-Men: Días del futuro pasado",
+   "tipo": "pelicula",
+   "id_externo": "127585",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "El despertar",
+   "tipo": "pelicula",
+   "id_externo": "1657630",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "El despertar",
+   "tipo": "pelicula",
+   "id_externo": "1657630",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Resident Evil",
+   "tipo": "pelicula",
+   "id_externo": "1423191",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Resident Evil",
+   "tipo": "pelicula",
+   "id_externo": "1423191",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Toy Story 5",
+   "tipo": "pelicula",
+   "id_externo": "1084244",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Street Fighter",
+   "tipo": "pelicula",
+   "id_externo": "1153576",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Street Fighter",
+   "tipo": "pelicula",
+   "id_externo": "1153576",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Coco",
+   "tipo": "pelicula",
+   "id_externo": "354912",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Coco",
+   "tipo": "pelicula",
+   "id_externo": "354912",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "La guerra de los mundos",
+   "tipo": "pelicula",
+   "id_externo": "755898",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "La guerra de los mundos",
+   "tipo": "pelicula",
+   "id_externo": "755898",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Vengadores: Doomsday",
+   "tipo": "pelicula",
+   "id_externo": "1003596",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Vengadores: Doomsday",
+   "tipo": "pelicula",
+   "id_externo": "1003596",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Dune: Parte dos",
+   "tipo": "pelicula",
+   "id_externo": "693134",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Ley y orden: Unidad de Víctimas Especiales",
+   "tipo": "serie",
+   "id_externo": "2734",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Sobrenatural",
+   "tipo": "serie",
+   "id_externo": "1622",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Medium",
+   "tipo": "serie",
+   "id_externo": "36",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Lo que hacemos en las sombras",
+   "tipo": "serie",
+   "id_externo": "83631",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "Lo que hacemos en las sombras",
+   "tipo": "serie",
+   "id_externo": "83631",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Lo que hacemos en las sombras",
+   "tipo": "serie",
+   "id_externo": "83631",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "The Bill",
+   "tipo": "serie",
+   "id_externo": "2072",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "The Crown",
+   "tipo": "serie",
+   "id_externo": "65494",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "paula_rios",
+   "titulo": "The Crown",
+   "tipo": "serie",
+   "id_externo": "65494",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "The Crown",
+   "tipo": "serie",
+   "id_externo": "65494",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Padre de familia",
+   "tipo": "serie",
+   "id_externo": "1434",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Padre de familia",
+   "tipo": "serie",
+   "id_externo": "1434",
+   "estado": "vista"
+  },
+  {
+   "usuario": "nicolas_duarte",
+   "titulo": "Malcolm",
+   "tipo": "serie",
+   "id_externo": "2004",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Malcolm",
+   "tipo": "serie",
+   "id_externo": "2004",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Marta",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Ana",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "MINDHUNTER",
+   "tipo": "serie",
+   "id_externo": "67744",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Ally McBeal",
+   "tipo": "serie",
+   "id_externo": "1480",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Carlos",
+   "titulo": "Ally McBeal",
+   "tipo": "serie",
+   "id_externo": "1480",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Ally McBeal",
+   "tipo": "serie",
+   "id_externo": "1480",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Mateo",
+   "titulo": "Running Man",
+   "tipo": "serie",
+   "id_externo": "33238",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "La Odisea",
+   "tipo": "pelicula",
+   "id_externo": "1368337",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Lupin",
+   "tipo": "serie",
+   "id_externo": "96677",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "lucia_herrera",
+   "titulo": "Verity. La sombra de un engaño",
+   "tipo": "pelicula",
+   "id_externo": "1283515",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Verity. La sombra de un engaño",
+   "tipo": "pelicula",
+   "id_externo": "1283515",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Pesadilla antes de Navidad",
+   "tipo": "pelicula",
+   "id_externo": "9479",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Pesadilla antes de Navidad",
+   "tipo": "pelicula",
+   "id_externo": "9479",
+   "estado": "vista"
+  },
+  {
+   "usuario": "valeria_soto",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "id_externo": "1668",
+   "estado": "abandonada"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "id_externo": "1668",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "id_externo": "1668",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Friends",
+   "tipo": "serie",
+   "id_externo": "1668",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Animales",
+   "tipo": "pelicula",
+   "id_externo": "1236045",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Diego",
+   "titulo": "Animales",
+   "tipo": "pelicula",
+   "id_externo": "1236045",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "tomas_vargas",
+   "titulo": "Wildwood: El Bosque Salvaje",
+   "tipo": "pelicula",
+   "id_externo": "791523",
+   "estado": "vista"
+  },
+  {
+   "usuario": "andres_molina",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "id_externo": "456",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "id_externo": "456",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "id_externo": "456",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Contra el huracán",
+   "tipo": "pelicula",
+   "id_externo": "1780005",
+   "estado": "pendiente"
+  },
+  {
+   "usuario": "Valentina",
+   "titulo": "Contra el huracán",
+   "tipo": "pelicula",
+   "id_externo": "1780005",
+   "estado": "viendo"
+  },
+  {
+   "usuario": "Camilo_Pacheco",
+   "titulo": "Spider-Man: Brand New Day",
+   "tipo": "pelicula",
+   "id_externo": "969681",
+   "estado": "vista"
+  },
+  {
+   "usuario": "Sofia",
+   "titulo": "Spider-Man: Brand New Day",
+   "tipo": "pelicula",
+   "id_externo": "969681",
+   "estado": "vista"
+  }
+ ],
+ "recomendaciones": [
+  {
+   "emisor": "Camilo_Pacheco",
+   "receptor": "Luis",
+   "titulo": "Wakfu",
+   "tipo": "serie",
+   "id_externo": "64414",
+   "estado": "aceptada",
+   "motivo": "Animación de aventuras, te puede gustar.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Te la recomiendo: vale la pena verla."
+   }
+  },
+  {
+   "emisor": "Mateo",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Spider-Man: Brand New Day",
+   "tipo": "pelicula",
+   "id_externo": "969681",
+   "estado": "completada",
+   "motivo": "Acción de la buena, para el fin de semana.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Te la recomiendo: vale la pena verla."
+   }
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Los Simpson",
+   "tipo": "serie",
+   "id_externo": "456",
+   "estado": "completada",
+   "motivo": "Un clásico de la animación para la tarde.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 5.0,
+    "comentario": "Mis capítulos favoritos son de la era dorada."
+   }
+  },
+  {
+   "emisor": "Diego",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Animales",
+   "tipo": "pelicula",
+   "id_externo": "1236045",
+   "estado": "abierta",
+   "motivo": "Sé que no es tu género, pero el ritmo es perfecto.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Te la recomiendo: vale la pena verla."
+   }
+  },
+  {
+   "emisor": "Luis",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Moesha",
+   "tipo": "serie",
+   "id_externo": "3497",
+   "estado": "aceptada",
+   "motivo": "Comedia de los noventa, la vas a disfrutar.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Te la recomiendo: vale la pena verla."
+   }
+  },
+  {
+   "emisor": "Ana",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Magnum",
+   "tipo": "serie",
+   "id_externo": "79593",
+   "estado": "completada",
+   "motivo": "Es ligera y tiene un tono parecido a lo que te gusta.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Te la recomiendo: vale la pena verla."
+   }
+  },
+  {
+   "emisor": "Valentina",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Encantadoramente Terrible",
+   "tipo": "serie",
+   "id_externo": "81332",
+   "estado": "descartada",
+   "motivo": "Una comedia romántica muy divertida.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Te la recomiendo: vale la pena verla."
+   }
+  },
+  {
+   "emisor": "Sofia",
+   "receptor": "Camilo_Pacheco",
+   "titulo": "Hope",
+   "tipo": "pelicula",
+   "id_externo": "1058424",
+   "estado": "abierta",
+   "motivo": "Te va a encantar el giro final.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Te la recomiendo: vale la pena verla."
+   }
+  },
+  {
+   "emisor": "Camilo_Pacheco",
+   "receptor": "Marta",
+   "titulo": "Amor entre lineas",
+   "tipo": "serie",
+   "id_externo": "279136",
+   "estado": "completada",
+   "motivo": "Una historia romántica muy bien llevada.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Muy tierna, me gustó mucho."
+   }
+  },
+  {
+   "emisor": "Camilo_Pacheco",
+   "receptor": "Sofia",
+   "titulo": "Proyecto Salvación",
+   "tipo": "pelicula",
+   "id_externo": "687163",
+   "estado": "enviada",
+   "motivo": "Muy buena pelicula, me gusto mucho.",
+   "fuera_de_intereses": true,
+   "resena_del_emisor": null
+  },
+  {
+   "emisor": "Camilo_Pacheco",
+   "receptor": "Sofia",
+   "titulo": "Coco",
+   "tipo": "pelicula",
+   "id_externo": "354912",
+   "estado": "completada",
+   "motivo": "Creo que te va a emocionar.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 5.0,
+    "comentario": "Un guion precioso."
+   }
+  },
+  {
+   "emisor": "Camilo_Pacheco",
+   "receptor": "Sofia",
+   "titulo": "Resident Evil",
+   "tipo": "pelicula",
+   "id_externo": "1423191",
+   "estado": "descartada",
+   "motivo": "Pensé que te gustaría por el género.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 4.0,
+    "comentario": "Te la recomiendo: vale la pena verla."
+   }
+  },
+  {
+   "emisor": "Camilo_Pacheco",
+   "receptor": "Mateo",
+   "titulo": "Breaking Bad",
+   "tipo": "serie",
+   "id_externo": "1396",
+   "estado": "enviada",
+   "motivo": "Es una serie espectacular su desarrollo y ritmo son verdaderamente atrapantes. Muy recomendada.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 5.0,
+    "comentario": "Una serie espectacular."
+   }
+  },
+  {
+   "emisor": "Camilo_Pacheco",
+   "receptor": "Valentina",
+   "titulo": "El despertar",
+   "tipo": "pelicula",
+   "id_externo": "1657630",
+   "estado": "aceptada",
+   "motivo": "Tiene la atmósfera que te gusta.",
+   "fuera_de_intereses": false,
+   "resena_del_emisor": {
+    "calificacion": 2.5,
+    "comentario": "Buena premisa, pero el final llega demasiado rápido."
+   }
+  }
+ ],
+ "notificaciones": [
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Ana",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Ana",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Ana|Magnum"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Luis",
+   "tipo": "recomendacion_aceptada",
+   "leida": true,
+   "recomendacion_de": "Camilo_Pacheco|Wakfu"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Diego",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Diego|Animales"
+  },
+  {
+   "destinatario": "Sofia",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Camilo_Pacheco|Proyecto Salvación"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Camilo_Pacheco|Breaking Bad"
+  },
+  {
+   "destinatario": "Mateo",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "Mateo|Spider-Man: Brand New Day"
+  },
+  {
+   "destinatario": "Ana",
+   "origen": "Camilo_Pacheco",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "Ana|Magnum"
+  },
+  {
+   "destinatario": "Luis",
+   "origen": "Camilo_Pacheco",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Marta",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "Camilo_Pacheco|Amor entre lineas"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Carlos",
+   "tipo": "solicitud_amistad",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Sofia",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Sofia",
+   "tipo": "recomendacion_completada",
+   "leida": false,
+   "recomendacion_de": "Camilo_Pacheco|Coco"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Sofia",
+   "tipo": "recomendacion_recibida",
+   "leida": false,
+   "recomendacion_de": "Sofia|Hope"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Mateo",
+   "tipo": "amistad_aceptada",
+   "leida": false,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Mateo",
+   "tipo": "recomendacion_recibida",
+   "leida": true,
+   "recomendacion_de": "Mateo|Spider-Man: Brand New Day"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Valentina",
+   "tipo": "amistad_aceptada",
+   "leida": true,
+   "recomendacion_de": null
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": "Valentina",
+   "tipo": "recomendacion_aceptada",
+   "leida": false,
+   "recomendacion_de": "Camilo_Pacheco|El despertar"
+  },
+  {
+   "destinatario": "Camilo_Pacheco",
+   "origen": null,
+   "tipo": "resena_oculta",
+   "leida": false,
+   "recomendacion_de": null
+  }
+ ]
+}

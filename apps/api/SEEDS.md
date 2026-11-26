@@ -55,3 +55,11 @@ Carga entre 500 y 1000 títulos populares (mitad películas, mitad series) con s
 ## Sincronización periódica
 
 Desactivada por defecto. Con `CATALOGO_SYNC_HABILITADA=true` se ejecuta según `CATALOGO_SYNC_CRON` (por defecto, cada domingo a las 03:00 UTC). Si el proveedor falla, la ejecución queda registrada como error y el catálogo existente se conserva.
+
+## Datos de demostración ampliados (`pnpm seed:demo-rico`)
+
+Carga un conjunto más completo para presentaciones: 15 usuarios con intereses, 56 reseñas (con calificación, comentario, spoilers y etiquetas), 70 títulos en biblioteca, 14 recomendaciones entre amigos en distintos estados, 20 amistades y 19 notificaciones. Los títulos son reales y los datos son ficticios.
+
+- Ejecutar después de `pnpm seed` (o `pnpm seed:demo`). Reutiliza los usuarios que ya existan (por ejemplo, Ana, Luis, Marta y Carlos) y no los reemplaza.
+- Es idempotente: si ya se cargó (existe el usuario `Camilo_Pacheco`), no hace nada.
+- Contraseña de los usuarios: `Demo1234!`. Solo para desarrollo; `NODE_ENV=production` lo rechaza.

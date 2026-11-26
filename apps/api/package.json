@@ -11,6 +11,7 @@
     "migrate:create": "node --env-file-if-exists=.env node_modules/node-pg-migrate/bin/node-pg-migrate.js create --migration-file-language sql",
     "seed": "tsx --env-file-if-exists=.env seeds/index.ts",
     "seed:demo": "tsx --env-file-if-exists=.env seeds/index.ts --demo",
+    "seed:demo-rico": "tsx --env-file-if-exists=.env seeds/index.ts --demo-rico",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "seed:catalog": "tsx --env-file-if-exists=.env seeds/catalogo.ts",
