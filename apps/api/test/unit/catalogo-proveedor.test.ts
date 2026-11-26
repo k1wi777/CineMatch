@@ -68,6 +68,7 @@ describe("cliente TMDB (BE-6.1)", () => {
       director: "Dir",
       duracion: 139,
       posterUrl: "https://image.tmdb.org/t/p/w500/abc.jpg",
+      fondoUrl: null,
       popularidadExterna: 61.5,
       generos: ["Drama"],
     });

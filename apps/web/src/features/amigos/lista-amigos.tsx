@@ -41,16 +41,16 @@ export function ListaAmigos() {
     <section className="space-y-6">
       <header className="flex flex-wrap items-end justify-between gap-4">
         <h1 className="font-display text-3xl">{t("lista.titulo")}</h1>
-        <nav aria-label={t("lista.navegacion")} className="flex gap-4 text-sm">
+        <nav aria-label={t("lista.navegacion")} className="flex gap-2 text-sm">
           <Link
             href="/amigos/solicitudes"
-            className="text-niebla underline underline-offset-4 hover:text-papel"
+            className="rounded-sm border border-papel/20 px-3 py-2 text-niebla hover:text-papel"
           >
             {t("lista.solicitudes")}
           </Link>
           <Link
             href="/amigos/buscar"
-            className="text-niebla underline underline-offset-4 hover:text-papel"
+            className="rounded-sm border border-papel/20 px-3 py-2 text-niebla hover:text-papel"
           >
             {t("lista.buscar")}
           </Link>

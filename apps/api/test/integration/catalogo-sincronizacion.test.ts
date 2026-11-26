@@ -50,6 +50,15 @@ function proveedorFalso(opciones: {
     async fetchTrailer() {
       return null;
     },
+    async search() {
+      return [];
+    },
+    async fetchGallery() {
+      return [];
+    },
+    async fetchCast() {
+      return [];
+    },
     async fetchLogo() {
       return null;
     },

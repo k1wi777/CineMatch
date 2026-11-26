@@ -67,7 +67,7 @@ export function Estrellas({
         >
           ★
           <span
-            className="absolute inset-y-0 left-0 overflow-hidden text-luz"
+            className="absolute inset-y-0 left-0 overflow-hidden text-estrella"
             style={{ width: `${rellenoEstrella(mostrado, indice) * 100}%` }}
           >
             ★

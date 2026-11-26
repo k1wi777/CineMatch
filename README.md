@@ -212,10 +212,10 @@ Creados por `pnpm seed:demo`, con la misma contraseña:
 
 | Correo | Usuario | Contraseña |
 | --- | --- | --- |
-| `demo_ana@demo.cinematch.local` | demo_ana | `Demo1234!` |
-| `demo_luis@demo.cinematch.local` | demo_luis | `Demo1234!` |
-| `demo_marta@demo.cinematch.local` | demo_marta | `Demo1234!` |
-| `demo_carlos@demo.cinematch.local` | demo_carlos | `Demo1234!` |
+| `ana@gmail.com` | Ana | `Demo1234!` |
+| `luis@gmail.com` | Luis | `Demo1234!` |
+| `marta@gmail.com` | Marta | `Demo1234!` |
+| `carlos@gmail.com` | Carlos | `Demo1234!` |
 
 El administrador es el que definiste en `ADMIN_EMAIL`.
 

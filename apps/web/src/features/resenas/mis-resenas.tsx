@@ -44,7 +44,7 @@ export function MisResenas() {
           accion={
             <Link
               href="/catalogo"
-              className="inline-block rounded-sm bg-luz px-4 py-2 text-sm font-semibold text-sala"
+              className="inline-block rounded-sm bg-estrella px-4 py-2 text-sm font-semibold text-sala"
             >
               {t("mis.irCatalogo")}
             </Link>

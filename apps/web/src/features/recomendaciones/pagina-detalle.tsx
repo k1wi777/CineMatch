@@ -1,17 +1,20 @@
 "use client";
 
 import type { RecomendacionDetalle } from "@cinematch/shared";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 import { useSesion } from "@/features/auth/sesion";
+import { useEstadoBiblioteca } from "@/features/biblioteca/biblioteca";
+import { SelectorEstado } from "@/features/biblioteca/selector-estado";
+import { useEstadisticas, useLogo } from "@/features/catalogo/ficha";
 import { comentarioVisible } from "@/features/catalogo/ficha-logica";
 import { ApiError, mensajeDeError } from "@/shared/api";
 import { formatoFecha } from "@/shared/formato";
 import { Chip } from "@/shared/ui/chip";
 import { Estrellas } from "@/shared/ui/estrellas";
 import { EstadoError, EstadoVacio } from "@/shared/ui/estados";
-import { Insignia } from "@/shared/ui/insignia";
 import { Skeleton } from "@/shared/ui/skeleton";
 import { accionesDelReceptor, puedeVerResenaReceptor } from "./estado";
 import { useAccionRecomendacion, useRecomendacion } from "./bandeja";
@@ -24,6 +27,11 @@ export function PaginaDetalleRecomendacion({ id }: { id: number }) {
   const detalle = useRecomendacion(id);
   const accion = useAccionRecomendacion(id);
   const [error, setError] = useState<string | null>(null);
+
+  const contenidoId = detalle.data?.contenido.id ?? 0;
+  const logo = useLogo(contenidoId);
+  const estadoBiblioteca = useEstadoBiblioteca(contenidoId);
+  const estadisticas = useEstadisticas(contenidoId);
 
   if (detalle.isPending) {
     return (
@@ -71,7 +79,23 @@ export function PaginaDetalleRecomendacion({ id }: { id: number }) {
         {t("volverBandeja")}
       </Link>
 
-      <header className="space-y-3">
+      <header className="relative isolate space-y-3 py-8 md:py-12">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2 overflow-hidden"
+        >
+          {r.contenido.posterUrl ? (
+            <Image
+              src={r.contenido.posterUrl}
+              alt=""
+              fill
+              sizes="100vw"
+              className="scale-110 object-cover opacity-50 blur-2xl"
+            />
+          ) : null}
+          <div className="absolute inset-0 bg-gradient-to-r from-sala/80 via-sala/50 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-sala to-transparent" />
+        </div>
         <p className="text-sm text-niebla">
           {soyReceptor
             ? t("deUsuario", { usuario: r.emisor.username })
@@ -84,10 +108,6 @@ export function PaginaDetalleRecomendacion({ id }: { id: number }) {
             {r.contenido.titulo}
           </Link>
         </h1>
-        <div className="flex flex-wrap gap-2">
-          <Insignia texto={t(`estado.${r.estado}`)} tono="luz" />
-          {r.fueraDeIntereses ? <Insignia texto={t("fueraDeIntereses")} tono="neutro" /> : null}
-        </div>
       </header>
 
       {r.motivo ? (
@@ -96,54 +116,140 @@ export function PaginaDetalleRecomendacion({ id }: { id: number }) {
         </blockquote>
       ) : null}
 
-      {acciones.length > 0 ? (
-        <section aria-labelledby={`rec-${id}-acciones`} className="space-y-3">
-          <h2 id={`rec-${id}-acciones`} className="text-sm text-niebla">
-            {t("acciones")}
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {acciones.includes("aceptar") ? (
-              <button
-                type="button"
-                onClick={() => ejecutar("aceptar")}
-                disabled={accion.isPending}
-                className="rounded-sm bg-luz px-4 py-2 text-sm font-semibold text-sala disabled:opacity-50"
-              >
-                {t("agregarPendientes")}
-              </button>
-            ) : null}
-            {acciones.includes("descartar") ? (
-              <button
-                type="button"
-                onClick={() => ejecutar("descartar")}
-                disabled={accion.isPending}
-                className="rounded-sm border border-papel/30 px-4 py-2 text-sm hover:border-brasa disabled:opacity-50"
-              >
-                {t("noMeInteresa")}
-              </button>
-            ) : null}
-            <Link
-              href={`/catalogo/${r.contenido.id}`}
-              className="rounded-sm border border-papel/30 px-4 py-2 text-sm hover:border-luz"
-            >
-              {t("verTitulo")}
-            </Link>
-            {soyReceptor ? (
-              <Link
-                href={`/catalogo/${r.contenido.id}#ficha-mi-resena`}
-                className="rounded-sm border border-papel/30 px-4 py-2 text-sm hover:border-luz"
-              >
-                {t("calificar")}
-              </Link>
-            ) : null}
-          </div>
-          {error ? (
-            <p role="alert" className="text-sm text-brasa">
-              {error}
-            </p>
+      <section aria-label="Detalle del título" className="grid gap-6 md:grid-cols-2">
+        <div className="relative min-h-56 overflow-hidden rounded-md border border-papel/10 bg-butaca md:row-start-1 md:col-start-1">
+          {r.contenido.fondoUrl ? (
+            <Image
+              src={r.contenido.fondoUrl}
+              alt={r.contenido.titulo}
+              fill
+              sizes="(max-width: 768px) 100vw, 560px"
+              className="object-cover"
+            />
           ) : null}
-        </section>
-      ) : null}
+        </div>
+        <div className="flex flex-col gap-6 rounded-md border border-papel/10 bg-butaca p-5 md:row-start-1 md:col-start-2 md:p-6">
+          {(logo.data?.url ?? r.contenido.logoUrl) ? (
+            <div className="relative h-16 w-full max-w-xs">
+              <Image
+                src={(logo.data?.url ?? r.contenido.logoUrl) as string}
+                alt={r.contenido.titulo}
+                fill
+                sizes="320px"
+                className="object-contain object-left"
+              />
+            </div>
+          ) : (
+            <p className="font-display text-2xl">{r.contenido.titulo}</p>
+          )}
+          <dl className="grid grid-cols-2 gap-x-6 gap-y-5 text-sm">
+            <div>
+              <dt className="text-niebla">Recomendada por</dt>
+              <dd className="text-papel">@{r.emisor.username}</dd>
+            </div>
+            <div>
+              <dt className="text-niebla">Enviada el</dt>
+              <dd className="text-papel">{formatoFecha(r.fechaEnvio)}</dd>
+            </div>
+            <div>
+              <dt className="text-niebla">Estado</dt>
+              <dd className="text-papel">{t(`estado.${r.estado}`)}</dd>
+            </div>
+            <div>
+              <dt className="text-niebla">Tus intereses</dt>
+              <dd className="text-papel">{r.fueraDeIntereses ? "Fuera de ellos" : "Coinciden"}</dd>
+            </div>
+
+            {r.contenido.director ? (
+              <div>
+                <dt className="text-niebla">Director</dt>
+                <dd className="text-papel">{r.contenido.director}</dd>
+              </div>
+            ) : null}
+            {r.contenido.duracion ? (
+              <div>
+                <dt className="text-niebla">Duración</dt>
+                <dd className="text-papel">{r.contenido.duracion} min</dd>
+              </div>
+            ) : null}
+          </dl>
+        </div>
+      </section>
+
+      <div className="grid gap-6 md:grid-cols-2 md:items-end">
+        <>
+          <section aria-labelledby={`rec-${id}-acciones`} className="space-y-3">
+            <h2 id={`rec-${id}-acciones`} className="text-sm text-niebla">
+              {t("acciones")}
+            </h2>
+            <div className="flex flex-wrap gap-1.5">
+              {acciones.includes("aceptar") ? (
+                <button
+                  type="button"
+                  onClick={() => ejecutar("aceptar")}
+                  disabled={accion.isPending}
+                  className="rounded-sm bg-luz px-3 py-2 text-sm font-semibold text-sala disabled:opacity-50 whitespace-nowrap"
+                >
+                  {t("agregarPendientes")}
+                </button>
+              ) : null}
+              {acciones.includes("descartar") ? (
+                <button
+                  type="button"
+                  onClick={() => ejecutar("descartar")}
+                  disabled={accion.isPending}
+                  className="rounded-sm border border-papel/30 px-3 py-2 text-sm hover:border-brasa disabled:opacity-50 whitespace-nowrap"
+                >
+                  {t("noMeInteresa")}
+                </button>
+              ) : null}
+              <Link
+                href={`/catalogo/${r.contenido.id}`}
+                className="rounded-sm border border-papel/30 px-3 py-2 text-sm hover:border-luz whitespace-nowrap"
+              >
+                {t("verTitulo")}
+              </Link>
+              {soyReceptor ? (
+                <Link
+                  href={`/catalogo/${r.contenido.id}#ficha-mi-resena`}
+                  className="rounded-sm border border-papel/30 px-3 py-2 text-sm hover:border-luz whitespace-nowrap"
+                >
+                  {t("calificar")}
+                </Link>
+              ) : null}
+            </div>
+            {error ? (
+              <p role="alert" className="text-sm text-brasa">
+                {error}
+              </p>
+            ) : null}
+          </section>
+        </>
+        <div className="grid w-full grid-cols-2 gap-2 sm:grid-cols-[1fr_1fr_1fr_1.5fr]">
+          {r.contenido.tipo ? (
+            <span className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-sm border border-papel/15 bg-butaca px-3 text-sm text-papel">
+              {r.contenido.tipo === "pelicula" ? "Película" : "Serie"}
+            </span>
+          ) : null}
+          {r.contenido.anio ? (
+            <span className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-sm border border-papel/15 bg-butaca px-3 text-sm text-papel">
+              Año {r.contenido.anio}
+            </span>
+          ) : null}
+          <span className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-sm border border-papel/15 bg-butaca px-3 text-sm text-papel">
+            {estadisticas.data?.promedioPublico != null
+              ? `Comunidad ${estadisticas.data.promedioPublico.toFixed(1).replace(".", ",")}`
+              : "Sin calificaciones"}
+          </span>
+          <div className="[&_label]:sr-only [&_select]:h-10 [&_select]:w-full">
+            <SelectorEstado
+              contenidoId={r.contenido.id}
+              estado={estadoBiblioteca.data}
+              etiqueta="En mi biblioteca"
+            />
+          </div>
+        </div>
+      </div>
 
       <section aria-labelledby={`rec-${id}-resena`} className="space-y-4">
         <h2 id={`rec-${id}-resena`} className="font-display text-2xl">

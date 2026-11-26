@@ -78,7 +78,7 @@ async function asignarGeneros(
 }
 
 // Crea o actualiza un título por (fuente, tipo, id_externo). Devuelve si se creó o solo se actualizó.
-async function guardarTitulo(
+export async function guardarTitulo(
   pool: pg.Pool,
   fuente: string,
   contenido: ContenidoExterno,

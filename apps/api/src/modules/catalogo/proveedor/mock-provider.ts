@@ -37,6 +37,25 @@ export function crearMockProvider(fixtures: ContenidoExterno[] = FIXTURES_MOCK):
       return null;
     },
 
+    // Sin red la búsqueda solo encuentra los títulos de prueba que contienen el texto.
+    async search(texto: string) {
+      const buscado = texto.trim().toLowerCase();
+      if (!buscado) return [];
+      return fixtures
+        .filter((contenido) => contenido.titulo.toLowerCase().includes(buscado))
+        .map(copia);
+    },
+
+    // Sin red no hay galería.
+    async fetchGallery() {
+      return [];
+    },
+
+    // Sin red no hay reparto.
+    async fetchCast() {
+      return [];
+    },
+
     // Sin red no hay logotipos.
     async fetchLogo() {
       return null;

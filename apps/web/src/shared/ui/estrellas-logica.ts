@@ -1,5 +1,5 @@
-// Lógica de las estrellas de calificación, sin React. Valores de 1 a 5 en pasos de 0,5 (RN1).
-export const MIN_CALIFICACION = 1;
+// Lógica de las estrellas de calificación, sin React. Valores de 0,5 a 5 en pasos de 0,5 (RN1).
+export const MIN_CALIFICACION = 0.5;
 export const MAX_CALIFICACION = 5;
 export const PASO_CALIFICACION = 0.5;
 

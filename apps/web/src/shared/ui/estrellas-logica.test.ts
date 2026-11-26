@@ -9,13 +9,13 @@ describe("ajustarCalificacion", () => {
     expect(ajustarCalificacion(3, "ArrowDown")).toBe(2.5);
   });
 
-  it("no sale del rango de 1 a 5", () => {
+  it("no sale del rango de 0,5 a 5", () => {
     expect(ajustarCalificacion(5, "ArrowRight")).toBe(5);
-    expect(ajustarCalificacion(1, "ArrowLeft")).toBe(1);
+    expect(ajustarCalificacion(0.5, "ArrowLeft")).toBe(0.5);
   });
 
   it("Inicio y Fin van a los extremos", () => {
-    expect(ajustarCalificacion(3.5, "Home")).toBe(1);
+    expect(ajustarCalificacion(3.5, "Home")).toBe(0.5);
     expect(ajustarCalificacion(3.5, "End")).toBe(5);
   });
 
@@ -33,8 +33,8 @@ describe("calificacionDesdeClic", () => {
     expect(calificacionDesdeClic(4, 15, 20)).toBe(4);
   });
 
-  it("nunca baja de 1 aunque sea media estrella", () => {
-    expect(calificacionDesdeClic(1, 1, 20)).toBe(1);
+  it("la mitad izquierda de la primera estrella vale medio punto", () => {
+    expect(calificacionDesdeClic(1, 1, 20)).toBe(0.5);
   });
 });
 

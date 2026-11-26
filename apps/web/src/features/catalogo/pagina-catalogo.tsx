@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { useGeneros } from "@/features/generos/generos";
 import { useValorDiferido } from "@/features/usuarios/usuarios";
 import { mensajeDeError } from "@/shared/api";
@@ -24,11 +24,22 @@ export function PaginaCatalogo({ filtros }: { filtros: FiltrosCatalogo }) {
   // El texto se queda en local y solo cambia la URL tras una pausa, para no pedir una búsqueda por tecla.
   const [texto, setTexto] = useState(filtros.q);
   const diferido = useValorDiferido(texto.trim(), 300);
+  // Último texto que la página ya tiene en la URL (escrito aquí o llegado de fuera, p. ej. el buscador del navbar).
+  const enviado = useRef(filtros.q);
+  const filtrosActuales = useRef(filtros);
+  filtrosActuales.current = filtros;
   useEffect(() => {
-    if (diferido !== filtros.q) {
-      router.replace(queryDeFiltros({ ...filtros, q: diferido, page: 1 }), { scroll: false });
-    }
-  }, [diferido, filtros, router]);
+    if (diferido === enviado.current) return;
+    enviado.current = diferido;
+    router.replace(queryDeFiltros({ ...filtrosActuales.current, q: diferido, page: 1 }), {
+      scroll: false,
+    });
+  }, [diferido, router]);
+  useEffect(() => {
+    if (filtros.q === enviado.current) return;
+    enviado.current = filtros.q;
+    setTexto(filtros.q);
+  }, [filtros.q]);
 
   function cambiar(nuevo: FiltrosCatalogo) {
     router.replace(queryDeFiltros(nuevo), { scroll: false });
@@ -53,44 +64,46 @@ export function PaginaCatalogo({ filtros }: { filtros: FiltrosCatalogo }) {
       </header>
 
       <div className="space-y-5">
-        <div className="space-y-1.5">
-          <label htmlFor={`${id}-q`} className="block text-sm text-niebla">
-            {t("buscar")}
-          </label>
-          <input
-            id={`${id}-q`}
-            type="search"
-            autoComplete="off"
-            placeholder={t("buscarPlaceholder")}
-            value={texto}
-            onChange={(evento) => setTexto(evento.target.value)}
-            className="w-full rounded-sm border border-papel/15 bg-butaca px-3 py-2 focus:border-luz focus:outline-none sm:max-w-md"
-          />
-        </div>
-
-        <fieldset className="space-y-2">
-          <legend className="mb-2 text-sm text-niebla">{t("tipo.etiqueta")}</legend>
-          <div className="flex flex-wrap gap-2">
-            {tipos.map((opcion) => {
-              const activo = filtros.tipo === opcion.valor;
-              return (
-                <button
-                  key={opcion.texto}
-                  type="button"
-                  aria-pressed={activo}
-                  onClick={() => cambiar({ ...filtros, tipo: opcion.valor, page: 1 })}
-                  className={`rounded-sm border px-3 py-1.5 text-sm ${
-                    activo
-                      ? "border-luz text-papel"
-                      : "border-papel/20 text-niebla hover:text-papel"
-                  }`}
-                >
-                  {opcion.texto}
-                </button>
-              );
-            })}
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:gap-8">
+          <div className="space-y-1.5 sm:max-w-md sm:flex-1">
+            <label htmlFor={`${id}-q`} className="block text-sm text-niebla">
+              {t("buscar")}
+            </label>
+            <input
+              id={`${id}-q`}
+              type="search"
+              autoComplete="off"
+              placeholder={t("buscarPlaceholder")}
+              value={texto}
+              onChange={(evento) => setTexto(evento.target.value)}
+              className="w-full rounded-sm border border-papel/15 bg-butaca px-3 py-2 focus:border-luz focus:outline-none"
+            />
           </div>
-        </fieldset>
+
+          <fieldset className="space-y-2 sm:shrink-0 sm:ml-auto">
+            <legend className="mb-2 text-sm text-niebla">{t("tipo.etiqueta")}</legend>
+            <div className="flex flex-wrap gap-2">
+              {tipos.map((opcion) => {
+                const activo = filtros.tipo === opcion.valor;
+                return (
+                  <button
+                    key={opcion.texto}
+                    type="button"
+                    aria-pressed={activo}
+                    onClick={() => cambiar({ ...filtros, tipo: opcion.valor, page: 1 })}
+                    className={`rounded-sm border px-3 py-2 text-sm ${
+                      activo
+                        ? "border-luz text-papel"
+                        : "border-papel/20 text-niebla hover:text-papel"
+                    }`}
+                  >
+                    {opcion.texto}
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+        </div>
 
         <fieldset className="space-y-2">
           <legend className="mb-2 text-sm text-niebla">
@@ -192,7 +205,6 @@ export function PaginaCatalogo({ filtros }: { filtros: FiltrosCatalogo }) {
                   titulo={titulo.titulo}
                   anio={titulo.anio}
                   posterUrl={titulo.posterUrl}
-                  generos={titulo.generos.map((genero) => genero.nombre)}
                 />
               </li>
             ))}

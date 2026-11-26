@@ -1,4 +1,5 @@
 // API pública del paquete. Solo lo exportado aquí forma parte del contrato.
+import "./locale.js";
 export * from "./contracts/auth.js";
 export * from "./contracts/amistades.js";
 export * from "./contracts/biblioteca.js";

@@ -5,7 +5,7 @@ import { hashPassword } from "../src/lib/password.js";
 export const DEMO_PASSWORD = "Demo1234!";
 
 // Si este usuario existe, los datos de demostración ya están cargados.
-const MARCADOR = "demo_ana";
+const MARCADOR = "Ana";
 
 const GENEROS = ["Drama", "Comedia", "Acción", "Ciencia ficción"];
 
@@ -34,10 +34,10 @@ async function cargarDemo(db: pg.PoolClient): Promise<void> {
   );
 
   const hash = await hashPassword(DEMO_PASSWORD);
-  const ana = await crearUsuario(db, "demo_ana", "Ana Demo", hash);
-  const luis = await crearUsuario(db, "demo_luis", "Luis Demo", hash);
-  const marta = await crearUsuario(db, "demo_marta", "Marta Demo", hash);
-  const carlos = await crearUsuario(db, "demo_carlos", "Carlos Demo", hash);
+  const ana = await crearUsuario(db, "Ana", "Ana", "ana@gmail.com", hash);
+  const luis = await crearUsuario(db, "Luis", "Luis", "luis@gmail.com", hash);
+  const marta = await crearUsuario(db, "Marta", "Marta", "marta@gmail.com", hash);
+  const carlos = await crearUsuario(db, "Carlos", "Carlos", "carlos@gmail.com", hash);
 
   await asignarIntereses(db, ana, ["Drama", "Comedia", "Ciencia ficción"]);
   await asignarIntereses(db, luis, ["Acción", "Drama", "Comedia"]);
@@ -82,11 +82,12 @@ async function crearUsuario(
   db: pg.PoolClient,
   username: string,
   nombre: string,
+  correo: string,
   hash: string,
 ): Promise<number> {
   const { rows } = await db.query<{ id: number }>(
     "INSERT INTO usuario (nombre, username, correo, contrasena, rol_id, acepta_datos_en) VALUES ($1, $2, $3, $4, (SELECT id FROM rol WHERE nombre = 'usuario'), now()) RETURNING id",
-    [nombre, username, `${username}@demo.cinematch.local`, hash],
+    [nombre, username, correo, hash],
   );
   return idDe(rows, username);
 }

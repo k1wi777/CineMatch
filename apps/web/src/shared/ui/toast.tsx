@@ -52,29 +52,25 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       {children}
       <div
         aria-live="polite"
-        className="pointer-events-none fixed inset-x-0 bottom-4 z-50 flex flex-col items-center gap-2 px-4"
+        className="pointer-events-none fixed inset-x-0 top-20 z-50 flex flex-col items-end gap-2 px-4"
       >
         {lista.map((toast) => (
           <div
             key={toast.id}
-            className="pointer-events-auto flex max-w-md items-center gap-4 rounded-sm bg-telon px-4 py-3 text-sm shadow-foco"
+            className="pointer-events-auto flex w-full max-w-lg items-center gap-4 rounded-md bg-telon px-5 py-4 text-base text-papel shadow-foco ring-1 ring-papel/10"
           >
             <span
-              className={
-                toast.tipo === "error"
-                  ? "text-brasa"
-                  : toast.tipo === "exito"
-                    ? "text-musgo"
-                    : "text-luz"
-              }
-            >
-              {toast.mensaje}
-            </span>
+              aria-hidden="true"
+              className={`h-2.5 w-2.5 shrink-0 rounded-full ${
+                toast.tipo === "error" ? "bg-brasa" : toast.tipo === "exito" ? "bg-musgo" : "bg-luz"
+              }`}
+            />
+            <p className="min-w-0 flex-1 leading-relaxed">{toast.mensaje}</p>
             {toast.accion ? (
               <Link
                 href={toast.accion.href}
                 onClick={() => cerrar(toast.id)}
-                className="shrink-0 font-semibold text-luz underline underline-offset-4"
+                className="shrink-0 font-semibold text-luz underline underline-offset-4 hover:text-papel"
               >
                 {toast.accion.etiqueta}
               </Link>
@@ -82,7 +78,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             <button
               type="button"
               onClick={() => cerrar(toast.id)}
-              className="ml-auto text-niebla hover:text-papel"
+              className="shrink-0 text-sm text-niebla hover:text-papel"
               aria-label="Cerrar aviso"
             >
               Cerrar

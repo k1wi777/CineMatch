@@ -19,7 +19,7 @@ import { agregarEtiqueta, sugerirEtiquetas, type ErrorEtiqueta } from "./etiquet
 import { useGuardarResena } from "./resenas";
 
 const CLASE_CAMPO =
-  "w-full rounded-sm border border-papel/15 bg-butaca px-3 py-2 focus:border-luz focus:outline-none";
+  "w-full rounded-sm border border-papel/15 bg-butaca px-3 py-2 focus:border-estrella focus:outline-none";
 
 type Errores = Partial<Record<keyof EscribirResena | "general", string>>;
 
@@ -186,7 +186,7 @@ export function FormularioResena({
               value={opcion.valor}
               checked={visibilidad === opcion.valor}
               onChange={() => setVisibilidad(opcion.valor)}
-              className="mt-1 accent-luz"
+              className="mt-1 accent-estrella"
             />
             <span>
               <span className="block text-papel">{opcion.texto}</span>
@@ -202,7 +202,7 @@ export function FormularioResena({
           type="checkbox"
           checked={esSpoiler}
           onChange={(evento) => setEsSpoiler(evento.target.checked)}
-          className="h-6 w-6 accent-luz"
+          className="h-6 w-6 accent-estrella"
         />
         {t("formulario.spoiler")}
       </label>
@@ -264,7 +264,7 @@ export function FormularioResena({
                 key={sugerencia}
                 type="button"
                 onClick={() => anadirEtiqueta(sugerencia)}
-                className="rounded-sm border border-papel/20 px-2 py-0.5 text-xs hover:border-luz"
+                className="rounded-sm border border-papel/20 px-2 py-0.5 text-xs hover:border-estrella"
               >
                 + {sugerencia}
               </button>
@@ -287,7 +287,7 @@ export function FormularioResena({
           type="submit"
           disabled={guardar.isPending}
           aria-busy={guardar.isPending || undefined}
-          className="rounded-sm bg-luz px-4 py-2 font-semibold text-sala disabled:cursor-not-allowed disabled:opacity-50"
+          className="rounded-sm bg-estrella px-4 py-2 font-semibold text-sala disabled:cursor-not-allowed disabled:opacity-50"
         >
           {guardar.isPending
             ? t("formulario.guardando")

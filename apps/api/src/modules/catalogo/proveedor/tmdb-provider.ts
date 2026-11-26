@@ -8,7 +8,7 @@ import {
   type TituloTmdb,
   type VideoTmdb,
 } from "./mapeo-tmdb.js";
-import type { MovieProvider, TipoContenido } from "./movie-provider.js";
+import type { ContenidoExterno, MovieProvider, TipoContenido } from "./movie-provider.js";
 
 const BASE_POR_DEFECTO = "https://api.themoviedb.org/3";
 const IDIOMA = "es-ES";
@@ -123,6 +123,19 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
     );
   }
 
+  // Ids de las plataformas de streaming más importantes de una región (las que TMDB muestra primero).
+  async function plataformasPrincipales(region: string): Promise<number[]> {
+    const datos = await pedir<{ results?: { provider_id: number; display_priority?: number }[] }>(
+      "/watch/providers/movie",
+      { watch_region: region },
+    );
+    return (datos?.results ?? [])
+      .slice()
+      .sort((a, b) => (a.display_priority ?? 999) - (b.display_priority ?? 999))
+      .slice(0, 5)
+      .map((plataforma) => plataforma.provider_id);
+  }
+
   return {
     fuente: "tmdb",
     async fetchGenres() {
@@ -160,6 +173,111 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
       return aContenidoExterno(tipo, titulo, generos);
     },
 
+    async fetchPopularEnRegion(region) {
+      // Estrenos y series del último año disponibles en las plataformas principales de esa región, por popularidad.
+      const plataformas = await plataformasPrincipales(region);
+      const parametros: Record<string, string> = {
+        region,
+        watch_region: region,
+        with_watch_monetization_types: "flatrate",
+        sort_by: "popularity.desc",
+        "vote_count.gte": "50",
+        page: "1",
+      };
+      if (plataformas.length > 0) parametros.with_watch_providers = plataformas.join("|");
+      const desde = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+      const [peliculas, series] = await Promise.all([
+        pedir<{ results?: (TituloTmdb & { genre_ids?: number[] })[] }>("/discover/movie", {
+          ...parametros,
+          "primary_release_date.gte": desde,
+        }),
+        pedir<{ results?: (TituloTmdb & { genre_ids?: number[] })[] }>("/discover/tv", {
+          ...parametros,
+          "first_air_date.gte": desde,
+        }),
+      ]);
+      const pel = (peliculas?.results ?? []).slice(0, 12);
+      const ser = (series?.results ?? []).slice(0, 12);
+      const [peliculasMapeadas, seriesMapeadas] = await Promise.all([
+        Promise.all(
+          pel.map(async (titulo) =>
+            aContenidoExterno(
+              "pelicula",
+              titulo,
+              await nombresPorIds("pelicula", titulo.genre_ids),
+            ),
+          ),
+        ),
+        Promise.all(
+          ser.map(async (titulo) =>
+            aContenidoExterno("serie", titulo, await nombresPorIds("serie", titulo.genre_ids)),
+          ),
+        ),
+      ]);
+      // Alterna películas y series (cada lista va de más a menos popular): las series no tapan a las películas.
+      const mezcla: ContenidoExterno[] = [];
+      const maximo = Math.max(peliculasMapeadas.length, seriesMapeadas.length);
+      for (let i = 0; i < maximo; i++) {
+        const pelicula = peliculasMapeadas[i];
+        const serie = seriesMapeadas[i];
+        if (pelicula) mezcla.push(pelicula);
+        if (serie) mezcla.push(serie);
+      }
+      return mezcla;
+    },
+
+    async search(texto) {
+      const consulta = texto.trim();
+      if (!consulta) return [];
+      const [peliculas, series] = await Promise.all([
+        pedir<{ results?: (TituloTmdb & { genre_ids?: number[] })[] }>("/search/movie", {
+          query: consulta,
+        }),
+        pedir<{ results?: (TituloTmdb & { genre_ids?: number[] })[] }>("/search/tv", {
+          query: consulta,
+        }),
+      ]);
+      const pel = (peliculas?.results ?? []).slice(0, 8);
+      const ser = (series?.results ?? []).slice(0, 8);
+      return Promise.all([
+        ...pel.map(async (titulo) =>
+          aContenidoExterno("pelicula", titulo, await nombresPorIds("pelicula", titulo.genre_ids)),
+        ),
+        ...ser.map(async (titulo) =>
+          aContenidoExterno("serie", titulo, await nombresPorIds("serie", titulo.genre_ids)),
+        ),
+      ]);
+    },
+
+    async fetchGallery(tipo, idExterno) {
+      if (!/^\d+$/.test(idExterno)) return [];
+      const ruta = tipo === "pelicula" ? `/movie/${idExterno}/images` : `/tv/${idExterno}/images`;
+      const datos = await pedir<{
+        backdrops?: { file_path?: string; aspect_ratio?: number; iso_639_1?: string | null }[];
+      }>(ruta, { include_image_language: "null" });
+      // Solo imágenes horizontales y sin idioma: las que llevan texto (arte de póster con el título) se dejan fuera.
+      return (datos?.backdrops ?? [])
+        .filter(
+          (imagen) =>
+            typeof imagen.file_path === "string" &&
+            (imagen.aspect_ratio ?? 0) >= 1.2 &&
+            imagen.iso_639_1 == null,
+        )
+        .slice(0, 8)
+        .map((imagen) => `https://image.tmdb.org/t/p/w780${imagen.file_path}`);
+    },
+
+    async fetchCast(tipo, idExterno) {
+      if (!/^\d+$/.test(idExterno)) return [];
+      const ruta = tipo === "pelicula" ? `/movie/${idExterno}/credits` : `/tv/${idExterno}/credits`;
+      const datos = await pedir<{ cast?: { name?: string; order?: number }[] }>(ruta);
+      return (datos?.cast ?? [])
+        .filter((persona) => typeof persona.name === "string" && persona.name.length > 0)
+        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+        .slice(0, 10)
+        .map((persona) => persona.name as string);
+    },
+
     async fetchLogo(tipo, idExterno) {
       if (!/^\d+$/.test(idExterno)) return null;
       const ruta = tipo === "pelicula" ? `/movie/${idExterno}/images` : `/tv/${idExterno}/images`;
@@ -173,6 +291,15 @@ export function crearTmdbProvider(opciones: OpcionesTmdb): MovieProvider {
         logos.find((logo) => logo.iso_639_1 === "en") ??
         logos[0];
       return elegido?.file_path ? `https://image.tmdb.org/t/p/w500${elegido.file_path}` : null;
+    },
+
+    async fetchPuntuacion(tipo, idExterno) {
+      if (!/^\d+$/.test(idExterno)) return null;
+      const ruta = tipo === "pelicula" ? `/movie/${idExterno}` : `/tv/${idExterno}`;
+      const datos = await pedir<{ vote_average?: number }>(ruta);
+      return typeof datos?.vote_average === "number" && datos.vote_average > 0
+        ? datos.vote_average
+        : null;
     },
 
     async fetchTrailer(tipo, idExterno) {

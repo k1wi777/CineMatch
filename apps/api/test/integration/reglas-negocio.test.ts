@@ -61,13 +61,13 @@ describe("reglas de negocio del ERS (RN1–RN17)", () => {
   }
 
   describe("reseñas, visibilidad y agregados", () => {
-    it("RN1: calificación de 1 a 5 en pasos de 0,5 y una sola reseña por usuario y título", async () => {
+    it("RN1: calificación de 0,5 a 5 en pasos de 0,5 y una sola reseña por usuario y título", async () => {
       const a = buildTestApp(pool);
       const yo = await persona(a, "rn1_autor");
       const titulo = await crearContenido(pool, "pelicula", "rn1");
 
-      const fuera = await escribir(a, yo.cookie, titulo, { calificacion: 0.5 });
-      const medio = await escribir(a, yo.cookie, titulo, { calificacion: 1.5 });
+      const fuera = await escribir(a, yo.cookie, titulo, { calificacion: 0 });
+      const medio = await escribir(a, yo.cookie, titulo, { calificacion: 0.5 });
       const repetida = await escribir(a, yo.cookie, titulo, { calificacion: 3 });
       const filas = await pool.query("SELECT count(*) AS n FROM resena WHERE usuario_id = $1", [
         yo.id,

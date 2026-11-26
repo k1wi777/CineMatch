@@ -9,7 +9,9 @@ const PRIVADAS = ["/", "/catalogo", "/biblioteca", "/amigos", "/notificaciones",
 
 async function auditar(pagina: import("@playwright/test").Page, ruta: string) {
   await pagina.goto(BASE + ruta);
-  await pagina.waitForLoadState("load");
+  // Se audita la página ya hidratada: el contraste de textos y campos puede cambiar mientras Next termina de montarla.
+  await pagina.waitForLoadState("networkidle");
+  await pagina.getByRole("heading").first().waitFor();
   const resultado = await new AxeBuilder({ page: pagina }).withTags(ETIQUETAS).analyze();
   expect(
     resultado.violations.map((v) => `${v.id} (${v.nodes.length})`),

@@ -1,7 +1,15 @@
 // Decisión de acceso por ruta, sin dependencias de Next: la usa el proxy y se prueba aparte.
 export const NOMBRE_COOKIE_SESION = "cm_session";
 
-const RUTAS_PUBLICAS = ["/login", "/registro", "/recuperar", "/ejemplo-formulario"] as const;
+const RUTAS_PUBLICAS = [
+  "/login",
+  "/registro",
+  "/recuperar",
+  "/privacidad",
+  "/terminos",
+  "/ayuda",
+  "/ejemplo-formulario",
+] as const;
 
 export function esRutaPublica(ruta: string): boolean {
   return RUTAS_PUBLICAS.some((publica) => ruta === publica || ruta.startsWith(`${publica}/`));

@@ -18,6 +18,10 @@ function proveedorConTrailer(fuente: string, enlace: string | null) {
     fetchGenres: async () => [],
     fetchPopular: async () => [],
     fetchDetails: async () => null,
+    fetchLogo: async () => null,
+    fetchCast: async () => [],
+    fetchGallery: async () => [],
+    search: async () => [],
     fetchTrailer: async (_tipo, idExterno) => {
       llamadas.push(idExterno);
       return enlace;

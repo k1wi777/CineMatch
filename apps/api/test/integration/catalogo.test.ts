@@ -98,9 +98,16 @@ describe("catálogo: listado, búsqueda y ficha (BE-6.4 y BE-6.5)", () => {
     const conTilde = await request(app).get("/api/catalog?q=animas").set("Cookie", sesion);
     const eñe = await request(app).get("/api/catalog?q=AÑO").set("Cookie", sesion);
 
-    expect(sinTilde.body.items.map((i: { titulo: string }) => i.titulo)).toEqual(["Año cero"]);
-    expect(conTilde.body.items.map((i: { titulo: string }) => i.titulo)).toEqual(["Ánimas"]);
-    expect(eñe.body.items.map((i: { titulo: string }) => i.titulo)).toEqual(["Año cero"]);
+    // La búsqueda también trae títulos de la fuente externa (mock en pruebas) que contienen el texto,
+    // por eso se comprueba que estén los locales y que no aparezca el que no coincide.
+    const titulos = (respuesta: request.Response) =>
+      respuesta.body.items.map((i: { titulo: string }) => i.titulo);
+    expect(titulos(sinTilde)).toContain("Año cero");
+    expect(titulos(sinTilde)).not.toContain("Otra cosa");
+    expect(titulos(conTilde)).toContain("Ánimas");
+    expect(titulos(conTilde)).not.toContain("Año cero");
+    expect(titulos(eñe)).toContain("Año cero");
+    expect(titulos(eñe)).not.toContain("Otra cosa");
   });
 
   it("trata % y _ de la búsqueda como texto literal", async () => {

@@ -45,79 +45,82 @@ export function PaginaBiblioteca() {
         ) : null}
       </header>
 
-      <div
-        role="tablist"
-        aria-label={t("pestanas")}
-        className="flex flex-wrap gap-2 border-b border-papel/10"
-      >
-        {ESTADOS_BIBLIOTECA.map((estado) => {
-          const activa = filtros.estado === estado;
-          return (
-            <button
-              key={estado}
-              id={`${id}-tab-${estado}`}
-              role="tab"
-              type="button"
-              aria-selected={activa}
-              aria-controls={`${id}-panel`}
-              onClick={() => cambiar({ estado })}
-              className={`-mb-px border-b-2 px-2 pb-2 text-sm ${
-                activa ? "border-luz text-papel" : "border-transparent text-niebla hover:text-papel"
-              }`}
-            >
-              {t(`estado.${estado}`)}
-              {conteos ? (
-                <span className="ml-1.5 text-xs text-niebla">{conteos[estado]}</span>
-              ) : null}
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-end">
-        <fieldset className="space-y-2">
-          <legend className="mb-2 text-sm text-niebla">{t("filtros.tipo")}</legend>
-          <div className="flex flex-wrap gap-2">
-            {tipos.map((opcion) => (
+      <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <div
+          role="tablist"
+          aria-label={t("pestanas")}
+          className="flex flex-wrap gap-2 border-b border-papel/10"
+        >
+          {ESTADOS_BIBLIOTECA.map((estado) => {
+            const activa = filtros.estado === estado;
+            return (
               <button
-                key={opcion.texto}
+                key={estado}
+                id={`${id}-tab-${estado}`}
+                role="tab"
                 type="button"
-                aria-pressed={filtros.tipo === opcion.valor}
-                onClick={() => cambiar({ tipo: opcion.valor })}
-                className={`rounded-sm border px-3 py-1.5 text-sm ${
-                  filtros.tipo === opcion.valor
+                aria-selected={activa}
+                aria-controls={`${id}-panel`}
+                onClick={() => cambiar({ estado })}
+                className={`-mb-px border-b-2 px-2 pb-2 text-sm ${
+                  activa
                     ? "border-luz text-papel"
-                    : "border-papel/20 text-niebla hover:text-papel"
+                    : "border-transparent text-niebla hover:text-papel"
                 }`}
               >
-                {opcion.texto}
+                {t(`estado.${estado}`)}
+                {conteos ? (
+                  <span className="ml-1.5 text-xs text-niebla">{conteos[estado]}</span>
+                ) : null}
               </button>
-            ))}
-          </div>
-        </fieldset>
+            );
+          })}
+        </div>
+        <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-end">
+          <fieldset className="space-y-2">
+            <legend className="mb-1.5 block text-sm text-niebla">{t("filtros.tipo")}</legend>
+            <div className="flex flex-wrap gap-2">
+              {tipos.map((opcion) => (
+                <button
+                  key={opcion.texto}
+                  type="button"
+                  aria-pressed={filtros.tipo === opcion.valor}
+                  onClick={() => cambiar({ tipo: opcion.valor })}
+                  className={`flex h-10 items-center rounded-sm border px-3 text-sm ${
+                    filtros.tipo === opcion.valor
+                      ? "border-luz text-papel"
+                      : "border-papel/20 text-niebla hover:text-papel"
+                  }`}
+                >
+                  {opcion.texto}
+                </button>
+              ))}
+            </div>
+          </fieldset>
 
-        <div className="flex items-end gap-2">
-          <div className="space-y-1.5">
-            <label htmlFor={`${id}-orden`} className="block text-sm text-niebla">
-              {t("filtros.orden")}
-            </label>
-            <select
-              id={`${id}-orden`}
-              value={filtros.orden}
-              onChange={(evento) => cambiar({ orden: evento.target.value as "fecha" | "titulo" })}
-              className="rounded-sm border border-papel/15 bg-butaca px-3 py-2 text-sm focus:border-luz focus:outline-none"
+          <div className="flex items-end gap-2">
+            <div className="space-y-1.5">
+              <label htmlFor={`${id}-orden`} className="block text-sm text-niebla">
+                {t("filtros.orden")}
+              </label>
+              <select
+                id={`${id}-orden`}
+                value={filtros.orden}
+                onChange={(evento) => cambiar({ orden: evento.target.value as "fecha" | "titulo" })}
+                className="h-10 rounded-sm border border-papel/15 bg-butaca px-3 text-sm focus:border-luz focus:outline-none"
+              >
+                <option value="fecha">{t("filtros.ordenFecha")}</option>
+                <option value="titulo">{t("filtros.ordenTitulo")}</option>
+              </select>
+            </div>
+            <button
+              type="button"
+              onClick={() => cambiar({ dir: filtros.dir === "asc" ? "desc" : "asc" })}
+              className="flex h-10 items-center rounded-sm border border-papel/20 px-3 text-sm hover:border-luz"
             >
-              <option value="fecha">{t("filtros.ordenFecha")}</option>
-              <option value="titulo">{t("filtros.ordenTitulo")}</option>
-            </select>
+              {filtros.dir === "asc" ? t("filtros.ascendente") : t("filtros.descendente")}
+            </button>
           </div>
-          <button
-            type="button"
-            onClick={() => cambiar({ dir: filtros.dir === "asc" ? "desc" : "asc" })}
-            className="rounded-sm border border-papel/20 px-3 py-2 text-sm hover:border-luz"
-          >
-            {filtros.dir === "asc" ? t("filtros.ascendente") : t("filtros.descendente")}
-          </button>
         </div>
       </div>
 
@@ -183,7 +186,6 @@ export function PaginaBiblioteca() {
                     titulo={elemento.titulo}
                     anio={elemento.anio}
                     posterUrl={elemento.posterUrl}
-                    generos={elemento.generos.map((genero) => genero.nombre)}
                   />
                   <SelectorEstado
                     contenidoId={elemento.id}

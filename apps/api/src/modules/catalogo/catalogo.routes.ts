@@ -1,6 +1,7 @@
 import {
   CatalogoPaginaSchema,
   CatalogoQuerySchema,
+  DestacadosQuerySchema,
   DestacadosSchema,
   TituloFichaSchema,
   TrailerSchema,
@@ -20,7 +21,7 @@ const ParamsTituloSchema = z.object({
 });
 
 // Títulos que devuelve el carrusel del inicio.
-const LIMITE_DESTACADOS = 6;
+const LIMITE_DESTACADOS = 15;
 
 registroOpenApi.registrarEsquema("PaginaCatalogo", CatalogoPaginaSchema);
 registroOpenApi.registrarEsquema("TituloFicha", TituloFichaSchema);
@@ -80,14 +81,25 @@ export function createCatalogoRouter(
     validate({ query: CatalogoQuerySchema }),
     async (_req, res) => {
       const query = res.locals.input.query as CatalogoQuery;
-      res.json(CatalogoPaginaSchema.parse(await servicio.listar(query)));
+      // Con un texto se busca también en la fuente externa (una vez al día por texto) y luego se responde con el catálogo local.
+      if (query.q) {
+        await servicio.importarBusqueda(query.q);
+      }
+      const pagina = await servicio.listar(query);
+      res.json(CatalogoPaginaSchema.parse(pagina));
     },
   );
 
   // Antes de /catalog/:id, para que «destacados» no se tome por un id.
-  router.get("/catalog/destacados", autenticado, async (_req, res) => {
-    res.json(DestacadosSchema.parse(await servicio.destacados(LIMITE_DESTACADOS)));
-  });
+  router.get(
+    "/catalog/destacados",
+    autenticado,
+    validate({ query: DestacadosQuerySchema }),
+    async (_req, res) => {
+      const { region } = res.locals.input.query as z.infer<typeof DestacadosQuerySchema>;
+      res.json(DestacadosSchema.parse(await servicio.destacados(LIMITE_DESTACADOS, region)));
+    },
+  );
 
   router.get(
     "/catalog/:id",
@@ -114,6 +126,31 @@ export function createCatalogoRouter(
         throw new NotFoundError("El título no existe.");
       }
       res.json(TrailerSchema.parse(trailer));
+    },
+  );
+
+  router.get(
+    "/catalog/:id/logo",
+    autenticado,
+    validate({ params: ParamsTituloSchema }),
+    async (_req, res) => {
+      const { id } = res.locals.input.params as z.infer<typeof ParamsTituloSchema>;
+      const logo = await servicio.obtenerLogo(id);
+      if (!logo) {
+        throw new NotFoundError("El título no existe.");
+      }
+      res.json(logo);
+    },
+  );
+
+  router.post(
+    "/catalog/:id/trailer/no-disponible",
+    autenticado,
+    validate({ params: ParamsTituloSchema }),
+    async (_req, res) => {
+      const { id } = res.locals.input.params as z.infer<typeof ParamsTituloSchema>;
+      await servicio.marcarTrailerNoDisponible(id);
+      res.status(204).end();
     },
   );
 

@@ -69,14 +69,12 @@ function SeccionRecibidas() {
               id={item.contenido.id}
               titulo={item.contenido.titulo}
               posterUrl={item.contenido.posterUrl}
+              href={`/recomendaciones/${item.id}`}
             />
             <p className="text-xs text-niebla">
               {t("recibidas.de", { usuario: item.emisor.username })} ·{" "}
               {formatoFecha(item.fechaEnvio)}
             </p>
-            <Link href={`/recomendaciones/${item.id}`} className="text-xs text-luz hover:underline">
-              {t("recibidas.ver")}
-            </Link>
           </li>
         ))}
       </ul>

@@ -28,6 +28,11 @@ const envBase = z.object({
   // Sincronización periódica del catálogo (BE-6.3). Desactivada por defecto.
   CATALOGO_SYNC_HABILITADA: z.stringbool().default(false),
   CATALOGO_SYNC_CRON: z.string().trim().min(1).default("0 3 * * 0"),
+  // Recalculo horario del pool de recomendaciones generales (RN15). Activo por defecto.
+  COMUNIDAD_RECALCULO_CRON: z.string().trim().min(1).default("0 * * * *"),
+  // Copia de seguridad diaria (NF de disponibilidad). Desactivada por defecto: requiere PostgreSQL con docker.
+  COPIA_DIARIA_HABILITADA: z.stringbool().default(false),
+  COPIA_DIARIA_CRON: z.string().trim().min(1).default("0 2 * * *"),
 });
 
 const envSchema = envBase.extend(REGLAS_DE_NEGOCIO_SCHEMA.shape).superRefine((env, ctx) => {

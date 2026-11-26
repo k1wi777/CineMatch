@@ -122,7 +122,7 @@ describe("integridad de catálogo, amistades y reseñas (BE-1.3 y BE-1.4)", () =
     it("rechaza una calificación fuera de rango (23514)", async () => {
       const usuario = await crearUsuario(pool, "rango");
       const contenido = await crearContenido(pool, "pelicula", "1");
-      await expectError(crearResena(pool, usuario, contenido, 0.5), "23514");
+      await expectError(crearResena(pool, usuario, contenido, 0), "23514");
       await expectError(crearResena(pool, usuario, contenido, 5.5), "23514");
     });
 
@@ -134,7 +134,7 @@ describe("integridad de catálogo, amistades y reseñas (BE-1.3 y BE-1.4)", () =
 
     it("acepta calificaciones en pasos de 0,5", async () => {
       const usuario = await crearUsuario(pool, "pasos_validos");
-      const calificaciones = [1, 3.5, 4.5, 5];
+      const calificaciones = [0.5, 1, 3.5, 4.5, 5];
       for (const [indice, calificacion] of calificaciones.entries()) {
         const contenido = await crearContenido(pool, "pelicula", `paso-${indice}`);
         await expect(crearResena(pool, usuario, contenido, calificacion)).resolves.toEqual(
