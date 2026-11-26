@@ -288,6 +288,7 @@
     "miResena": {
       "titulo": "Mi reseña",
       "vacio": "Todavía no has reseñado este título.",
+      "anadir": "Añadir reseña",
       "ocultada": "Tu reseña está oculta por moderación."
     },
     "resenas": {
@@ -332,6 +333,7 @@
     "formulario": {
       "nuevaTitulo": "Escribe tu reseña",
       "editarTitulo": "Edita tu reseña",
+      "cancelar": "Cancelar",
       "calificacion": "Tu calificación",
       "calificacionRequerida": "Elige una calificación de 0,5 a 5.",
       "comentario": "Comentario (opcional)",
@@ -523,6 +525,18 @@
   "inicio": {
     "cargando": "Cargando",
     "verTodas": "Ver todas",
+    "hero": {
+      "titulo": "Destacados",
+      "verFicha": "Ver ficha",
+      "masInfo": "Más información",
+      "anterior": "Título anterior",
+      "siguiente": "Título siguiente",
+      "irA": "Ir al título {n}",
+      "tipo": {
+        "pelicula": "Película",
+        "serie": "Serie"
+      }
+    },
     "recibidas": {
       "titulo": "Recomendaciones recibidas",
       "de": "De @{usuario}",

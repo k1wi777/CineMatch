@@ -77,6 +77,23 @@ export const TituloFichaSchema = z.object({
 
 export type TituloFicha = z.infer<typeof TituloFichaSchema>;
 
+// Título destacado del inicio: imagen horizontal para el carrusel y datos para el texto.
+export const DestacadoSchema = z.object({
+  id: z.number().int(),
+  tipo: TipoContenidoSchema,
+  titulo: z.string(),
+  anio: z.number().int().nullable(),
+  sinopsis: z.string().nullable(),
+  posterUrl: z.string().nullable(),
+  fondoUrl: z.string(),
+  logoUrl: z.string().nullable(),
+  generos: z.array(GeneroRefSchema),
+});
+
+export const DestacadosSchema = z.array(DestacadoSchema);
+
+export type Destacado = z.infer<typeof DestacadoSchema>;
+
 // Enlace al tráiler de YouTube, o null si el título no tiene uno.
 export const TrailerSchema = z.object({
   url: z.string().url().nullable(),

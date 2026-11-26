@@ -11,6 +11,7 @@ export type TituloTmdb = {
   release_date?: string; // películas
   first_air_date?: string; // series
   poster_path?: string | null;
+  backdrop_path?: string | null;
   popularity?: number;
   genre_ids?: number[];
   genres?: GeneroTmdb[];
@@ -77,6 +78,13 @@ export function posterDe(posterPath: string | null | undefined): string | null {
   return posterPath ? `${URL_POSTER_TMDB}${posterPath}` : null;
 }
 
+// Imagen horizontal (1280 px de ancho) para el carrusel del inicio.
+export const URL_FONDO_TMDB = "https://image.tmdb.org/t/p/w1280";
+
+export function fondoDe(fondoPath: string | null | undefined): string | null {
+  return fondoPath ? `${URL_FONDO_TMDB}${fondoPath}` : null;
+}
+
 // Director de una película (job "Director") o creador de una serie (created_by).
 export function directorDe(tipo: TipoContenido, titulo: TituloTmdb): string | null {
   if (tipo === "pelicula") {
@@ -110,6 +118,7 @@ export function aContenidoExterno(
     director: directorDe(tipo, titulo),
     duracion: duracionDe(tipo, titulo),
     posterUrl: posterDe(titulo.poster_path),
+    fondoUrl: fondoDe(titulo.backdrop_path),
     popularidadExterna: typeof titulo.popularity === "number" ? titulo.popularity : null,
     generos,
   };

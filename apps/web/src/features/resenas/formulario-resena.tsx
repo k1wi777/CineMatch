@@ -27,9 +27,11 @@ type Errores = Partial<Record<keyof EscribirResena | "general", string>>;
 export function FormularioResena({
   contenidoId,
   existente,
+  alCancelar,
 }: {
   contenidoId: number;
   existente: ResenaLista | null;
+  alCancelar?: () => void;
 }) {
   const t = useTranslations("resenas");
   const id = useId();
@@ -271,18 +273,29 @@ export function FormularioResena({
         ) : null}
       </div>
 
-      <button
-        type="submit"
-        disabled={guardar.isPending}
-        aria-busy={guardar.isPending || undefined}
-        className="rounded-sm bg-luz px-4 py-2 font-semibold text-sala disabled:cursor-not-allowed disabled:opacity-50"
-      >
-        {guardar.isPending
-          ? t("formulario.guardando")
-          : existente
-            ? t("formulario.guardarCambios")
-            : t("formulario.publicar")}
-      </button>
+      <div className="flex flex-wrap gap-3">
+        {alCancelar ? (
+          <button
+            type="button"
+            onClick={alCancelar}
+            className="rounded-sm border border-papel/30 px-4 py-2 hover:border-papel"
+          >
+            {t("formulario.cancelar")}
+          </button>
+        ) : null}
+        <button
+          type="submit"
+          disabled={guardar.isPending}
+          aria-busy={guardar.isPending || undefined}
+          className="rounded-sm bg-luz px-4 py-2 font-semibold text-sala disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {guardar.isPending
+            ? t("formulario.guardando")
+            : existente
+              ? t("formulario.guardarCambios")
+              : t("formulario.publicar")}
+        </button>
+      </div>
     </form>
   );
 }

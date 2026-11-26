@@ -9,6 +9,7 @@ import { EstadoError } from "@/shared/ui/estados";
 import { SkeletonCartel } from "@/shared/ui/skeleton";
 import { TarjetaTitulo } from "@/shared/ui/tarjeta-titulo";
 import { useRecomendacionesComunidad } from "./comunidad";
+import { HeroInicio } from "./hero-inicio";
 import { TarjetaComunidad } from "./tarjeta-comunidad";
 
 const MAX_RECIBIDAS = 6;
@@ -19,6 +20,7 @@ const MAX_COMUNIDAD = 12;
 export function PaginaInicio() {
   return (
     <div className="space-y-12">
+      <HeroInicio />
       <SeccionRecibidas />
       <SeccionComunidad />
     </div>

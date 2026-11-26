@@ -36,5 +36,10 @@ export function crearMockProvider(fixtures: ContenidoExterno[] = FIXTURES_MOCK):
     async fetchTrailer() {
       return null;
     },
+
+    // Sin red no hay logotipos.
+    async fetchLogo() {
+      return null;
+    },
   };
 }

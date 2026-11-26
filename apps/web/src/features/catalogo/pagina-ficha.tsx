@@ -16,8 +16,8 @@ import { BarraAcciones } from "./barra-acciones";
 import { BotonTrailer } from "./boton-trailer";
 import { debeMostrarPromedioAmigos } from "./ficha-logica";
 import { useEstadisticas, useFicha, useResenasTitulo } from "./ficha";
-import { FormularioResena } from "@/features/resenas/formulario-resena";
 import { ResenaItem } from "@/features/resenas/resena-item";
+import { MiResena } from "./mi-resena";
 
 const TAMANO_RESENAS = 20;
 
@@ -188,26 +188,14 @@ export function PaginaFicha({ id }: { id: number }) {
         )}
       </section>
 
-      <section aria-labelledby="ficha-mi-resena" className="space-y-4">
+      <section aria-labelledby="ficha-mi-resena" className="space-y-5">
         <h2 id="ficha-mi-resena" className="font-display text-2xl">
           {t("miResena.titulo")}
         </h2>
         {resenas.isPending || resenas.isError ? (
           <Skeleton className="h-32 w-full" />
         ) : (
-          <>
-            {resenas.data.miResena ? (
-              <ul className="space-y-4">
-                <ResenaItem resena={resenas.data.miResena} />
-              </ul>
-            ) : (
-              <p className="text-niebla">{t("miResena.vacio")}</p>
-            )}
-            <div className="rounded-sm border border-papel/10 p-4 md:p-6">
-              {/* Sin clave: al guardar no se vuelve a montar, así el aviso de «guardada» sigue visible. */}
-              <FormularioResena contenidoId={id} existente={resenas.data.miResena ?? null} />
-            </div>
-          </>
+          <MiResena contenidoId={id} resena={resenas.data.miResena ?? null} />
         )}
       </section>
 

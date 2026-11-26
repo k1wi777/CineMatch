@@ -16,7 +16,8 @@ import { useEliminarResena } from "./resenas";
 
 // Una reseña: calificación y etiquetas antes del comentario. Un spoiler pide confirmación para verlo.
 // Si la reseña es del usuario de la sesión, ofrece editarla y eliminarla.
-export function ResenaItem({ resena }: { resena: ResenaLista }) {
+// alEditar: si se pasa, «Editar» llama a esa función (la ficha abre su formulario); si no, lleva a la ficha.
+export function ResenaItem({ resena, alEditar }: { resena: ResenaLista; alEditar?: () => void }) {
   const t = useTranslations("resenas");
   const sesion = useSesion();
   const eliminar = useEliminarResena();
@@ -41,7 +42,7 @@ export function ResenaItem({ resena }: { resena: ResenaLista }) {
   }
 
   return (
-    <li className="space-y-3 rounded-sm border border-papel/10 bg-butaca p-4">
+    <li className="space-y-3 rounded-sm border border-papel/10 bg-butaca p-4 md:p-6">
       {resena.contenido ? (
         <Link href={`/catalogo/${resena.contenido.id}`} className="font-medium hover:text-luz">
           {resena.contenido.titulo}
@@ -59,9 +60,38 @@ export function ResenaItem({ resena }: { resena: ResenaLista }) {
           )}
           {resena.visibilidad === "amigos" ? <Insignia texto={t("soloAmigos")} tono="luz" /> : null}
         </div>
-        <time dateTime={resena.fechaCreacion} className="text-xs text-niebla">
-          {formatoFecha(resena.fechaCreacion)}
-        </time>
+        <div className="flex flex-wrap items-center gap-3">
+          <time dateTime={resena.fechaCreacion} className="text-xs text-niebla">
+            {formatoFecha(resena.fechaCreacion)}
+          </time>
+          {esPropia ? (
+            <div className="flex flex-wrap gap-2 text-sm">
+              {alEditar ? (
+                <button
+                  type="button"
+                  onClick={alEditar}
+                  className="rounded-sm border border-papel/30 px-3 py-1 hover:border-luz"
+                >
+                  {t("editar")}
+                </button>
+              ) : resena.contenido ? (
+                <Link
+                  href={`/catalogo/${resena.contenido.id}#ficha-formulario-resena`}
+                  className="rounded-sm border border-papel/30 px-3 py-1 hover:border-luz"
+                >
+                  {t("editar")}
+                </Link>
+              ) : null}
+              <button
+                type="button"
+                onClick={() => setConfirmando(true)}
+                className="rounded-sm border border-papel/30 px-3 py-1 hover:border-brasa hover:text-brasa"
+              >
+                {t("eliminar")}
+              </button>
+            </div>
+          ) : null}
+        </div>
       </div>
 
       <div className="flex flex-wrap items-center gap-3">
@@ -104,26 +134,6 @@ export function ResenaItem({ resena }: { resena: ResenaLista }) {
         <p role="alert" className="text-sm text-brasa">
           {error}
         </p>
-      ) : null}
-
-      {esPropia ? (
-        <div className="flex flex-wrap gap-3 pt-1 text-sm">
-          {resena.contenido ? (
-            <Link
-              href={`/catalogo/${resena.contenido.id}#ficha-mi-resena`}
-              className="rounded-sm border border-papel/30 px-3 py-1.5 hover:border-luz"
-            >
-              {t("editar")}
-            </Link>
-          ) : null}
-          <button
-            type="button"
-            onClick={() => setConfirmando(true)}
-            className="rounded-sm border border-papel/30 px-3 py-1.5 hover:border-brasa hover:text-brasa"
-          >
-            {t("eliminar")}
-          </button>
-        </div>
       ) : null}
 
       <ModalConfirmacion
